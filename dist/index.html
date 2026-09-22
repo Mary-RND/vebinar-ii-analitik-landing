@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Бесплатный вебинар «ИИ-аналитик за 3 месяца» — 25 сентября, 19:00 МСК</title>
+<meta name="description" content="Бесплатный вебинар: как за 3 месяца освоить профессию ИИ-аналитика и выйти на доход от 200 000 ₽, если ты не программист, но умеешь мыслить системами.">
+<meta name="theme-color" content="#07070e">
+<meta property="og:title" content="Бесплатный вебинар «ИИ-аналитик за 3 месяца»">
+<meta property="og:description" content="25 сентября, 19:00 МСК. Стань тем, кто внедряет нейросети, а не боится их.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1200&q=80&auto=format">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============ БАЗА ============ */
+:root{
+  --bg:#07070e;
+  --bg-2:#0c0c17;
+  --card:rgba(255,255,255,.04);
+  --card-2:rgba(255,255,255,.06);
+  --border:rgba(255,255,255,.09);
+  --border-2:rgba(255,255,255,.16);
+  --text:#eef0ff;
+  --muted:#9aa0b8;
+  --dim:#6b7189;
+  --violet:#8b7cff;
+  --mint:#41ffc4;
+  --cyan:#50dcff;
+  --amber:#ffc857;
+  --pink:#ff6db0;
+  --grad:linear-gradient(100deg,#41ffc4 0%,#50dcff 45%,#8b7cff 100%);
+  --radius:20px;
+  --head:'Unbounded',system-ui,sans-serif;
+  --body:'Manrope',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--body);
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:rgba(65,255,196,.25);color:#fff}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-thumb{background:#23233a;border-radius:20px}
+::-webkit-scrollbar-track{background:transparent}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button{font-family:inherit}
+
+/* ============ ФОН ============ */
+.bg-grid{
+  position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:56px 56px;
+  -webkit-mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 30%,transparent 75%);
+  mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 30%,transparent 75%);
+}
+.glow{
+  position:fixed;z-index:-1;border-radius:50%;filter:blur(120px);opacity:.5;pointer-events:none;
+}
+.glow-1{width:620px;height:620px;top:-220px;left:-160px;background:radial-gradient(circle,#7c5cff 0%,transparent 65%)}
+.glow-2{width:520px;height:520px;top:20%;right:-200px;background:radial-gradient(circle,#1ecba3 0%,transparent 65%);opacity:.35}
+
+/* ============ ТИПОГРАФИКА ============ */
+h1,h2,h3,h4{font-family:var(--head);font-weight:600;line-height:1.18}
+.section{position:relative;padding:92px 0}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.overline{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--mint);margin-bottom:18px;
+}
+.overline::before{content:"";width:26px;height:1px;background:var(--mint);opacity:.7}
+.sec-title{font-size:clamp(24px,4vw,42px);letter-spacing:-.01em}
+.sec-title .grad,.grad-text{
+  background:var(--grad);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.sec-sub{color:var(--muted);max-width:640px;margin-top:16px;font-size:17px}
+
+/* ============ ПОЯВЛЕНИЕ ============ */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* ============ ШАПКА ============ */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  background:rgba(7,7,14,.72);
+  border-bottom:1px solid transparent;
+  transition:border-color .4s;
+}
+.header.scrolled{border-color:var(--border)}
+.nav{max-width:1160px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-family:var(--head);font-weight:600;font-size:15px;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+.logo em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--muted);font-size:14px;font-weight:600;text-decoration:none;transition:color .25s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{
+  font-size:13px;font-weight:800;letter-spacing:.02em;color:#04120c;
+  background:var(--grad);border:none;border-radius:100px;
+  padding:11px 22px;cursor:pointer;text-decoration:none;
+  transition:transform .25s,box-shadow .25s;
+}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 30px -8px rgba(65,255,196,.55)}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* ============ ГЕРОЙ ============ */
+.hero{position:relative;padding:150px 0 110px;overflow:hidden}
+.hero-orbs{position:absolute;inset:0;pointer-events:none;z-index:-1}
+.orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.4;animation:float 14s ease-in-out infinite}
+.orb-1{width:420px;height:420px;left:8%;top:-60px;background:radial-gradient(circle,#8b7cff,transparent 70%)}
+.orb-2{width:380px;height:380px;right:6%;top:14%;background:radial-gradient(circle,#2ee6ae,transparent 70%);animation-delay:-5s}
+.orb-3{width:300px;height:300px;left:38%;bottom:-120px;background:radial-gradient(circle,#50dcff,transparent 70%);animation-delay:-9s;opacity:.25}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-26px) scale(1.08)}}
+.hero-inner{max-width:840px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.badge{
+  display:inline-flex;align-items:center;gap:10px;
+  border:1px solid var(--border-2);background:rgba(255,255,255,.05);
+  border-radius:100px;padding:9px 18px;font-size:12px;font-weight:800;
+  letter-spacing:.22em;color:var(--mint);
+}
+.badge .dot{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 0 rgba(65,255,196,.6);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(65,255,196,.5)}70%{box-shadow:0 0 0 10px rgba(65,255,196,0)}100%{box-shadow:0 0 0 0 rgba(65,255,196,0)}}
+.hero h1{font-size:clamp(28px,5.4vw,58px);margin:26px 0 22px;letter-spacing:-.02em}
+.hero .lead{color:var(--muted);font-size:clamp(16px,2.2vw,20px);max-width:720px;margin:0 auto}
+.hero .lead strong{color:var(--text);font-weight:700}
+
+.hero-meta{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin:30px 0 26px}
+.date-chip{
+  display:inline-flex;align-items:center;gap:10px;
+  font-weight:700;font-size:15px;
+  background:var(--card);border:1px solid var(--border);
+  padding:12px 20px;border-radius:14px;
+}
+.date-chip svg{color:var(--mint)}
+.chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.chip{font-size:12.5px;font-weight:700;letter-spacing:.06em;color:var(--muted);border:1px solid var(--border);border-radius:100px;padding:7px 14px}
+.chip b{color:var(--text)}
+
+/* таймер */
+.timer{
+  max-width:560px;margin:0 auto 34px;
+  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+  border:1px solid var(--border);border-radius:var(--radius);
+  padding:22px 20px;
+}
+.timer-label{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+.timer-cols{display:flex;justify-content:center;gap:10px;align-items:flex-end}
+.t-cell{flex:1;max-width:110px}
+.t-num{
+  font-family:var(--head);font-weight:600;font-size:clamp(26px,5vw,40px);
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+  font-variant-numeric:tabular-nums;letter-spacing:.02em;
+}
+.t-sep{font-family:var(--head);font-size:clamp(22px,4vw,32px);color:var(--dim);padding-bottom:2px}
+.t-lbl{font-size:11px;font-weight:600;letter-spacing:.08em;color:var(--dim);text-transform:uppercase;margin-top:6px}
+@media(max-width:520px){.timer-cols{gap:6px}.t-sep{display:none}.t-cell{max-width:none}}
+
+/* кнопка */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  font-weight:800;font-size:16px;letter-spacing:.01em;color:#04120c;
+  background:var(--grad);border:none;border-radius:100px;cursor:pointer;
+  padding:19px 38px;text-decoration:none;
+  box-shadow:0 14px 44px -12px rgba(65,255,196,.5),0 4px 18px -6px rgba(80,220,255,.4);
+  transition:transform .25s,box-shadow .25s;
+  position:relative;overflow:hidden;
+}
+.btn::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;
+  background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);
+  transform:translateX(-120%);transition:transform .7s;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 20px 56px -12px rgba(65,255,196,.6),0 6px 24px -6px rgba(80,220,255,.5)}
+.btn:hover::after{transform:translateX(120%)}
+.btn:disabled{opacity:.65;cursor:progress;transform:none;box-shadow:none}
+.btn.big{width:min(100%,440px)}
+.micro{
+  margin-top:16px;color:var(--dim);font-size:13px;max-width:460px;
+  display:inline-flex;gap:8px;align-items:flex-start;text-align:left;
+}
+.micro svg{flex:0 0 auto;margin-top:2px;color:var(--mint)}
+
+.scroll-hint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);color:var(--dim);opacity:.7;animation:floaty 2.4s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+
+/* ============ КНОПКА / ПЛАВАЮЩАЯ ============ */
+.float-cta{
+  position:fixed;left:50%;bottom:20px;transform:translate(-50%,160%);
+  z-index:70;display:inline-flex;align-items:center;gap:10px;
+  font-weight:800;font-size:14.5px;color:#04120c;
+  background:var(--grad);border:none;border-radius:100px;cursor:pointer;
+  padding:16px 28px;
+  box-shadow:0 18px 50px -10px rgba(65,255,196,.6);
+  transition:transform .5s cubic-bezier(.16,1,.3,1);
+  bottom:calc(20px + env(safe-area-inset-bottom));
+}
+.float-cta.show{transform:translate(-50%,0)}
+.float-cta:active{transform:translate(-50%,2px)}
+.float-cta .arr{transition:transform .3s}
+.float-cta:hover .arr{transform:translateX(4px)}
+@media(max-width:520px){.float-cta{font-size:13px;padding:14px 22px;bottom:calc(14px + env(safe-area-inset-bottom))}}
+
+/* ============ КАРТОЧКИ ============ */
+.grid{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(2,1fr)}
+@media(max-width:940px){.g3{grid-template-columns:1fr}.g4{grid-template-columns:1fr}}
+.card{
+  position:relative;background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:30px 26px;overflow:hidden;
+  transition:transform .35s,border-color .35s,background .35s;
+}
+.card:hover{transform:translateY(-6px);border-color:rgba(65,255,196,.35);background:var(--card-2)}
+.card::before{
+  content:"";position:absolute;top:-80px;right:-80px;width:180px;height:180px;border-radius:50%;
+  background:radial-gradient(circle,rgba(65,255,196,.14),transparent 70%);opacity:0;transition:opacity .4s;
+}
+.card:hover::before{opacity:1}
+.icon{
+  width:52px;height:52px;border-radius:15px;flex:0 0 auto;
+  display:grid;place-items:center;color:var(--mint);
+  background:linear-gradient(180deg,rgba(65,255,196,.14),rgba(65,255,196,.03));
+  border:1px solid rgba(65,255,196,.25);
+}
+.card h3{font-family:var(--body);font-weight:800;font-size:19px;margin:22px 0 10px;line-height:1.35}
+.card p{color:var(--muted);font-size:15px}
+
+/* ============ ПРОГРАММА ============ */
+.prog-num{
+  position:absolute;top:14px;right:20px;font-family:var(--head);font-weight:700;
+  font-size:56px;line-height:1;color:rgba(255,255,255,.05);pointer-events:none;
+  transition:color .35s;
+}
+.card:hover .prog-num{color:rgba(65,255,196,.18)}
+
+/* ============ СПИКЕР ============ */
+.speaker-grid{display:grid;grid-template-columns:380px 1fr;gap:56px;align-items:center}
+@media(max-width:940px){.speaker-grid{grid-template-columns:1fr;gap:36px}}
+.photo-frame{position:relative}
+/* Замените внутренности .photo-wrap на <img src="speaker.jpg" alt="Алексей Петров"> для реального фото */
+.photo-wrap{
+  position:relative;border-radius:26px;overflow:hidden;aspect-ratio:4/5;
+  background:
+    radial-gradient(120% 90% at 30% 10%,rgba(139,124,255,.35),transparent 55%),
+    radial-gradient(120% 90% at 80% 90%,rgba(65,255,196,.22),transparent 60%),
+    linear-gradient(160deg,#14142a,#0b0b16);
+  border:1px solid var(--border-2);
+  display:grid;place-items:center;
+}
+.speaker-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo-fallback{z-index:0}
+.photo-wrap::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(7,7,14,.08),rgba(7,7,14,.25) 65%,rgba(7,7,14,.5));
+}
+.photo-wrap img.speaker-photo{z-index:1}
+.photo-frame::before{
+  content:"";position:absolute;inset:-14px;border-radius:34px;z-index:-1;
+  background:conic-gradient(from 180deg,rgba(139,124,255,.5),rgba(65,255,196,.45),rgba(80,220,255,.45),rgba(139,124,255,.5));
+  filter:blur(30px);opacity:.45;animation:spin 12s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.speaker-name{font-size:clamp(22px,3vw,30px);margin-top:22px}
+.speaker-role{color:var(--mint);font-weight:700;font-size:14px;letter-spacing:.04em;margin-top:6px}
+.fact-list{list-style:none;margin-top:26px;display:grid;gap:14px}
+.fact-list li{display:flex;gap:14px;color:var(--muted);font-size:15px;align-items:flex-start}
+.fact-list li b{color:var(--text);font-weight:700}
+.check{
+  flex:0 0 auto;width:22px;height:22px;border-radius:8px;display:grid;place-items:center;
+  background:rgba(65,255,196,.12);border:1px solid rgba(65,255,196,.3);color:var(--mint);margin-top:1px;
+}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:38px}
+@media(max-width:940px){.stats{grid-template-columns:1fr}}
+.stat{
+  background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px 18px;
+}
+.stat-num{
+  font-family:var(--head);font-weight:600;font-size:clamp(20px,2.6vw,28px);
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.stat-txt{color:var(--muted);font-size:13px;margin-top:6px}
+
+/* ============ FAQ ============ */
+.faq{max-width:820px;margin:0 auto;display:grid;gap:14px}
+.faq-item{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--card);transition:border-color .3s}
+.faq-item.open{border-color:rgba(65,255,196,.4)}
+.faq-q{
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;
+  background:none;border:none;color:var(--text);cursor:pointer;text-align:left;
+  padding:22px 24px;font-size:16px;font-weight:700;line-height:1.4;
+}
+.faq-i{
+  flex:0 0 auto;width:30px;height:30px;border-radius:10px;display:grid;place-items:center;
+  border:1px solid var(--border-2);color:var(--mint);transition:transform .35s,background .3s;
+}
+.faq-i svg{transition:transform .35s}
+.faq-item.open .faq-i{background:rgba(65,255,196,.12)}
+.faq-item.open .faq-i svg{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.16,1,.3,1)}
+.faq-a-in{color:var(--muted);padding:0 24px 24px;font-size:15px}
+
+/* ============ БОНУС ============ */
+.bonus{
+  position:relative;border-radius:28px;padding:56px 30px;text-align:center;overflow:hidden;
+  background:
+    radial-gradient(120% 130% at 50% 0%,rgba(80,220,255,.16),transparent 55%),
+    radial-gradient(120% 120% at 50% 100%,rgba(139,124,255,.18),transparent 60%),
+    linear-gradient(180deg,rgba(255,200,87,.05),rgba(255,200,87,.02));
+  border:1px solid rgba(255,200,87,.32);
+  box-shadow:0 0 80px -30px rgba(255,200,87,.4) inset,0 30px 80px -40px rgba(255,200,87,.25);
+}
+.bonus::before{
+  content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:60%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,200,87,.8),transparent);
+}
+.gift-ico{
+  width:76px;height:76px;border-radius:22px;margin:0 auto 24px;
+  display:grid;place-items:center;color:var(--amber);
+  background:linear-gradient(180deg,rgba(255,200,87,.16),rgba(255,200,87,.04));
+  border:1px solid rgba(255,200,87,.45);
+  box-shadow:0 0 40px -8px rgba(255,200,87,.45);
+  animation:beat 2.6s ease-in-out infinite;
+}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.bonus .sec-title{color:var(--amber)}
+.bonus .sec-sub{color:var(--muted);margin:16px auto 0;text-align:center}
+.bonus-list{list-style:none;display:grid;gap:14px;max-width:760px;margin:36px auto 0;text-align:left}
+.bonus-list li{
+  display:flex;gap:16px;align-items:flex-start;
+  background:rgba(255,200,87,.05);border:1px solid rgba(255,200,87,.18);
+  border-radius:16px;padding:20px;
+}
+.b-num{
+  flex:0 0 auto;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+  font-family:var(--head);font-weight:600;font-size:14px;color:#1a1204;
+  background:linear-gradient(135deg,#ffd37a,#ffb02e);
+}
+.bonus-list b{color:var(--text);display:block;margin-bottom:4px}
+.bonus-list p{color:var(--muted);font-size:14.5px}
+.bonus-note{
+  display:inline-flex;align-items:center;gap:10px;margin-top:28px;
+  font-size:13.5px;font-weight:600;color:var(--amber);
+  border:1px dashed rgba(255,200,87,.4);border-radius:12px;padding:12px 18px;text-align:left;
+}
+
+/* ============ ФОРМА ============ */
+.form-card{
+  max-width:640px;margin:0 auto;position:relative;
+  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+  border:1px solid var(--border-2);border-radius:28px;padding:46px 40px;
+  text-align:center;
+}
+@media(max-width:560px){.form-card{padding:34px 22px}}
+.form-card::before{
+  content:"";position:absolute;top:-1px;left:20%;right:20%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--mint),transparent);
+}
+.field{position:relative;margin-bottom:16px}
+.field svg{
+  position:absolute;left:20px;top:50%;transform:translateY(-50%);color:var(--dim);pointer-events:none;
+}
+.field input{
+  width:100%;background:rgba(7,7,14,.6);border:1px solid var(--border-2);border-radius:14px;
+  color:var(--text);padding:17px 18px 17px 52px;font-family:var(--body);font-size:15.5px;font-weight:600;
+  outline:none;transition:border-color .3s,box-shadow .3s;
+}
+.field input::placeholder{color:var(--dim);font-weight:500}
+.field input:focus{border-color:var(--mint);box-shadow:0 0 0 4px rgba(65,255,196,.12)}
+.btn[type=submit]{width:100%}
+.form-sent{display:none;text-align:center;padding:20px 0}
+.form-sent .ok{
+  width:70px;height:70px;border-radius:50%;margin:0 auto 22px;display:grid;place-items:center;
+  background:var(--grad);color:#04120c;animation:pop .6s cubic-bezier(.16,1,.3,1);
+}
+@keyframes pop{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+.form-card.sent form{display:none}
+.form-card.sent .form-sent{display:block}
+.consent{color:var(--dim);font-size:12px;margin-top:18px}
+
+/* ============ ФИНАЛ ============ */
+.final{padding:120px 0;position:relative;text-align:center}
+.final h2{font-size:clamp(26px,5vw,50px);max-width:760px;margin:0 auto}
+.final .lead{color:var(--muted);max-width:560px;margin:22px auto 36px}
+
+/* ============ ФУТЕР ============ */
+.footer{border-top:1px solid var(--border);padding:34px 0;color:var(--dim);font-size:13px}
+.footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.15);transition:color .25s}
+.footer a:hover{color:var(--mint)}
+</style>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+
+<!-- ============ ШАПКА ============ -->
+<header class="header" id="header">
+  <nav class="nav" aria-label="Основная навигация">
+    <a class="logo" href="#top">ИИ‑<em>аналитик</em></a>
+    <ul class="nav-links">
+      <li><a href="#whom">Кому подойдёт</a></li>
+      <li><a href="#program">Программа</a></li>
+      <li><a href="#speaker">Спикер</a></li>
+      <li><a href="#faq">Вопросы</a></li>
+    </ul>
+    <a class="nav-cta" href="#reg">Забронировать место</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- ============ 1. ПЕРВЫЙ ЭКРАН ============ -->
+<section class="hero">
+  <div class="hero-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="wrap hero-inner">
+    <span class="badge reveal"><span class="dot"></span>ОНЛАЙН • БЕСПЛАТНО</span>
+
+    <h1 class="reveal" style="--d:.05s">Хватит бояться, что нейросети займут твоё место.<br><span class="grad-text">Стань тем, кто их внедряет.</span></h1>
+
+    <p class="lead reveal" style="--d:.1s">Бесплатный вебинар: как за 3 месяца освоить профессию <strong>ИИ‑аналитика</strong> и выйти на <strong>доход от 200&nbsp;000&nbsp;₽</strong>, если ты не программист, но умеешь мыслить системами.</p>
+
+    <div class="hero-meta reveal" style="--d:.15s">
+      <div class="date-chip">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        25 сентября 2026, 19:00 МСК
+      </div>
+      <div class="chips">
+        <span class="chip">90 <b>минут</b></span>
+        <span class="chip">Разбор <b>ваших задач</b></span>
+        <span class="chip">Без <b>записи</b></span>
+      </div>
+    </div>
+
+    <div class="timer reveal" style="--d:.2s">
+      <div class="timer-label">До начала эфира осталось:</div>
+      <div class="timer-cols" id="timer">
+        <div class="t-cell"><div class="t-num" id="td">00</div><div class="t-lbl" id="tdl">дней</div></div>
+        <div class="t-sep">:</div>
+        <div class="t-cell"><div class="t-num" id="th">00</div><div class="t-lbl" id="thl">часов</div></div>
+        <div class="t-sep">:</div>
+        <div class="t-cell"><div class="t-num" id="tm">00</div><div class="t-lbl" id="tml">минут</div></div>
+        <div class="t-sep">:</div>
+        <div class="t-cell"><div class="t-num" id="ts">00</div><div class="t-lbl" id="tsl">секунд</div></div>
+      </div>
+    </div>
+
+    <div class="reveal" style="--d:.25s">
+      <a class="btn big" href="#reg">Забронировать место на эфире
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <div class="micro">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6L22 7"/></svg>
+        Пришлем ссылку на вход и чек‑лист «10 задач бизнеса, которые ИИ‑аналитик решает за 1 день» на почту в течение 2 минут.
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
+  </div>
+</section>
+
+<!-- ============ 2. КОМУ ПОДОЙДЁТ ============ -->
+<section class="section" id="whom">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="overline">Кому подойдёт</span>
+      <h2 class="sec-title">Этот вебинар для тебя, если ты <span class="grad-text">узнал себя</span> в одной из этих ситуаций</h2>
+    </div>
+    <div class="grid g3" style="margin-top:44px">
+      <article class="card reveal">
+        <div class="icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15l4-4 3 3 5-6"/><path d="M14 8h4v4"/><text x="3.5" y="13.5" font-size="9" font-weight="700" fill="currentColor" stroke="none">$</text></svg>
+        </div>
+        <h3>Упёрся в финансовый потолок</h3>
+        <p>Ты тратишь 4 часа на сведение таблиц и отчетов, а начальник говорит, что нейросети делают это за секунды. Зарплата не росла два года. Ты боишься попасть под сокращение, но не понимаешь, кем работать дальше, если всю рутину заберет ИИ.</p>
+      </article>
+      <article class="card reveal" style="--d:.08s">
+        <div class="icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 4.4c-1.7-.3-3 .9-2.8 2.4-1.4.2-2.1 2-1.1 3.1-1.3.2-1.9 1.7-1.2 2.7.1.9.9 1.5 1.8 1.6.4 1.4 1.8 2.3 3.1 1.7.6 1 2 1.3 2.8.5"/><path d="M14.5 4.4c1.7-.3 3 .9 2.8 2.4 1.4.2 2.1 2 1.1 3.1 1.3.2 1.9 1.7 1.2 2.7-.1.9-.9 1.5-1.8 1.6-.4 1.4-1.8 2.3-3.1 1.7-.6 1-2 1.3-2.8.5"/><path d="M12 5.6V18"/><text x="18" y="21" font-size="9" font-weight="800" fill="currentColor" stroke="none">?</text></svg>
+        </div>
+        <h3>Знаешь промпты, но не видишь, как заработать</h3>
+        <p>Ты научился писать крутые промпты и генерировать код. Но на бирже за тексты платят 500 рублей, а на вакансии «AI‑менеджер» требуют знать Python. Ты не видишь, как превратить игру с чат‑ботом в профессию с высоким чеком.</p>
+      </article>
+      <article class="card reveal" style="--d:.16s">
+        <div class="icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9.5" cy="7" r="3.4"/><path d="M3.5 20c1.2-3.2 3.6-5 6-5s4.8 1.8 6 5"/><path d="M19 2l2.5 4.5L19 9"/><path d="M21 6.5h-5"/></svg>
+        </div>
+        <h3>Хочешь сменить профессию, но кажется, что поздно</h3>
+        <p>Тебе 30+, ты работаешь в логистике, финансах или маркетинге. Понимаешь, что ИИ изменит твою отрасль, но ты гуманитарий. Кажется, что ниша уже поделена между IT‑гениями, и тебе туда просто не пустят.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. ПРОГРАММА ============ -->
+<section class="section" id="program" style="background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="overline">Программа вебинара</span>
+      <h2 class="sec-title">Что ты получишь за <span class="grad-text">90 минут</span> эфира</h2>
+    </div>
+    <div class="grid g4" style="margin-top:44px">
+      <article class="card reveal">
+        <div class="prog-num">01</div>
+        <div class="icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l5-5 3 3 8-9"/><path d="M13 6h7v7"/></svg>
+        </div>
+        <h3>Сменишь роль — с исполнителя на архитектора</h3>
+        <p>Разберем 3 реальных кейса, как бывшие маркетологи и аналитики за 90 дней переквалифицировались в ИИ‑аналитиков. Узнаешь, какие бизнес‑процессы компании готовы автоматизировать уже завтра, и как продать им эту услугу (или устроиться в штат на оклад 180–250 тыс. ₽).</p>
+      </article>
+      <article class="card reveal" style="--d:.08s">
+        <div class="prog-num">02</div>
+        <div class="icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/><circle cx="12" cy="12" r="8" stroke-dasharray="3.2 2.4"/><circle cx="18.5" cy="5.5" r="3"/><circle cx="18.5" cy="5.5" r="1.2"/></svg>
+        </div>
+        <h3>Перейдешь от «промптов» к «конвейерам»</h3>
+        <p>Покажем разницу между разовым запросом к GPT и построением связки «Парсинг данных → LLM → Интеграция в CRM через API». Получишь шаблон архитектуры ИИ‑отдела для e‑commerce, который сможешь собрать за неделю и продать бизнесу за 300 000 ₽.</p>
+      </article>
+      <article class="card reveal" style="--d:.16s">
+        <div class="prog-num">03</div>
+        <div class="icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l-4 5 4 5"/><path d="M17 7l4 5-4 5"/><path d="M3.6 13.2h16.8"/></svg>
+        </div>
+        <h3>Освоишь стек без сложного кода</h3>
+        <p>ИИ‑аналитик — это не про писать нейросети с нуля. Это про уметь ставить ТЗ для разработчиков и связывать готовые сервисы. Разберем 5 инструментов (Make, n8n, API нейросетей), которые нужно освоить в первую очередь, чтобы взять первого клиента еще во время обучения.</p>
+      </article>
+      <article class="card reveal" style="--d:.24s">
+        <div class="prog-num">04</div>
+        <div class="icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="2.2"/><circle cx="18" cy="5" r="2.2"/><path d="M8 19h3.5a4 4 0 0 0 0-8H9a4 4 0 0 1 0-8H16"/></svg>
+        </div>
+        <h3>Получишь дорожную карту на 3 месяца</h3>
+        <p>Покажем пошаговый план: какие навыки учить в каком порядке, где брать первых клиентов, как формировать портфолио, если его нет. Ты уйдешь с вебинара с четким пониманием, что делать завтра, через неделю и через месяц.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. СПИКЕР ============ -->
+<section class="section" id="speaker">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="overline">Спикер</span>
+      <h2 class="sec-title">Кто <span class="grad-text">ведет вебинар</span></h2>
+    </div>
+    <div class="speaker-grid" style="margin-top:48px">
+      <div class="photo-frame reveal">
+        <!-- ============ ФОТО СПИКЕРА ============ -->
+        <!-- Чтобы поставить своё фото, замените src у <img class="speaker-photo"> на путь/ссылку вашего файла.
+             Пока изображение грузится (или если его нет) показывается запасная плашка. -->
+        <div class="photo-wrap">
+          <img class="speaker-photo"
+               src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=900&h=1125&fit=crop&crop=faces&q=80&auto=format"
+               alt="Алексей Петров — спикер вебинара"
+               loading="lazy"
+               onerror="this.style.display='none'">
+          <svg class="photo-fallback" width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="rgba(238,240,255,.5)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity=".85" aria-hidden="true">
+            <circle cx="12" cy="8" r="4.4"/>
+            <path d="M4.5 20.5c1.4-4.2 4-6.5 7.5-6.5s6.1 2.3 7.5 6.5"/>
+          </svg>
+        </div>
+      </div>
+      <div class="reveal" style="--d:.1s">
+        <h3 class="speaker-name">Алексей Петров</h3>
+        <div class="speaker-role">Специалист по ИИ‑автоматизации бизнеса</div>
+        <ul class="fact-list">
+          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>7 лет в автоматизации бизнес‑процессов</li>
+          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Внедрил ИИ‑решения в <b>40+ компаниях</b> (e‑commerce, финтех, логистика)</li>
+          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Бывший руководитель отдела аналитики в <b>[название компании]</b></li>
+          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Построил ИИ‑конвейеры, которые сэкономили клиентам <b>120 млн ₽ за 2025 год</b></li>
+        </ul>
+        <div class="stats">
+          <div class="stat"><div class="stat-num">23 ученика</div><div class="stat-txt">уже работают ИИ‑аналитиками с доходом от 150 000 ₽/мес</div></div>
+          <div class="stat"><div class="stat-num">280 000 ₽</div><div class="stat-txt">средний чек выпускников на фрилансе в месяц</div></div>
+          <div class="stat"><div class="stat-num">92%</div><div class="stat-txt">студентов нашли работу или первого клиента в течение 60 дней после курса</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. ВОПРОС-ОТВЕТ ============ -->
+<section class="section" id="faq" style="background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center">
+      <span class="overline" style="justify-content:center">Вопрос-ответ</span>
+      <h2 class="sec-title">Частые сомнения и <span class="grad-text">ответы на них</span></h2>
+    </div>
+    <div class="faq" style="margin-top:44px">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">«Я не программист, у меня гуманитарное образование. Мне точно не подойдет?»
+          <span class="faq-i"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-in">ИИ‑аналитик — это не про код. Это про логику и умение видеть системные связи. 68% наших студентов — бывшие маркетологи, аналитики, проект‑менеджеры без технического бэкграунда. Мы учим работать с готовыми инструментами через интерфейсы, а не писать нейросети с нуля. Если ты умеешь ставить ТЗ и понимать бизнес‑процессы — ты справишься.</div></div>
+      </div>
+      <div class="faq-item reveal" style="--d:.08s">
+        <button class="faq-q" aria-expanded="false">«Сколько времени нужно, чтобы начать зарабатывать?»
+          <span class="faq-i"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-in">Первого клиента можно взять через 6–8 недель обучения, если уделять занятиям 10–12 часов в неделю. Это не «стань миллионером за месяц». Это реальный срок, чтобы освоить стек инструментов, собрать 2–3 кейса на учебных проектах и начать откликаться на вакансии или брать заказы на фрилансе. Средний доход на старте: 80–120 тыс. ₽/мес.</div></div>
+      </div>
+      <div class="faq-item reveal" style="--d:.16s">
+        <button class="faq-q" aria-expanded="false">«А если ИИ‑профессии — это просто хайп, и через год всё умрет?»
+          <span class="faq-i"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-in">Спрос на специалистов по внедрению ИИ вырос в 4,2 раза за 2025 год (данные HeadHunter). Компании не сокращают бюджеты на автоматизацию — они увеличивают их. Проблема не в том, что ИИ умрет, а в том, что специалистов катастрофически не хватает. Через год рынок станет более зрелым, но порог входа вырастет. Сейчас окно возможностей открыто.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. БОНУС ============ -->
+<section class="section" id="bonus">
+  <div class="wrap">
+    <div class="bonus reveal">
+      <div class="gift-ico">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="11" rx="2.5"/><path d="M4 12h16M12 9v11"/><path d="M12 9c-3.6 0-5.6-1.4-5.6-3.2C6.4 3.7 8.2 2.3 10 3c1.1.4 1.6 1.2 2 2.2.4-1 1-1.8 2-2.2 1.8-.7 3.6.7 3.6 2.8C17.6 7.6 15.6 9 12 9Z"/></svg>
+      </div>
+      <span class="overline" style="justify-content:center;color:var(--amber)">Бонус</span>
+      <h2 class="sec-title">Подарок за то, что досмотришь до конца</h2>
+      <p class="sec-sub">Если ты останешься на вебинаре до конца <b style="color:var(--text)">и задашь хотя бы один вопрос в чате</b>, получишь:</p>
+      <ul class="bonus-list">
+        <li class="reveal"><span class="b-num">01</span><div><b>Закрытый доступ к Telegram‑чату</b><p>150+ актуальных вакансий ИИ‑аналитиков от наших компаний‑партнеров. Обновляется каждую неделю.</p></div></li>
+        <li class="reveal" style="--d:.08s"><span class="b-num">02</span><div><b>Готовый шаблон договора на ИИ‑аудит бизнеса</b><p>Стоит 15 000 ₽ у юристов. Сможешь использовать для первых клиентов.</p></div></li>
+        <li class="reveal" style="--d:.16s"><span class="b-num">03</span><div><b>Персональный разбор твоей задачи от спикера</b><p>В течение 7 дней после вебинара — для первых 30 зарегистрировавшихся.</p></div></li>
+      </ul>
+      <div class="bonus-note">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.2 8.5-7 10-3.8-1.5-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+        Важно: бонусы доступны только тем, кто зарегистрировался и присутствовал на эфире. В записи бонусы не выдаются.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. ФОРМА РЕГИСТРАЦИИ ============ -->
+<section class="section" id="reg" style="background:var(--bg-2);border-top:1px solid var(--border)">
+  <div class="wrap">
+    <div class="form-card reveal" id="formCard">
+      <span class="overline" style="justify-content:center">Регистрация</span>
+      <h2 class="sec-title" style="font-size:clamp(22px,3.4vw,34px)">Забронируй место <span class="grad-text">на вебинаре</span></h2>
+      <p class="sec-sub" style="margin:14px auto 32px;text-align:center;font-size:15px">Оставь контакты, и мы пришлем ссылку на вход + чек‑лист «10 задач бизнеса, которые ИИ‑аналитик решает за 1 день»</p>
+      <form id="regForm" novalidate>
+        <div class="field">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-3.6 4.5-5.5 8-5.5s6.5 1.9 8 5.5"/></svg>
+          <input type="text" name="name" placeholder="Имя" required aria-label="Имя" autocomplete="name">
+        </div>
+        <div class="field">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+          <input type="tel" name="phone" placeholder="Телефон" required aria-label="Телефон" autocomplete="tel" inputmode="tel" pattern="\+?[0-9\s\(\)\-]{10,}" title="Введите номер телефона">
+        </div>
+        <div class="field">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6L22 7"/></svg>
+          <input type="email" name="email" placeholder="Email" required aria-label="Email" autocomplete="email" inputmode="email">
+        </div>
+        <button class="btn" type="submit">Забронировать место на эфире
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <div class="micro" style="justify-content:center;max-width:none;text-align:left">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6L22 7"/></svg>
+          Пришлем ссылку на вход и чек‑лист «10 задач бизнеса, которые ИИ‑аналитик решает за 1 день» на почту в течение 2 минут.
+        </div>
+        <div class="consent">Нажимая кнопку, ты соглашаешься с политикой конфиденциальности и обработкой персональных данных.</div>
+      </form>
+      <div class="form-sent">
+        <div class="ok"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3 style="font-size:22px">Место забронировано!</h3>
+        <p class="sec-sub" style="margin:12px auto 0;text-align:center;font-size:15px">Ссылка на вход и чек‑лист уже летят на твою почту. Проверь папку «Входящие» или «Промоакции» — письмо придет в течение 2 минут.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. ФИНАЛ ============ -->
+<section class="final" id="final">
+  <div class="wrap">
+    <h2 class="reveal">Не откладывай на завтра то, что может изменить твою карьеру <span class="grad-text">сегодня</span></h2>
+    <p class="lead reveal" style="--d:.08s">Эфир пройдет <b style="color:var(--text)">25 сентября в 19:00 МСК</b>. Записи не будет — мы разбираем задачи участников в реальном времени.</p>
+    <div class="reveal" style="--d:.14s">
+      <a class="btn big" href="#reg">Забронировать место на эфире
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <div class="micro" style="justify-content:center">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6L22 7"/></svg>
+        Пришлем ссылку на вход и чек‑лист «10 задач бизнеса, которые ИИ‑аналитик решает за 1 день» на почту в течение 2 минут.
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ ПЛАВАЮЩАЯ КНОПКА ============ -->
+<button class="float-cta" id="floatCta" onclick="document.getElementById('reg').scrollIntoView({behavior:'smooth'})">
+  <span>Забронировать место</span>
+  <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+</button>
+
+<!-- ============ ФУТЕР ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <span>© 2026 Вебинар «ИИ‑аналитик за 3 месяца»</span>
+    <a href="#" onclick="return false">Политика конфиденциальности</a>
+  </div>
+</footer>
+
+<script>
+/* ============ ТАЙМЕР ОБРАТНОГО ОТСЧЁТА ============ */
+var END = new Date('2026-09-25T19:00:00+03:00').getTime();
+function plural(n, one, few, many){
+  n = Math.abs(n) % 100; var n1 = n % 10;
+  if (n > 10 && n < 20) return many;
+  if (n1 > 1 && n1 < 5) return few;
+  if (n1 === 1) return one;
+  return many;
+}
+function pad(n){ return String(n).padStart(2, '0'); }
+function tick(){
+  var d = Math.max(0, END - Date.now());
+  var days = Math.floor(d / 864e5);
+  var hours = Math.floor(d / 36e5) % 24;
+  var mins = Math.floor(d / 6e4) % 60;
+  var secs = Math.floor(d / 1e3) % 60;
+  document.getElementById('td').textContent = pad(days);
+  document.getElementById('th').textContent = pad(hours);
+  document.getElementById('tm').textContent = pad(mins);
+  document.getElementById('ts').textContent = pad(secs);
+  document.getElementById('tdl').textContent = plural(days, 'день', 'дня', 'дней');
+  document.getElementById('thl').textContent = plural(hours, 'час', 'часа', 'часов');
+  document.getElementById('tml').textContent = plural(mins, 'минута', 'минуты', 'минут');
+  document.getElementById('tsl').textContent = plural(secs, 'секунда', 'секунды', 'секунд');
+}
+tick();
+setInterval(tick, 1000);
+
+/* ============ ШАПКА: ТЕНЬ ПРИ СКРОЛЛЕ ============ */
+var header = document.getElementById('header');
+window.addEventListener('scroll', function(){
+  header.classList.toggle('scrolled', window.scrollY > 10);
+}, {passive:true});
+
+/* ============ ПЛАВНОЕ ПОЯВЛЕНИЕ БЛОКОВ ============ */
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+/* ============ ПЛАВАЮЩАЯ КНОПКА ============ */
+var floatCta = document.getElementById('floatCta');
+var regVisible = false, finalVisible = false;
+function toggleFloat(){
+  floatCta.classList.toggle('show', window.scrollY > 560 && !regVisible && !finalVisible);
+}
+window.addEventListener('scroll', toggleFloat, {passive:true});
+var fio = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if (e.target.id === 'reg') regVisible = e.isIntersecting && e.intersectionRatio > .2;
+    if (e.target.id === 'final') finalVisible = e.isIntersecting && e.intersectionRatio > .3;
+    toggleFloat();
+  });
+}, {threshold:[.2,.3]});
+fio.observe(document.getElementById('reg'));
+fio.observe(document.getElementById('final'));
+
+/* ============ FAQ-АККОРДЕОН ============ */
+document.querySelectorAll('.faq-item').forEach(function(item){
+  var btn = item.querySelector('.faq-q');
+  var panel = item.querySelector('.faq-a');
+  btn.addEventListener('click', function(){
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(o){
+      o.classList.remove('open');
+      o.querySelector('.faq-a').style.maxHeight = null;
+      o.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen){
+      item.classList.add('open');
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+/* ============ ФОРМА РЕГИСТРАЦИИ (ОТПРАВКА ЗАЯВОК НА ПОЧТУ, WEB3FORMS) ============ */
+/* === НАСТРОЙКА (один раз, ~3 минуты): ===
+   1) Зайдите на https://web3forms.com и нажмите «Create your Form».
+   2) Укажите свою почту (придёт письмо с подтверждением почты) и получите access key.
+   3) Скопируйте ключ и вставьте его между кавычек в переменной WEB3FORMS_KEY ниже.
+   Бесплатный тариф: до 250 заявок в месяц. Ключ безопасно держать на клиенте.
+   Заявки приходят на вашу почту. Позже при желании легко добавить дублирование
+   в Google Таблицы. */
+
+var WEB3FORMS_KEY = "3d50cf75-d662-4382-92ac-11ad30cbbfff";
+
+document.getElementById('regForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var form = this;
+  if (!form.checkValidity()){ form.reportValidity(); return; }
+  var btn = form.querySelector('[type=submit]');
+  var base = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = 'Отправляем…';
+
+  var payload = {
+    access_key: WEB3FORMS_KEY,
+    subject: 'Новая заявка: вебинар ИИ-аналитик',
+    from_name: 'Лендинг ИИ-аналитик',
+    name: form.elements.name.value.trim(),
+    phone: form.elements.phone.value.trim(),
+    email: form.elements.email.value.trim(),
+    source: 'вебинар-лендинг'
+  };
+
+  var finish = function(){
+    document.getElementById('formCard').classList.add('sent');
+  };
+  var fail = function(msg){
+    btn.disabled = false;
+    btn.innerHTML = base;
+    alert(msg);
+  };
+
+  if (!WEB3FORMS_KEY){
+    console.warn('WEB3FORMS_KEY пуст. Заявка НЕ отправлена — заполните его по инструкции выше.');
+    finish();
+    return;
+  }
+
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  .then(function(r){ return r.json(); })
+  .then(function(res){
+    if (res.success){
+      finish();
+    } else {
+      fail('Не удалось отправить заявку: ' + (res.message || 'сервис не отвечает'));
+    }
+  })
+  .catch(function(){
+    fail('Не получилось отправить заявку. Проверь интернет и попробуй ещё раз.');
+  });
+});
+</script>
+</body>
+</html>
