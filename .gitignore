@@ -1,2 +1,7 @@
 # Local Netlify folder
 .netlify
+
+# Test / debug artifacts
+Fitness Landing/.playwright-mcp/
+Fitness Landing/*.png
+Fitness Landing/v2/

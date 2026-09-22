@@ -24,11 +24,11 @@
         <a href="#approach" class="nav__link">Подход</a>
         <a href="#program" class="nav__link">Программа</a>
         <a href="#filter" class="nav__link">Кому подходит</a>
-        <a href="#cases" class="nav__link">Кейсы</a>
+        <a href="#cases" class="nav__link">Результаты</a>
         <a href="#team" class="nav__link">Команда</a>
         <a href="#faq" class="nav__link">FAQ</a>
       </nav>
-      <a href="#offer" class="btn btn--sm header__cta">Получить план</a>
+      <a href="#offer" class="btn btn--sm header__cta" data-open-signup>Получить план</a>
       <button class="burger" id="burger" aria-label="Меню">
         <span></span><span></span><span></span>
       </button>
@@ -54,7 +54,7 @@
           Без срывов и возврата килограммов.
         </p>
         <div class="hero__cta reveal">
-          <a href="#offer" class="btn btn--primary btn--lg">Получить план бесплатно</a>
+          <a href="#offer" class="btn btn--primary btn--lg" data-open-signup>Получить план бесплатно</a>
           <span class="microtext">Занимает 2 минуты. Без обязательств и звонков-спамеров.</span>
         </div>
         <ul class="hero__points reveal">
@@ -65,6 +65,13 @@
       </div>
 
       <div class="hero__visual reveal">
+        <div class="hero-photo">
+          <img src="images/hero.jpg" alt="Уютная студия «Спорт-ленд» — тренер после тренировки" fetchpriority="high" width="1400" height="933">
+          <div class="hero-card hero-card--float">
+            <span class="pulse"></span>
+            Результат уже на <strong>2-й неделе</strong>
+          </div>
+        </div>
         <div class="hero-card hero-card--main">
           <div class="hero-card__glow"></div>
           <div class="stat">
@@ -86,10 +93,6 @@
               <span>человек<br>в группе</span>
             </div>
           </div>
-        </div>
-        <div class="hero-card hero-card--float">
-          <span class="pulse"></span>
-          Результат уже на <strong>2-й неделе</strong>
         </div>
       </div>
     </div>
@@ -193,7 +196,10 @@
 
       <div class="steps">
         <article class="step reveal">
-          <div class="step__num">01</div>
+          <div class="step__media">
+            <img src="images/step-nutrition.jpg" alt="Умное питание: полезная еда за семейным столом" loading="lazy" decoding="async" width="900" height="1350">
+            <span class="step__num">01</span>
+          </div>
           <div class="step__body">
             <h3>Умное питание</h3>
             <p>Мы не даём жёсткое меню «ешьте только это». Мы рассчитываем ваш персональный коридор калорий и БЖУ,
@@ -201,7 +207,10 @@
           </div>
         </article>
         <article class="step reveal">
-          <div class="step__num">02</div>
+          <div class="step__media">
+            <img src="images/step-training.jpg" alt="Адаптивные тренировки: лёгкие упражнения с гантелями" loading="lazy" decoding="async" width="900" height="1350">
+            <span class="step__num">02</span>
+          </div>
           <div class="step__body">
             <h3>Адаптивные тренировки</h3>
             <p>Забудьте про «качалочный» сленг и штанги, которые больше вашего веса. Тренер подбирает программу
@@ -209,7 +218,10 @@
           </div>
         </article>
         <article class="step reveal">
-          <div class="step__num">03</div>
+          <div class="step__media">
+            <img src="images/step-support.jpg" alt="Поддержка 24/7: куратор на связи в чате" loading="lazy" decoding="async" width="900" height="506">
+            <span class="step__num">03</span>
+          </div>
           <div class="step__body">
             <h3>Поддержка 24/7</h3>
             <p>Ваш куратор в чате. Задали вопрос по продукту в магазине? Скинули фото тарелки? Не хочется идти
@@ -281,7 +293,7 @@
           </div>
 
           <div class="offer__cta">
-            <a href="#final" class="btn btn--light btn--lg">Получить план бесплатно</a>
+            <a href="#final" class="btn btn--light btn--lg" data-open-signup>Получить план бесплатно</a>
             <span class="microtext microtext--light">Занимает 2 минуты. Без обязательств.</span>
           </div>
         </div>
@@ -299,7 +311,9 @@
 
       <div class="cases">
         <article class="case reveal">
-          <div class="case__photo case__photo--1"><span>А</span></div>
+          <div class="case__photo case__photo--anna">
+            <img src="images/case-anna.jpg" alt="Анна, клиентка «Спорт-ленд»" loading="lazy" decoding="async" width="700" height="1050">
+          </div>
           <div class="case__body">
             <div class="case__meta">
               <strong>Анна, 34 года</strong>
@@ -316,7 +330,9 @@
         </article>
 
         <article class="case reveal">
-          <div class="case__photo case__photo--2"><span>Е</span></div>
+          <div class="case__photo case__photo--elena">
+            <img src="images/case-elena.jpg" alt="Елена, клиентка «Спорт-ленд»" loading="lazy" decoding="async" width="700" height="467">
+          </div>
           <div class="case__body">
             <div class="case__meta">
               <strong>Елена, 42 года</strong>
@@ -345,21 +361,27 @@
 
       <div class="cards cards--3">
         <article class="card card--person reveal">
-          <div class="avatar avatar--1">М</div>
+          <div class="person__photo">
+            <img src="images/team-mikhail.jpg" alt="Михаил, старший тренер" loading="lazy" decoding="async" width="900" height="506">
+          </div>
           <h3>Михаил</h3>
           <span class="role">Старший тренер</span>
           <p>Мастер спорта, 10 лет практики. Специализация — тренировки для новичков и людей с ограничениями
             по здоровью. Не делает из клиентов «бицепсы», делает здоровые суставы и сильное сердце.</p>
         </article>
         <article class="card card--person reveal">
-          <div class="avatar avatar--2">О</div>
+          <div class="person__photo">
+            <img src="images/team-olga.jpg" alt="Ольга, нутрициолог" loading="lazy" decoding="async" width="900" height="600">
+          </div>
           <h3>Ольга</h3>
           <span class="role">Нутрициолог</span>
           <p>Дипломированный специалист по клиническому питанию. Разрабатывает рационы не по учебникам 90-х,
             а с опорой на современные научные данные и ваши гастрономические предпочтения.</p>
         </article>
         <article class="card card--person reveal">
-          <div class="avatar avatar--3">К</div>
+          <div class="person__photo">
+            <img src="images/team-curator.jpg" alt="Команда кураторов «Спорт-ленд»" loading="lazy" decoding="async" width="900" height="1350">
+          </div>
           <h3>Кураторы</h3>
           <span class="role">Команда поддержки</span>
           <p>Люди, которые сами прошли этот путь. Они на связи в мессенджерах, поддерживают, мотивируют
@@ -415,7 +437,7 @@
       <h2>Хватит откладывать жизнь на «когда похудею». <span class="grad-text">Живите полноценно уже сегодня.</span></h2>
       <p class="lead">Сделайте первый шаг. Это бесплатно и ни к чему вас не обязывает. Напоминаем: набор в
         сентябрьскую группу закрывается 30 сентября, осталось 7 мест.</p>
-      <a href="#" class="btn btn--primary btn--xl">Получить план бесплатно</a>
+      <a href="#" class="btn btn--primary btn--xl" data-open-signup>Получить план бесплатно</a>
       <span class="microtext">Занимает 2 минуты. Без обязательств.</span>
     </div>
   </section>
@@ -448,7 +470,54 @@
   </footer>
 
   <!-- Floating mobile CTA -->
-  <a href="#offer" class="fab">Получить план бесплатно</a>
+  <a href="#offer" class="fab" data-open-signup>Получить план бесплатно</a>
+
+  <!-- ============ SIGNUP MODAL ============ -->
+  <div class="modal" id="signup-modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="signup-title">
+      <button class="modal__close" type="button" aria-label="Закрыть" data-close-modal>&times;</button>
+      <div class="modal__body">
+        <span class="eyebrow">Бесплатная диагностика</span>
+        <h2 id="signup-title">Получить план</h2>
+        <p class="modal__sub">Оставьте контакты — перезвоним в течение рабочего дня и запишем на консультацию.</p>
+
+        <form class="signup-form" id="signup-form" novalidate>
+          <div class="field">
+            <label for="sf-name">ФИО</label>
+            <input type="text" id="sf-name" name="name" autocomplete="name" placeholder="Иванова Мария Петровна" required minlength="2">
+            <span class="field__error" data-error-for="name"></span>
+          </div>
+          <div class="field">
+            <label for="sf-phone">Телефон</label>
+            <input type="tel" id="sf-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 (999) 123-45-67" required>
+            <span class="field__error" data-error-for="phone"></span>
+          </div>
+          <div class="field">
+            <label for="sf-email">Email</label>
+            <input type="email" id="sf-email" name="email" autocomplete="email" placeholder="name@mail.ru" required>
+            <span class="field__error" data-error-for="email"></span>
+          </div>
+
+          <input type="hidden" name="_subject" value="Новая заявка с лендинга «Спорт-ленд»">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" class="signup-form__honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <button type="submit" class="btn btn--primary btn--lg signup-form__submit">
+            <span class="btn__label">Отправить заявку</span>
+          </button>
+          <p class="microtext">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>.</p>
+        </form>
+
+        <div class="signup-success" id="signup-success" hidden>
+          <div class="signup-success__icon">✓</div>
+          <h3>Заявка отправлена</h3>
+          <p>Мы свяжемся с вами в ближайшее время.</p>
+          <button type="button" class="btn btn--primary" data-close-modal>Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

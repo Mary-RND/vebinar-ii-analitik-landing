@@ -137,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- Smooth anchor scroll (fallback) ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    if (anchor.hasAttribute('data-open-signup')) return;
     anchor.addEventListener('click', e => {
       const id = anchor.getAttribute('href');
       if (id.length > 1) {
@@ -147,5 +148,157 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     });
+  });
+
+  /* ---------- Signup modal ---------- */
+  const FORMSPARK_ENDPOINT = 'https://formsubmit.co/ajax/mar.petrushina@yandex.ru';
+
+  const modal = document.getElementById('signup-modal');
+  const form = document.getElementById('signup-form');
+  const successBox = document.getElementById('signup-success');
+  const submitBtn = form.querySelector('.signup-form__submit');
+  const submitLabel = submitBtn.querySelector('.btn__label');
+  let lastFocus = null;
+
+  const openModal = () => {
+    lastFocus = document.activeElement;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    form.hidden = false;
+    successBox.hidden = true;
+    setTimeout(() => form.querySelector('#sf-name').focus(), 80);
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    if (lastFocus) lastFocus.focus();
+  };
+
+  document.querySelectorAll('[data-open-signup]').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      openModal();
+    });
+  });
+  modal.querySelectorAll('[data-close-modal]').forEach(el => {
+    el.addEventListener('click', closeModal);
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+
+  /* ---------- Validation ---------- */
+  const phoneDigits = v => v.replace(/\D/g, '');
+
+  const validators = {
+    name: v => {
+      const t = v.trim();
+      if (!t) return 'Укажите ФИО';
+      if (t.length < 2) return 'Слишком короткое имя';
+      return '';
+    },
+    phone: v => {
+      const d = phoneDigits(v);
+      if (!d) return 'Укажите телефон';
+      if (d.length < 10) return 'Введите полный номер';
+      return '';
+    },
+    email: v => {
+      const t = v.trim();
+      if (!t) return 'Укажите email';
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(t)) return 'Проверьте адрес почты';
+      return '';
+    }
+  };
+
+  const showError = (name, msg) => {
+    const input = form.elements[name];
+    const err = form.querySelector(`[data-error-for="${name}"]`);
+    if (msg) {
+      input.classList.add('invalid');
+      err.textContent = msg;
+      err.classList.add('show');
+    } else {
+      input.classList.remove('invalid');
+      err.textContent = '';
+      err.classList.remove('show');
+    }
+    return !msg;
+  };
+
+  Object.keys(validators).forEach(name => {
+    const input = form.elements[name];
+    input.addEventListener('blur', () => showError(name, validators[name](input.value)));
+    input.addEventListener('input', () => {
+      if (input.classList.contains('invalid')) {
+        showError(name, validators[name](input.value));
+      }
+    });
+  });
+
+  /* ---------- Phone mask (light) ---------- */
+  const phoneInput = form.elements.phone;
+  phoneInput.addEventListener('input', () => {
+    let d = phoneDigits(phoneInput.value);
+    if (d.startsWith('8')) d = '7' + d.slice(1);
+    if (d && !d.startsWith('7')) d = '7' + d;
+    d = d.slice(0, 11);
+    let out = '';
+    if (d.length > 0) out = '+7';
+    if (d.length > 1) out += ' (' + d.slice(1, 4);
+    if (d.length >= 4) out += ') ' + d.slice(4, 7);
+    if (d.length >= 7) out += '-' + d.slice(7, 9);
+    if (d.length >= 9) out += '-' + d.slice(9, 11);
+    phoneInput.value = out;
+  });
+
+  /* ---------- Submit via FormSubmit ---------- */
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+
+    let ok = true;
+    Object.keys(validators).forEach(name => {
+      if (!showError(name, validators[name](form.elements[name].value))) ok = false;
+    });
+    if (!ok) {
+      form.querySelector('.invalid')?.focus();
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitLabel.textContent = 'Отправляем…';
+
+    const payload = {
+      ФИО: form.elements.name.value.trim(),
+      Телефон: form.elements.phone.value.trim(),
+      Email: form.elements.email.value.trim(),
+      _subject: form.elements._subject.value,
+      _template: 'table',
+      _honey: form.elements._honey.value
+    };
+
+    try {
+      const res = await fetch(FORMSPARK_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+
+      form.hidden = true;
+      successBox.hidden = false;
+      form.reset();
+    } catch (err) {
+      showError('email', 'Не удалось отправить. Попробуйте ещё раз или напишите нам.');
+    } finally {
+      submitBtn.disabled = false;
+      submitLabel.textContent = 'Отправить заявку';
+    }
   });
 });
