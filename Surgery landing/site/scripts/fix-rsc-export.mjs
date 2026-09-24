@@ -1,4 +1,4 @@
-import { readdir, readFile, writeFile } from "node:fs/promises";
+import { readdir, readFile, writeFile, mkdir, copyFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const root = process.argv[2] || "out";
@@ -30,4 +30,20 @@ async function walk(dir) {
 }
 
 await walk(root);
-console.log(`RSC payload aliases created: ${created}`);
+
+// Trailing-slash URLs: GH Pages serves `X/index.html` for `X/`, but export only
+// writes root-level `X.html`. Mirror html/txt into `X/index.*`.
+const entries = await readdir(root, { withFileTypes: true });
+let dirs = 0;
+for (const entry of entries) {
+  if (!entry.isFile()) continue;
+  if (!entry.name.endsWith(".html") && !entry.name.endsWith(".txt")) continue;
+  const ext = entry.name.endsWith(".html") ? "html" : "txt";
+  const route = entry.name.replace(/\.(html|txt)$/, "");
+  if (route === "index" || route === "404") continue;
+  if (!entries.some((e) => e.isDirectory() && e.name === route)) continue;
+  await copyFile(join(root, entry.name), join(root, route, `index.${ext}`));
+  dirs++;
+}
+
+console.log(`RSC payload aliases created: ${created}, route index mirrors: ${dirs}`);
