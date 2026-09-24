@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { HeroScene, type HeroDriver } from "./HeroScene";
 import { useIsMobile, useWebGL } from "@/hooks/useWebGL";
+import { EcgDivider } from "@/components/Medic";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -159,9 +160,10 @@ export function HeroSection() {
           className="pointer-events-none absolute inset-x-0 top-[13%] flex flex-col items-center px-6 text-center sm:top-[15%] sm:px-10"
         >
           <p className="eyebrow text-terracotta/90 mix-blend-screen">
-            пластическая хирургия лица и тела
+            роль — проводник
           </p>
-          <h1 className="mt-6 max-w-3xl font-display text-3xl font-medium leading-tight text-ivory sm:text-5xl md:text-[3.4rem]">
+          <EcgDivider className="mt-4 text-terracotta/70" />
+          <h1 className="mt-5 max-w-3xl font-display text-3xl font-medium leading-tight text-ivory sm:text-5xl md:text-[3.4rem]">
             Тело — это не проект.
             <br />
             <span className="italic text-ivory/75">
@@ -175,7 +177,7 @@ export function HeroSection() {
           <div className="pointer-events-auto mt-10">
             <a
               href="#forma"
-              className="inline-flex items-center gap-2 rounded-full border border-ivory/50 px-7 py-3.5 text-[0.95rem] font-semibold text-ivory transition-all duration-300 hover:border-ivory hover:bg-ivory/10"
+              className="animate-pulse-glove inline-flex items-center gap-2 rounded-full border border-ivory/50 px-7 py-3.5 text-[0.95rem] font-semibold text-ivory transition-all duration-300 hover:border-ivory hover:bg-ivory/10"
             >
               Начать разговор
               <svg

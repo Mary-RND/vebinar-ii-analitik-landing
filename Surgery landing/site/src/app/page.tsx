@@ -7,6 +7,8 @@ import { PostpartumPreview } from "@/components/PostpartumPreview";
 import { AboutSurgeon } from "@/components/AboutSurgeon";
 import { HowItWorks } from "@/components/HowItWorks";
 import { ContactForm } from "@/components/ContactForm";
+import { FAQ } from "@/components/FAQ";
+import { MarqueeStrip } from "@/components/MarqueeStrip";
 import { Reveal } from "@/components/Reveal";
 
 export default function Home() {
@@ -15,11 +17,13 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <HeroSection />
+        <MarqueeStrip />
         <Philosophy />
         <BodyMaps />
         <PostpartumPreview />
         <AboutSurgeon />
         <HowItWorks />
+        <FAQ />
 
         <section id="forma" className="bg-white">
           <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
@@ -44,21 +48,6 @@ export default function Home() {
                 <ContactForm />
               </Reveal>
             </div>
-          </div>
-        </section>
-
-        <section className="bg-sand/30">
-          <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8">
-            <Reveal className="rounded-2xl bg-white p-8 ring-1 ring-ink/5 sm:p-10">
-              <h3 className="font-display text-xl font-medium">Ответы на важные вопросы</h3>
-              <p className="mt-2 text-sm text-ink/55">Не нашли ответ? Задайте его напрямую через форму выше.</p>
-              <div className="mt-6 grid gap-4 text-sm leading-relaxed text-ink/70 sm:grid-cols-2">
-                <p>Как проходит реабилитация после маммопластики?</p>
-                <p>Можно ли совместить несколько зон в одну операцию?</p>
-                <p>Чем мужская пластика отличается от женской?</p>
-                <p>Когда можно планировать послеродовое восстановление?</p>
-              </div>
-            </Reveal>
           </div>
         </section>
       </main>
