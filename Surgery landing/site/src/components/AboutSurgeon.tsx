@@ -24,7 +24,7 @@ export function AboutSurgeon() {
           <Reveal>
             <div className="relative overflow-hidden rounded-[24px] bg-sand">
               <Image
-                src="https://images.pexels.com/photos/5996692/pexels-photo-5996692.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://images.pexels.com/photos/6303569/pexels-photo-6303569.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Пластический хирург"
                 width={640}
                 height={800}
