@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { site } from "@/lib/site";
+
+const WEB3FORMS_KEY = "3d50cf75-d662-4382-92ac-11ad30cbbfff";
 
 type Status = "idle" | "sending" | "ok" | "error";
 
@@ -23,10 +26,15 @@ export function ContactForm() {
     setError(null);
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          ...payload,
+          access_key: WEB3FORMS_KEY,
+          subject: "Запрос с сайта пластического хирурга",
+          from_name: "Сайт пластического хирурга",
+        }),
       });
       if (!res.ok) throw new Error();
       setStatus("ok");
@@ -141,9 +149,9 @@ export function ContactForm() {
 
       <p className="text-xs leading-relaxed text-ink/40">
         Нажимая кнопку, вы соглашаетесь с{" "}
-        <a href="/policy" className="underline decoration-ink/20 underline-offset-4 hover:decoration-ink/40">
+        <Link href="/policy" className="underline decoration-ink/20 underline-offset-4 hover:decoration-ink/40">
           политикой конфиденциальности
-        </a>
+        </Link>
         . Ваши данные в безопасности и используются только для связи с вами.
       </p>
 

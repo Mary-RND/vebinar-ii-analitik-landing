@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, type CSSProperties } from "react";
+import Link from "next/link";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -242,7 +243,7 @@ export function HeroSection() {
           className="pointer-events-none absolute inset-0 flex items-center justify-between px-8 opacity-0 sm:px-14 md:px-20"
           style={{ transform: "translateY(10px)" }}
         >
-          <a
+          <Link
             href="/#napravleniya"
             className="pointer-events-auto group flex flex-col items-start gap-3 text-ivory"
           >
@@ -253,8 +254,8 @@ export function HeroSection() {
             <span className="text-sm text-ivory/60 transition-colors group-hover:text-ivory">
               Грудь · Живот · Бёдра · Ягодицы · Руки · Лицо
             </span>
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#napravleniya"
             className="pointer-events-auto group flex flex-col items-end gap-3 text-right text-ivory"
           >
@@ -265,7 +266,7 @@ export function HeroSection() {
             <span className="text-sm text-ivory/60 transition-colors group-hover:text-ivory">
               Грудь · Живот · Спина · Лицо · Шея
             </span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
