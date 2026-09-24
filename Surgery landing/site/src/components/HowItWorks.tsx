@@ -18,7 +18,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="pervaya-vstrecha" className="bg-sand/35">
+    <section id="pervaya-vstrecha" className="aurora bg-sand/35">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow text-bronze">Первая встреча</p>
@@ -31,32 +31,34 @@ export function HowItWorks() {
         </Reveal>
         <div className="mx-auto mt-12 grid max-w-5xl gap-6 sm:grid-cols-3">
           {steps.map((s, i) => (
-            <Reveal
-              key={s.title}
-              delay={i * 0.08}
-              className="relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-ink/5"
-            >
-              <div
-                className="pointer-events-none absolute inset-x-0 top-0 h-px"
-                style={{
-                  background:
-                    i === 2
-                      ? "linear-gradient(90deg, transparent, rgba(47,79,63,0.5), transparent)"
-                      : "linear-gradient(90deg, transparent, rgba(184,115,79,0.4), transparent)",
-                }}
-              />
-              <div className="flex items-center justify-between">
-                <span className="animate-pulse-glove flex size-10 items-center justify-center rounded-full border border-bronze/25 text-sm font-semibold text-bronze">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="rounded-full px-3 py-1 text-[0.65rem] font-semibold tracking-wide uppercase"
-                  style={{ color: i === 2 ? "var(--color-emerald)" : "var(--color-terracotta)" }}
-                >
-                  {i === 0 ? "диалог" : i === 1 ? "прогноз" : "решение"}
-                </span>
+            <Reveal key={s.title} delay={i * 0.08}>
+              <div className="lift group relative h-full overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-ink/5">
+                <div
+                  className="pointer-events-none absolute inset-x-0 top-0 h-px"
+                  style={{
+                    background:
+                      i === 2
+                        ? "linear-gradient(90deg, transparent, rgba(47,79,63,0.5), transparent)"
+                        : "linear-gradient(90deg, transparent, rgba(184,115,79,0.4), transparent)",
+                  }}
+                />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-br from-terracotta/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                />
+                <div className="relative flex items-center justify-between">
+                  <span className="animate-pulse-glove flex size-10 items-center justify-center rounded-full border border-bronze/25 text-sm font-semibold text-bronze">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="rounded-full px-3 py-1 text-[0.65rem] font-semibold tracking-wide uppercase"
+                    style={{ color: i === 2 ? "var(--color-emerald)" : "var(--color-terracotta)" }}
+                  >
+                    {i === 0 ? "диалог" : i === 1 ? "прогноз" : "решение"}
+                  </span>
+                </div>
+                <h3 className="relative mt-4 font-display text-xl font-medium">{s.title}</h3>
+                <p className="relative mt-3 text-sm leading-relaxed text-ink/65">{s.text}</p>
               </div>
-              <h3 className="mt-4 font-display text-xl font-medium">{s.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-ink/65">{s.text}</p>
             </Reveal>
           ))}
         </div>

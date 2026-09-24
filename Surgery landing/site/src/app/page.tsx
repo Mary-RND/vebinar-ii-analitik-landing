@@ -25,7 +25,7 @@ export default function Home() {
         <HowItWorks />
         <FAQ />
 
-        <section id="forma" className="bg-white">
+        <section id="forma" className="aurora bg-white">
           <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
             <div className="grid gap-10 lg:grid-cols-[1.05fr_1.4fr]">
               <Reveal>
@@ -33,7 +33,7 @@ export default function Home() {
                 <h2 className="mt-4 font-display text-3xl font-medium leading-tight sm:text-5xl">
                   Первая консультация
                   <br />
-                  <span className="italic text-ink/60">— это знакомство</span>
+                  <span className="text-gold italic">— это знакомство</span>
                 </h2>
                 <p className="mt-4 max-w-md text-sm leading-relaxed text-ink/60">
                   Без обязательств, без давления. Оставьте контакты, и мы свяжемся с вами,

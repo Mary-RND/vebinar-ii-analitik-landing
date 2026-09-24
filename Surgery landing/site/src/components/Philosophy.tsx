@@ -2,7 +2,7 @@ import { Reveal } from "@/components/Reveal";
 
 export function Philosophy() {
   return (
-    <section id="filosofiya" className="bg-marble">
+    <section id="filosofiya" className="aurora bg-marble">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_1.6fr] lg:items-start">
           <Reveal>
@@ -10,7 +10,7 @@ export function Philosophy() {
             <h2 className="mt-4 font-display text-3xl font-medium leading-tight sm:text-5xl">
               Проводник,
               <br />
-              <span className="italic text-ink/60">а&nbsp;не&nbsp;исполнитель</span>
+              <span className="text-gold italic">а&nbsp;не&nbsp;исполнитель</span>
             </h2>
           </Reveal>
           <Reveal delay={0.12} className="max-w-2xl">

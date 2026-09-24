@@ -133,7 +133,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-terracotta px-7 py-4 text-sm font-semibold text-ivory shadow-[0_12px_30px_-14px_rgba(184,115,79,0.7)] transition hover:bg-bronze disabled:opacity-60 sm:w-auto"
+        className="btn-shine inline-flex w-full items-center justify-center gap-2 rounded-full bg-terracotta px-7 py-4 text-sm font-semibold text-ivory shadow-[0_12px_30px_-14px_rgba(184,115,79,0.7)] transition hover:bg-bronze disabled:opacity-60 sm:w-auto"
       >
         {status === "sending" ? "Отправляем..." : "Отправить запрос"}
         <span aria-hidden>→</span>

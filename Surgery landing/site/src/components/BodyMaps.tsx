@@ -27,8 +27,8 @@ function Card({
     <div
       className={
         tone === "dark"
-          ? "relative overflow-hidden rounded-[28px] bg-graphite p-6 text-ivory shadow-[0_20px_60px_-30px_rgba(0,0,0,0.5)] sm:p-8"
-          : "relative overflow-hidden rounded-[28px] bg-white p-6 shadow-[0_20px_60px_-30px_rgba(42,40,37,0.22)] sm:p-8"
+          ? "lift group relative overflow-hidden rounded-[28px] bg-graphite p-6 text-ivory shadow-[0_20px_60px_-30px_rgba(0,0,0,0.5)] sm:p-8"
+          : "lift group relative overflow-hidden rounded-[28px] bg-white p-6 shadow-[0_20px_60px_-30px_rgba(42,40,37,0.22)] sm:p-8"
       }
     >
       <div
@@ -39,6 +39,14 @@ function Card({
               ? "radial-gradient(60% 50% at 20% 8%, rgba(139,111,71,0.16), transparent 70%), radial-gradient(50% 45% at 85% 90%, rgba(47,79,63,0.18), transparent 70%)"
               : "radial-gradient(60% 50% at 85% 12%, rgba(184,115,79,0.1), transparent 70%), radial-gradient(50% 45% at 12% 92%, rgba(139,111,71,0.08), transparent 70%)",
         }}
+      />
+      <div
+        aria-hidden="true"
+        className={
+          tone === "dark"
+            ? "pointer-events-none absolute inset-0 bg-gradient-to-br from-bronze/20 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            : "pointer-events-none absolute inset-0 bg-gradient-to-br from-terracotta/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        }
       />
       <div className="relative">
         <div className="flex items-center gap-3">
@@ -92,7 +100,7 @@ function Card({
           onClick={() => setPicked(null)}
         >
           <div
-            className="w-full max-w-md rounded-2xl bg-white p-8 text-ink shadow-2xl"
+            className="animate-pop w-full max-w-md rounded-2xl bg-white p-8 text-ink shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <p className="eyebrow text-bronze">Вы выбрали направление</p>
@@ -106,7 +114,7 @@ function Card({
             <div className="mt-6 flex flex-wrap gap-3">
               <a
                 href={hrefBase}
-                className="inline-flex items-center gap-2 rounded-full bg-terracotta px-6 py-3 text-sm font-semibold text-ivory transition hover:bg-bronze"
+                className="btn-shine inline-flex items-center gap-2 rounded-full bg-terracotta px-6 py-3 text-sm font-semibold text-ivory transition hover:bg-bronze"
               >
                 Перейти к описанию <span aria-hidden>→</span>
               </a>

@@ -30,7 +30,7 @@ export default function Page() {
     <>
       <Header />
       <main className="flex-1">
-        <section className="aurora-dark bg-graphite pt-28 text-ivory">
+        <section className="aurora-dark relative overflow-hidden bg-graphite pt-28 text-ivory">
           <div className="mx-auto max-w-7xl px-5 pb-16 sm:px-8 sm:pb-20">
             <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_1fr]">
               <Reveal>
@@ -38,7 +38,7 @@ export default function Page() {
                 <h1 className="mt-4 max-w-3xl font-display text-4xl font-medium leading-tight sm:text-6xl">
                   Мужская
                   <br />
-                  <span className="italic text-ivory/60">пластика</span>
+                  <span className="text-gold italic">пластика</span>
                 </h1>
                 <EcgDivider className="mt-5 text-bronze" />
                 <p className="mt-6 max-w-2xl text-[1.02rem] leading-relaxed text-ivory/70">
@@ -48,14 +48,23 @@ export default function Page() {
                 </p>
                 <Link
                   href="#forma-male"
-                  className="animate-pulse-glove mt-8 inline-flex items-center gap-2 rounded-full border border-ivory/30 px-7 py-3.5 text-sm font-semibold text-ivory transition hover:bg-ivory hover:text-graphite"
+                  className="btn-shine animate-pulse-glove mt-8 inline-flex items-center gap-2 rounded-full border border-ivory/30 px-7 py-3.5 text-sm font-semibold text-ivory transition hover:bg-ivory hover:text-graphite"
                 >
                   Задать вопрос о мужской пластике <span aria-hidden>→</span>
                 </Link>
               </Reveal>
 
-              <Reveal delay={0.15}>
-                <div className="relative overflow-hidden rounded-[24px] bg-ivory/5 p-6 ring-1 ring-ivory/10 sm:p-8">
+              <Reveal delay={0.15} className="relative">
+                <div
+                  aria-hidden="true"
+                  className="animate-float-slow pointer-events-none absolute -left-10 -top-10 size-40 rounded-full bg-bronze/30 blur-3xl"
+                />
+                <div
+                  aria-hidden="true"
+                  className="animate-float-slow pointer-events-none absolute -bottom-12 -right-8 size-44 rounded-full bg-emerald/25 blur-3xl"
+                  style={{ animationDelay: "1.8s" }}
+                />
+                <div className="lift relative overflow-hidden rounded-[24px] bg-ivory/5 p-6 ring-1 ring-ivory/10 sm:p-8">
                   <div
                     className="pointer-events-none absolute inset-0"
                     style={{
@@ -104,21 +113,27 @@ export default function Page() {
             </Reveal>
             <div className="mx-auto mt-10 grid max-w-5xl gap-6 sm:grid-cols-2">
               {zones.map((z, i) => (
-                <Reveal key={z.title} delay={i * 0.07} className="relative overflow-hidden rounded-2xl bg-white p-8 ring-1 ring-ink/5">
-                  <div
-                    className="pointer-events-none absolute inset-x-0 top-0 h-px"
-                    style={{
-                      background:
-                        "linear-gradient(90deg, transparent, rgba(139,111,71,0.55), transparent)",
-                    }}
-                  />
-                  <div className="flex items-start gap-4">
-                    <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-bronze/30 text-sm font-semibold text-bronze">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <div>
-                      <h3 className="font-display text-lg font-medium">{z.title}</h3>
-                      <p className="mt-2 text-sm leading-relaxed text-ink/60">{z.d}</p>
+                <Reveal key={z.title} delay={i * 0.07}>
+                  <div className="lift group relative h-full overflow-hidden rounded-2xl bg-white p-8 ring-1 ring-ink/5">
+                    <div
+                      className="pointer-events-none absolute inset-x-0 top-0 h-px"
+                      style={{
+                        background:
+                          "linear-gradient(90deg, transparent, rgba(139,111,71,0.55), transparent)",
+                      }}
+                    />
+                    <div
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-0 bg-gradient-to-br from-bronze/12 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                    />
+                    <div className="relative flex items-start gap-4">
+                      <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-bronze/30 text-sm font-semibold text-bronze">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <div>
+                        <h3 className="font-display text-lg font-medium">{z.title}</h3>
+                        <p className="mt-2 text-sm leading-relaxed text-ink/60">{z.d}</p>
+                      </div>
                     </div>
                   </div>
                 </Reveal>
@@ -132,7 +147,7 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="forma-male" className="bg-graphite text-ivory">
+        <section id="forma-male" className="aurora-dark bg-graphite text-ivory">
           <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
             <div className="grid gap-10 lg:grid-cols-[1.05fr_1.4fr]">
               <Reveal>

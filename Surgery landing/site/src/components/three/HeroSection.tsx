@@ -123,6 +123,21 @@ export function HeroSection() {
         delay: 3.2,
         ease: "power2.out",
       });
+
+      const parts = textRef.current
+        ? Array.from(textRef.current.children)
+        : [];
+      if (parts.length) {
+        gsap.from(parts, {
+          opacity: 0,
+          y: 26,
+          duration: 1.1,
+          stagger: 0.12,
+          delay: 0.3,
+          ease: "power3.out",
+          clearProps: "opacity,transform",
+        });
+      }
     },
     { scope: wrapRef }
   );
@@ -177,7 +192,7 @@ export function HeroSection() {
           <div className="pointer-events-auto mt-10">
             <a
               href="#forma"
-              className="animate-pulse-glove inline-flex items-center gap-2 rounded-full border border-ivory/50 px-7 py-3.5 text-[0.95rem] font-semibold text-ivory transition-all duration-300 hover:border-ivory hover:bg-ivory/10"
+              className="btn-shine animate-pulse-glove inline-flex items-center gap-2 rounded-full border border-ivory/50 px-7 py-3.5 text-[0.95rem] font-semibold text-ivory transition-all duration-300 hover:border-ivory hover:bg-ivory/10"
             >
               Начать разговор
               <svg

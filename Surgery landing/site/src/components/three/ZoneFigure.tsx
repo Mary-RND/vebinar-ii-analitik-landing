@@ -73,7 +73,10 @@ function ZoneRig({
   useFrame((state, delta) => {
     const g = groupRef.current;
     if (g) {
-      g.rotation.y = Math.sin(state.clock.elapsedTime * 0.35) * 0.45;
+      const t = state.clock.elapsedTime;
+      g.rotation.y = Math.sin(t * 0.35) * 0.45;
+      g.rotation.x = THREE.MathUtils.lerp(g.rotation.x, pointer.y * 0.1, 0.05);
+      g.position.y = -0.05 + Math.sin(t * 0.9) * 0.018;
       camera.lookAt(0, 1.08, 0);
 
       raycaster.setFromCamera(pointer, camera);
@@ -153,6 +156,18 @@ export function ZoneFigure({
 
   return (
     <div className={`relative overflow-hidden ${className}`}>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(58% 46% at 50% 80%, rgba(184,115,79,0.20), transparent 72%)",
+        }}
+      />
+      <div
+        aria-hidden="true"
+        className="medical-dots pointer-events-none absolute inset-0 text-ink/10"
+      />
       <Canvas
         camera={{ position: [0, camY, camZ], fov: 26, near: 0.1, far: 20 }}
         gl={{

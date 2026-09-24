@@ -27,7 +27,15 @@ export function MarqueeStrip() {
   );
 
   return (
-    <div className="relative overflow-hidden border-y border-ivory/10 bg-graphite py-5">
+    <div
+      className="marquee-strip relative overflow-hidden border-y border-ivory/10 bg-graphite py-5"
+      style={{
+        maskImage:
+          "linear-gradient(90deg, transparent, black 8%, black 92%, transparent)",
+        WebkitMaskImage:
+          "linear-gradient(90deg, transparent, black 8%, black 92%, transparent)",
+      }}
+    >
       <div className="flex w-max animate-marquee">
         {row()}
         {row(true)}

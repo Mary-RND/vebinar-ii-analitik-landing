@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { ScrollProgress } from "@/components/ScrollProgress";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -37,9 +38,11 @@ export default function RootLayout({
   return (
     <html
       lang="ru"
+      data-scroll-behavior="smooth"
       className={`${cormorant.variable} ${manrope.variable} h-full antialiased scroll-smooth`}
     >
       <body className="flex min-h-full flex-col bg-marble font-sans text-ink">
+        <ScrollProgress />
         {children}
       </body>
     </html>

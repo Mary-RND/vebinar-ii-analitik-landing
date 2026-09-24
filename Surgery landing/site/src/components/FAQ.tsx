@@ -31,7 +31,7 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="relative bg-sand/30">
+    <section className="aurora relative bg-sand/30">
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow text-bronze">Частые вопросы</p>
@@ -50,7 +50,9 @@ export function FAQ() {
               <Reveal key={item.q} delay={i * 0.05}>
                 <div
                   className={`overflow-hidden rounded-2xl bg-white ring-1 transition-all duration-300 ${
-                    isOpen ? "ring-emerald/25" : "ring-ink/5 hover:ring-ink/10"
+                    isOpen
+                      ? "shadow-[0_20px_55px_-30px_rgba(47,79,63,0.45)] ring-emerald/25"
+                      : "ring-ink/5 hover:ring-ink/10"
                   }`}
                 >
                   <button

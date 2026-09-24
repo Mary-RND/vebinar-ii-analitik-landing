@@ -37,7 +37,7 @@ export default function Page() {
                 <h1 className="mt-4 max-w-3xl font-display text-4xl font-medium leading-tight sm:text-6xl">
                   Вернуться
                   <br />
-                  <span className="italic text-ink/60">к себе после родов</span>
+                  <span className="text-gold italic">к себе после родов</span>
                 </h1>
                 <EcgDivider className="mt-5 text-terracotta/60" />
                 <div className="mt-6 max-w-2xl space-y-4 text-[1.02rem] leading-relaxed text-ink/75">
@@ -54,14 +54,14 @@ export default function Page() {
                 </div>
                 <Link
                   href="#forma-postpartum"
-                  className="animate-pulse-glove mt-8 inline-flex items-center gap-2 rounded-full bg-terracotta px-7 py-3.5 text-sm font-semibold text-ivory transition hover:bg-bronze"
+                  className="btn-shine animate-pulse-glove mt-8 inline-flex items-center gap-2 rounded-full bg-terracotta px-7 py-3.5 text-sm font-semibold text-ivory transition hover:bg-bronze"
                 >
                   Обсудить маршрут восстановления <span aria-hidden>→</span>
                 </Link>
               </Reveal>
 
               <Reveal delay={0.15}>
-                <div className="relative overflow-hidden rounded-[24px] bg-white p-6 shadow-[0_24px_70px_-30px_rgba(42,40,37,0.35)] sm:p-8">
+                <div className="lift relative overflow-hidden rounded-[24px] bg-white p-6 shadow-[0_24px_70px_-30px_rgba(42,40,37,0.35)] sm:p-8">
                   <div
                     className="pointer-events-none absolute inset-0"
                     style={{
@@ -111,25 +111,27 @@ export default function Page() {
             </Reveal>
             <div className="mx-auto mt-10 grid max-w-5xl gap-6 sm:grid-cols-3">
               {steps.map((s, i) => (
-                <Reveal
-                  key={s.title}
-                  delay={i * 0.07}
-                  className="relative overflow-hidden rounded-2xl bg-marble p-8 ring-1 ring-ink/5"
-                >
-                  <div
-                    className="pointer-events-none absolute inset-x-0 top-0 h-px"
-                    style={{
-                      background:
-                        "linear-gradient(90deg, transparent, rgba(184,115,79,0.5), transparent)",
-                    }}
-                  />
-                  <div className="flex items-start gap-4">
-                    <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-terracotta/30 text-sm font-semibold text-terracotta">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <div>
-                      <h3 className="font-display text-lg font-medium">{s.title}</h3>
-                      <p className="mt-2 text-sm leading-relaxed text-ink/60">{s.text}</p>
+                <Reveal key={s.title} delay={i * 0.07}>
+                  <div className="lift group relative h-full overflow-hidden rounded-2xl bg-marble p-8 ring-1 ring-ink/5">
+                    <div
+                      className="pointer-events-none absolute inset-x-0 top-0 h-px"
+                      style={{
+                        background:
+                          "linear-gradient(90deg, transparent, rgba(184,115,79,0.5), transparent)",
+                      }}
+                    />
+                    <div
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-0 bg-gradient-to-br from-terracotta/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                    />
+                    <div className="relative flex items-start gap-4">
+                      <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-terracotta/30 text-sm font-semibold text-terracotta">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <div>
+                        <h3 className="font-display text-lg font-medium">{s.title}</h3>
+                        <p className="mt-2 text-sm leading-relaxed text-ink/60">{s.text}</p>
+                      </div>
                     </div>
                   </div>
                 </Reveal>
@@ -143,7 +145,7 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="forma-postpartum" className="bg-sand/30">
+        <section id="forma-postpartum" className="aurora bg-sand/30">
           <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
             <div className="grid gap-10 lg:grid-cols-[1.05fr_1.4fr]">
               <Reveal>

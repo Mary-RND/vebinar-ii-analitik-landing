@@ -46,7 +46,7 @@ export function AboutSurgeon() {
             <h2 className="mt-4 font-display text-3xl font-medium leading-tight sm:text-5xl">
               Опыт, который
               <br />
-              <span className="italic text-ink/60">слышит</span>
+              <span className="text-gold italic">слышит</span>
             </h2>
             <EcgDivider className="mt-5 text-terracotta/60" />
             <div className="mt-6 space-y-4 text-[1.02rem] leading-relaxed text-ink/75">

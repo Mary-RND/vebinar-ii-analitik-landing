@@ -165,3 +165,80 @@ body {
     animation: none;
   }
 }
+
+/* — depth & light: v2 effects — */
+
+/* Шиммер-блик по кнопке при наведении */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  transform: translateX(-130%) skewX(-18deg);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.38),
+    transparent
+  );
+  transition: transform 0.75s ease;
+  pointer-events: none;
+}
+.btn-shine:hover::after {
+  transform: translateX(130%) skewX(-18deg);
+}
+
+/* Плавный подъём карточек */
+.lift {
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 36px 72px -36px rgba(42, 40, 37, 0.45);
+}
+
+/* Прогресс чтения */
+.scroll-progress {
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  will-change: transform;
+}
+
+/* Появление модалки */
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.animate-pop {
+  animation: pop-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Марquee: пауза при наведении */
+.marquee-strip:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* Тонкий скроллбар в тон палитре */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-marble);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-terracotta), var(--color-bronze));
+  border-radius: 8px;
+  border: 2px solid var(--color-marble);
+}
