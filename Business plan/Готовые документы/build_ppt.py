@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Инвестиционная презентация VitaGen-AI — синяя гамма, 16:9."""
+"""Инвестиционная презентация VitaGen-AI — синяя гамма с градиентами, 16:9, 17 слайдов."""
 import os
 from pptx import Presentation
 from pptx.util import Inches, Pt, Emu
@@ -10,17 +10,20 @@ from pptx.oxml.ns import qn
 from PIL import Image
 
 ASSETS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
+TOTAL = 17
 
 # палитра (синяя медицинская)
 DEEP = RGBColor(0x0A, 0x2F, 0x4F)     # глубокий тёмно-синий
 MID = RGBColor(0x14, 0x5D, 0xA0)      # средний синий
 BRIGHT = RGBColor(0x2E, 0x9E, 0xD8)   # яркий синий (акцент)
+CYAN = RGBColor(0x5B, 0xC8, 0xEA)     # светлый бирюзовый
 SKY = RGBColor(0xD6, 0xEA, 0xF7)      # светло-голубой фон
 ICE = RGBColor(0xF2, 0xF8, 0xFC)      # почти белый синеватый
 WHITE = RGBColor(0xFF, 0xFF, 0xFF)
 DARK = RGBColor(0x1A, 0x2A, 0x3A)     # текст
 GRAY = RGBColor(0x5A, 0x6A, 0x7A)
-GOLD = RGBColor(0xE8, 0xA7, 0x3C)     # редкий акцент (для ключевых цифр)
+GOLD = RGBColor(0xE8, 0xA7, 0x3C)     # редкий акцент
+VIOLET = RGBColor(0x6B, 0x5B, 0xC8)   # для градиентов
 
 prs = Presentation()
 prs.slide_width = Inches(13.333)
@@ -31,10 +34,28 @@ W = prs.slide_width
 H = prs.slide_height
 
 
-def rect(slide, x, y, w, h, fill, line=None, shape=MSO_SHAPE.RECTANGLE):
+def _apply_grad(shape, c1, c2, angle=90):
+    shape.fill.gradient()
+    stops = shape.fill.gradient_stops
+    stops[0].color.rgb = c1
+    stops[0].position = 0.0
+    stops[1].color.rgb = c2
+    stops[1].position = 1.0
+    try:
+        shape.fill.gradient_angle = angle
+    except Exception:
+        pass
+    return shape
+
+
+def rect(slide, x, y, w, h, fill, line=None, shape=MSO_SHAPE.RECTANGLE, grad=None, grad_angle=90):
+    """Прямоугольник; grad=(c1,c2) — линейный градиент вместо solid."""
     s = slide.shapes.add_shape(shape, x, y, w, h)
-    s.fill.solid()
-    s.fill.fore_color.rgb = fill
+    if grad is not None:
+        _apply_grad(s, grad[0], grad[1], grad_angle)
+    else:
+        s.fill.solid()
+        s.fill.fore_color.rgb = fill
     if line is None:
         s.line.fill.background()
     else:
@@ -90,10 +111,10 @@ def bullets(slide, x, y, w, h, items, size=16, color=DARK, spacing=1.15, bold_he
 
 
 def slide_chrome(idx, title, subtitle=None):
-    """Стандартная страница: верхняя синяя полоса, заголовок, подвал, номер."""
+    """Стандартная страница: градиентная шапка, заголовок, подвал, номер."""
     s = prs.slides.add_slide(BLANK)
-    rect(s, 0, 0, W, Inches(1.15), DEEP)
-    rect(s, 0, Inches(1.15), W, Pt(4), BRIGHT)
+    rect(s, 0, 0, W, Inches(1.15), DEEP, grad=(DEEP, MID), grad_angle=0)
+    rect(s, 0, Inches(1.15), W, Pt(4), BRIGHT, grad=(BRIGHT, CYAN), grad_angle=0)
     tb(s, Inches(0.55), Inches(0.22), Inches(11.6), Inches(0.75), title,
        size=28, bold=True, color=WHITE, anchor=MSO_ANCHOR.MIDDLE)
     if subtitle:
@@ -104,13 +125,13 @@ def slide_chrome(idx, title, subtitle=None):
     tb(s, Inches(0.55), H - Inches(0.33), Inches(8), Inches(0.3),
        "VitaGen-AI  ·  Коммерческая тайна  ·  2026", size=10, color=GRAY)
     tb(s, W - Inches(1.3), H - Inches(0.33), Inches(0.9), Inches(0.3),
-       f"{idx} / 15", size=10, color=GRAY, align=PP_ALIGN.RIGHT)
+       f"{idx} / {TOTAL}", size=10, color=GRAY, align=PP_ALIGN.RIGHT)
     return s
 
 
 def kpi_card(slide, x, y, w, h, value, label, val_color=MID):
-    rect(slide, x, y, w, h, ICE, line=SKY)
-    rect(slide, x, y, Pt(5), h, BRIGHT)
+    rect(slide, x, y, w, h, ICE, grad=(WHITE, SKY), grad_angle=45, line=SKY)
+    rect(slide, x, y, Pt(5), h, BRIGHT, grad=(BRIGHT, VIOLET), grad_angle=90)
     tb(slide, x + Inches(0.18), y + Inches(0.12), w - Inches(0.3), Inches(0.55),
        value, size=26, bold=True, color=val_color)
     tb(slide, x + Inches(0.18), y + h - Inches(0.55), w - Inches(0.3), Inches(0.45),
@@ -172,9 +193,9 @@ def add_pic(slide, name, x_in, y_in, w_in, frame=False):
 s = prs.slides.add_slide(BLANK)
 # картинка пользователя: эмбрион, чёрный фон заменён на синий DEEP
 s.shapes.add_picture(os.path.join(ASSETS, "cover_user_embryo.png"), 0, 0, width=W, height=H)
-# декоративная нижняя полоса поверх фона
-rect(s, 0, Inches(5.9), W, Inches(1.6), MID)
-rect(s, 0, Inches(5.75), W, Pt(5), BRIGHT)
+# декоративная нижняя полоса — градиент
+rect(s, 0, Inches(5.9), W, Inches(1.6), MID, grad=(MID, DEEP), grad_angle=0)
+rect(s, 0, Inches(5.75), W, Pt(5), BRIGHT, grad=(BRIGHT, CYAN), grad_angle=0)
 tb(s, Inches(0.9), Inches(1.15), Inches(6.6), Inches(1.0),
    "VitaGen-AI", size=54, bold=True, color=WHITE)
 tb(s, Inches(0.9), Inches(2.15), Inches(6.6), Inches(1.7),
@@ -360,16 +381,84 @@ bullets(s, Inches(0.55), Inches(4.85), Inches(12.2), Inches(2.2), [
     ("Суверенитет: ", "100% российская разработка, данные в РФ-облаке, замещение импортных решений в госсекторе."),
 ])
 
-# ==================== 9. КОМАНДА ====================
-s = slide_chrome(9, "Команда: клиника, наука, регуляторика, ИИ, международный рынок",
+# ==================== 9. СТРАТЕГИЯ ИС ====================
+s = slide_chrome(9, "Стратегия правовой охраны: портфель ИС + депонирование",
+                 "Многоуровневая защита: свидетельства → депонирование ТЗ/кода → патенты → know-how")
+# портфель
+rect(s, Inches(0.55), Inches(1.9), Inches(4.0), Inches(4.85), ICE, grad=(WHITE, SKY), grad_angle=60, line=SKY)
+rect(s, Inches(0.55), Inches(1.9), Inches(4.0), Inches(0.48), DEEP, grad=(DEEP, MID), grad_angle=0)
+tb(s, Inches(0.7), Inches(1.98), Inches(3.7), Inches(0.35),
+   "Портфель на сегодня", size=14, bold=True, color=WHITE)
+bullets(s, Inches(0.7), Inches(2.55), Inches(3.7), Inches(4.0), [
+    "Свидетельство РЦИС/ФИСРПС №1440-028-537 от 30.03.2026 — алгоритм/прогноз (правообладатель — Петрушина М. В.);",
+    "ПОЭВМ (код платформы) — регистрация в Роспатенте;",
+    "Заявки know-how: NDA, договоры с клиниками, режим коммерческой тайны;",
+    "План подачи патентных заявок 2026–27: DFI-интеграция, KIR/HLA-C матчинг;",
+    "Оценка ИС для вклада в УК АО — 45 млн ₽ (отчёт оценщика).",
+], size=11.5, spacing=1.05)
+
+# план депонирования
+rect(s, Inches(4.8), Inches(1.9), Inches(8.0), Inches(2.55), ICE, grad=(WHITE, SKY), grad_angle=60, line=SKY)
+rect(s, Inches(4.8), Inches(1.9), Inches(8.0), Inches(0.48), MID, grad=(MID, BRIGHT), grad_angle=0)
+tb(s, Inches(4.95), Inches(1.98), Inches(7.7), Inches(0.35),
+   "Депонирование (РИС, ст. 1257 ГК РФ) — 1–2 недели, ~10 000 ₽/объект", size=14, bold=True, color=WHITE)
+bullets(s, Inches(4.95), Inches(2.55), Inches(7.7), Inches(1.8), [
+    ("ТЗ на разработку VitaGen-AI ", "— техническая документация (критический приоритет);"),
+    ("Код разработки продукта (исходники/релизы) ", "— депонируется отдельно от ТЗ как объект авторского права;"),
+    ("Клинические протоколы пилота (РНИМУ) ", "— научная методология;"),
+    ("Презентация, методология, дорожная карта ", "— фиксация даты до показа инвесторам/партнёрам."),
+], size=12, spacing=1.0)
+
+# юр. нюансы + КНР
+rect(s, Inches(4.8), Inches(4.7), Inches(8.0), Inches(2.05), DEEP, grad=(DEEP, MID), grad_angle=45)
+tb(s, Inches(4.95), Inches(4.85), Inches(7.7), Inches(0.35),
+   "Юрисдикции и эскалация", size=14, bold=True, color=CYAN)
+bullets(s, Inches(4.95), Inches(5.3), Inches(7.7), Inches(1.3), [
+    "РФ: РИС/РЦИС — презумпция авторства; свидетельство — доказательство в суде;",
+    "КНР: NCAC — рекомендуется для ключевых ТЗ при выходе в Хайнань (двойное депонирование);",
+    "Лицензирование: эксклюзивные лицензии партнёрам по регионам/АТР; мониторинг патентных классов.",
+], size=12, color=WHITE, spacing=1.05)
+
+# ==================== 10. НАУЧНЫЙ ЗАДЕЛ ====================
+s = slide_chrome(10, "Научный задел: публикация, регистрация РИД, конгрессы",
+                 "Подтверждённая доказательная база — не slide-deck, а реальная работа команды")
+# три скана
+scans = [
+    ("scan_rcis.png", "Свидетельство РЦИС\n№1440-028-537 · 30.03.2026",
+     "Реестр РИД ФИСРПС/РЦИС.РФ.\nПравообладатель: Петрушина М. В."),
+    ("scan_article.png", "Статья «Наука и практика»\n№1/2026, с. 20–31",
+     "Петрушина М. В., Изотов О. И.\n«Мультимодальная интеграция данных\nв репродуктивной медицине»"),
+    ("scan_thanks.png", "Благодарность конгресса\nНовосибирск · 28.04.2026",
+     "Доклад на Межрегиональном конгрессе\n«Демографический потенциал…»\n(исх. №91, ООО «МОИР»)"),
+]
+for i, (img, title, desc) in enumerate(scans):
+    x = Inches(0.55 + i * 4.2)
+    rect(s, x, Inches(1.9), Inches(4.0), Inches(4.9), ICE, grad=(WHITE, SKY), grad_angle=90, line=SKY)
+    # картинка — по высоте ~2.6"
+    path = os.path.join(ASSETS, img)
+    with Image.open(path) as im:
+        iw, ih = im.size
+    pic_h_in = 2.55
+    pic_w = pic_h_in * iw / ih
+    if pic_w > 3.7:
+        pic_w = 3.7
+        pic_h_in = pic_w * ih / iw
+    s.shapes.add_picture(path, x + Inches((4.0 - pic_w) / 2), Inches(2.05), width=Inches(pic_w))
+    tb(s, x + Inches(0.15), Inches(4.75), Inches(3.7), Inches(0.7),
+       title, size=12.5, bold=True, color=DEEP, align=PP_ALIGN.CENTER, line_spacing=1.1)
+    tb(s, x + Inches(0.15), Inches(5.55), Inches(3.7), Inches(1.0),
+       desc, size=10.5, color=GRAY, align=PP_ALIGN.CENTER, line_spacing=1.15)
+
+# ==================== 11. КОМАНДА ====================
+s = slide_chrome(11, "Команда: клиника, наука, регуляторика, ИИ, международный рынок",
                  "Инициативная группа + план найма по раундам")
 team = [
     ("Петрушина М. В.", "Генеральный директор", "Инициатор проекта, правообладатель РИД,\nООО «МедТехПрима»"),
-    ("Изотов О. И., к.м.н.", "Научный консультант", "Российский университет медицины"),
+    ("Доброхотова Ю. Э., д.м.н.", "Научный руководитель", "Профессор, зав. кафедрой акушерства\nи гинекологии, РНИМУ им. Н. И. Пирогова"),
+    ("Изотов О. И., к.м.н.", "Медицинский директор", "ООО «МедТехПрима» · научный консультант,\nРоссийский университет медицины"),
     ("Смирнов С. Н., к.э.н.", "Экономика проекта", "Финансовый университет при Правительстве РФ"),
     ("Танделов А. Т.", "Регуляторика", "ГК «Глобальные Медицинские технологии»"),
     ("Воронцов А. И.", "Партнёрства", "ГК «Рич Кемикл», Академия Инноваторов"),
-    ("Мороз А. Е.", "Развитие", "Академия Инноваторов"),
     ("N. Luo (КНР)", "Международный маркетинг", "АТР-направление, Хайнань"),
     ("Z. Abbas (Гонконг)", "Big Data / ML / AI", "IT-консалтинг платформы"),
 ]
@@ -377,22 +466,22 @@ for i, (name, role, desc) in enumerate(team):
     row, col_i = divmod(i, 4)
     x = Inches(0.55 + col_i * 3.15)
     y = Inches(1.9 + row * 1.8)
-    rect(s, x, y, Inches(2.95), Inches(1.6), ICE, line=SKY)
-    rect(s, x, y, Pt(5), Inches(1.6), MID)
+    rect(s, x, y, Inches(2.95), Inches(1.6), ICE, grad=(WHITE, SKY), grad_angle=45, line=SKY)
+    rect(s, x, y, Pt(5), Inches(1.6), MID, grad=(MID, BRIGHT), grad_angle=90)
     tb(s, x + Inches(0.18), y + Inches(0.12), Inches(2.65), Inches(0.35),
-       name, size=13.5, bold=True, color=DEEP)
+       name, size=12.5, bold=True, color=DEEP)
     tb(s, x + Inches(0.18), y + Inches(0.48), Inches(2.65), Inches(0.3),
-       role, size=12, bold=True, color=MID)
+       role, size=11.5, bold=True, color=MID)
     tb(s, x + Inches(0.18), y + Inches(0.82), Inches(2.65), Inches(0.65),
-       desc, size=10.5, color=GRAY, line_spacing=1.1)
+       desc, size=10, color=GRAY, line_spacing=1.1)
 tb(s, Inches(0.55), Inches(5.65), Inches(12.2), Inches(1.3),
    "Научная база пилота: РНИМУ им. Н. И. Пирогова и клиники-партнёры.\n"
    "Найм по Раунду 1: ML-инженеры (2–3), интеграционный разработчик, эмбриолог-аналитик,\n"
    "менеджер клинических исследований, регуляторный специалист; с 2027 — B2B-менеджер.",
    size=13.5, color=DARK, line_spacing=1.25)
 
-# ==================== 10. ФИНАНСЫ ====================
-s = slide_chrome(10, "Финансы: безубыточность 2028, выручка 391 млн ₽ к 2030",
+# ==================== 12. ФИНАНСЫ ====================
+s = slide_chrome(12, "Финансы: безубыточность 2028, выручка 391 млн ₽ к 2030",
                  "Базовый сценарий; переключатель в модели: пессимистичный / базовый / оптимистичный")
 styled_table(s, Inches(0.55), Inches(1.9), Inches(12.25), Inches(2.9),
              ["Показатель, млн ₽", "2026", "2027", "2028", "2029", "2030"],
@@ -409,36 +498,36 @@ kpi_card(s, Inches(3.75), Inches(5.05), Inches(3.0), Inches(1.5), "37%", "мар
 kpi_card(s, Inches(6.95), Inches(5.05), Inches(3.0), Inches(1.5), "×0,75 / ×1,3", "песс. / опт. сценарии по выручке (расходы ×1,12 / ×0,95)")
 kpi_card(s, Inches(10.15), Inches(5.05), Inches(2.6), Inches(1.5), "УСН 5%", "налог в модели (консервативно, без Сколково)")
 
-# ==================== 11. ГРАФИКИ: ФИНАНСЫ ====================
-s = slide_chrome(11, "Финансы в динамике: рост выручки и выход в плюс",
+# ==================== 13. ГРАФИКИ: ФИНАНСЫ ====================
+s = slide_chrome(13, "Финансы в динамике: рост выручки и выход в плюс",
                  "Базовый сценарий финансовой модели — те же данные, что в таблице P&L")
 add_pic(s, "chart_revenue.png", 0.55, 1.95, 6.1)
 add_pic(s, "chart_ebitda.png", 6.85, 1.95, 6.1)
-rect(s, Inches(0.55), Inches(5.45), Inches(12.4), Inches(1.45), ICE, line=SKY)
-rect(s, Inches(0.55), Inches(5.45), Pt(5), Inches(1.45), BRIGHT)
+rect(s, Inches(0.55), Inches(5.45), Inches(12.4), Inches(1.45), ICE, grad=(WHITE, SKY), grad_angle=0, line=SKY)
+rect(s, Inches(0.55), Inches(5.45), Pt(5), Inches(1.45), BRIGHT, grad=(BRIGHT, VIOLET), grad_angle=90)
 bullets(s, Inches(0.85), Inches(5.6), Inches(11.9), Inches(1.2), [
     ("Рост выручки ≈2,3×/год при CAGR ~154% (2026–2030): ", "SaaS-подписки + модули + матчи + B2G + APAC."),
     ("Пик кассовой потребности — 2026–2027: ", "покрывается раундами Seed 35 млн ₽ и Series A 45 млн ₽ с грантовой обочкой; EBITDA-безубыточность — 2028."),
 ], size=13)
 
-# ==================== 12. ГРАФИКИ: КЛИЕНТЫ И РЫНОК ====================
-s = slide_chrome(12, "Рост клиентской базы и рыночный контекст",
+# ==================== 14. ГРАФИКИ: КЛИЕНТЫ И РЫНОК ====================
+s = slide_chrome(14, "Рост клиентской базы и рыночный контекст",
                  "Проникновение в РФ и ранний выход в Китай/АТР по модели")
 add_pic(s, "chart_clients.png", 0.55, 1.95, 6.1)
 add_pic(s, "chart_market.png", 6.85, 1.95, 6.1)
-rect(s, Inches(0.55), Inches(5.5), Inches(12.4), Inches(1.4), ICE, line=SKY)
-rect(s, Inches(0.55), Inches(5.5), Pt(5), Inches(1.4), BRIGHT)
+rect(s, Inches(0.55), Inches(5.5), Inches(12.4), Inches(1.4), ICE, grad=(WHITE, SKY), grad_angle=0, line=SKY)
+rect(s, Inches(0.55), Inches(5.5), Pt(5), Inches(1.4), BRIGHT, grad=(BRIGHT, VIOLET), grad_angle=90)
 bullets(s, Inches(0.85), Inches(5.65), Inches(11.9), Inches(1.15), [
     ("85 клиник в РФ к 2030 — ≈13–17% SAM: ", "путь через якорный пилот с РНИМУ → Москва → ключевые регионы (ЦФО, СЗФО, ПФО)."),
     ("APAC после запуска WFOE в Хайнане: ", "~8 млн ₽ (2029) → ~25,5 млн ₽ (2030) при 3 партнёрах; воронка на 2031 — 4–6 партнёров (~35 млн ₽)."),
 ], size=13)
 
-# ==================== 13. ИНВЕСТИЦИИ ====================
-s = slide_chrome(13, "Инвестиции: 70 млн ₽ за два раунда",
+# ==================== 15. ИНВЕСТИЦИИ ====================
+s = slide_chrome(15, "Инвестиции: 70 млн ₽ за два раунда",
                  "Непубличное АО «ВИТА ГЕН АИ» · привилегированные акции · акционерное соглашение · опционный пул 12%")
 # два раунда
-rect(s, Inches(0.55), Inches(1.9), Inches(6.0), Inches(2.5), ICE, line=SKY)
-rect(s, Inches(0.55), Inches(1.9), Inches(6.0), Inches(0.5), DEEP)
+rect(s, Inches(0.55), Inches(1.9), Inches(6.0), Inches(2.5), ICE, grad=(WHITE, SKY), grad_angle=45, line=SKY)
+rect(s, Inches(0.55), Inches(1.9), Inches(6.0), Inches(0.5), DEEP, grad=(DEEP, MID), grad_angle=0)
 tb(s, Inches(0.75), Inches(1.97), Inches(5.6), Inches(0.4),
    "Раунд 1 · Seed · 2026", size=15, bold=True, color=WHITE)
 bullets(s, Inches(0.75), Inches(2.55), Inches(5.6), Inches(1.7), [
@@ -446,8 +535,8 @@ bullets(s, Inches(0.75), Inches(2.55), Inches(5.6), Inches(1.7), [
     "Доля инвестора: 24,1% (после Series A — 20,8%)",
     "Направления: ядро и интеграции 12 · валидация 7 · регуляторика 5 · команда 7 · ИС/юриспруденция 2,5 · резерв 1,5",
 ], size=12.5)
-rect(s, Inches(6.8), Inches(1.9), Inches(6.0), Inches(2.5), ICE, line=SKY)
-rect(s, Inches(6.8), Inches(1.9), Inches(6.0), Inches(0.5), MID)
+rect(s, Inches(6.8), Inches(1.9), Inches(6.0), Inches(2.5), ICE, grad=(WHITE, SKY), grad_angle=45, line=SKY)
+rect(s, Inches(6.8), Inches(1.9), Inches(6.0), Inches(0.5), MID, grad=(MID, BRIGHT), grad_angle=0)
 tb(s, Inches(7.0), Inches(1.97), Inches(5.6), Inches(0.4),
    "Раунд 2 · Series A · 2027", size=15, bold=True, color=WHITE)
 bullets(s, Inches(7.0), Inches(2.55), Inches(5.6), Inches(1.7), [
@@ -465,19 +554,19 @@ styled_table(s, Inches(0.55), Inches(4.55), Inches(7.7), Inches(1.95),
                  ["NPV @ 25% (Seed)", "45,6 млн ₽", "—"],
              ],
              col_ws=[3, 2, 2], body_size=11)
-rect(s, Inches(8.5), Inches(4.55), Inches(4.3), Inches(1.95), DEEP)
+rect(s, Inches(8.5), Inches(4.55), Inches(4.3), Inches(1.95), DEEP, grad=(DEEP, MID), grad_angle=45)
 tb(s, Inches(8.7), Inches(4.68), Inches(3.9), Inches(0.35),
-   "Выход (2031)", size=13, bold=True, color=BRIGHT)
+   "Выход (2031)", size=13, bold=True, color=CYAN)
 tb(s, Inches(8.7), Inches(5.08), Inches(3.9), Inches(1.3),
    "EBITDA 180 млн ₽ × 7,5 = 1 350 млн ₽\n"
    "Стратеги: IT/medtech-холдинги, лабораторные сети,\nВЭБ.РФ, IPO МСП-биржа",
    size=12, color=WHITE, line_spacing=1.2)
 tb(s, Inches(0.55), Inches(6.6), Inches(12.2), Inches(0.4),
-   "Дополнительно: гранты ФСИ/Сколково/ВЭБ.РФ/ДЗМ — 10–20 млн ₽ non-dilutive. Cap table post-Series A: 63,1% основатель/МедТехПрима · 20,8% Seed · 13,8% Series A · 8,9% опционный пул.",
+   "Дополнительно: гранты ФСИ/Сколково/ВЭБ.РФ/ДЗМ — 10–20 млн ₽ non-dilutive. Cap table post-Series A: 63,1% основатель/ООО «МедТехПрима» · 20,8% Seed · 13,8% Series A · 8,9% опционный пул.",
    size=10.5, color=GRAY)
 
-# ==================== 14. ROADMAP / КИТАЙ ====================
-s = slide_chrome(14, "Дорожная карта 2026–2030 и международный трек",
+# ==================== 16. ROADMAP / КИТАЙ ====================
+s = slide_chrome(16, "Дорожная карта 2026–2030 и международный трек",
                  "Федеральный масштаб поэтапно; экспорт через зону свободной торговли Хайнань")
 years = [
     ("2026", "Seed", "Доработка ядра,\nинтеграции с МИС,\nстарт пилота", DEEP),
@@ -488,13 +577,13 @@ years = [
 ]
 for i, (year, tag, desc, col) in enumerate(years):
     x = Inches(0.55 + i * 2.5)
-    rect(s, x, Inches(1.95), Inches(2.32), Inches(0.55), col)
+    rect(s, x, Inches(1.95), Inches(2.32), Inches(0.55), col, grad=(col, BRIGHT if col != BRIGHT else CYAN), grad_angle=0)
     tb(s, x, Inches(2.02), Inches(2.32), Inches(0.45),
        f"{year}  ·  {tag}", size=13, bold=True, color=WHITE, align=PP_ALIGN.CENTER)
-    rect(s, x, Inches(2.5), Inches(2.32), Inches(1.9), ICE, line=SKY)
+    rect(s, x, Inches(2.5), Inches(2.32), Inches(1.9), ICE, grad=(WHITE, SKY), grad_angle=90, line=SKY)
     tb(s, x + Inches(0.1), Inches(2.65), Inches(2.12), Inches(1.6),
        desc, size=12, color=DARK, align=PP_ALIGN.CENTER, line_spacing=1.2)
-rect(s, Inches(0.55), Inches(4.65), Inches(12.25), Inches(2.25), ICE, line=SKY)
+rect(s, Inches(0.55), Inches(4.65), Inches(12.25), Inches(2.25), ICE, grad=(WHITE, SKY), grad_angle=0, line=SKY)
 tb(s, Inches(0.8), Inches(4.8), Inches(11.7), Inches(0.4),
    "Китайский трек (детали — раздел 10 бизнес-плана)", size=15, bold=True, color=DEEP)
 bullets(s, Inches(0.8), Inches(5.25), Inches(11.7), Inches(1.5), [
@@ -502,11 +591,11 @@ bullets(s, Inches(0.8), Inches(5.25), Inches(11.7), Inches(1.5), [
     "Льготный КН 15% (политика СПК Госсовета по Хайнаню), пилотный режим Боао Лэчэн, PIPL: локальный деплой, экспорт только агрегатов",
 ], size=13)
 
-# ==================== 15. КОНТАКТЫ / CTA ====================
+# ==================== 17. КОНТАКТЫ / CTA ====================
 s = prs.slides.add_slide(BLANK)
-rect(s, 0, 0, W, H, DEEP)
-rect(s, 0, Inches(5.85), W, Pt(5), BRIGHT)
-rect(s, 0, Inches(5.9), W, Inches(1.6), MID)
+rect(s, 0, 0, W, H, DEEP, grad=(DEEP, MID), grad_angle=45)
+rect(s, 0, Inches(5.85), W, Pt(5), BRIGHT, grad=(BRIGHT, CYAN), grad_angle=0)
+rect(s, 0, Inches(5.9), W, Inches(1.6), MID, grad=(MID, DEEP), grad_angle=0)
 # иллюстрация ДНК справа (фон совпадает с DEEP — бесшовно)
 add_pic(s, "dna.png", 9.15, 1.35, 3.5)
 tb(s, Inches(0.9), Inches(1.3), Inches(8.0), Inches(1.0),
@@ -515,7 +604,7 @@ tb(s, Inches(0.9), Inches(1.3), Inches(8.0), Inches(1.0),
 tb(s, Inches(0.9), Inches(3.3), Inches(7.9), Inches(2.2),
    "Seeking:  Seed 35 млн ₽ (2026) + Series A 45 млн ₽ (2027)\n"
    "Структура:  непубличное АО, привилегированные акции, акционерное соглашение, опционный пул 12%\n"
-   "Готовы:  due diligence, пилотный протокол, отчёт оценщика по ИС, model deck",
+   "Контакт для инвестора:  Петрушина М. В., генеральный директор",
    size=15, color=SKY, line_spacing=1.4)
 tb(s, Inches(0.9), Inches(6.15), Inches(7.5), Inches(1.1),
    "Петрушина Марина Владимировна · генеральный директор\n"
@@ -528,4 +617,4 @@ tb(s, W - Inches(3.6), Inches(6.4), Inches(2.9), Inches(0.8),
 
 out = r"C:\Users\User\Documents\Freelance\Business plan\Готовые документы\VitaGen_Инвестиционная_презентация.pptx"
 prs.save(out)
-print("saved:", out)
+print("saved:", out, "slides:", len(prs.slides))
