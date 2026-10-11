@@ -1,11 +1,15 @@
 # -*- coding: utf-8 -*-
 """Инвестиционная презентация VitaGen-AI — синяя гамма, 16:9."""
+import os
 from pptx import Presentation
 from pptx.util import Inches, Pt, Emu
 from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.oxml.ns import qn
+from PIL import Image
+
+ASSETS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
 
 # палитра (синяя медицинская)
 DEEP = RGBColor(0x0A, 0x2F, 0x4F)     # глубокий тёмно-синий
@@ -100,7 +104,7 @@ def slide_chrome(idx, title, subtitle=None):
     tb(s, Inches(0.55), H - Inches(0.33), Inches(8), Inches(0.3),
        "VitaGen-AI  ·  Коммерческая тайна  ·  2026", size=10, color=GRAY)
     tb(s, W - Inches(1.3), H - Inches(0.33), Inches(0.9), Inches(0.3),
-       f"{idx} / 13", size=10, color=GRAY, align=PP_ALIGN.RIGHT)
+       f"{idx} / 15", size=10, color=GRAY, align=PP_ALIGN.RIGHT)
     return s
 
 
@@ -144,20 +148,42 @@ def styled_table(slide, x, y, w, h, headers, rows, col_ws=None, hdr_size=12, bod
     return t
 
 
+def pic_h(name, w_in):
+    """Высота картинки в дюймах при заданной ширине (по пикселям файла)."""
+    path = os.path.join(ASSETS, name)
+    with Image.open(path) as im:
+        iw, ih = im.size
+    return w_in * ih / iw
+
+
+def add_pic(slide, name, x_in, y_in, w_in, frame=False):
+    """Картинка с опциональной рамкой; x/y/w в дюймах. Возвращает высоту в дюймах."""
+    h_in = pic_h(name, w_in)
+    if frame:
+        pad = 0.045
+        rect(slide, Inches(x_in - pad), Inches(y_in - pad),
+             Inches(w_in + 2 * pad), Inches(h_in + 2 * pad), BRIGHT)
+    slide.shapes.add_picture(os.path.join(ASSETS, name),
+                             Inches(x_in), Inches(y_in), width=Inches(w_in))
+    return h_in
+
+
 # ==================== 1. ОБЛОЖКА ====================
 s = prs.slides.add_slide(BLANK)
 rect(s, 0, 0, W, H, DEEP)
 rect(s, 0, Inches(5.9), W, Inches(1.6), MID)
 # декоративные полосы
 rect(s, 0, Inches(5.75), W, Pt(5), BRIGHT)
-tb(s, Inches(0.9), Inches(1.15), Inches(11.5), Inches(1.0),
+# иллюстрация эмбриона (фон совпадает с DEEP — бесшовно)
+add_pic(s, "cover_embryo.png", 7.55, 1.35, 5.35)
+tb(s, Inches(0.9), Inches(1.15), Inches(6.6), Inches(1.0),
    "VitaGen-AI", size=54, bold=True, color=WHITE)
-tb(s, Inches(0.9), Inches(2.15), Inches(11.2), Inches(1.6),
-   "Мультимодальная платформа прогнозирования\nрепродуктивных исходов ВРТ на основе ИИ",
-   size=28, color=BRIGHT, line_spacing=1.25)
-tb(s, Inches(0.9), Inches(4.05), Inches(11.2), Inches(0.9),
+tb(s, Inches(0.9), Inches(2.15), Inches(6.6), Inches(1.7),
+   "Мультимодальная платформа\nпрогнозирования репродуктивных\nисходов ВРТ на основе ИИ",
+   size=24, color=BRIGHT, line_spacing=1.25)
+tb(s, Inches(0.9), Inches(4.15), Inches(6.7), Inches(1.3),
    "Инвестиционное предложение · Seed 35 млн ₽ + Series A 45 млн ₽\nФедеральный рынок России · Международное направление: Хайнань (КНР) и АТР",
-   size=16, color=SKY, line_spacing=1.3)
+   size=14.5, color=SKY, line_spacing=1.35)
 tb(s, Inches(0.9), Inches(6.2), Inches(8), Inches(1.0),
    "Петрушина М. В. · генеральный директор\nООО «МедТехПрима» · +7 985 728 66 55 · mar.petrushina@yandex.ru",
    size=14, color=WHITE, line_spacing=1.3)
@@ -172,12 +198,16 @@ kpi_card(s, Inches(0.55), Inches(1.95), Inches(2.9), Inches(1.5), "≈120–130 
 kpi_card(s, Inches(3.65), Inches(1.95), Inches(2.9), Inches(1.5), "≈35–40%", "средняя реализация на перенос (МЗ РФ)")
 kpi_card(s, Inches(6.75), Inches(1.95), Inches(2.9), Inches(1.5), "15–17%", "пар в мире сталкиваются с бесплодием (ВОЗ)")
 kpi_card(s, Inches(9.85), Inches(1.95), Inches(2.9), Inches(1.5), "≈1,4", "СКР в РФ — ниже уровня воспроизводства (Росстат)")
-bullets(s, Inches(0.55), Inches(3.8), Inches(12.2), Inches(3.0), [
-    ("Скрытые потери: ", "до 50% неудач переносов объясняются генетикой эмбриона, качеством эндометрия, иммунной несовместимостью и мужским фактором — в клинической практике они частично «невидимы»."),
+# иллюстрация ICSI справа от буллитов
+h_pic = add_pic(s, "icsi.png", 9.55, 3.9, 3.25, frame=True)
+tb(s, Inches(9.55), Inches(3.9) + Inches(h_pic) + Inches(0.12), Inches(3.25), Inches(0.3),
+   "ICSI: прецизионная инъекция сперматозоида", size=9.5, color=GRAY, align=PP_ALIGN.CENTER)
+bullets(s, Inches(0.55), Inches(3.8), Inches(8.7), Inches(3.1), [
+    ("Скрытые потери: ", "до 50% неудач переносов объясняются генетикой эмбриона, качеством эндометрия, иммунной несовместимостью и мужским фактором — они частично «невидимы»."),
     ("Мужской фактор недооценён: ", "DFI/MAR-тест часто не включён в протокол решения о переносе — источник ранних потерь и неудачных циклов."),
     ("ОМС и бюджеты: ", "каждый повторный цикл — прямые затраты квот; регионам нужен инструмент управления CLBR и стоимостью живорождения."),
     ("Регуляторный тренд: ", "Минздрав и ДЗМ инициируют режимы упрощённой валидации («песочница») для ИИ-МИ — окно для суверенных российских решений."),
-])
+], size=14.5)
 
 # ==================== 3. РЕШЕНИЕ ====================
 s = slide_chrome(3, "Решение: 5 уровней данных → единый прогноз имплантации",
@@ -287,11 +317,14 @@ for i, (title, price, desc) in enumerate(streams):
        price, size=14, bold=True, color=DEEP, align=PP_ALIGN.CENTER, line_spacing=1.05)
     tb(s, x + Inches(0.1), Inches(3.55), Inches(2.12), Inches(1.1),
        desc, size=11, color=GRAY, align=PP_ALIGN.CENTER, line_spacing=1.15)
-bullets(s, Inches(0.55), Inches(5.15), Inches(12.2), Inches(2.0), [
-    ("Юнит-экономика: ", "LTV ~12–15 млн ₽ на клинику (5 лет), CAC 0,8–1,2 млн ₽ с учётом пилота; цикл сделки 6–9 мес."),
+h_pic = add_pic(s, "division.png", 10.05, 4.9, 2.5, frame=True)
+tb(s, Inches(10.05), Inches(4.9) + Inches(h_pic) + Inches(0.08), Inches(2.5), Inches(0.25),
+   "Данные развития эмбриона для ИИ", size=9, color=GRAY, align=PP_ALIGN.CENTER)
+bullets(s, Inches(0.55), Inches(5.15), Inches(8.8), Inches(2.0), [
+    ("Юнит-экономика: ", "LTV ~12–15 млн ₽ на клинику (5 лет), CAC 0,8–1,2 млн ₽; цикл сделки 6–9 мес."),
     ("Воронка: ", "научный контент → пилот на данных клиники (1–3 мес.) → сравнение прогноза с фактом → договор."),
     ("Lock-in: ", "глубокая интеграция с МИС и накопление исторических данных клиники повышают стоимость переключения."),
-])
+], size=13.5)
 
 # ==================== 7. TRACTION / СТАТУС ====================
 s = slide_chrome(7, "Статус проекта: прототип, ИС, команда, пилот 2026–27",
@@ -299,10 +332,10 @@ s = slide_chrome(7, "Статус проекта: прототип, ИС, ком
 kpi_card(s, Inches(0.55), Inches(1.95), Inches(3.0), Inches(1.5), "AUC 0,89", "предварительная внутренняя валидация (требуется проспективное исследование)")
 kpi_card(s, Inches(3.75), Inches(1.95), Inches(3.0), Inches(1.5), "6 РИД", "свидетельство №1440-028-537 (30.03.2026), ПОЭВМ, заявки, know-how")
 kpi_card(s, Inches(6.95), Inches(1.95), Inches(3.0), Inches(1.5), "45 млн ₽", "оценка ИС для вклада в УК АО (отчёт оценщика)")
-kpi_card(s, Inches(10.15), Inches(1.95), Inches(2.6), Inches(1.5), "8–10 тыс.", "циклов в пилоте: НМИЦ АГП + 5–7 клиник")
+kpi_card(s, Inches(10.15), Inches(1.95), Inches(2.6), Inches(1.5), "8–10 тыс.", "циклов в пилоте: РНИМУ Пирогова + 5–7 клиник")
 bullets(s, Inches(0.55), Inches(3.8), Inches(12.2), Inches(3.2), [
     ("Регуляторика: ", "подготовка к регистрации ПО как медизделия; рассмотрение режима «песочницы» ДЗМ/Минздрава для ИИ-МИ."),
-    ("Инфраструктура: ", "доступ к циклам через НМИЦ АГП им. В. И. Кулакова; российское облако с требованиями 152-ФЗ."),
+    ("Инфраструктура: ", "доступ к циклам через РНИМУ им. Н. И. Пирогова; российское облако с требованиями 152-ФЗ."),
     ("Обезличивание: ", "PIPL-совместимая архитектура для будущего Китая; masking при неполных данных."),
     ("Роадмап: ", "2026–27 пилот и регистрация → 2028 модули и масштабирование на Москву → 2029 регионы и матчинг СМ → 2030 федеральный масштаб + Хайнань."),
     ("Доказательная база: ", "публикация результатов пилота в российских и международных изданиях — инструмент продаж и научной репутации."),
@@ -354,7 +387,7 @@ for i, (name, role, desc) in enumerate(team):
     tb(s, x + Inches(0.18), y + Inches(0.82), Inches(2.65), Inches(0.65),
        desc, size=10.5, color=GRAY, line_spacing=1.1)
 tb(s, Inches(0.55), Inches(5.65), Inches(12.2), Inches(1.3),
-   "Научная база пилота: НМИЦ акушерства и гинекологии им. В. И. Кулакова и клиники-партнёры.\n"
+   "Научная база пилота: РНИМУ им. Н. И. Пирогова и клиники-партнёры.\n"
    "Найм по Раунду 1: ML-инженеры (2–3), интеграционный разработчик, эмбриолог-аналитик,\n"
    "менеджер клинических исследований, регуляторный специалист; с 2027 — B2B-менеджер.",
    size=13.5, color=DARK, line_spacing=1.25)
@@ -377,8 +410,32 @@ kpi_card(s, Inches(3.75), Inches(5.05), Inches(3.0), Inches(1.5), "37%", "мар
 kpi_card(s, Inches(6.95), Inches(5.05), Inches(3.0), Inches(1.5), "×0,75 / ×1,3", "песс. / опт. сценарии по выручке (расходы ×1,12 / ×0,95)")
 kpi_card(s, Inches(10.15), Inches(5.05), Inches(2.6), Inches(1.5), "УСН 5%", "налог в модели (консервативно, без Сколково)")
 
-# ==================== 11. ИНВЕСТИЦИИ ====================
-s = slide_chrome(11, "Инвестиции: 70 млн ₽ за два раунда",
+# ==================== 11. ГРАФИКИ: ФИНАНСЫ ====================
+s = slide_chrome(11, "Финансы в динамике: рост выручки и выход в плюс",
+                 "Базовый сценарий финансовой модели — те же данные, что в таблице P&L")
+add_pic(s, "chart_revenue.png", 0.55, 1.95, 6.1)
+add_pic(s, "chart_ebitda.png", 6.85, 1.95, 6.1)
+rect(s, Inches(0.55), Inches(5.45), Inches(12.4), Inches(1.45), ICE, line=SKY)
+rect(s, Inches(0.55), Inches(5.45), Pt(5), Inches(1.45), BRIGHT)
+bullets(s, Inches(0.85), Inches(5.6), Inches(11.9), Inches(1.2), [
+    ("Рост выручки ≈2,3×/год при CAGR ~154% (2026–2030): ", "SaaS-подписки + модули + матчи + B2G + APAC."),
+    ("Пик кассовой потребности — 2026–2027: ", "покрывается раундами Seed 35 млн ₽ и Series A 45 млн ₽ с грантовой обочкой; EBITDA-безубыточность — 2028."),
+], size=13)
+
+# ==================== 12. ГРАФИКИ: КЛИЕНТЫ И РЫНОК ====================
+s = slide_chrome(12, "Рост клиентской базы и рыночный контекст",
+                 "Проникновение в РФ и ранний выход в Китай/АТР по модели")
+add_pic(s, "chart_clients.png", 0.55, 1.95, 6.1)
+add_pic(s, "chart_market.png", 6.85, 1.95, 6.1)
+rect(s, Inches(0.55), Inches(5.5), Inches(12.4), Inches(1.4), ICE, line=SKY)
+rect(s, Inches(0.55), Inches(5.5), Pt(5), Inches(1.4), BRIGHT)
+bullets(s, Inches(0.85), Inches(5.65), Inches(11.9), Inches(1.15), [
+    ("85 клиник в РФ к 2030 — ≈13–17% SAM: ", "путь через якорный пилот с РНИМУ → Москва → ключевые регионы (ЦФО, СЗФО, ПФО)."),
+    ("APAC после запуска WFOE в Хайнане: ", "~8 млн ₽ (2029) → ~25,5 млн ₽ (2030) при 3 партнёрах; воронка на 2031 — 4–6 партнёров (~35 млн ₽)."),
+], size=13)
+
+# ==================== 13. ИНВЕСТИЦИИ ====================
+s = slide_chrome(13, "Инвестиции: 70 млн ₽ за два раунда",
                  "Непубличное АО «ВИТА ГЕН АИ» · привилегированные акции · акционерное соглашение · опционный пул 12%")
 # два раунда
 rect(s, Inches(0.55), Inches(1.9), Inches(6.0), Inches(2.5), ICE, line=SKY)
@@ -420,8 +477,8 @@ tb(s, Inches(0.55), Inches(6.6), Inches(12.2), Inches(0.4),
    "Дополнительно: гранты ФСИ/Сколково/ВЭБ.РФ/ДЗМ — 10–20 млн ₽ non-dilutive. Cap table post-Series A: 63,1% основатель/МедТехПрима · 20,8% Seed · 13,8% Series A · 8,9% опционный пул.",
    size=10.5, color=GRAY)
 
-# ==================== 12. ROADMAP / КИТАЙ ====================
-s = slide_chrome(12, "Дорожная карта 2026–2030 и международный трек",
+# ==================== 14. ROADMAP / КИТАЙ ====================
+s = slide_chrome(14, "Дорожная карта 2026–2030 и международный трек",
                  "Федеральный масштаб поэтапно; экспорт через зону свободной торговли Хайнань")
 years = [
     ("2026", "Seed", "Доработка ядра,\nинтеграции с МИС,\nстарт пилота", DEEP),
@@ -446,19 +503,21 @@ bullets(s, Inches(0.8), Inches(5.25), Inches(11.7), Inches(1.5), [
     "Льготный КН 15% (политика СПК Госсовета по Хайнаню), пилотный режим Боао Лэчэн, PIPL: локальный деплой, экспорт только агрегатов",
 ], size=13)
 
-# ==================== 13. КОНТАКТЫ / CTA ====================
+# ==================== 15. КОНТАКТЫ / CTA ====================
 s = prs.slides.add_slide(BLANK)
 rect(s, 0, 0, W, H, DEEP)
 rect(s, 0, Inches(5.85), W, Pt(5), BRIGHT)
 rect(s, 0, Inches(5.9), W, Inches(1.6), MID)
-tb(s, Inches(0.9), Inches(1.3), Inches(11.5), Inches(1.0),
+# иллюстрация ДНК справа (фон совпадает с DEEP — бесшовно)
+add_pic(s, "dna.png", 9.15, 1.35, 3.5)
+tb(s, Inches(0.9), Inches(1.3), Inches(8.0), Inches(1.0),
    "Соединим клинику, генетику и ИИ —\nчтобы каждый цикл ВРТ давал ребёнка",
-   size=30, bold=True, color=WHITE, line_spacing=1.2)
-tb(s, Inches(0.9), Inches(3.3), Inches(11.5), Inches(2.2),
+   size=28, bold=True, color=WHITE, line_spacing=1.2)
+tb(s, Inches(0.9), Inches(3.3), Inches(7.9), Inches(2.2),
    "Seeking:  Seed 35 млн ₽ (2026) + Series A 45 млн ₽ (2027)\n"
    "Структура:  непубличное АО, привилегированные акции, акционерное соглашение, опционный пул 12%\n"
    "Готовы:  due diligence, пилотный протокол, отчёт оценщика по ИС, model deck",
-   size=16, color=SKY, line_spacing=1.4)
+   size=15, color=SKY, line_spacing=1.4)
 tb(s, Inches(0.9), Inches(6.15), Inches(7.5), Inches(1.1),
    "Петрушина Марина Владимировна · генеральный директор\n"
    "ООО «МедТехПрима»  ·  проектная компания: АО «ВИТА ГЕН АИ» (создаётся)\n"
