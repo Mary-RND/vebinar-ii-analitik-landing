@@ -170,12 +170,11 @@ def add_pic(slide, name, x_in, y_in, w_in, frame=False):
 
 # ==================== 1. ОБЛОЖКА ====================
 s = prs.slides.add_slide(BLANK)
-rect(s, 0, 0, W, H, DEEP)
+# картинка пользователя: эмбрион, чёрный фон заменён на синий DEEP
+s.shapes.add_picture(os.path.join(ASSETS, "cover_user_embryo.png"), 0, 0, width=W, height=H)
+# декоративная нижняя полоса поверх фона
 rect(s, 0, Inches(5.9), W, Inches(1.6), MID)
-# декоративные полосы
 rect(s, 0, Inches(5.75), W, Pt(5), BRIGHT)
-# иллюстрация эмбриона (фон совпадает с DEEP — бесшовно)
-add_pic(s, "cover_embryo.png", 7.55, 1.35, 5.35)
 tb(s, Inches(0.9), Inches(1.15), Inches(6.6), Inches(1.0),
    "VitaGen-AI", size=54, bold=True, color=WHITE)
 tb(s, Inches(0.9), Inches(2.15), Inches(6.6), Inches(1.7),
