@@ -1,13 +1,23 @@
-name: Deploy surgery landing to GitHub Pages
+name: Deploy landings to GitHub Pages
+
+# Публикует на GitHub Pages два сайта из этого репозитория:
+#   /                 -> Surgery landing (3D-редизайн сайта хирурга)
+#   /plastic/         -> Plastic Surgery land (сайт пластического хирурга)
+#
+# Фитнес-лендинги (v1 и v2) здесь не публикуются — они уже размещены
+# на Cloudflare Workers, ссылки в рабочей тетради.
 
 on:
   push:
     branches: [main]
     paths:
       - "Surgery landing/site/**"
+      - "Plastic Surgery land/site/**"
       - ".github/workflows/deploy-surgery-pages.yml"
   workflow_dispatch:
 
+# Только один workflow в репозитории может публиковать Pages:
+# при добавлении второго они начнут перезаписывать сайт друг друга.
 permissions:
   contents: read
   pages: write
@@ -22,22 +32,52 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: "Surgery landing/site/package-lock.json"
-      - name: Install dependencies
+          cache-dependency-path: |
+            Surgery landing/site/package-lock.json
+            Plastic Surgery land/site/package-lock.json
+
+      - name: Install dependencies (Surgery landing)
         working-directory: "Surgery landing/site"
         run: npm ci --legacy-peer-deps
-      - name: Build static export
+
+      - name: Build Surgery landing
         working-directory: "Surgery landing/site"
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+
+      - name: Install dependencies (Plastic Surgery land)
+        working-directory: "Plastic Surgery land/site"
+        run: npm ci --legacy-peer-deps
+
+      - name: Build Plastic Surgery land
+        working-directory: "Plastic Surgery land/site"
+        run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}/plastic
+
+      - name: Assemble Pages artifact
+        run: |
+          set -e
+          rm -rf _site
+          mkdir -p _site
+
+          # Оба сайта используют статический экспорт Next.js (out/)
+          cp -R "Surgery landing/site/out/." _site/
+
+          mkdir -p _site/plastic
+          cp -R "Plastic Surgery land/site/out/." _site/plastic/
+
+          touch _site/.nojekyll
+
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: "Surgery landing/site/out"
+          path: "_site"
 
   deploy:
     needs: build
