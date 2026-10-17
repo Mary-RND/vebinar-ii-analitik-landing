@@ -99,8 +99,10 @@ $env:NEXT_PUBLIC_BASE_PATH='/vebinar-ii-analitik-landing/plastic'; npm run build
 Plastic Surgery land/
 ├── README.md                  ← этот файл
 ├── screenshots/               ← скриншоты для портфолио
+│   └── dev/                   ← рабочие материалы: итерации первого экрана, референсы
 ├── content/prices.md          ← черновик прайса с рыночными ценами
 ├── tools/                     ← генерация фото (FLUX) и промпты
+├── Тексты для сайта пластического хирурга.docx  ← исходные тексты
 └── site/
     ├── src/app/               # layout, globals.css, единственный маршрут /
     ├── src/components/        # Header, Footer, Reveal, ScrollProgress, ui/Button
