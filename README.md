@@ -1,7 +1,8 @@
 # Лендинг вебинара «Аналитик» — рекламный лендинг под ключ
 
-**Live:** [restless-hat-0282.mar-petrushina.workers.dev](https://restless-hat-0282.mar-petrushina.workers.dev/)
-**Зеркало:** [mary-rnd.github.io/vebinar-ii-analitik-landing](https://mary-rnd.github.io/vebinar-ii-analitik-landing/)
+**Live:** [mary-rnd.github.io/vebinar-ii-analitik-landing](https://mary-rnd.github.io/vebinar-ii-analitik-landing/)
+
+**Зеркало:** [restless-hat-0282.mar-petrushina.workers.dev](https://restless-hat-0282.mar-petrushina.workers.dev/) — Cloudflare Workers (домен `workers.dev` в РФ не открывается, поэтому основная ссылка — GitHub Pages).
 
 Рекламный лендинг бесплатного вебинара по аналитике: тёмная тема, честная продающая
 структура, обратный отсчёт до старта и форма регистрации. Один файл на чистом
@@ -90,10 +91,11 @@ python -m http.server 8000
 
 ## Деплой
 
-- **Живая версия** — Cloudflare Workers: `https://restless-hat-0282.mar-petrushina.workers.dev/`
-- **Зеркало на GitHub Pages** — обновляется автоматически: пуш в `main` с изменениями
-  в `index.html` или `dist/**` запускает `.github/workflows/deploy-webinar-pages.yml`
-  и публикует `dist/` по адресу `https://mary-rnd.github.io/vebinar-ii-analitik-landing/`.
+- **Живая версия** — GitHub Pages: `https://mary-rnd.github.io/vebinar-ii-analitik-landing/`
+  — пуш в `main` с изменениями в `index.html` или `dist/**` запускает
+  `.github/workflows/deploy-webinar-pages.yml` и публикует `dist/` автоматически.
+- **Зеркало** — Cloudflare Workers: `https://restless-hat-0282.mar-petrushina.workers.dev/`
+  (домен `workers.dev` в РФ не открывается, поэтому основной Live — на GitHub Pages).
 
 ## Структура
 
