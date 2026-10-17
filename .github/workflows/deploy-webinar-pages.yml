@@ -1,0 +1,50 @@
+name: Deploy webinar landing to GitHub Pages
+
+# Публикует лендинг на GitHub Pages: статический файл из dist/ уходит в корень.
+# Зеркало живой версии — рабочая ссылка в README.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "dist/**"
+      - ".github/workflows/deploy-webinar-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assemble Pages artifact
+        run: |
+          set -e
+          rm -rf _site
+          mkdir -p _site
+          cp -R dist/. _site/
+          touch _site/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_site"
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
