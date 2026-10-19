@@ -1,3 +1,5 @@
+> [← Портфолио Марины Петрушиной](https://mary-rnd.github.io/portfolio/) — сайты, ИИ-боты, трекеры и автоматизация для малого бизнеса и MedTech.
+
 # Лендинг вебинара «Аналитик» — рекламный лендинг под ключ
 
 **Live:** [mary-rnd.github.io/vebinar-ii-analitik-landing](https://mary-rnd.github.io/vebinar-ii-analitik-landing/)
