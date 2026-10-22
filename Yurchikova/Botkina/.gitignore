@@ -1,0 +1,30 @@
+# Yurchikova/Botkina — правила git для проекта аналитики закупок
+
+# Сырой сбор ЕИС: кэш карточек контрактов (≈658 МБ, 3 900 файлов) в git не попадает
+data/raw/
+data/botkina/*.jsonl
+data/botkina/*.html
+data/botkina/*.tsv
+data/botkina/*.txt
+data/botkina/*_list.json
+data/botkina/*_state.json
+!data/botkina/analytics.json
+
+# Внутренние и отладочные артефакты _probe (скрипты проверок и тесты входят в репозиторий)
+_probe/*
+!_probe/check_*.py
+!_probe/test_*.py
+
+# Сборка пакета передачи воспроизводима скриптом pipeline/package_delivery.py
+output/*.zip
+
+# Внутренний документ: ценообразование и условия, не для публикации
+PRICING_INTERNAL.md
+
+# Python
+__pycache__/
+*.pyc
+
+# Служебные файлы Office
+~$*
+.~lock.*
