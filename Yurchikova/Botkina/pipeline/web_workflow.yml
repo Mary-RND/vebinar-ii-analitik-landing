@@ -1,0 +1,35 @@
+name: Publish Pages
+
+on:
+  push:
+    branches: [ "master", "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Сайт готов к публикации: шлюз с паролем + зашифрованный дашборд.
+      # Сборка не требуется, но в артефакт должны попасть только файлы сайта.
+      - name: Prepare site
+        run: |
+          mkdir -p _site
+          cp index.html payload.bin _site/
+          test -f _site/index.html
+          test -f _site/payload.bin
+          ls -la _site
+
+      - name: Upload pages artifact
+        uses: gitverse/upload-pages-artifact@v1.0.0
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        uses: gitverse/deploy-pages@v1.0.0

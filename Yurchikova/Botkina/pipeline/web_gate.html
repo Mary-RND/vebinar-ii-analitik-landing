@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Доступ к дашборду — __TITLE__</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231f4e79'/%3E%3Ctext x='16' y='22' font-family='Segoe UI,Arial' font-size='14' font-weight='700' fill='%23fff' text-anchor='middle'%3E%D0%9C%D0%9D%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#0e2438;--panel:#12324f;--line:#2c557f;--ink:#eaf2fa;--muted:#a9c3da;--accent:#2f80ed;--bad:#e8734f}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:
+  radial-gradient(1200px 700px at 20% -10%,#1c4a75 0%,transparent 60%),
+  radial-gradient(1000px 600px at 110% 20%,#16405f 0%,transparent 55%),var(--bg);
+  color:var(--ink);display:flex;align-items:center;justify-content:center;padding:24px}
+.lock{width:100%;max-width:430px}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.mark{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#2f80ed,#1f4e79);
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;letter-spacing:.5px}
+h1{font-size:19px;line-height:1.3;margin:0;font-weight:650}
+.sub{color:var(--muted);font-size:13px;margin-top:4px}
+.card{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:16px;padding:22px 22px 18px;
+  backdrop-filter:blur(6px)}
+label{display:block;font-size:12.5px;color:var(--muted);margin-bottom:7px;letter-spacing:.02em}
+.row{display:flex;gap:8px}
+input[type=password]{flex:1;background:#0c2135;border:1px solid var(--line);border-radius:11px;color:var(--ink);
+  padding:12px 13px;font:inherit;font-size:15px;outline:none;min-width:0}
+input[type=password]:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,128,237,.22)}
+button{border:0;border-radius:11px;padding:12px 18px;font:inherit;font-size:14.5px;font-weight:600;cursor:pointer}
+.go{background:var(--accent);color:#fff}
+.go:disabled{opacity:.55;cursor:default}
+.eye{background:transparent;border:1px solid var(--line);color:var(--muted);padding:12px 13px}
+.err{color:var(--bad);font-size:13px;min-height:18px;margin-top:10px}
+.hint{color:var(--muted);font-size:12px;line-height:1.55;margin-top:14px;border-top:1px solid var(--line);padding-top:13px}
+.hint b{color:var(--ink);font-weight:600}
+.work{display:none}
+.topbar{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  background:linear-gradient(120deg,#12324f,#1f4e79 55%,#2c6c9e);color:#fff;padding:9px 14px}
+.topbar .t{font-size:14px;font-weight:600;margin-right:auto;line-height:1.35}
+.topbar .m{font-size:11.5px;opacity:.85;font-weight:400}
+.topbar button{background:rgba(255,255,255,.14);color:#fff;padding:8px 13px;font-size:13px;border-radius:9px}
+.topbar button:hover{background:rgba(255,255,255,.24)}
+#frame{width:100%;height:calc(100vh - 48px);border:0;display:block;background:#fff}
+noscript{display:block;margin-top:14px;color:var(--bad);font-size:13px}
+@media print{.topbar{display:none}#frame{height:100vh}}
+</style>
+</head>
+<body>
+  <main class="lock" id="lock">
+    <div class="brand">
+      <div class="mark">МН</div>
+      <div>
+        <h1>__TITLE__</h1>
+        <div class="sub">Интерактивный дашборд · доступ по паролю</div>
+      </div>
+    </div>
+    <form class="card" id="form" autocomplete="off" novalidate>
+      <label for="pw">Пароль доступа</label>
+      <div class="row">
+        <input type="password" id="pw" placeholder="Введите пароль" autocomplete="off"
+               autocapitalize="off" autocorrect="off" spellcheck="false" required>
+        <button type="button" class="eye" id="eye" title="Показать или скрыть пароль">Показать</button>
+        <button type="submit" class="go" id="go">Открыть</button>
+      </div>
+      <div class="err" id="err"></div>
+      <div class="hint">
+        <b>Пароль выдаёт аналитик</b>, предоставивший доступ к дашборду, и не публикуется
+        ни в отчёте, ни в реестрах. Данные дашборда зашифрованы: без пароля они не читаются,
+        даже если файлы сайта скачать напрямую.<br>
+        Объём данных: __SIZE_MB__ МБ · дата сборки страницы: __BUILT__.
+      </div>
+      <noscript>Для работы страницы нужен включённый JavaScript.</noscript>
+    </form>
+  </main>
+
+  <section class="work" id="work">
+    <div class="topbar">
+      <div class="t">__TITLE__<div class="m">Доступ открыт · закройте вкладку, чтобы выйти</div></div>
+      <button id="print">Печать / PDF</button>
+      <button id="exit">Выйти</button>
+    </div>
+    <iframe id="frame" title="Дашборд закупок МНКЦ им. С.П. Боткина за 2025 год"></iframe>
+  </section>
+
+<script>
+const ITER = __ITERATIONS__;
+const SALTIV = 28;   // 16 байт соль + 12 байт IV
+const el = id => document.getElementById(id);
+const enc = new TextEncoder(), dec = new TextDecoder();
+
+async function deriveKey(password, salt){
+  const base = await crypto.subtle.importKey('raw', enc.encode(password), 'PBKDF2', false, ['deriveKey']);
+  return crypto.subtle.deriveKey(
+    {name:'PBKDF2', salt, iterations:ITER, hash:'SHA-256'}, base,
+    {name:'AES-GCM', length:256}, false, ['decrypt']);
+}
+
+el('eye').addEventListener('click', () => {
+  const f = el('pw'), show = f.type === 'password';
+  f.type = show ? 'text' : 'password';
+  el('eye').textContent = show ? 'Скрыть' : 'Показать';
+});
+
+el('form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const pw = el('pw').value;
+  const err = el('err'), go = el('go');
+  if (!pw) { err.textContent = 'Введите пароль'; return; }
+  err.textContent = ''; go.disabled = true; go.textContent = 'Проверяем…';
+  try {
+    const res = await fetch('./payload.bin', {cache:'no-store'});
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const buf = await res.arrayBuffer();
+    if (buf.byteLength < SALTIV) throw new Error('короткий файл данных');
+    const salt = new Uint8Array(buf, 0, 16);
+    const iv   = new Uint8Array(buf, 16, 12);
+    const ct   = new Uint8Array(buf, 28);
+    const key  = await deriveKey(pw, salt);
+    const pt   = await crypto.subtle.decrypt({name:'AES-GCM', iv}, key, ct);
+    const html = dec.decode(pt);
+    el('frame').srcdoc = html;
+    el('lock').style.display = 'none';
+    el('work').style.display = 'block';
+    document.title = '__TITLE__';
+    el('pw').value = '';
+  } catch (ex) {
+    if (ex instanceof TypeError || /^HTTP/.test(ex.message || '')) {
+      // нет соединения или файл данных не отдаётся хостингом — пароль тут ни при чём
+      err.textContent = 'Не удалось загрузить данные дашборда (файл payload.bin недоступен). ' +
+                        'Проверьте соединение или обратитесь к администратору сайта.';
+    } else {
+      err.textContent = 'Неверный пароль. Проверьте раскладку клавиатуры и регистр.';
+      el('pw').value = ''; el('pw').focus();
+    }
+  } finally {
+    go.disabled = false; go.textContent = 'Открыть';
+  }
+});
+
+el('print').addEventListener('click', () => {
+  const f = el('frame');
+  if (f.contentWindow) f.contentWindow.focus(), f.contentWindow.print();
+});
+el('exit').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>

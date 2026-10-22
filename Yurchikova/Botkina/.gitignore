@@ -10,16 +10,24 @@ data/botkina/*_list.json
 data/botkina/*_state.json
 !data/botkina/analytics.json
 
-# Внутренние и отладочные артефакты _probe (скрипты проверок и тесты входят в репозиторий)
+# Внутренние и отладочные артефакты _probe (скрипты проверок, тесты и сборка веб-версии входят в репозиторий)
 _probe/*
 !_probe/check_*.py
 !_probe/test_*.py
+!_probe/make_web_repo.py
+!_probe/shot_gate.py
 
 # Сборка пакета передачи воспроизводима скриптом pipeline/package_delivery.py
 output/*.zip
 
 # Внутренний документ: ценообразование и условия, не для публикации
 PRICING_INTERNAL.md
+
+# Файл передачи пароля к веб-дашборду и папка-репозиторий Pages (публичны на GitVerse отдельно)
+output/Доступ_к_веб_дашборду.txt
+output/_password.tmp
+output/botkina-dashboard/
+output/web/
 
 # Python
 __pycache__/
