@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Закупки МНКЦ им. С.П. Боткина — 2025</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f4e79'/%3E%3Cpath d='M8 22V10h3v5.5h2V10h3v12h-3v-4h-2v4z' fill='%23fff'/%3E%3Cpath d='M20 10h4v12h-4z' fill='%234fa3d1'/%3E%3C/svg%3E">
 <script>
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -140,6 +141,21 @@ tr:hover td{background:var(--panel2)}
 .tablewrap table{margin:0}
 .tablewrap thead th{position:sticky;top:0;background:var(--panel2);z-index:2}
 .hintbar{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:8px 0;font-size:12px;color:var(--muted)}
+.tbar{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin:8px 0 6px;font-size:12px}
+.tbar input[type=search]{flex:1 1 170px;min-width:140px;max-width:300px;background:var(--panel2);
+  border:1px solid var(--line);border-radius:9px;color:var(--ink);padding:6px 9px;font:inherit;font-size:12.5px;outline:none}
+.tbar input[type=search]:focus{border-color:var(--accent2)}
+.tbar select{background:var(--panel2);border:1px solid var(--line);border-radius:9px;color:var(--ink);
+  padding:5px 7px;font:inherit;font-size:12px}
+.tbar .lbl{color:var(--muted)}
+.tbar .cnt{color:var(--muted);white-space:nowrap;margin-left:auto}
+.tbar button{border:1px solid var(--line);background:var(--panel2);color:var(--ink);border-radius:9px;
+  padding:5px 11px;font:inherit;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap}
+.tbar button:hover{border-color:var(--accent2);color:var(--accent2)}
+.tbar button.xl{border-color:var(--green);color:var(--green)}
+th.sortable::after{content:' ↕';opacity:.35;font-size:9px}
+th.sortable[data-dir="asc"]::after{content:' ▲';opacity:1;color:var(--accent2);font-size:9px}
+th.sortable[data-dir="desc"]::after{content:' ▼';opacity:1;color:var(--accent2);font-size:9px}
 .registry{position:relative;height:600px;overflow:auto;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
 .registry table{table-layout:fixed;min-width:1240px}
 .registry thead th{position:sticky;top:0;z-index:3;background:var(--panel2);border-bottom:1px solid var(--line)}
@@ -179,7 +195,7 @@ footer{margin-top:24px;color:var(--muted);font-size:12px;line-height:1.6}
   :root{--bg:#fff;--panel:#fff;--panel2:#fff;--ink:#000;--muted:#444;--line:#bbb;--grid:#ddd}
   html[data-theme]{--bg:#fff;--panel:#fff;--panel2:#fff;--ink:#000;--muted:#444;--line:#bbb;--grid:#ddd}
   body{background:#fff}
-  .toolbar,nav.tabs,.topbtns,footer .noprint{display:none !important}
+  .toolbar,nav.tabs,.topbtns,.tbar,footer .noprint{display:none !important}
   header.top{background:#12324f !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   section.block{break-inside:auto;break-before:page;box-shadow:none;border-color:#bbb}
   section.block:first-of-type{break-before:auto}
@@ -225,7 +241,8 @@ footer{margin-top:24px;color:var(--muted);font-size:12px;line-height:1.6}
       <label class="chk"><input type="checkbox" id="f80"> номенклатура 80 %</label>
       <label class="chk"><input type="checkbox" id="fest"> без оценочных</label>
       <button class="ghost" id="reset">Сбросить</button>
-      <button class="ghost" id="csv">CSV</button>
+      <button class="ghost" id="csv" title="Реестр позиций: UTF-8 с BOM, разделитель «;»">CSV — реестр</button>
+      <button class="ghost" id="xlsx" title="Весь отчёт текущего среза одним файлом .xlsx">Excel — весь отчёт</button>
     </div>
     <div class="chips" id="chips"></div>
   </div>
@@ -286,7 +303,7 @@ footer{margin-top:24px;color:var(--muted);font-size:12px;line-height:1.6}
     <div class="note">Pareto по позициям и таблица набора. Поиск и фильтры — в верхней панели.</div>
     <div class="factlegend"><span class="tag"><span class="sw"></span><b>факт</b> — данные первичного источника ЕИС без изменений</span><span class="tag"><span class="sw est"></span><b>оценка</b> — расчётное, агрегированное или неполное значение</span><span>Оценочные значения не предназначены для официальной отчётности.</span></div>
     <div class="chart tall" id="chParetoItems"></div>
-    <div class="hintbar"><span id="itemsHint"></span><span>Показаны первые 300 строк</span></div>
+    <div class="hintbar"><span id="itemsHint"></span><span id="itemsShown"></span></div>
     <div class="tablewrap"><table id="itemsTable"></table></div>
     <div class="srcline" data-srcline></div>
   </section>
@@ -363,8 +380,9 @@ footer{margin-top:24px;color:var(--muted);font-size:12px;line-height:1.6}
         <li>Фильтры верхней панели (вид закупки, товарная группа, страна, российский/импортный товар, поставщик, диапазон суммы позиции, поиск по наименованию) применяются одновременно ко всем разделам. Выбранные значения отображаются в шапке под фильтрами; кнопка «Сбросить» очищает их.</li>
         <li>Фильтры не меняют учёт: карточки «Профильный объём», «Отсечено фильтрами», «Исключено» и «Общий объём 2025» всегда дают проверяемое равенство — срез + отсечено фильтрами + исключено = общий объём.</li>
         <li>Кнопка «Тема» переключает светлую, тёмную и системную тему. Кнопка «Печать / PDF» готовит версию для печати: формат A4, светлая тема, разрывы страниц по разделам, повтор шапок таблиц и полный реестр позиций.</li>
-        <li>Кнопка «CSV» выгружает текущий отфильтрованный срез реестра позиций: разделитель «;», кодировка UTF-8 с BOM, файл открывается в Excel без дополнительной настройки.</li>
-        <li>В таблицах клик по заголовку сортирует строки; строки реестра подгружаются по мере прокрутки.</li>
+        <li>Кнопка «CSV — реестр» в верхней панели выгружает текущий отфильтрованный срез реестра позиций: разделитель «;», кодировка UTF-8 с BOM, файл открывается в Excel без дополнительной настройки. Кнопка «Excel — весь отчёт» рядом собирает один файл .xlsx: описание среза, показатели, все таблицы в текущем виде и полный реестр среза.</li>
+        <li>Над каждой таблицей — своя строка управления: поиск только по этой таблице, счётчик показанных строк, число выводимых строк для длинных таблиц и кнопки «Excel» и «CSV». Выгружаются ровно те строки, что видны в таблице после фильтров и сортировки; числа в .xlsx остаются числами, поэтому из файла можно строить сводные таблицы.</li>
+        <li>В таблицах клик по заголовку сортирует строки: значок ▲ или ▼ показывает, по какому столбцу и в каком направлении идёт сортировка. Строки реестра подгружаются по мере прокрутки, а в печать выводятся полностью.</li>
         <li>Оценочные значения (сумма позиции распределена по цене контракта) помечены словом «оценка».</li>
       </ul>
     </details>
@@ -458,7 +476,20 @@ const shortCat = s => CAT_SHORT[s] || (s.length > 18 ? s.slice(0,17) + '…' : s
 
 // ---------- состояние ----------
 const state = {kind:'', cat:'', country:'', origin:'', sup:'', min:null, max:null, q:'', only80:false, noEst:false};
-const sortState = {cat:{k:'sum',d:-1}, items:{k:'sum',d:-1}, bench:{k:'sum',d:-1}, reg:{k:'sum',d:-1}};
+const sortState = {cat:{k:'sum',d:-1}, items:{k:'sum',d:-1}, bench:{k:'sum',d:-1}, reg:{k:'sum',d:-1},
+  country:{k:'orig',d:-1}, cd:{k:'sum',d:-1}};
+// локальные фильтры и лимиты строк внутри таблиц (не трогают остальные разделы)
+const tstate = {cat:{q:''}, catdet:{q:'',limit:12}, items:{q:'',limit:300},
+  bench:{q:'',limit:200}, country:{q:''}, reg:{q:''}};
+const TBL = {
+  cat:{el:'#catTable', sheet:'Категории', title:'Категории по правилу 80 %'},
+  catdet:{el:'#catDetail', sheet:'Позиции группы', title:'Позиции товарной группы'},
+  items:{el:'#itemsTable', sheet:'Номенклатура', title:'Номенклатура по правилу 80 %'},
+  bench:{el:'#benchTable', sheet:'Бенчмарки', title:'Ценовые бенчмарки'},
+  country:{el:'#countryTable', sheet:'Страны', title:'Страна происхождения по товарным группам'},
+  reg:{el:'#regBox', sheet:'Реестр', title:'Реестр позиций'}
+};
+let lastKpi = [];
 const selected = {cat:''};
 
 function matchPos(p){
@@ -605,6 +636,7 @@ function renderKpis(){
     ['Категорий в 80 %', catsIn80 + ' из ' + DATA.categories.length, 'правило 80 %, не топ-10'],
     ['Медиана позиции', money(median(rows.map(p=>p.sum||0))), est ? pct(est / (rows.length||1) * 100) + ' оценочных' : 'оценочных нет'],
   ];
+  lastKpi = kpi;
   $('#kpis').innerHTML = kpi.map(([l,v,h]) => `<div class="kpi"><div class="label">${l}</div><div class="value">${v}</div><div class="hint">${h}</div></div>`).join('');
 }
 
@@ -862,6 +894,34 @@ function drawAll(){
 }
 
 // ---------- таблицы ----------
+const plural = (n, f) => { const a = Math.abs(n) % 100, b = a % 10;
+  if (a > 10 && a < 20) return f[2];
+  if (b > 1 && b < 5) return f[1];
+  if (b === 1) return f[0];
+  return f[2]; };
+const words = (n) => plural(n, ['строка', 'строки', 'строк']);
+const hay = (v) => String(v ?? '').toLowerCase();
+function markSort(sel, st){
+  $$(sel + ' th.sortable').forEach(th => {
+    th.dataset.dir = (th.dataset.k === st.k) ? (st.d < 0 ? 'desc' : 'asc') : '';
+  });
+}
+function setCnt(t, shown, total){
+  const el = document.querySelector('[data-tcnt="' + t + '"]');
+  if (!el) return;
+  const cut = (tstate[t].limit && shown < total) || tstate[t].q;
+  el.textContent = cut
+    ? 'Показано ' + fmt0.format(shown) + ' из ' + fmt0.format(total) + ' ' + words(total)
+    : fmt0.format(total) + ' ' + words(total);
+}
+function redrawTable(t){
+  if (t === 'cat') renderCats();
+  else if (t === 'catdet') renderCatDetail();
+  else if (t === 'items') renderItems();
+  else if (t === 'bench') renderBench();
+  else if (t === 'country') renderCountryTable();
+  else if (t === 'reg') regReset();
+}
 function renderCats(){
   const st = sortState.cat;
   const get = (r) => ({category:r.category,sum:r.sum,share:r.share,cum:r.cum_share,n:r.n,sup:r.suppliers,avg:r.avg_position}[st.k]);
@@ -871,10 +931,17 @@ function renderCats(){
   let acc = 0;
   const enriched = rows.map(c=>{ acc += c.sum || 0;
     return {...c, _share: totalSum ? (c.sum||0)/totalSum*100 : 0, _cum: totalSum ? acc/totalSum*100 : 0}; });
+  const q = hay(tstate.cat.q);
+  const shown = q
+    ? enriched.filter(c => hay(c.category + ' ' + money(c.sum) + ' ' + pct(c._share) + ' ' + fmt0.format(c.n)).includes(q))
+    : enriched;
+  const fSum = shown.reduce((s,c)=>s+(c.sum||0),0);
   const showCum = st.k === 'sum' && st.d === -1;
-  const tN = rows.reduce((s,c)=>s+c.n,0);
-  const tSup = new Set(P().map(p=>p.sup).filter(Boolean)).size;
-  const body = enriched.map((c,i)=>`<tr data-cat="${esc(c.category)}" style="cursor:pointer">
+  const tN = shown.reduce((s,c)=>s+c.n,0);
+  const tSup = q
+    ? new Set(P().filter(p=>shown.some(c=>c.category===p.cat)).map(p=>p.sup).filter(Boolean)).size
+    : new Set(P().map(p=>p.sup).filter(Boolean)).size;
+  const body = shown.map((c,i)=>`<tr data-cat="${esc(c.category)}" style="cursor:pointer">
     <td class="num">${i+1}</td>
     <td>${esc(c.category)} ${c.in_80?'<span class="badge80">80 %</span>':''}</td>
     <td class="num">${money(c.sum)}</td><td class="num">${pct(c._share)}</td>
@@ -890,36 +957,64 @@ function renderCats(){
     <th class="sortable num" data-t="cat" data-k="sup">Поставщиков</th>
     <th class="sortable num" data-t="cat" data-k="avg">Средняя</th></tr></thead>
     <tbody>${body}</tbody>
-    <tfoot><tr><td></td><td>Итого по срезу</td><td class="num">${money(totalSum)}</td>
-      <td class="num">100,0 %</td><td class="num">${showCum?'100,0 %':'—'}</td>
+    <tfoot><tr><td></td><td>${q?'Итого по фильтру таблицы':'Итого по срезу'}</td><td class="num">${money(fSum)}</td>
+      <td class="num">${q?pct(totalSum?fSum/totalSum*100:0):'100,0 %'}</td>
+      <td class="num">${q?(showCum&&shown.length?pct(shown[shown.length-1]._cum):'—'):(showCum?'100,0 %':'—')}</td>
       <td class="num">${fmt0.format(tN)}</td><td class="num">${fmt0.format(tSup)}</td>
-      <td class="num">${money(tN?totalSum/tN:null)}</td></tr></tfoot>`;
+      <td class="num">${money(tN?fSum/tN:null)}</td></tr></tfoot>`;
   $$('#catTable tbody tr').forEach(tr => tr.addEventListener('click', () => {
     selected.cat = tr.dataset.cat;
     renderCatDetail();
     $$('#catTable tbody tr').forEach(x => x.style.background = '');
     tr.style.background = 'var(--panel2)';
   }));
-  $('#catHint').textContent = `${rows.length} групп, в 80 %-наборе ${rows.filter(c=>c.in_80).length}`;
+  $('#catHint').textContent = rows.length === shown.length
+    ? `${rows.length} групп, в 80 %-наборе ${rows.filter(c=>c.in_80).length}`
+    : `${rows.length} групп, по фильтру таблицы — ${shown.length}`;
+  markSort('#catTable', st);
+  setCnt('cat', shown.length, rows.length);
   renderCatDetail();
 }
 function renderCatDetail(){
   const cat = selected.cat || state.cat || (DATA.categories[0]||{}).category || '';
-  if (!cat){ $('#catDetail').innerHTML=''; return; }
-  const rows = DATA.positions.filter(p=>p.cat===cat).sort((a,b)=>(b.sum||0)-(a.sum||0)).slice(0,12);
-  $('#catDetailTitle').textContent = 'Позиции группы: ' + cat;
+  if (!cat){ $('#catDetail').innerHTML=''; setCnt('catdet', 0, 0); return; }
+  const st = sortState.cd;
+  const q = hay(tstate.catdet.q);
+  let rows = DATA.positions.filter(p=>p.cat===cat);
+  if (q) rows = rows.filter(p => hay(p.name + ' ' + (p.unit||'') + ' ' + money(p.sum) + ' '
+    + (p.country||'') + ' ' + (p.sup||'')).includes(q));
+  rows = sortRows(rows, st, p => ({name:p.name, qty:p.qty, price:p.price, sum:p.sum,
+    country:p.country, sup:p.sup}[st.k]));
+  const total = rows.length;
+  rows = tstate.catdet.limit ? rows.slice(0, tstate.catdet.limit) : rows;
+  const fSum = rows.reduce((s,p)=>s+(p.sum||0),0);
+  $('#catDetailTitle').textContent = 'Позиции группы: ' + cat
+    + (total !== rows.length ? ` · показано ${rows.length} из ${total}` : '');
   const body = rows.map((p,i)=>`<tr><td class="num">${i+1}</td><td>${esc(p.name)}</td>
     <td>${esc(p.unit||'—')}</td><td class="num">${!p.qty?'—':fmt0.format(p.qty)}</td>
     <td class="num">${money(p.price)}</td><td class="num">${money(p.sum)}</td>
     <td>${esc(p.country)}</td><td>${esc(p.sup||'—')}</td></tr>`).join('');
-  $('#catDetail').innerHTML = `<thead><tr><th>№</th><th>Позиция</th><th>Ед.</th><th class="num">Кол-во</th>
-    <th class="num">Цена</th><th class="num">Сумма</th><th>Страна</th><th>Поставщик</th></tr></thead>
-    <tbody>${body || '<tr><td colspan="8" class="empty">Нет данных</td></tr>'}</tbody>`;
+  $('#catDetail').innerHTML = `<thead><tr><th>№</th>
+    <th class="sortable" data-t="cd" data-k="name">Позиция</th><th>Ед.</th>
+    <th class="sortable num" data-t="cd" data-k="qty">Кол-во</th>
+    <th class="sortable num" data-t="cd" data-k="price">Цена</th>
+    <th class="sortable num" data-t="cd" data-k="sum">Сумма</th>
+    <th class="sortable" data-t="cd" data-k="country">Страна</th>
+    <th class="sortable" data-t="cd" data-k="sup">Поставщик</th></tr></thead>
+    <tbody>${body || '<tr><td colspan="8" class="empty">Нет данных</td></tr>'}</tbody>
+    <tfoot><tr><td></td><td>${q?'Итого по фильтру таблицы':'Итого по показанным позициям'}</td>
+      <td></td><td></td><td></td><td class="num">${money(fSum)}</td><td></td><td></td></tr></tfoot>`;
+  markSort('#catDetail', st);
+  setCnt('catdet', rows.length, total);
 }
 function renderItems(){
   const st = sortState.items;
-  const all = FI();
-  const rows = sortRows(all, st, (it)=>({name:it.name,cat:it.cat,sum:it.sum,n:it.n,sup:it.sup,med:it.med}[st.k])).slice(0,300);
+  const q = hay(tstate.items.q);
+  let all = FI();
+  if (q) all = all.filter(it => hay(it.name + ' ' + it.cat + ' ' + (it.unit||'') + ' '
+    + money(it.sum) + ' ' + (it.country||'')).includes(q));
+  const rows = sortRows(all, st, (it)=>({name:it.name,cat:it.cat,sum:it.sum,n:it.n,sup:it.sup,med:it.med}[st.k]))
+    .slice(0, tstate.items.limit || 1e9);
   const body = rows.map((it,i)=>`<tr>
     <td class="num">${i+1}</td><td>${esc(it.name)}</td><td>${esc(it.cat)}</td>
     <td>${esc(it.unit||'—')}</td><td class="num">${!it.qty?'—':fmt0.format(it.qty)}</td>
@@ -937,15 +1032,24 @@ function renderItems(){
     <th class="sortable num" data-t="items" data-k="sup">Поставщиков</th>
     <th class="sortable num" data-t="items" data-k="med">Медиана</th><th>80 %</th></tr></thead>
     <tbody>${body || '<tr><td colspan="10" class="empty">Ничего не найдено</td></tr>'}</tbody>
-    <tfoot><tr><td></td><td>Итого по срезу</td><td></td><td></td><td></td>
+    <tfoot><tr><td></td><td>${q?'Итого по фильтру таблицы':'Итого по срезу'}</td><td></td><td></td><td></td>
       <td class="num">${money(totalSum)}</td><td class="num">${fmt0.format(totalN)}</td>
-      <td class="num">${fmt0.format(tSup)}</td><td></td><td></td></tr></tfoot>`;
+      <td class="num">${q?'—':fmt0.format(tSup)}</td><td></td><td></td></tr></tfoot>`;
   $('#itemsHint').textContent = `Найдено ${all.length.toLocaleString('ru-RU')} позиций, из них в 80 %-наборе ${all.filter(i=>i.in80).length}`;
+  const sh = $('#itemsShown');
+  if (sh) sh.textContent = rows.length < all.length
+    ? `Показаны первые ${fmt0.format(rows.length)}; полный список — в поле «Показать» над таблицей` : '';
+  markSort('#itemsTable', st);
+  setCnt('items', rows.length, all.length);
 }
 function renderBench(){
   const st = sortState.bench;
-  const all = FI().filter(it=>it.in80 && it.n>=2 && it.med && it.min);
-  const rows = sortRows(all, st, (it)=>({name:it.name,cat:it.cat,med:it.med,min:it.min,max:it.max,spread:(it.max/it.min-1)*100,n:it.n,sup:it.sup}[st.k])).slice(0,200);
+  const q = hay(tstate.bench.q);
+  let all = FI().filter(it=>it.in80 && it.n>=2 && it.med && it.min);
+  if (q) all = all.filter(it => hay(it.name + ' ' + it.cat + ' ' + (it.unit||'') + ' '
+    + money(it.med) + ' ' + (it.country||'')).includes(q));
+  const rows = sortRows(all, st, (it)=>({name:it.name,cat:it.cat,med:it.med,min:it.min,max:it.max,spread:(it.max/it.min-1)*100,n:it.n,sup:it.sup}[st.k]))
+    .slice(0, tstate.bench.limit || 1e9);
   const body = rows.map((it,i)=>{
     const spread = it.min ? (it.max/it.min-1)*100 : null;
     return `<tr><td class="num">${i+1}</td><td>${esc(it.name)}</td><td>${esc(it.cat)}</td>
@@ -962,10 +1066,15 @@ function renderBench(){
     <th class="sortable num" data-t="bench" data-k="spread">Разброс</th>
     <th class="sortable num" data-t="bench" data-k="n">Закупок</th>
     <th class="sortable num" data-t="bench" data-k="sup">Поставщиков</th></tr></thead>
-    <tbody>${body || '<tr><td colspan="10" class="empty">Нет позиций с двумя и более закупками</td></tr>'}</tbody>`;
+    <tbody>${body || '<tr><td colspan="10" class="empty">Нет позиций с двумя и более закупками</td></tr>'}</tbody>
+    <tfoot><tr><td></td><td>${q?'Итого по фильтру таблицы':'Итого по срезу'}</td><td></td><td></td><td></td>
+      <td></td><td></td><td></td>
+      <td class="num">${fmt0.format(rows.reduce((s,it)=>s+it.n,0))}</td><td></td></tr></tfoot>`;
   const extreme = all.filter(it=>it.min && it.max/it.min > 11).length;
   $('#benchHint').textContent = `${all.length} позиций с бенчмарком` +
     (extreme ? `; разброс выше 1000 % — у ${extreme} (разная фасовка или единица измерения)` : '');
+  markSort('#benchTable', st);
+  setCnt('bench', rows.length, all.length);
 }
 function renderCountryTable(){
   const rowsP = P();
@@ -979,19 +1088,31 @@ function renderCountryTable(){
     const top = [...cc.entries()].sort((a,b)=>b[1]-a[1])[0];
     return {cat:c.category, ru, imp, unk, top};
   });
-  const body = rows.map(r=>`<tr><td>${esc(r.cat)}</td><td class="num">${mln0(r.ru)}</td>
+  const st = sortState.country;
+  const q = hay(tstate.country.q);
+  let view = rows;
+  if (q) view = view.filter(r => hay(r.cat + ' ' + (r.top ? r.top[0] : '')).includes(q));
+  if (st.k !== 'orig') view = sortRows(view, st, r => ({cat:r.cat, ru:r.ru, imp:r.imp, unk:r.unk,
+    top:r.top ? r.top[0] : ''}[st.k]));
+  const body = view.map(r=>`<tr><td>${esc(r.cat)}</td><td class="num">${mln0(r.ru)}</td>
     <td class="num">${mln0(r.imp)}</td><td class="num">${mln0(r.unk)}</td>
     <td>${r.top?esc(r.top[0])+' ('+mln(r.top[1])+')':'—'}</td></tr>`).join('');
-  const tRu = rows.reduce((s,r)=>s+r.ru,0), tImp = rows.reduce((s,r)=>s+r.imp,0), tUnk = rows.reduce((s,r)=>s+r.unk,0);
-  $('#countryTable').innerHTML = `<thead><tr><th>Товарная группа</th><th class="num">Россия</th>
-    <th class="num">Импорт</th><th class="num">Не указана</th><th>Крупнейший импорт</th></tr></thead>
+  const tRu = view.reduce((s,r)=>s+r.ru,0), tImp = view.reduce((s,r)=>s+r.imp,0), tUnk = view.reduce((s,r)=>s+r.unk,0);
+  $('#countryTable').innerHTML = `<thead><tr>
+    <th class="sortable" data-t="country" data-k="cat">Товарная группа</th>
+    <th class="sortable num" data-t="country" data-k="ru">Россия</th>
+    <th class="sortable num" data-t="country" data-k="imp">Импорт</th>
+    <th class="sortable num" data-t="country" data-k="unk">Не указана</th>
+    <th class="sortable" data-t="country" data-k="top">Крупнейший импорт</th></tr></thead>
     <tbody>${body || '<tr><td colspan="5" class="empty">Нет данных</td></tr>'}</tbody>
-    <tfoot><tr><td>Итого по срезу</td><td class="num">${mln0(tRu)}</td>
+    <tfoot><tr><td>${q?'Итого по фильтру таблицы':'Итого по срезу'}</td><td class="num">${mln0(tRu)}</td>
       <td class="num">${mln0(tImp)}</td><td class="num">${mln0(tUnk)}</td><td></td></tr></tfoot>`;
   const ru = rowsP.filter(p=>p.country==='Россия').reduce((s,p)=>s+(p.sum||0),0);
   const unk = rowsP.filter(p=>p.country==='не определена').reduce((s,p)=>s+(p.sum||0),0);
   const total = rowsP.reduce((s,p)=>s+(p.sum||0),0);
   $('#countryHint').textContent = total ? `Россия — ${pct(ru/total*100)}, импорт — ${pct((total-ru-unk)/total*100)}, не указана — ${pct(unk/total*100)}` : 'Нет данных';
+  markSort('#countryTable', st);
+  setCnt('country', view.length, rows.length);
 }
 function renderKey(){
   const rows = FI().filter(it=>it.in80).sort((a,b)=>b.sum-a.sum).slice(0,12);
@@ -1016,7 +1137,10 @@ function renderKey(){
 const reg = {rows:[], rowH:38, box:null, body:null, start:-1, end:-1};
 function regSorted(){
   const st = sortState.reg;
-  return sortRows(P(), st, (p)=>({name:p.name,cat:p.cat,qty:p.qty,price:p.price,sum:p.sum,country:p.country,month:p.month,sup:p.sup}[st.k]));
+  let rows = P();
+  const q = hay(tstate.reg.q);
+  if (q) rows = rows.filter(p => hay(p.name + ' ' + p.cat + ' ' + (p.sup||'') + ' ' + p.country).includes(q));
+  return sortRows(rows, st, (p)=>({name:p.name,cat:p.cat,qty:p.qty,price:p.price,sum:p.sum,country:p.country,month:p.month,sup:p.sup}[st.k]));
 }
 function regCells(p, idx){
   return `<td class="num">${idx}</td>
@@ -1054,11 +1178,16 @@ function regRender(){
   [...reg.body.querySelectorAll('tr:not(.spacer)')].forEach(tr=>tr.remove());
   reg.body.insertAdjacentHTML('beforeend', html);
   const totalSum = rows.reduce((s,p)=>s+(p.sum||0),0);
-  $('#regHint').textContent = `${total.toLocaleString('ru-RU')} позиций; сумма ${money(totalSum)}`;
+  const allN = P().length;
+  $('#regHint').textContent = (tstate.reg.q && total !== allN)
+    ? `${total.toLocaleString('ru-RU')} из ${allN.toLocaleString('ru-RU')} позиций; сумма ${money(totalSum)}`
+    : `${total.toLocaleString('ru-RU')} позиций; сумма ${money(totalSum)}`;
 }
 function regReset(){
   reg.rows = regSorted(); reg.start = -1; reg.end = -1;
   reg.body.dataset.n = ''; reg.box.scrollTop = 0; regRender();
+  markSort('#regBox', sortState.reg);
+  setCnt('reg', reg.rows.length, P().length);
 }
 // печать: разворачиваем весь реестр, чтобы в PDF/PDF-печати не осталось только видимых строк
 function regAll(){
@@ -1068,19 +1197,308 @@ function regAll(){
   reg.body.innerHTML = rows.map((p,i)=>`<tr>${regCells(p, i+1)}</tr>`).join('');
 }
 
-// ---------- CSV ----------
+// ---------- выгрузка: CSV и XLSX ----------
+const FILTER_TXT = () => {
+  const parts = [];
+  if (state.kind) parts.push('вид: ' + (KIND[state.kind] || state.kind));
+  if (state.cat) parts.push('группа: ' + state.cat);
+  if (state.country) parts.push('страна: ' + state.country);
+  if (state.origin) parts.push('происхождение: ' + ({ru:'Россия', import:'импорт', unknown:'не указана'}[state.origin]));
+  if (state.sup) parts.push('поставщик: ' + state.sup);
+  if (state.min != null) parts.push('сумма от ' + money(state.min));
+  if (state.max != null) parts.push('сумма до ' + money(state.max));
+  if (state.q) parts.push('поиск: ' + state.q);
+  if (state.only80) parts.push('набор 80 %');
+  if (state.noEst) parts.push('без оценочных');
+  return parts.length ? parts.join('; ') : 'без фильтров';
+};
+const REG_HEAD = ['Позиция','Группа','Вид','Ед.','Количество','Цена','Сумма','Страна','Месяц','Поставщик','Класс'];
+function tableData(t){
+  if (t === 'reg'){
+    const rows = regSorted();
+    return {header: REG_HEAD.slice(), count: rows.length, foot: null, rows: rows.map(p => [
+      p.name, p.cat, KIND[p.kind] || p.kind, p.unit || '', p.qty ?? '', p.price ?? '', p.sum ?? '',
+      p.country, p.month || '', p.sup || '', p.est ? 'оценка' : 'факт'])};
+  }
+  const el = $(TBL[t].el);
+  const header = [...el.querySelectorAll('thead th')].map(th => th.textContent.trim());
+  const rows = [...el.querySelectorAll('tbody tr')]
+    .filter(tr => !tr.querySelector('td.empty'))
+    .map(tr => [...tr.querySelectorAll('td')].map(td => td.textContent.trim()));
+  const foot = el.querySelector('tfoot')
+    ? [...el.querySelectorAll('tfoot tr')].map(tr => [...tr.querySelectorAll('td')].map(td => td.textContent.trim()))
+    : null;
+  return {header, rows, foot, count: rows.length};
+}
+const saveBlob = (blob, name) => {
+  const a = document.createElement('a');
+  const url = URL.createObjectURL(blob);
+  a.href = url; a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 8000);
+};
+const csvLine = (vals) => vals.map(v => `"${String(v ?? '').replace(/"/g, '""')}"`).join(';');
 function downloadCsv(){
   const rows = regSorted();
-  const head = ['Позиция','Группа','Вид','Ед.','Количество','Цена','Сумма','Страна','Месяц','Поставщик','Класс'];
-  const lines = [head.join(';')].concat(rows.map(p=>[
+  const lines = [REG_HEAD.join(';')].concat(rows.map(p=>[
     p.name,p.cat,KIND[p.kind]||p.kind,p.unit||'',p.qty??'',p.price??'',p.sum??'',
     p.country,p.month||'',p.sup||'',p.est?'оценка':'факт'
   ].map(v=>`"${String(v).replace(/"/g,'""')}"`).join(';')));
-  const blob = new Blob(['\ufeff'+lines.join('\r\n')], {type:'text/csv;charset=utf-8'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'botkina_2025_registry.csv'; a.click();
-  URL.revokeObjectURL(a.href);
+  saveBlob(new Blob(['\ufeff'+lines.join('\r\n')], {type:'text/csv;charset=utf-8'}),
+    'botkina_2025_registry.csv');
+}
+function exportCsv(t){
+  if (t === 'reg'){ downloadCsv(); return; }
+  const d = tableData(t);
+  const lines = [csvLine(d.header)].concat(d.rows.map(csvLine), (d.foot || []).map(csvLine));
+  saveBlob(new Blob(['\ufeff'+lines.join('\r\n')], {type:'text/csv;charset=utf-8'}),
+    'botkina_2025_' + TBL[t].sheet + '.csv');
+}
+
+// --- XLSX: ZIP без сжатия (CRC32) и XML листа, без внешних библиотек ---
+const xesc = (s) => String(s ?? '').replace(/[&<>"']/g,
+  c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&apos;'}[c]));
+const sheetName = (n) => String(n).replace(/[\\/?*[\]:]/g, '-').slice(0, 31);
+function colN(i){
+  let s = ''; let n = i + 1;
+  while (n > 0){ const m = (n - 1) % 26; s = String.fromCharCode(65 + m) + s; n = Math.floor((n - 1) / 26); }
+  return s;
+}
+function parseCell(raw){
+  const s = String(raw ?? '').replace(/\u00A0/g, ' ').trim();
+  if (s === '' || s === '—' || s === '-') return {t:'empty'};
+  let t = s.replace(/\s+/g, '');
+  let isPct = false;
+  if (t.endsWith('%')){ isPct = true; t = t.slice(0, -1); }
+  if (t.endsWith('₽')) t = t.slice(0, -1);
+  let mult = 1;
+  if (/млн\.?$/i.test(t)){ mult = 1e6; t = t.replace(/млн\.?$/i, ''); }
+  else if (/тыс\.?$/i.test(t)){ mult = 1e3; t = t.replace(/тыс\.?$/i, ''); }
+  if (!/^[+-]?\d+(?:[.,]\d+)?$/.test(t)) return {t:'text', v:s};
+  const num = parseFloat(t.replace(',', '.'));
+  if (!isFinite(num)) return {t:'text', v:s};
+  if (isPct) return {t:'num', v:num / 100, s:4};
+  const scaled = mult > 1 || /[.,]\d/.test(t) || s.includes('₽');
+  return {t:'num', v:num * mult, s: scaled ? 2 : 3};
+}
+function cellXml(ref, v, style, forceText){
+  if (v == null) return `<c r="${ref}"/>`;
+  if (forceText) return `<c r="${ref}" s="${style||0}" t="inlineStr"><is><t xml:space="preserve">${xesc(v)}</t></is></c>`;
+  if (typeof v === 'number' && isFinite(v)){
+    const s = style === 1 ? (Number.isInteger(v) ? 6 : 5) : (style || (Number.isInteger(v) ? 3 : 2));
+    return `<c r="${ref}" s="${s}"><v>${v}</v></c>`;
+  }
+  const p = parseCell(v);
+  if (p.t === 'empty') return `<c r="${ref}"/>`;
+  if (p.t === 'num'){
+    const s = style === 1 ? ({2:5, 3:6, 4:7}[p.s] || 1) : (style || p.s);
+    return `<c r="${ref}" s="${s}"><v>${p.v}</v></c>`;
+  }
+  return `<c r="${ref}" s="${style||0}" t="inlineStr"><is><t xml:space="preserve">${xesc(p.v)}</t></is></c>`;
+}
+function sheetXml(sh){
+  const out = [];
+  let r = 0;
+  const addRow = (vals, style, forceText) => {
+    r++;
+    let cells = '';
+    for (let i = 0; i < vals.length; i++) cells += cellXml(colN(i) + r, vals[i], style, forceText);
+    out.push(`<row r="${r}">${cells}</row>`);
+  };
+  sh.meta.forEach((m, i) => addRow([m], i === 0 ? 1 : 0, true));
+  addRow([], 0, false);
+  addRow(sh.header, 1, true);
+  const first = r + 1;
+  sh.rows.forEach(x => addRow(x, 0, false));
+  const lastData = r;
+  if (sh.foot) sh.foot.forEach(x => addRow(x, 1, false));
+  const widths = sh.header.map((h, i) => {
+    let len = String(h).length;
+    for (const row of sh.rows.slice(0, 300)){
+      const v = row[i];
+      if (v != null) len = Math.max(len, Math.min(56, String(v).length));
+    }
+    return Math.min(58, Math.max(9, Math.round(len * 1.15) + 2));
+  });
+  const cols = widths.map((w, i) => `<col min="${i+1}" max="${i+1}" width="${w}" customWidth="1"/>`).join('');
+  const lastCol = colN(Math.max(0, sh.header.length - 1));
+  const filter = sh.rows.length ? `<autoFilter ref="A${first}:${lastCol}${lastData}"/>` : '';
+  const pane = first > 1
+    ? `<pane ySplit="${first-1}" topLeftCell="A${first}" activePane="bottomLeft" state="frozen"/>` +
+      `<selection pane="bottomLeft" activeCell="A${first}" sqref="A${first}"/>`
+    : '';
+  return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>` +
+    `<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">` +
+    `<dimension ref="A1:${lastCol}${r}"/>` +
+    `<sheetViews><sheetView workbookViewId="0">${pane}</sheetView></sheetViews>` +
+    `<sheetFormatPr defaultRowHeight="15"/><cols>${cols}</cols><sheetData>` +
+    out.join('') + `</sheetData>${filter}</worksheet>`;
+}
+function crc32(u8){
+  if (!crc32.t){
+    const t = new Uint32Array(256);
+    for (let n = 0; n < 256; n++){
+      let c = n;
+      for (let k = 0; k < 8; k++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
+      t[n] = c >>> 0;
+    }
+    crc32.t = t;
+  }
+  let crc = 0xFFFFFFFF;
+  for (let i = 0; i < u8.length; i++) crc = (crc >>> 8) ^ crc32.t[(crc ^ u8[i]) & 0xFF];
+  return (crc ^ 0xFFFFFFFF) >>> 0;
+}
+function zipStore(files){
+  const enc = new TextEncoder();
+  const u16 = n => [n & 255, (n >>> 8) & 255];
+  const u32 = n => [n & 255, (n >>> 8) & 255, (n >>> 16) & 255, (n >>> 24) & 255];
+  const parts = [], cen = [];
+  let offset = 0;
+  for (const f of files){
+    const name = enc.encode(f.name), crc = crc32(f.u8), size = f.u8.length;
+    const lh = new Uint8Array([...u32(0x04034b50), ...u16(20), ...u16(0), ...u16(0), ...u16(0), ...u16(0),
+      ...u32(crc), ...u32(size), ...u32(size), ...u16(name.length), ...u16(0)]);
+    parts.push(lh, name, f.u8);
+    cen.push({name, crc, size, offset});
+    offset += lh.length + name.length + size;
+  }
+  const cd = []; let cdLen = 0;
+  for (const c of cen){
+    const h = new Uint8Array([...u32(0x02014b50), ...u16(20), ...u16(20), ...u16(0), ...u16(0), ...u16(0), ...u16(0),
+      ...u32(c.crc), ...u32(c.size), ...u32(c.size), ...u16(c.name.length), ...u16(0), ...u16(0), ...u16(0),
+      ...u16(0), ...u32(0), ...u32(c.offset)]);
+    cd.push(h, c.name); cdLen += h.length + c.name.length;
+  }
+  const eocd = new Uint8Array([...u32(0x06054b50), ...u16(0), ...u16(0), ...u16(cen.length), ...u16(cen.length),
+    ...u32(cdLen), ...u32(offset), ...u16(0)]);
+  return new Blob([...parts, ...cd, eocd],
+    {type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'});
+}
+const STYLES_XML = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
+<fonts count="2"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><name val="Calibri"/></font></fonts>
+<fills count="3"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill>
+<fill><patternFill patternType="solid"><fgColor rgb="FFDCE6F1"/><bgColor indexed="64"/></patternFill></fill></fills>
+<borders count="1"><border><left/><right/><top/><bottom/><diagonal/></border></borders>
+<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>
+<cellXfs count="8">
+<xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/>
+<xf numFmtId="0" fontId="1" fillId="2" borderId="0" xfId="0" applyFont="1" applyFill="1"/>
+<xf numFmtId="4" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/>
+<xf numFmtId="3" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/>
+<xf numFmtId="10" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/>
+<xf numFmtId="4" fontId="1" fillId="0" borderId="0" xfId="0" applyNumberFormat="1" applyFont="1"/>
+<xf numFmtId="3" fontId="1" fillId="0" borderId="0" xfId="0" applyNumberFormat="1" applyFont="1"/>
+<xf numFmtId="10" fontId="1" fillId="0" borderId="0" xfId="0" applyNumberFormat="1" applyFont="1"/>
+</cellXfs><cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles>
+</styleSheet>`;
+const XLSX_CT = 'application/vnd.openxmlformats-officedocument.spreadsheetml';
+function xlsxDownload(sheets, fname){
+  const enc = new TextEncoder();
+  const files = [];
+  const push = (name, text) => files.push({name, u8: enc.encode(text)});
+  const overrides = sheets.map((s, i) =>
+    `<Override PartName="/xl/worksheets/sheet${i+1}.xml" ContentType="${XLSX_CT}.worksheet+xml"/>`).join('');
+  push('[Content_Types].xml', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>
+<Default Extension="xml" ContentType="application/xml"/>
+<Override PartName="/xl/workbook.xml" ContentType="${XLSX_CT}.sheet.main+xml"/>${overrides}
+<Override PartName="/xl/styles.xml" ContentType="${XLSX_CT}.styles+xml"/></Types>`);
+  push('_rels/.rels', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/>
+</Relationships>`);
+  push('xl/workbook.xml', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets>` +
+    sheets.map((s, i) => `<sheet name="${xesc(sheetName(s.name))}" sheetId="${i+1}" r:id="rId${i+1}"/>`).join('') +
+    `</sheets></workbook>`);
+  push('xl/_rels/workbook.xml.rels', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">` +
+    sheets.map((s, i) => `<Relationship Id="rId${i+1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet${i+1}.xml"/>`).join('') +
+    `<Relationship Id="rIdS" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`);
+  push('xl/styles.xml', STYLES_XML);
+  sheets.forEach((s, i) => push(`xl/worksheets/sheet${i+1}.xml`, sheetXml(s)));
+  saveBlob(zipStore(files), fname);
+}
+const metaLines = (title, n) => [
+  title + ' — Анализ закупок МНКЦ им. С.П. Боткина за 2025 год',
+  'Источник: ЕИС, реестры 44-ФЗ и 223-ФЗ · дата выгрузки данных: ' + DATA.meta.extracted_at
+    + ' · учёт по дате заключения контракта',
+  'Срез: ' + FILTER_TXT() + ' · строк: ' + fmt0.format(n)
+    + ' · факт — данные ЕИС, оценка — расчётное значение (не для официальной отчётности)'
+];
+function exportTable(t){
+  const d = tableData(t);
+  xlsxDownload([{name: TBL[t].sheet, meta: metaLines(TBL[t].title, d.count),
+    header: d.header, rows: d.rows, foot: d.foot}],
+    'Боткина_2025_' + TBL[t].sheet + '.xlsx');
+}
+function exportReport(){
+  const sheets = [];
+  sheets.push({name:'Описание', meta: metaLines('Описание среза', P().length),
+    header:['Параметр','Значение'], foot:null, rows:[
+      ['Заказчик', DATA.meta.customer_full || DATA.meta.customer],
+      ['ИНН / КПП', DATA.meta.inn + ' / ' + DATA.meta.kpp],
+      ['Период', DATA.meta.period],
+      ['Дата выгрузки данных', DATA.meta.extracted_at],
+      ['Источники', 'ЕИС: реестр контрактов 44-ФЗ и реестр договоров 223-ФЗ'],
+      ['Фильтры', FILTER_TXT()],
+      ['Позиций в срезе', P().length],
+      ['Сумма среза', P().reduce((s,p)=>s+(p.sum||0),0)],
+      ['Позиций в профиле', DATA.totals.positions_in_scope],
+      ['Профильный объём', DATA.totals.sum_scope],
+      ['Охват страны', pct(DATA.totals.country_coverage)],
+      ['Классы достоверности', 'факт — данные ЕИС; оценка — расчётное значение, не для официальной отчётности']
+    ]});
+  sheets.push({name:'Показатели', meta: metaLines('Основные показатели', lastKpi.length),
+    header:['Показатель','Значение','Пояснение'], foot:null,
+    rows: lastKpi.map(k => k.slice())});
+  ['cat','items','bench','country'].forEach(t => {
+    const d = tableData(t);
+    sheets.push({name:TBL[t].sheet, meta: metaLines(TBL[t].title, d.count),
+      header:d.header, rows:d.rows, foot:d.foot});
+  });
+  const r = tableData('reg');
+  sheets.push({name:TBL.reg.sheet, meta: metaLines(TBL.reg.title, r.count),
+    header:r.header, rows:r.rows, foot:null});
+  xlsxDownload(sheets, 'Боткина_2025_отчёт_по_срезу.xlsx');
+}
+// --- панель управления над каждой таблицей ---
+function makeToolbars(){
+  Object.keys(TBL).forEach(t => {
+    const cfg = TBL[t];
+    const tbl = $(cfg.el);
+    if (!tbl) return;
+    const host = tbl.closest('.tablewrap') || tbl.closest('.registry') || tbl.parentNode;
+    const limits = t === 'items' ? [[100,'100 строк'],[300,'300 строк'],[0,'все строки']]
+      : t === 'bench' ? [[100,'100 строк'],[200,'200 строк'],[0,'все строки']]
+      : t === 'catdet' ? [[12,'12 строк'],[50,'50 строк'],[0,'все строки']] : null;
+    const bar = document.createElement('div');
+    bar.className = 'tbar';
+    bar.innerHTML =
+      '<input type="search" placeholder="Поиск по этой таблице" data-tsearch="' + t + '" ' +
+        'title="Фильтр строк таблицы; на другие разделы не влияет">' +
+      (limits ? '<span class="lbl">Показать:</span><select data-tlimit="' + t + '">' +
+        limits.map(([v,l]) => `<option value="${v}" ${v === tstate[t].limit ? 'selected' : ''}>${l}</option>`).join('') +
+        '</select>' : '') +
+      `<span class="cnt" data-tcnt="${t}"></span>` +
+      `<button class="xl" data-xlsx="${t}" title="Выгрузить показанные строки в Excel (.xlsx)">Excel</button>` +
+      `<button data-csvx="${t}" title="Выгрузить показанные строки в CSV (UTF-8 с BOM, разделитель «;»)">CSV</button>`;
+    host.parentNode.insertBefore(bar, host);
+  });
+  $$('[data-tsearch]').forEach(inp => {
+    const t = inp.dataset.tsearch;
+    let tmr;
+    inp.addEventListener('input', () => { clearTimeout(tmr);
+      tmr = setTimeout(() => { tstate[t].q = inp.value.trim(); redrawTable(t); }, 160); });
+  });
+  $$('[data-tlimit]').forEach(sel => {
+    const t = sel.dataset.tlimit;
+    sel.addEventListener('change', () => { tstate[t].limit = +sel.value; redrawTable(t); });
+  });
+  $$('[data-xlsx]').forEach(b => b.addEventListener('click', () => exportTable(b.dataset.xlsx)));
+  $$('[data-csvx]').forEach(b => b.addEventListener('click', () => exportCsv(b.dataset.csvx)));
 }
 
 // ---------- обновление ----------
@@ -1147,20 +1565,22 @@ function init(){
     refresh();
   });
   $('#csv').addEventListener('click', downloadCsv);
+  $('#xlsx').addEventListener('click', exportReport);
   $('#themeBtn').addEventListener('click', cycleTheme);
   $('#printBtn').addEventListener('click', ()=>{ Object.values(charts).forEach(c=>c.resize()); window.print(); });
   window.addEventListener('beforeprint', ()=>{ regAll(); });
   window.addEventListener('afterprint', ()=>{ regReset(); });
 
-  // сортировка таблиц
+  // сортировка таблиц (клик по заголовку; у реестра — отдельный обработчик ниже)
   document.addEventListener('click', (e)=>{
     const th = e.target.closest('th.sortable');
-    if (!th) return;
+    if (!th || !th.dataset.t) return;
     const t = th.dataset.t, k = th.dataset.k;
     if (!sortState[t]) return;
-    if (sortState[t].k === k) sortState[t].d *= -1;
-    else { sortState[t].k = k; sortState[t].d = (k==='name'||k==='cat'||k==='country'||k==='sup'||k==='month') ? 1 : -1; }
-    if (t==='cat') renderCats(); else if (t==='items') renderItems(); else if (t==='bench') renderBench();
+    const st = sortState[t];
+    if (st.k === k) st.d *= -1;
+    else { st.k = k; st.d = (['name','cat','country','sup','month','orig','top'].includes(k)) ? 1 : -1; }
+    redrawTable(t);
   });
   // сортировка реестра
   $$('#regBox th.sortable').forEach(th=>th.addEventListener('click', ()=>{
@@ -1174,6 +1594,7 @@ function init(){
   const saved = localStorage.getItem(THEME_KEY) || 'light';
   document.documentElement.dataset.theme = saved;
   $('#themeBtn').textContent = 'Тема: ' + ({light:'светлая',dark:'тёмная',auto:'системная'}[saved]);
+  makeToolbars();
   refresh();
 }
 init();
