@@ -15,6 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "output"
 ABC = "abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789"  # без похожих 0/O/1/l
+LOGIN = "marina-rnd"  # логин GitVerse для поддомена Pages (без точек)
 
 
 def gen_password() -> str:
@@ -45,7 +46,7 @@ def main() -> None:
             "Анализ закупок МНКЦ им. С.П. Боткина за 2025 год",
             f"Дата сборки: {date.today().strftime('%d.%m.%Y')}",
             "",
-            "ССЫЛКА:  https://<ЛОГИН>.gitverse.site/botkina-dashboard/",
+            "ССЫЛКА:  https://marina-rnd.gitverse.site/botkina-dashboard/",
             f"ПАРОЛЬ: {pw}",
             "",
             "Как войти:",

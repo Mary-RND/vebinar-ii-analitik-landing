@@ -32,9 +32,13 @@
 
 ```
 cd D:\Freelance\Yurchikova\Botkina\output\botkina-dashboard
-git remote add origin https://gitverse.ru/<ЛОГИН>/botkina-dashboard.git
+git remote add origin https://gitverse.ru/Marina-RND/botkina-dashboard.git
 git push -u origin main
 ```
+
+Если в репозитории уже есть ветка `master` (например, файлы загружены через веб-интерфейс,
+а не через git), отправляйте в неё — `git push -u origin main:master`, чтобы не появилось
+двух параллельных веток.
 
 Если git попросит логин/пароль — используйте [Personal Access Token](https://gitverse.ru/-/user_settings/personal_access_tokens)
 в роли пароля (галочки: `write_repository`), либо настройте SSH-ключ.
@@ -45,8 +49,11 @@ git push -u origin main
 
 1. Включить GitVerse Pages.
 2. Источник — **Ветка**.
-3. Ветка — `main`, папка — `/` (корень).
-4. Сохранить настройки.
+3. Ветка — **та, что реально есть в репозитории**: `main`; если репозиторий создан пустым,
+   GitVerse делает основной ветку `master` — тогда выбирайте `master` (именно так у аккаунта
+   Marina-RND). Настройка не совпала с репозиторием — сборка падает с ошибкой «ветка не найдена».
+4. Папка — `/` (корень).
+5. Сохранить настройки.
 
 Сборка запустится автоматически; статус и логи — в разделе CI/CD или на самой странице Pages.
 Если встроенный сборщик по какой-то причине не отдаёт файл данных (в логах будет ошибка
@@ -58,7 +65,7 @@ git push -u origin main
 Сайт проекта открывается по адресу
 
 ```
-https://<ЛОГИН>.gitverse.site/botkina-dashboard/
+https://marina-rnd.gitverse.site/botkina-dashboard/
 ```
 
 Ту же ссылку GitVerse показывает на главной странице репозитория в блоке Pages — оттуда
