@@ -9,6 +9,7 @@ on:
     paths:
       - "index.html"
       - "dist/**"
+      - "Yurchikova/Botkina/output/dashboard.html"
       - ".github/workflows/deploy-webinar-pages.yml"
   workflow_dispatch:
 
@@ -33,6 +34,9 @@ jobs:
           rm -rf _site
           mkdir -p _site
           cp -R dist/. _site/
+          # Дашборд Боткиной — параллельно лендингу, по адресу /dashboard/ (без пароля)
+          mkdir -p _site/dashboard
+          cp "Yurchikova/Botkina/output/dashboard.html" _site/dashboard/index.html
           touch _site/.nojekyll
 
       - uses: actions/upload-pages-artifact@v3
