@@ -143,13 +143,14 @@ header.top .badge{background:rgba(255,255,255,.13);border:1px solid rgba(255,255
 .toolbar{position:sticky;top:0;z-index:30;background:color-mix(in srgb, var(--bg) 94%, transparent);
   backdrop-filter:blur(8px);padding:12px 0 10px;margin:14px 0 4px;border-bottom:1px solid var(--line)}
 .filters{display:flex;gap:9px;flex-wrap:wrap;align-items:end}
-.field{display:flex;flex-direction:column;gap:4px}
+.field{display:flex;flex-direction:column;gap:4px;flex:1 1 190px;min-width:0}
 .field label{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 select,input[type=search],input[type=number]{background:var(--panel);border:1px solid var(--line);
   border-radius:10px;padding:8px 10px;font:inherit;color:var(--ink);min-width:150px;outline:none}
 select:focus,input:focus{border-color:var(--accent2);box-shadow:0 0 0 3px rgba(47,128,237,.12)}
-select.wide{min-width:210px}
+select.wide{min-width:0}
 input[type=number]{width:130px}
+.field select,.field input{width:100%;min-width:0}
 .chk{display:flex;align-items:center;gap:7px;padding:8px 10px;background:var(--panel);
   border:1px solid var(--line);border-radius:10px;cursor:pointer;user-select:none;font-size:13px}
 button.ghost{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 12px;
@@ -240,7 +241,7 @@ footer{margin-top:24px;color:var(--muted);font-size:12px;line-height:1.6}
 .method h3{font-size:13.5px;margin:14px 0 6px;color:var(--accent)}
 .method ul{margin:6px 0;padding-left:20px;font-size:12.5px;color:var(--muted)}
 .method li{margin:2px 0}
-@media (max-width:1100px){.kpis{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}}
+@media (max-width:1100px){.toolbar{position:static}.kpis{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}}
 @media (max-width:700px){.cards{grid-template-columns:1fr}}
 @media print{
   :root{--bg:#fff;--panel:#fff;--panel2:#fff;--ink:#000;--muted:#444;--line:#bbb;--grid:#ddd}

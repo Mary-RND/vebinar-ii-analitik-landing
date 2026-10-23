@@ -12,7 +12,10 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "output" / "web"
 CHROME = r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
-GOOD = os.environ.get("BOTKINA_WEB_PASSWORD", "Botkina-Dash-2026!")
+GOOD = (os.environ.get("BOTKINA_WEB_PASSWORD")
+        or ((ROOT / "output" / "_password.tmp").read_text(encoding="utf-8").strip()
+            if (ROOT / "output" / "_password.tmp").exists() else None)
+        or "Botkina-Dash-2026!")
 BAD = GOOD[:-1] + ("X" if GOOD[-1] != "X" else "Y")   # тот же пароль с изменённым последним символом
 
 

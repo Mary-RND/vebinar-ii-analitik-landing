@@ -35,15 +35,17 @@ button{border:0;border-radius:11px;padding:12px 18px;font:inherit;font-size:14.5
 .hint{color:var(--muted);font-size:12px;line-height:1.55;margin-top:14px;border-top:1px solid var(--line);padding-top:13px}
 .hint b{color:var(--ink);font-weight:600}
 .work{display:none}
-.topbar{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+body.working{display:block;padding:0;overflow:hidden}
+body.working .work{display:flex;flex-direction:column;height:100vh;min-height:0}
+.topbar{position:sticky;top:0;z-index:5;flex:0 0 auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
   background:linear-gradient(120deg,#12324f,#1f4e79 55%,#2c6c9e);color:#fff;padding:9px 14px}
 .topbar .t{font-size:14px;font-weight:600;margin-right:auto;line-height:1.35}
 .topbar .m{font-size:11.5px;opacity:.85;font-weight:400}
 .topbar button{background:rgba(255,255,255,.14);color:#fff;padding:8px 13px;font-size:13px;border-radius:9px}
 .topbar button:hover{background:rgba(255,255,255,.24)}
-#frame{width:100%;height:calc(100vh - 48px);border:0;display:block;background:#fff}
+#frame{flex:1 1 auto;min-height:0;width:100%;border:0;display:block;background:#fff}
 noscript{display:block;margin-top:14px;color:var(--bad);font-size:13px}
-@media print{.topbar{display:none}#frame{height:100vh}}
+@media print{body.working{overflow:visible}.topbar{display:none}#frame{flex:none;height:100vh}}
 </style>
 </head>
 <body>
@@ -121,7 +123,7 @@ el('form').addEventListener('submit', async (e) => {
     const html = dec.decode(pt);
     el('frame').srcdoc = html;
     el('lock').style.display = 'none';
-    el('work').style.display = 'block';
+    document.body.classList.add('working');
     document.title = '__TITLE__';
     el('pw').value = '';
   } catch (ex) {
