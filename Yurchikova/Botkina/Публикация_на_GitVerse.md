@@ -31,6 +31,7 @@
 Откройте папку `output/botkina-dashboard` и выполните (вместо `<ЛОГИН>` — ваш логин GitVerse):
 
 ```
+cd D:\Freelance\Yurchikova\Botkina\output\botkina-dashboard
 git remote add origin https://gitverse.ru/<ЛОГИН>/botkina-dashboard.git
 git push -u origin main
 ```
@@ -59,6 +60,9 @@ git push -u origin main
 ```
 https://<ЛОГИН>.gitverse.site/botkina-dashboard/
 ```
+
+Ту же ссылку GitVerse показывает на главной странице репозитория в блоке Pages — оттуда
+её удобнее всего скопировать и вставить в карточку доступа вместо `<ЛОГИН>`.
 
 Проверочный сценарий:
 
@@ -122,8 +126,9 @@ git -C output/botkina-dashboard push
 ```
 botkina-dashboard/
 ├── index.html                     # страница входа (7 КБ)
-├── payload.bin                    # дашборд, AES-256-GCM (3,8 МБ)
+├── payload.bin                    # дашборд, AES-256-GCM (3,9 МБ)
 ├── README.md                      # описание для заказчика на самой странице репозитория
+├── .nojekyll                      # отключает обработку статики сборщиком Jekyll
 ├── .gitignore
 └── .gitverse/workflows/publish-pages.yml   # публикация без встроенного сборщика (запасной путь)
 ```
