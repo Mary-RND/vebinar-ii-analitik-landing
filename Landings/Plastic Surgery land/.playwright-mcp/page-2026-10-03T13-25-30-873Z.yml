@@ -1,0 +1,130 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - text: Мы используем
+      - button "cookie" [ref=f2e5] [cursor=pointer]
+      - text: и Яндекс.Метрику, чтобы сайт работал лучше
+    - button "Хорошо" [ref=f2e6] [cursor=pointer]
+  - banner [ref=f2e8]:
+    - generic [ref=f2e9]:
+      - link " Москва" [ref=f2e11] [cursor=pointer]:
+        - /url: "#b-choose-town-popup"
+        - generic [ref=f2e12]:
+          - generic [ref=f2e13]: 
+          - text: Москва
+      - generic [ref=f2e14]:
+        - link [ref=f2e15] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f2e16]: 6 930 240 отзывов
+      - generic [ref=f2e17]:
+        - link "Клиникам" [ref=f2e18] [cursor=pointer]:
+          - /url: https://expert.prodoctorov.ru/
+        - link "Врачам" [ref=f2e19] [cursor=pointer]:
+          - /url: https://expert.prodoctorov.ru/vrachu/
+        - link "" [ref=f2e20] [cursor=pointer]:
+          - /url: /moskva/analyses/cart/content/
+        - button "Войти" [ref=f2e21] [cursor=pointer]
+    - generic [ref=f2e31]:
+      - generic [ref=f2e32]: 
+      - searchbox "Врачи, клиники, услуги в Москве" [ref=f2e33]
+  - generic [ref=f2e36]:
+    - generic [ref=f2e37]:
+      - heading "На этой странице ничего нет" [level=1] [ref=f2e38]
+      - heading "Отзывы об этой странице" [level=2] [ref=f2e39]
+      - generic [ref=f2e40]:
+        - generic [ref=f2e41]: «Не заходите сюда. Только зря время и нервы потратите»
+        - generic [ref=f2e42]: «Я пришёл сюда, чтобы что?! Узнать, что здесь ничего нет?!»
+        - generic [ref=f2e43]: «Никому не рекомендую эту страницу»
+        - generic [ref=f2e44]: «Понравилась картинка. Не понравилось всё остальное»
+      - link "На главную" [ref=f2e45] [cursor=pointer]:
+        - /url: /
+    - img "Страница не существует" [ref=f2e48]
+  - generic [ref=f2e50]:
+    - link [ref=f2e51] [cursor=pointer]:
+      - /url: /
+      - img "Логотип ПроДокторов" [ref=f2e52]
+    - generic [ref=f2e53]:
+      - generic [ref=f2e54]:
+        - link "Компания МедРокет" [ref=f2e55] [cursor=pointer]:
+          - /url: https://medrocket.me/
+        - link "О ПроДокторов" [ref=f2e56] [cursor=pointer]:
+          - /url: /info/about-us/
+        - link "Редакция и юрлицо" [ref=f2e57] [cursor=pointer]:
+          - /url: /info/document/
+        - link "О нас говорят" [ref=f2e58] [cursor=pointer]:
+          - /url: /info/pressa/
+        - link "Выступления" [ref=f2e59] [cursor=pointer]:
+          - /url: /info/conf/
+        - link "Битва за отзывы" [ref=f2e60] [cursor=pointer]:
+          - /url: /info/legal-case/
+        - link "Отзывы без обмана" [ref=f2e61] [cursor=pointer]:
+          - /url: /info/rate-fraud-free/
+        - link "Этический комитет" [ref=f2e62] [cursor=pointer]:
+          - /url: /info/ethical-commission/
+        - button "Вакансии" [ref=f2e64] [cursor=pointer]
+        - link "Соцсети" [ref=f2e65] [cursor=pointer]:
+          - /url: /info/socials/
+        - link "Контакты" [ref=f2e66] [cursor=pointer]:
+          - /url: /info/contacts/
+      - generic [ref=f2e67]:
+        - generic [ref=f2e68]: Наши продукты
+        - button "Конференция Дни МедРокет" [ref=f2e70] [cursor=pointer]
+        - button "Премия ПроДокторов" [ref=f2e72] [cursor=pointer]
+        - button "Доска памяти врачей" [ref=f2e74] [cursor=pointer]
+        - button "ПроТаблетки" [ref=f2e76] [cursor=pointer]
+        - button "ПроБолезни" [ref=f2e78] [cursor=pointer]
+        - button "МедФлекс" [ref=f2e80] [cursor=pointer]
+        - button "МедТочка" [ref=f2e82] [cursor=pointer]
+        - button "МедЛок" [ref=f2e84] [cursor=pointer]
+      - generic [ref=f2e85]:
+        - generic [ref=f2e86]: Помощь
+        - button "База знаний" [ref=f2e88] [cursor=pointer]
+        - link "Регистрация врача" [ref=f2e89] [cursor=pointer]:
+          - /url: /info/doctor-about/
+        - link "Регистрация клиники" [ref=f2e90] [cursor=pointer]:
+          - /url: /info/lpu-about/
+        - generic [ref=f2e91]: Партнёрам
+        - link "Клиникам" [ref=f2e92] [cursor=pointer]:
+          - /url: https://expert.prodoctorov.ru/
+        - link "Врачам" [ref=f2e93] [cursor=pointer]:
+          - /url: https://expert.prodoctorov.ru/vrachu/
+        - link "Исследование поведения пациента" [ref=f2e94] [cursor=pointer]:
+          - /url: /static/_v1/pd/documents/pdf/footer/Исследование_ПроДокторов_2025.pdf
+      - generic [ref=f2e95]:
+        - generic [ref=f2e96]: Карта сайта
+        - link "Города" [ref=f2e97] [cursor=pointer]:
+          - /url: /town/
+        - link "Регионы" [ref=f2e98] [cursor=pointer]:
+          - /url: /regions/
+        - link "Врачи" [ref=f2e99] [cursor=pointer]:
+          - /url: /vrach/
+        - link "Клиники" [ref=f2e100] [cursor=pointer]:
+          - /url: /lpu/
+        - link "Услуги" [ref=f2e101] [cursor=pointer]:
+          - /url: /services/
+      - generic [ref=f2e102]:
+        - generic [ref=f2e103]: Условия использования
+        - link "Пользовательское соглашение" [ref=f2e104] [cursor=pointer]:
+          - /url: /info/terms-of-use/
+        - link "Обработка персональных данных" [ref=f2e105] [cursor=pointer]:
+          - /url: /info/privacy-policy/
+        - link "Публикация материалов" [ref=f2e106] [cursor=pointer]:
+          - /url: /info/publishing-policy/
+        - link "Условия программы защиты авторов отзывов" [ref=f2e107] [cursor=pointer]:
+          - /url: /info/authors-protection/
+          - text: Условия программы защитыавторов отзывов
+        - link "Условия программы \"Отзывы без обмана\"" [ref=f2e108] [cursor=pointer]:
+          - /url: /info/rate-fraud-free-rules/
+          - text: Условия программы"Отзывы без обмана"
+        - link "Лицензионный договор" [ref=f2e109] [cursor=pointer]:
+          - /url: /static/_v1/pd/documents/pdf/Стандартный-лицензионный-договор-2026-(01.06.2026).pdf
+        - link "Рекламный договор" [ref=f2e110] [cursor=pointer]:
+          - /url: /static/_v1/pd/documents/pdf/Стандартный-договор-на-оказание-маркетинговых-и-рекламных-услуг(01.06.2026).pdf
+        - generic [ref=f2e111]:
+          - button "Единый реестр российских программ" [ref=f2e113] [cursor=pointer]:
+            - img "Единый реестр российских программ" [ref=f2e114]
+          - img "18+" [ref=f2e115]
+    - generic [ref=f2e116]:
+      - generic [ref=f2e117]: © 2011–2026 МедРокет ИНН 2311144947
+      - generic [ref=f2e118]: "Зарегистрировано Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор). Регистрационный номер Эл № ФС 77 - 89293 от 01.04.2025 г. Учредитель — ООО «МЕДРОКЕТ» ОГРН 1122311003760. Адрес редакции: 350015, Краснодарский край, г. Краснодар, ул. Буденного, д. 182, офис 87."
+      - generic [ref=f2e119]: Информация, представленная на сайте, не может быть использована для постановки диагноза, назначения лечения и не заменяет прием врача.

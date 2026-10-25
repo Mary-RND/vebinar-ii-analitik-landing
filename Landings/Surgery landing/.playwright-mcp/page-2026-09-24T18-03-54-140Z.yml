@@ -1,0 +1,150 @@
+- generic [active] [ref=f15e1]:
+  - banner [ref=f15e2]:
+    - generic [ref=f15e3]:
+      - link "Пластический хирург" [ref=f15e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f15e5]: П
+        - generic [ref=f15e6]:
+          - generic [ref=f15e7]: Пластический хирург
+          - generic [ref=f15e8]: проводник
+      - navigation [ref=f15e9]:
+        - link "Направления" [ref=f15e10] [cursor=pointer]:
+          - /url: /#napravleniya
+        - link "Послеродовое восстановление" [ref=f15e11] [cursor=pointer]:
+          - /url: /poslerodovoe-vosstanovlenie
+        - link "О хирурге и подходе" [ref=f15e12] [cursor=pointer]:
+          - /url: /#filosofiya
+        - link "Контакты" [ref=f15e13] [cursor=pointer]:
+          - /url: /#kontakty
+      - link "Задать вопрос" [ref=f15e15] [cursor=pointer]:
+        - /url: /#forma
+  - main [ref=f15e18]:
+    - generic [ref=f15e21]:
+      - generic [ref=f15e22]:
+        - paragraph [ref=f15e23]: Направление
+        - heading "Вернуться к себе после родов" [level=1] [ref=f15e24]: Вернутьсяк себе после родов
+        - generic [ref=f15e28]:
+          - paragraph [ref=f15e29]: Тело после родов — это не «испорченное» тело. Это тело, которое сделало огромную работу. Но иногда оно не возвращается к прежнему состоянию само — и это нормально.
+          - paragraph [ref=f15e30]: Послеродовая пластика — это не одна операция, а маршрут. Часто он включает работу с животом (диастаз, кожа), грудью (форма, объём), бёдрами.
+          - paragraph [ref=f15e31]: Никто не торопит. Никто не оценивает.
+        - link "Обсудить маршрут восстановления" [ref=f15e32] [cursor=pointer]:
+          - /url: "#forma-postpartum"
+          - text: Обсудить маршрут восстановления
+          - generic [aria-hidden] [ref=f15e33]: →
+      - generic [ref=f15e35]:
+        - paragraph [ref=f15e36]: Зоны маршрута
+        - paragraph [ref=f15e37]: Наведите курсор — увидите возможное направление коррекции
+        - generic [ref=f15e38]: Наведите курсор на зону, чтобы узнать о возможностях
+        - generic [ref=f15e43]:
+          - generic [ref=f15e44]: Живот
+          - generic [ref=f15e48]: Грудь
+          - generic [ref=f15e52]: Бёдра и контур
+    - generic [ref=f15e57]:
+      - generic [ref=f15e58]:
+        - heading "Маршрут восстановления" [level=2] [ref=f15e59]
+        - paragraph [ref=f15e60]: План зависит от ваших целей, сроков после родов и планов на будущее. Ниже — типовые направления, которые комбинируются индивидуально.
+      - generic [ref=f15e61]:
+        - generic [ref=f15e63]:
+          - generic [ref=f15e64]: "01"
+          - generic [ref=f15e65]:
+            - heading "Живот" [level=3] [ref=f15e66]
+            - paragraph [ref=f15e67]: Диастаз, избыток кожи, растяжки — абдоминопластика и липосакция по показаниям.
+        - generic [ref=f15e69]:
+          - generic [ref=f15e70]: "02"
+          - generic [ref=f15e71]:
+            - heading "Грудь" [level=3] [ref=f15e72]
+            - paragraph [ref=f15e73]: Форма и объём после лактации — маммопластика, подтяжка, коррекция асимметрии.
+        - generic [ref=f15e75]:
+          - generic [ref=f15e76]: "03"
+          - generic [ref=f15e77]:
+            - heading "Бёдра и контур" [level=3] [ref=f15e78]
+            - paragraph [ref=f15e79]: Липосакция и подтяжка для восстановления силуэта.
+      - generic [ref=f15e80]: На консультации обсуждаем, кормите ли вы ещё, когда были роды, какие у вас планы на беременность в будущем, и только после этого предлагаем последовательность вмешательств — иногда с паузой в несколько месяцев между этапами.
+    - generic [ref=f15e83]:
+      - generic [ref=f15e84]:
+        - paragraph [ref=f15e85]: Начать разговор
+        - heading "Обсудить послеродовое восстановление" [level=2] [ref=f15e86]
+        - paragraph [ref=f15e87]: Первая консультация — это знакомство. Без обязательств и давления.
+      - generic [ref=f15e89]:
+        - generic [ref=f15e90]:
+          - text: Как к вам обращаться?
+          - textbox "Как к вам обращаться?" [ref=f15e91]:
+            - /placeholder: Ваше имя
+        - generic [ref=f15e92]:
+          - text: Удобный способ связи
+          - textbox "Удобный способ связи" [ref=f15e93]:
+            - /placeholder: Телефон или Telegram
+        - generic [ref=f15e94]:
+          - text: Что вас интересует?
+          - combobox "Что вас интересует?" [ref=f15e95]:
+            - option "Выберите направление" [disabled] [selected]
+            - option "Пластика лица"
+            - option "Пластика тела"
+            - option "Послеродовое восстановление"
+            - option "Мужская пластика"
+            - option "Пока просто изучаю вопрос"
+        - generic [ref=f15e96]:
+          - generic [ref=f15e97]: Комментарий (необязательно)
+          - textbox "Комментарий (необязательно)" [ref=f15e98]:
+            - /placeholder: Коротко опишите ваш запрос или задайте вопрос, если хотите подготовиться к разговору заранее...
+        - button "Отправить запрос" [ref=f15e99]:
+          - text: Отправить запрос
+          - generic [aria-hidden] [ref=f15e100]: →
+        - paragraph [ref=f15e101]:
+          - text: Нажимая кнопку, вы соглашаетесь с
+          - link "политикой конфиденциальности" [ref=f15e102] [cursor=pointer]:
+            - /url: /policy
+          - text: . Ваши данные в безопасности и используются только для связи с вами.
+  - contentinfo [ref=f15e103]:
+    - generic [ref=f15e104]:
+      - generic [ref=f15e105]:
+        - generic [ref=f15e106]:
+          - generic [ref=f15e107]:
+            - generic [ref=f15e108]: П
+            - generic [ref=f15e109]:
+              - paragraph [ref=f15e110]: Пластический хирург
+              - paragraph [ref=f15e111]: проводник
+          - paragraph [ref=f15e112]: «Проводник в разговоре с вашим телом»
+        - generic [ref=f15e113]:
+          - paragraph [ref=f15e114]: Сайт
+          - list [ref=f15e115]:
+            - listitem [ref=f15e116]:
+              - link "Направления" [ref=f15e117] [cursor=pointer]:
+                - /url: /#napravleniya
+            - listitem [ref=f15e118]:
+              - link "Послеродовое восстановление" [ref=f15e119] [cursor=pointer]:
+                - /url: /poslerodovoe-vosstanovlenie
+            - listitem [ref=f15e120]:
+              - link "Мужская пластика" [ref=f15e121] [cursor=pointer]:
+                - /url: /muzhskaya-plastika
+            - listitem [ref=f15e122]:
+              - link "О хирурге и подходе" [ref=f15e123] [cursor=pointer]:
+                - /url: /#filosofiya
+            - listitem [ref=f15e124]:
+              - link "Первая встреча" [ref=f15e125] [cursor=pointer]:
+                - /url: /#pervaya-vstrecha
+            - listitem [ref=f15e126]:
+              - link "Контакты" [ref=f15e127] [cursor=pointer]:
+                - /url: /#kontakty
+        - generic [ref=f15e128]:
+          - paragraph [ref=f15e129]: Контакты
+          - list [ref=f15e130]:
+            - listitem [ref=f15e131]: Москва, ул. Клиническая, 10
+            - listitem [ref=f15e132]:
+              - link "+7 (000) 000-00-00" [ref=f15e133] [cursor=pointer]:
+                - /url: tel:+70000000000
+            - listitem [ref=f15e134]:
+              - 'link "Telegram: @doctor_username" [ref=f15e135] [cursor=pointer]':
+                - /url: https://t.me/doctor_username
+            - listitem [ref=f15e136]:
+              - 'link "WhatsApp: +7 (000) 000-00-00" [ref=f15e137] [cursor=pointer]':
+                - /url: https://wa.me/70000000000
+          - paragraph [ref=f15e138]: Ежедневно с 09:00 до 21:00. Мы на связи.
+      - generic [ref=f15e139]:
+        - paragraph [ref=f15e140]: © 2026 Пластический хирург. Все права защищены.
+        - generic [ref=f15e141]:
+          - link "Политика конфиденциальности" [ref=f15e142] [cursor=pointer]:
+            - /url: /policy
+          - link "Согласие на обработку данных" [ref=f15e143] [cursor=pointer]:
+            - /url: /policy
+  - button "Open Next.js Dev Tools" [ref=f15e149] [cursor=pointer]

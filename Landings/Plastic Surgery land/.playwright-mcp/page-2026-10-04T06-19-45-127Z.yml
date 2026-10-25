@@ -1,0 +1,626 @@
+- generic [active] [ref=e1]:
+  - link "Перейти к содержанию" [ref=e2] [cursor=pointer]:
+    - /url: "#napravleniya"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "ООО «Медбизнес»" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: М
+        - generic [ref=e7]:
+          - generic [ref=e8]: Пластический хирург
+          - generic [ref=e9]: Медбизнес
+      - navigation [ref=e10]:
+        - link "О хирурге" [ref=e11] [cursor=pointer]:
+          - /url: /#o-hirurge
+        - link "Бригада" [ref=e12] [cursor=pointer]:
+          - /url: /#brigada
+        - link "Направления" [ref=e13] [cursor=pointer]:
+          - /url: /#napravleniya
+        - link "Цены" [ref=e14] [cursor=pointer]:
+          - /url: /#ceny
+        - link "Клиники" [ref=e15] [cursor=pointer]:
+          - /url: /#kliniki
+        - link "Вопросы" [ref=e16] [cursor=pointer]:
+          - /url: /#voprosy
+      - link "+7 (495) 000-00-00" [ref=e18] [cursor=pointer]:
+        - /url: tel:+74950000000
+  - main [ref=e19]:
+    - generic [ref=e21]:
+      - generic:
+        - paragraph: ООО «Медбизнес» · Москва
+        - heading "Один хирург — одна бригада — четыре клиники" [level=1]
+        - paragraph: Москва. Лицо, грудь, контур тела. Одной командой хирурга, анестезиолога, ассистента, операционной сестры и координатора.
+        - generic [ref=e27]:
+          - link "Смотреть направления" [ref=e28] [cursor=pointer]:
+            - /url: "#napravleniya"
+          - link "+7 (495) 000-00-00" [ref=e31] [cursor=pointer]:
+            - /url: tel:+74950000000
+      - generic:
+        - generic [ref=e32]:
+          - generic [ref=e33]: Лицо
+          - paragraph [ref=e36]: веки · нос · уши
+        - generic [ref=e37]:
+          - generic [ref=e38]: Грудь
+          - paragraph [ref=e41]: объём · форма · подтяжка
+        - generic [ref=e42]:
+          - generic [ref=e43]: Тело
+          - paragraph [ref=e46]: живот · бёдра · спина
+      - generic [ref=e47]: Листайте — слои формы разойдутся
+      - generic: 02 / 11
+    - generic [ref=e54]:
+      - generic [ref=e55]:
+        - paragraph [ref=e56]: Позиционирование
+        - heading "Четыре обещания, которые можно проверить" [level=2] [ref=e57]
+        - paragraph [ref=e58]: "У пластического хирурга легко потеряться: клиники, кабинеты, «партнёры», скидки. Здесь всё устроено проще — один человек ведёт случай от начала до конца, и вокруг него фиксированная команда."
+      - generic [ref=e59]:
+        - article [ref=e61]:
+          - generic [ref=e62]: "01"
+          - heading "Один хирург" [level=3] [ref=e63]
+          - paragraph [ref=e64]: "Арсений Долганов, 16 лет практики. Ведёт лично: от первой консультации до контрольного осмотра через три месяца."
+        - article [ref=e66]:
+          - generic [ref=e67]: "02"
+          - heading "Одна бригада" [level=3] [ref=e68]
+          - paragraph [ref=e69]: Анестезиолог, ассистент, операционная сестра и координатор работают постоянно. Вы знаете, кто будет рядом.
+        - article [ref=e71]:
+          - generic [ref=e72]: "03"
+          - heading "Четыре клиники" [level=3] [ref=e73]
+          - paragraph [ref=e74]: 4 адреса в Москве и Подмосковье. Меняется адрес — не меняются хирург, протокол и оснащение.
+        - article [ref=e76]:
+          - generic [ref=e77]: "04"
+          - heading "Одна методика" [level=3] [ref=e78]
+          - paragraph [ref=e79]: Одинаковый протокол и одни и те же материалы в каждой клинике. Результат не зависит от того, куда вы приехали.
+      - generic [ref=e82]:
+        - generic [ref=e83]: Клиника «Север» · Москва, ул. Академика Волгина, 6, стр. 3
+        - generic [ref=e84]: Медлайн · Москва, Ленинский проспект, 45, корп. 2
+        - generic [ref=e85]: Гранат Клиник · Москва, ул. Гранатная, 7
+        - generic [ref=e86]: Белый Контур · Химки, ул. Молодёжная, 3
+        - generic [ref=e87]: Клиника «Север» · Москва, ул. Академика Волгина, 6, стр. 3
+        - generic [ref=e88]: Медлайн · Москва, Ленинский проспект, 45, корп. 2
+        - generic [ref=e89]: Гранат Клиник · Москва, ул. Гранатная, 7
+        - generic [ref=e90]: Белый Контур · Химки, ул. Молодёжная, 3
+    - generic [ref=e93]:
+      - generic [ref=e95]:
+        - img "Арсений Долганов, пластический хирург" [ref=e97]
+        - generic [ref=e98]:
+          - paragraph [ref=e99]: Арсений Долганов
+          - paragraph [ref=e100]: 16 лет · лицо, грудь, контур тела
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - paragraph [ref=e103]: О хирурге
+          - heading "Арсений Долганов" [level=2] [ref=e104]
+          - paragraph [ref=e105]: пластический хирург
+        - generic [ref=e106]:
+          - paragraph [ref=e108]: "Работаю пластическим хирургом 16 лет. Из них девять — в одной операционной, где собирается вся команда: анестезиолог, ассистент, операционная сестра."
+          - paragraph [ref=e110]: "Со второго года практики веду свою статистику: сколько операций, сколько осложнений, сколько случаев, где пришлось переделывать. Эту таблицу показываю на консультации, если пациент хочет её видеть."
+          - paragraph [ref=e112]: Не обещаю результат, которого не видел в своей практике. Если случай за пределами моих четырёх партнёрских клиник — скажу прямо и порекомендую, к кому обратиться.
+        - generic [ref=e114]:
+          - generic [ref=e115]:
+            - term [ref=e116]: "16"
+            - definition [ref=e117]: лет практики
+          - generic [ref=e118]:
+            - term [ref=e119]: 2 800
+            - definition [ref=e120]: операций
+          - generic [ref=e121]:
+            - term [ref=e122]: "9"
+            - definition [ref=e123]: лет в одной бригаде
+          - generic [ref=e124]:
+            - term [ref=e125]: "2"
+            - definition [ref=e126]: сложных случая в месяц
+        - generic [ref=e127]:
+          - heading "Принципы" [level=3] [ref=e128]
+          - list [ref=e129]:
+            - listitem [ref=e130]:
+              - paragraph [ref=e131]: Сначала расчёт, потом решение
+              - paragraph [ref=e132]: На консультации считаем смету по вашим данным, а не называем вилку «от». Разница обычно составляет 20–30%.
+            - listitem [ref=e133]:
+              - paragraph [ref=e134]: Одна команда на всех операциях
+              - paragraph [ref=e135]: Та же бригада, что оперировала вас в прошлый раз, работает и в следующий. Это сокращает время адаптации операционной.
+            - listitem [ref=e136]:
+              - paragraph [ref=e137]: Четыре клиники — одна методика
+              - paragraph [ref=e138]: Переезжая между клиниками, вы не меняете хирурга, протокол и оснащение. Различаются только адрес и сервис.
+            - listitem [ref=e139]:
+              - paragraph [ref=e140]: Отказ — полноценный результат
+              - paragraph [ref=e141]: Если операция вам не нужна, я скажу об этом на первой консультации и объясню, почему.
+        - generic [ref=e143]:
+          - link "Посмотреть цены" [ref=e144] [cursor=pointer]:
+            - /url: "#ceny"
+          - link "+7 (495) 000-00-00" [ref=e147] [cursor=pointer]:
+            - /url: tel:+74950000000
+    - generic [ref=e149]:
+      - generic [ref=e150]:
+        - paragraph [ref=e151]: Бригада
+        - heading "Пять человек, которые оперируют вместе каждый год" [level=2] [ref=e152]
+        - paragraph [ref=e153]: Это не набор имён на сайте. Анестезиолог, ассистент и операционная сестра работают с ООО «Медбизнес» постоянно и участвуют в каждой операции. Ниже — состав рабочей группы и зона ответственности каждого.
+      - generic [ref=e154]:
+        - article [ref=e156]:
+          - generic [ref=e157]:
+            - img "Марина Кузьмина, Анестезиолог-реаниматолог" [ref=e158]
+            - generic [ref=e159]: "02"
+          - generic [ref=e160]:
+            - heading "Марина Кузьмина" [level=3] [ref=e161]
+            - paragraph [ref=e162]: Анестезиолог-реаниматолог
+            - paragraph [ref=e163]: Ведёт общий наркоз и ведение послеоперационного дня
+        - article [ref=e165]:
+          - generic [ref=e166]:
+            - img "Тимур Басыров, Ассистент хирурга" [ref=e167]
+            - generic [ref=e168]: "03"
+          - generic [ref=e169]:
+            - heading "Тимур Басыров" [level=3] [ref=e170]
+            - paragraph [ref=e171]: Ассистент хирурга
+            - paragraph [ref=e172]: Работает в паре с хирургом с 2019 года
+        - article [ref=e174]:
+          - generic [ref=e175]:
+            - img "Ирина Лаврова, Операционная сестра" [ref=e176]
+            - generic [ref=e177]: "04"
+          - generic [ref=e178]:
+            - heading "Ирина Лаврова" [level=3] [ref=e179]
+            - paragraph [ref=e180]: Операционная сестра
+            - paragraph [ref=e181]: Стерилизация, инструмент, контроль оборудования
+        - article [ref=e183]:
+          - generic [ref=e184]:
+            - img "Ольга Мещерякова, Координатор по пациентам" [ref=e185]
+            - generic [ref=e186]: "05"
+          - generic [ref=e187]:
+            - heading "Ольга Мещерякова" [level=3] [ref=e188]
+            - paragraph [ref=e189]: Координатор по пациентам
+            - paragraph [ref=e190]: Согласование дат, документов и анализов
+      - article [ref=e192]:
+        - img "Арсений Долганов, Пластический хирург" [ref=e194]
+        - generic [ref=e195]:
+          - generic [ref=e196]: 01 · ведущий
+          - heading "Арсений Долганов" [level=3] [ref=e198]
+          - paragraph [ref=e199]: Пластический хирург
+          - paragraph [ref=e200]: 16 лет практики, 2 800 операций. Ведёт все сложные случаи блока и отвечает за результат целиком — от расчёта до планового осмотра.
+    - generic [ref=e203]:
+      - generic [ref=e204]:
+        - paragraph [ref=e205]: Направления
+        - heading "Девять операций и схема, где какая зона" [level=2] [ref=e206]
+        - paragraph [ref=e207]: "Практика хирурга закрывает лицо, грудь и контур тела. Справа — список с ценами, слева — схема: нажмите на зону, чтобы отфильтровать операции."
+      - generic [ref=e208]:
+        - generic [ref=e210]:
+          - figure "Нажмите на точку, чтобы увидеть операции в этой зоне" [ref=e211]:
+            - img "Схема тела с зонами пластических операций" [ref=e212]:
+              - button "Блефаропластика" [pressed] [ref=e230] [cursor=pointer]
+              - button "Риносептопластика" [ref=e233] [cursor=pointer]
+              - button "Отопластика" [ref=e236] [cursor=pointer]
+              - button "Грудь" [ref=e239] [cursor=pointer]
+              - button "Абдоминопластика" [ref=e242] [cursor=pointer]
+              - button "Липосакция" [ref=e245] [cursor=pointer]
+              - button "Липосакция" [ref=e248] [cursor=pointer]
+              - button "Лабиопластика" [ref=e251] [cursor=pointer]
+          - generic [ref=e253]:
+            - paragraph [ref=e254]: Выбрана зона
+            - paragraph [ref=e255]: Блефаропластика
+            - paragraph [ref=e256]: Веки
+        - generic [ref=e257]:
+          - generic [ref=e259]:
+            - button "Все" [ref=e260]
+            - button "Лицо" [ref=e261]
+            - button "Нос и уши" [ref=e262]
+            - button "Грудь" [ref=e263]
+            - button "Тело" [ref=e264]
+            - button "Другое" [ref=e265]
+          - generic [ref=e266]:
+            - article [ref=e268]:
+              - generic [ref=e269]:
+                - heading "Верхняя блефаропластика" [level=3] [ref=e270]
+                - generic [ref=e271]: от 80 000 ₽
+              - paragraph [ref=e272]: Убирает избыток кожи верхнего века. След от вмешательства скрывается в складке века — в отличие от нижней зоны, где остаётся тонкий рубец.
+              - generic [ref=e273]:
+                - generic [ref=e274]: 40–60 минут
+                - generic [ref=e275]: ·
+                - generic [ref=e276]: средняя по рынку 81 300 ₽, разброс до 330 000 ₽
+            - article [ref=e278]:
+              - generic [ref=e279]:
+                - heading "Нижняя блефаропластика" [level=3] [ref=e280]
+                - generic [ref=e281]: от 95 000 ₽
+              - paragraph [ref=e282]: "Работает с нижним веком и с переходом на щёку. Технику выбираю по типу век: внешний доступ даёт более тонкий контроль, но оставляет рубец."
+              - generic [ref=e283]:
+                - generic [ref=e284]: 60–90 минут
+                - generic [ref=e285]: ·
+                - generic [ref=e286]: разброс на рынке 14 000–310 000 ₽
+            - article [ref=e288]:
+              - generic [ref=e289]:
+                - heading "Круговая блефаропластика" [level=3] [ref=e290]
+                - generic [ref=e291]: от 110 000 ₽
+              - paragraph [ref=e292]: Верх и низ за одну операцию и один наркоз. Подходит, когда изменения век выражены с обеих сторон.
+              - generic [ref=e293]:
+                - generic [ref=e294]: 1,5–2 часа
+                - generic [ref=e295]: ·
+                - generic [ref=e296]: средняя по рынку 108 500 ₽
+            - article [ref=e298]:
+              - generic [ref=e299]:
+                - heading "Риносептопластика" [level=3] [ref=e300]
+                - generic [ref=e301]: от 155 000 ₽
+              - paragraph [ref=e302]: Меняет форму носа и, при необходимости, восстанавливает дыхание. Функциональную часть оцениваю до того, как трогать костный каркас.
+              - generic [ref=e303]:
+                - generic [ref=e304]: 2–3 часа
+                - generic [ref=e305]: ·
+                - generic [ref=e306]: средняя по рынку 153 400 ₽
+            - article [ref=e308]:
+              - generic [ref=e309]:
+                - heading "Отопластика" [level=3] [ref=e310]
+                - generic [ref=e311]: от 65 000 ₽
+              - paragraph [ref=e312]: Самая быстрая операция в прайсе. Чаще всего делают подросткам, но возраст не ограничен — ограничение только в состоянии хряща.
+              - generic [ref=e313]:
+                - generic [ref=e314]: 1–1,5 часа
+                - generic [ref=e315]: ·
+                - generic [ref=e316]: диапазон по рынку 30 000–100 000 ₽
+            - article [ref=e318]:
+              - generic [ref=e319]:
+                - heading "Увеличение груди" [level=3] [ref=e320]
+                - generic [ref=e321]: около 220 000 ₽
+              - paragraph [ref=e322]: "Работаю с имплантами последнего поколения: в среднем они переживают 10–12 лет. Форма подбирается по грудной клетке, а не по фото из интернета."
+              - generic [ref=e323]:
+                - generic [ref=e324]: 2–3 часа
+                - generic [ref=e325]: ·
+                - generic [ref=e326]: без стоимости имплантов
+            - article [ref=e328]:
+              - generic [ref=e329]:
+                - heading "Подтяжка груди" [level=3] [ref=e330]
+                - generic [ref=e331]: около 180 000 ₽
+              - paragraph [ref=e332]: Подтягивает грудь, убирает излишек кожи. Часто это первый этап перед увеличением или частью восстановления после родов.
+              - generic [ref=e333]:
+                - generic [ref=e334]: 2–3 часа
+                - generic [ref=e335]: ·
+                - generic [ref=e336]: без увеличения
+            - article [ref=e338]:
+              - generic [ref=e339]:
+                - heading "Абдоминопластика" [level=3] [ref=e340]
+                - generic [ref=e341]: около 250 000 ₽
+              - paragraph [ref=e342]: "Самая длительная операция блока и самая требовательная к восстановлению: 2–3 ночи в стационаре и до 8 недель ограничений."
+              - generic [ref=e343]:
+                - generic [ref=e344]: 3–4 часа
+                - generic [ref=e345]: ·
+                - generic [ref=e346]: средняя по рынку 180 000–400 000 ₽
+            - article [ref=e348]:
+              - generic [ref=e349]:
+                - heading "Липосакция одной зоны" [level=3] [ref=e350]
+                - generic [ref=e351]: около 50 000 ₽
+              - paragraph [ref=e352]: Обычно делают две–четыре зоны за один сеанс. Это способ убрать локальный рельеф, а не похудеть.
+              - generic [ref=e353]:
+                - generic [ref=e354]: 40–90 минут
+                - generic [ref=e355]: ·
+                - generic [ref=e356]: зона — живот, бёдра, подбородок
+            - article [ref=e358]:
+              - generic [ref=e359]:
+                - heading "Лабиопластика" [level=3] [ref=e360]
+                - generic [ref=e361]: около 90 000 ₽
+              - paragraph [ref=e362]: "Восстанавливает форму и симметрию вульвы. Чувствительная зона: перед операцией обсуждаем тактильную чувствительность и объём возможной коррекции."
+              - generic [ref=e363]:
+                - generic [ref=e364]: 40–60 минут
+                - generic [ref=e365]: ·
+                - generic [ref=e366]: диапазон 60 000–150 000 ₽
+          - generic [ref=e368]:
+            - paragraph [ref=e369]: Не нашли свою задачу в списке? Опишите её — скажу прямо, берусь за неё или нет, и к кому обратиться.
+            - link "Цены и что входит" [ref=e370] [cursor=pointer]:
+              - /url: "#ceny"
+    - generic [ref=e374]:
+      - generic [ref=e375]:
+        - paragraph [ref=e376]: Цены
+        - heading "Смета по вашим данным, а не вилка «от»" [level=2] [ref=e377]
+        - paragraph [ref=e378]: Цена операции зависит от объёма вмешательства, способа доступа и материалов. На консультации считаю смету по вашим данным — разница с «минимальной» обычно составляет 20–30%.
+      - generic [ref=e379]:
+        - generic [ref=e380]:
+          - generic [ref=e381]: Операция
+          - generic [ref=e382]: Стоимость
+          - generic [ref=e383]: Длительность
+          - generic [ref=e384]: Ориентир по рынку
+        - generic [ref=e386]:
+          - heading "Верхняя блефаропластика" [level=3] [ref=e388]
+          - paragraph [ref=e389]: от 80 000 ₽
+          - paragraph [ref=e390]: 40–60 минут
+          - paragraph [ref=e391]: средняя по рынку 81 300 ₽, разброс до 330 000 ₽
+        - generic [ref=e393]:
+          - heading "Нижняя блефаропластика" [level=3] [ref=e395]
+          - paragraph [ref=e396]: от 95 000 ₽
+          - paragraph [ref=e397]: 60–90 минут
+          - paragraph [ref=e398]: разброс на рынке 14 000–310 000 ₽
+        - generic [ref=e400]:
+          - heading "Круговая блефаропластика" [level=3] [ref=e402]
+          - paragraph [ref=e403]: от 110 000 ₽
+          - paragraph [ref=e404]: 1,5–2 часа
+          - paragraph [ref=e405]: средняя по рынку 108 500 ₽
+        - generic [ref=e407]:
+          - heading "Риносептопластика" [level=3] [ref=e409]
+          - paragraph [ref=e410]: от 155 000 ₽
+          - paragraph [ref=e411]: 2–3 часа
+          - paragraph [ref=e412]: средняя по рынку 153 400 ₽
+        - generic [ref=e414]:
+          - heading "Отопластика" [level=3] [ref=e416]
+          - paragraph [ref=e417]: от 65 000 ₽
+          - paragraph [ref=e418]: 1–1,5 часа
+          - paragraph [ref=e419]: диапазон по рынку 30 000–100 000 ₽
+        - generic [ref=e421]:
+          - heading "Увеличение груди" [level=3] [ref=e423]
+          - paragraph [ref=e424]: около 220 000 ₽
+          - paragraph [ref=e425]: 2–3 часа
+          - paragraph [ref=e426]: без стоимости имплантов
+        - generic [ref=e428]:
+          - heading "Подтяжка груди" [level=3] [ref=e430]
+          - paragraph [ref=e431]: около 180 000 ₽
+          - paragraph [ref=e432]: 2–3 часа
+          - paragraph [ref=e433]: без увеличения
+        - generic [ref=e435]:
+          - heading "Абдоминопластика" [level=3] [ref=e437]
+          - paragraph [ref=e438]: около 250 000 ₽
+          - paragraph [ref=e439]: 3–4 часа
+          - paragraph [ref=e440]: средняя по рынку 180 000–400 000 ₽
+        - generic [ref=e442]:
+          - heading "Липосакция одной зоны" [level=3] [ref=e444]
+          - paragraph [ref=e445]: около 50 000 ₽
+          - paragraph [ref=e446]: 40–90 минут
+          - paragraph [ref=e447]: зона — живот, бёдра, подбородок
+        - generic [ref=e449]:
+          - heading "Лабиопластика" [level=3] [ref=e451]
+          - paragraph [ref=e452]: около 90 000 ₽
+          - paragraph [ref=e453]: 40–60 минут
+          - paragraph [ref=e454]: диапазон 60 000–150 000 ₽
+      - generic [ref=e455]:
+        - generic [ref=e457]:
+          - heading "Что не входит в цену операции" [level=3] [ref=e458]
+          - list [ref=e459]:
+            - listitem [ref=e460]:
+              - generic [ref=e461]: Импланты под молочными железами
+              - generic [ref=e462]: от 90 000 ₽ за пару
+            - listitem [ref=e463]:
+              - generic [ref=e464]: Стационар
+              - generic [ref=e465]: от 5 000 ₽ за сутки
+            - listitem [ref=e466]:
+              - generic [ref=e467]: Анестезия
+              - generic [ref=e468]: входит в стоимость операции
+        - generic [ref=e470]:
+          - generic [ref=e471]:
+            - heading "Самая быстрая операция" [level=3] [ref=e472]
+            - paragraph [ref=e473]: Круговая блефаропластика — от 110 000 ₽, 1,5–2 часа. Чаще всего делают подросткам, но ограничение только в состоянии хряща.
+          - generic [ref=e474]:
+            - link "Уточнить стоимость" [ref=e475] [cursor=pointer]:
+              - /url: tel:+74950000000
+            - paragraph [ref=e478]: Предоплата не требуется
+      - paragraph [ref=e480]: "Цены на сайте — ориентировочные и приведены как пример оформления. Это демонстрационный проект: все данные вымышлены. Реальная стоимость определяется на очной консультации и не является публичной офертой."
+    - generic [ref=e483]:
+      - generic [ref=e484]:
+        - paragraph [ref=e485]: Клиники
+        - heading "Четыре адреса, одна методика" [level=2] [ref=e486]
+        - paragraph [ref=e487]: ООО «Медбизнес» работает на базе партнёрских клиник. Хирург, протокол и оснащение — одни и те же; отличаются адрес, палаты и уровень сервиса. На консультации сразу фиксируем клинику под дату операции.
+      - generic [ref=e488]:
+        - article [ref=e490]:
+          - generic [ref=e491]:
+            - generic [ref=e492]: "01"
+            - generic [ref=e493]: Волоколамская, 8 минут пешком
+          - heading "Клиника «Север»" [level=3] [ref=e494]
+          - paragraph [ref=e495]: Москва, ул. Академика Волгина, 6, стр. 3
+          - paragraph [ref=e496]: "Полный цикл: консультация, операция, дневной стационар."
+          - generic [ref=e497]: Операционные — ежедневно, 08:00–21:00
+        - article [ref=e501]:
+          - generic [ref=e502]:
+            - generic [ref=e503]: "02"
+            - generic [ref=e504]: Шаболовская, 3 минуты пешком
+          - heading "Медлайн" [level=3] [ref=e505]
+          - paragraph [ref=e506]: Москва, Ленинский проспект, 45, корп. 2
+          - paragraph [ref=e507]: Одноместные палаты и отдельный пост наблюдения после наркоза.
+          - generic [ref=e508]: Операционные — ежедневно, 08:00–21:00
+        - article [ref=e512]:
+          - generic [ref=e513]:
+            - generic [ref=e514]: "03"
+            - generic [ref=e515]: Баррикадная, 7 минут пешком
+          - heading "Гранат Клиник" [level=3] [ref=e516]
+          - paragraph [ref=e517]: Москва, ул. Гранатная, 7
+          - paragraph [ref=e518]: Единственная из четырёх клиник с собственной стоматологией.
+          - generic [ref=e519]: Операционные — ежедневно, 08:00–21:00
+        - article [ref=e523]:
+          - generic [ref=e524]:
+            - generic [ref=e525]: "04"
+            - generic [ref=e526]: Химки, 6 минут пешком
+          - heading "Белый Контур" [level=3] [ref=e527]
+          - paragraph [ref=e528]: Химки, ул. Молодёжная, 3
+          - paragraph [ref=e529]: "Загородная локация: после операции можно уехать из города."
+          - generic [ref=e530]: Операционные — ежедневно, 08:00–21:00
+      - generic [ref=e534]:
+        - paragraph [ref=e535]: "Приезжаете из другого города? Организую проживание и трансфер: консультация, анализы, операция и контрольный осмотр обычно укладываются в 4–5 дней."
+        - link "Подобрать клинику" [ref=e536] [cursor=pointer]:
+          - /url: tel:+74950000000
+    - generic [ref=e540]:
+      - generic [ref=e541]:
+        - paragraph [ref=e542]: Как проходит
+        - heading "Шесть шагов от заявки до контрольного осмотра" [level=2] [ref=e543]
+        - paragraph [ref=e544]: Первый шаг ничего не стоит и ни к чему не обязывает. Дальше вы двигаетесь в своём темпе — паузы между этапами допустимы.
+      - list [ref=e545]:
+        - listitem [ref=e547]:
+          - generic [ref=e548]: "01"
+          - generic [ref=e549]:
+            - heading "Заявка из архива" [level=3] [ref=e550]
+            - paragraph [ref=e551]: Опишите, что хотите изменить. Из архива подберу 5–7 похожих случаев и покажу, что получается у меня.
+          - generic [ref=e552]: в тот же день
+        - listitem [ref=e554]:
+          - generic [ref=e555]: "02"
+          - generic [ref=e556]:
+            - heading "Очная консультация" [level=3] [ref=e557]
+            - paragraph [ref=e558]: Осмотр, фотопротокол, расчёт сметы по вашим данным. Показываю свою статистику осложнений.
+          - generic [ref=e559]: 40–60 минут
+        - listitem [ref=e561]:
+          - generic [ref=e562]: "03"
+          - generic [ref=e563]:
+            - heading "Анализы и план" [level=3] [ref=e564]
+            - paragraph [ref=e565]: Список обследований, план операции, дата. Анализы можно сдать в любой лаборатории.
+          - generic [ref=e566]: 5–14 дней
+        - listitem [ref=e568]:
+          - generic [ref=e569]: "04"
+          - generic [ref=e570]:
+            - heading "Операция" [level=3] [ref=e571]
+            - paragraph [ref=e572]: Работает вся бригада целиком. Длительность зависит от операции, наркоз один.
+          - generic [ref=e573]: 40 минут — 4 часа
+        - listitem [ref=e575]:
+          - generic [ref=e576]: "05"
+          - generic [ref=e577]:
+            - heading "Снятие швов" [level=3] [ref=e578]
+            - paragraph [ref=e579]: Осмотр, оценка результата, план коррекции при необходимости.
+          - generic [ref=e580]: 7–14 дней
+        - listitem [ref=e582]:
+          - generic [ref=e583]: "06"
+          - generic [ref=e584]:
+            - heading "Контроль через 3 месяца" [level=3] [ref=e585]
+            - paragraph [ref=e586]: Финальная оценка и фотопротокол «до и после». Дальше — плановый осмотр раз в год.
+          - generic [ref=e587]: 3 месяца
+      - generic [ref=e589]:
+        - generic [ref=e590]:
+          - heading "Первый шаг — бесплатный" [level=3] [ref=e591]
+          - paragraph [ref=e592]: Опишите задачу — покажу 5–7 случаев из архива с похожим исходным строением. Без записи и обязательств.
+        - link "Смотреть архив" [ref=e593] [cursor=pointer]:
+          - /url: "#primery"
+      - paragraph [ref=e597]: Анализы можно сдать в любой лаборатории — направление выдаём на консультации. Ежедневно с 09:00 до 21:00. На связи.
+    - generic [ref=e601]:
+      - generic [ref=e602]:
+        - generic [ref=e603]:
+          - paragraph [ref=e604]: Примеры работ
+          - heading "Архив вместо галереи" [level=2] [ref=e605]
+          - paragraph [ref=e606]: "На этом сайте нет блока «до и после». Это осознанное решение: фотографии пациентов публикуются только с письменного согласия, а выбор случаев — личный разговор, а не витрина."
+        - generic [ref=e607]:
+          - generic [ref=e609]:
+            - heading "Кейсы с фотографиями — по запросу" [level=3] [ref=e610]
+            - paragraph [ref=e611]: "Показываю случаи лично на консультации и по мессенджеру: с исходным строением, техникой и сроками восстановления. Публичное портфолио на сайте не размещаю."
+          - generic [ref=e613]:
+            - heading "Примеры подбираю под вашу задачу" [level=3] [ref=e614]
+            - paragraph [ref=e615]: "Не «красивые вообще», а похожие на ваш случай: тот же объём вмешательства и близкое исходное строение. Так честнее оценивать результат."
+          - generic [ref=e617]:
+            - heading "Что важно понимать про сроки" [level=3] [ref=e618]
+            - paragraph [ref=e619]: Окончательный вид — через 3–6 месяцев. Первые недели — отёк и неравномерность; судьбу операции по фото «сразу после» решать нельзя.
+      - generic [ref=e621]:
+        - paragraph [ref=e622]: Куда смотреть
+        - heading "Каналы связи" [level=3] [ref=e623]
+        - paragraph [ref=e624]: Примеры работ и свободные даты — в мессенджерах. Отвечаю сам, без операторов и скриптов.
+        - list [ref=e625]:
+          - listitem [ref=e626]:
+            - link "Te Telegram @medbusiness_clinic" [ref=e627] [cursor=pointer]:
+              - /url: https://t.me/medbusiness_clinic
+              - generic [ref=e628]:
+                - generic [ref=e629]: Te
+                - generic [ref=e630]: Telegram
+              - generic [ref=e631]: "@medbusiness_clinic"
+          - listitem [ref=e632]:
+            - link "Wh WhatsApp +7 (495) 000-00-00" [ref=e633] [cursor=pointer]:
+              - /url: https://wa.me/74950000000
+              - generic [ref=e634]:
+                - generic [ref=e635]: Wh
+                - generic [ref=e636]: WhatsApp
+              - generic [ref=e637]: +7 (495) 000-00-00
+          - listitem [ref=e638]:
+            - link "ВК ВКонтакте medbusiness" [disabled] [ref=e639]:
+              - /url: "#kontakty"
+              - generic [ref=e640]:
+                - generic [ref=e641]: ВК
+                - generic [ref=e642]: ВКонтакте
+              - generic [ref=e643]: medbusiness
+          - listitem [ref=e644]:
+            - link "Yo YouTube medbusiness" [disabled] [ref=e645]:
+              - /url: "#kontakty"
+              - generic [ref=e646]:
+                - generic [ref=e647]: Yo
+                - generic [ref=e648]: YouTube
+              - generic [ref=e649]: medbusiness
+        - paragraph [ref=e650]: "ВКонтакте и YouTube — разделы готовятся, ссылки пока неактивны. Демонстрационный проект: контакты вымышленные."
+    - generic [ref=e652]:
+      - generic [ref=e653]:
+        - paragraph [ref=e654]: Вопросы
+        - heading "Что спрашивают чаще всего" [level=2] [ref=e655]
+        - paragraph [ref=e656]: Если вашего вопроса здесь нет — напишите, отвечу без шаблонных формулировок.
+        - link "+7 (495) 000-00-00" [ref=e657] [cursor=pointer]:
+          - /url: tel:+74950000000
+      - generic [ref=e658]:
+        - generic [ref=e660]:
+          - button "Нужна ли предоплата?" [expanded] [ref=e661]
+          - paragraph [ref=e669]: Нет. Оплата — после операции, в клинике. Запись на консультацию тоже бесплатная.
+        - generic [ref=e671]:
+          - button "Вы работаете во всех четырёх клиниках?" [ref=e672]
+          - paragraph [ref=e676]: Да. График делю между «Севером», «Медлайном», «Гранат Клиник» и «Белым Контуром». На консультации сразу фиксируем клинику под дату операции.
+        - generic [ref=e678]:
+          - button "Можно ли сначала посмотреть чужие случаи?" [ref=e679]
+          - paragraph [ref=e683]: "Да, по ссылке на архив. Примеры подбираю под вашу задачу: с похожим исходным строением и тем же объёмом вмешательства."
+        - generic [ref=e685]:
+          - button "Что если результат не устроит?" [ref=e686]
+          - paragraph [ref=e690]: Коррекция в течение 12 месяцев после операции входит в стоимость. Правки делаю теми же методами, в тех же клиниках.
+        - generic [ref=e692]:
+          - button "Делаете ли вы сложные случаи?" [ref=e693]
+          - paragraph [ref=e697]: Беру их, но с ограничением по количеству — не больше двух в месяц. Сложные случаи веду лично, без передачи ассистенту.
+        - generic [ref=e699]:
+          - button "Можно ли приехать из другого города?" [ref=e700]
+          - paragraph [ref=e704]: "Да. Организую проживание и трансфер: консультация, анализы, операция и контрольный осмотр обычно укладываются в 4–5 дней."
+    - generic [ref=e707]:
+      - generic [ref=e708]:
+        - paragraph [ref=e709]: Первый шаг
+        - heading "Напишите, что хотите изменить. Отберу 5–7 случаев из архива." [level=2] [ref=e710]: Напишите, что хотите изменить.Отберу 5–7 случаев из архива.
+        - paragraph [ref=e711]: Примеры с похожим исходным строением и тем же объёмом вмешательства. Без записи, без обязательств и без предоплаты.
+      - generic [ref=e713]:
+        - link "Написать в Telegram" [ref=e714] [cursor=pointer]:
+          - /url: https://t.me/medbusiness_clinic
+        - link "+7 (495) 000-00-00" [ref=e717] [cursor=pointer]:
+          - /url: tel:+74950000000
+      - generic [ref=e721]:
+        - generic [ref=e722]:
+          - paragraph [ref=e723]: в тот же день
+          - paragraph [ref=e724]: Ответ
+        - generic [ref=e725]:
+          - paragraph [ref=e726]: не требуется
+          - paragraph [ref=e727]: Предоплата
+        - generic [ref=e728]:
+          - paragraph [ref=e729]: 40–60 минут
+          - paragraph [ref=e730]: Консультация
+      - paragraph [ref=e732]: Арсений Долганов, лицо, грудь, контур тела · Москва, Ежедневно с 09:00 до 21:00. На связи.
+  - contentinfo [ref=e733]:
+    - generic [ref=e735]:
+      - generic [ref=e736]:
+        - generic [ref=e737]:
+          - generic [ref=e738]:
+            - generic [ref=e739]: М
+            - generic [ref=e740]:
+              - paragraph [ref=e741]: Пластический хирург
+              - paragraph [ref=e742]: ООО «Медбизнес»
+          - paragraph [ref=e743]: Один хирург — одна бригада — четыре клиники
+          - paragraph [ref=e744]: Арсений Долганов — хирург, 16 лет практики, 2 800 операций. Работает на базе четырёх клиник Москвы и Подмосковья.
+        - generic [ref=e745]:
+          - paragraph [ref=e746]: Разделы
+          - list [ref=e747]:
+            - listitem [ref=e748]:
+              - link "О хирурге" [ref=e749] [cursor=pointer]:
+                - /url: /#o-hirurge
+            - listitem [ref=e750]:
+              - link "Бригада" [ref=e751] [cursor=pointer]:
+                - /url: /#brigada
+            - listitem [ref=e752]:
+              - link "Направления" [ref=e753] [cursor=pointer]:
+                - /url: /#napravleniya
+            - listitem [ref=e754]:
+              - link "Цены" [ref=e755] [cursor=pointer]:
+                - /url: /#ceny
+        - generic [ref=e756]:
+          - paragraph [ref=e757]: Организация
+          - list [ref=e758]:
+            - listitem [ref=e759]:
+              - link "Клиники" [ref=e760] [cursor=pointer]:
+                - /url: /#kliniki
+            - listitem [ref=e761]:
+              - link "Как проходит" [ref=e762] [cursor=pointer]:
+                - /url: /#kak-prohodit
+            - listitem [ref=e763]:
+              - link "Примеры работ" [ref=e764] [cursor=pointer]:
+                - /url: /#primery
+            - listitem [ref=e765]:
+              - link "Вопросы" [ref=e766] [cursor=pointer]:
+                - /url: /#voprosy
+        - generic [ref=e767]:
+          - paragraph [ref=e768]: Контакты
+          - list [ref=e769]:
+            - listitem [ref=e770]:
+              - link "+7 (495) 000-00-00" [ref=e771] [cursor=pointer]:
+                - /url: tel:+74950000000
+            - listitem [ref=e772]:
+              - 'link "Telegram: @medbusiness_clinic" [ref=e773] [cursor=pointer]':
+                - /url: https://t.me/medbusiness_clinic
+            - listitem [ref=e774]: Москва, четыре клиники
+          - paragraph [ref=e775]: Ежедневно с 09:00 до 21:00. На связи.
+      - generic [ref=e776]:
+        - paragraph [ref=e777]: "Демонстрационный сайт. Все данные — вымышленные: имена, клиники, цены и статистика приведены как пример оформления и не являются публичной офертой или медицинской рекомендацией."
+        - generic [ref=e778]:
+          - paragraph [ref=e779]: © 2026 ООО «Медбизнес»
+          - paragraph [ref=e780]: Использование материалов сайта — с указанием источника
+  - alert [ref=e781]

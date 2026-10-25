@@ -1,0 +1,445 @@
+- generic [active] [ref=f22e1]:
+  - generic:
+    - dialog:
+      - generic [ref=f22e2]:
+        - generic [ref=f22e3]:
+          - paragraph
+        - generic [ref=f22e5]:
+          - generic [ref=f22e6]:
+            - generic [ref=f22e7]: Корпорация Майкрософт и наши сторонние поставщики используют файлы cookie и аналогичные технологии для предоставления, поддержки и улучшения наших услуг и рекламных объявлений. С вашего согласия мы будем использовать эти данные для персонализации объявлений и связанной с ними аналитики.
+            - generic [ref=f22e8]:
+              - text: Выберите "Принять", чтобы согласиться с этими видами использования, "Отклонить", чтобы отклонить их, или выберите "Другие варианты", чтобы увидеть все доступные варианты. Изменить выбор можно в разделе "Управление файлами cookie" в нижней части этой страницы.
+              - link "Заявление о конфиденциальности" [ref=f22e9] [cursor=pointer]:
+                - /url: https://go.microsoft.com/fwlink/?LinkId=521839
+          - generic [ref=f22e10]:
+            - link "Принимаю" [ref=f22e12] [cursor=pointer]:
+              - /url: "javascript: void(0)"
+            - link "Отклонить" [ref=f22e14] [cursor=pointer]:
+              - /url: "javascript: void(0)"
+            - link "Дополнительные параметры" [ref=f22e15] [cursor=pointer]:
+              - /url: "javascript: void(0)"
+  - banner [ref=f22e16]:
+    - button "Перейти к контенту" [ref=f22e17] [cursor=pointer]
+    - button "Отзыв о доступности" [ref=f22e20] [cursor=pointer]
+    - generic [ref=f22e23]:
+      - link [ref=f22e24] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Вернуться к Поиску Bing" [level=1] [ref=f22e25]
+      - search [ref=f22e26]:
+        - button "Поиск" [ref=f22e29] [cursor=pointer]
+        - searchbox "Введите свой поисковый запрос здесь — пока вы печатаете, будут отображаться предлагаемые варианты" [ref=f22e30]: цена нижняя блефаропластика Москва продоктов
+        - generic [ref=f22e31] [cursor=pointer]
+        - button "Поиск с использованием изображения" [ref=f22e36] [cursor=pointer]
+    - complementary "Награды и предпочтения учетной записи" [ref=f22e38]:
+      - button "Microsoft Rewards" [ref=f22e39] [cursor=pointer]:
+        - generic [ref=f22e40]: Rewards
+      - link "Войти" [ref=f22e56] [cursor=pointer]:
+        - /url: javascript:void(0)
+    - navigation "Фильтр поиска" [ref=f22e58]:
+      - list [ref=f22e59]:
+        - listitem [ref=f22e60]:
+          - link "Все" [ref=f22e61] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f22e62]:
+          - link "Поиск" [ref=f22e63] [cursor=pointer]:
+            - /url: /copilotsearch?q=%d1%86%d0%b5%d0%bd%d0%b0+%d0%bd%d0%b8%d0%b6%d0%bd%d1%8f%d1%8f+%d0%b1%d0%bb%d0%b5%d1%84%d0%b0%d1%80%d0%be%d0%bf%d0%bb%d0%b0%d1%81%d1%82%d0%b8%d0%ba%d0%b0+%d0%9c%d0%be%d1%81%d0%ba%d0%b2%d0%b0+%d0%bf%d1%80%d0%be%d0%b4%d0%be%d0%ba%d1%82%d0%be%d0%b2&FORM=CSSCOP
+        - listitem [ref=f22e66]:
+          - link "Карты" [ref=f22e67] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=fdc6f502502ca1d8a1b134eb2489216ce6019a07d375a4fd9264a6c16da142b3JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L21hcHM_cT0lZDElODYlZDAlYjUlZDAlYmQlZDAlYjArJWQwJWJkJWQwJWI4JWQwJWI2JWQwJWJkJWQxJThmJWQxJThmKyVkMCViMSVkMCViYiVkMCViNSVkMSU4NCVkMCViMCVkMSU4MCVkMCViZSVkMCViZiVkMCViYiVkMCViMCVkMSU4MSVkMSU4MiVkMCViOCVkMCViYSVkMCViMCslZDAlOWMlZDAlYmUlZDElODElZDAlYmElZDAlYjIlZDAlYjArJWQwJWJmJWQxJTgwJWQwJWJlJWQwJWI0JWQwJWJlJWQwJWJhJWQxJTgyJWQwJWJlJWQwJWIyJkZPUk09SERSU0M2&ntb=1
+        - listitem [ref=f22e68]:
+          - link "Покупки" [ref=f22e69] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=0c7d77124eef027535dee168467c9929b8a495977928f0aeac158ff87e3691a7JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3Nob3AvdG9waWNzP3E9JWQxJTg2JWQwJWI1JWQwJWJkJWQwJWIwKyVkMCViZCVkMCViOCVkMCViNiVkMCViZCVkMSU4ZiVkMSU4ZislZDAlYjElZDAlYmIlZDAlYjUlZDElODQlZDAlYjAlZDElODAlZDAlYmUlZDAlYmYlZDAlYmIlZDAlYjAlZDElODElZDElODIlZDAlYjglZDAlYmElZDAlYjArJWQwJTljJWQwJWJlJWQxJTgxJWQwJWJhJWQwJWIyJWQwJWIwKyVkMCViZiVkMSU4MCVkMCViZSVkMCViNCVkMCViZSVkMCViYSVkMSU4MiVkMCViZSVkMCViMiZGT1JNPVNIT1BUQg&ntb=1
+        - listitem [ref=f22e70]:
+          - link "Изображения" [ref=f22e71] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c1237174a3a0ffa1c14e02b70027d3cb60aff132e699836433fc0d160d02672dJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L2ltYWdlcy9zZWFyY2g_cT0lZDElODYlZDAlYjUlZDAlYmQlZDAlYjArJWQwJWJkJWQwJWI4JWQwJWI2JWQwJWJkJWQxJThmJWQxJThmKyVkMCViMSVkMCViYiVkMCViNSVkMSU4NCVkMCViMCVkMSU4MCVkMCViZSVkMCViZiVkMCViYiVkMCViMCVkMSU4MSVkMSU4MiVkMCViOCVkMCViYSVkMCViMCslZDAlOWMlZDAlYmUlZDElODElZDAlYmElZDAlYjIlZDAlYjArJWQwJWJmJWQxJTgwJWQwJWJlJWQwJWI0JWQwJWJlJWQwJWJhJWQxJTgyJWQwJWJlJWQwJWIyJkZPUk09SERSU0Mz&ntb=1
+        - listitem [ref=f22e72]:
+          - link "Видео" [ref=f22e73] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=a61abefa67c1bc14818e2917cdf79caa16a5fa99440754c589c7f2982d454f45JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3ZpZGVvcy9zZWFyY2g_cT0lZDElODYlZDAlYjUlZDAlYmQlZDAlYjArJWQwJWJkJWQwJWI4JWQwJWI2JWQwJWJkJWQxJThmJWQxJThmKyVkMCViMSVkMCViYiVkMCViNSVkMSU4NCVkMCViMCVkMSU4MCVkMCViZSVkMCViZiVkMCViYiVkMCViMCVkMSU4MSVkMSU4MiVkMCViOCVkMCViYSVkMCViMCslZDAlOWMlZDAlYmUlZDElODElZDAlYmElZDAlYjIlZDAlYjArJWQwJWJmJWQxJTgwJWQwJWJlJWQwJWI0JWQwJWJlJWQwJWJhJWQxJTgyJWQwJWJlJWQwJWIyJkZPUk09SERSU0M0&ntb=1
+        - listitem [ref=f22e74]:
+          - link "Новости" [ref=f22e75] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=1ea180b9ca00970557aeed19abaa0e3615e4cf1e8f1e5eb5ff42e406d613ab34JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L25ld3Mvc2VhcmNoP3E9JWQxJTg2JWQwJWI1JWQwJWJkJWQwJWIwKyVkMCViZCVkMCViOCVkMCViNiVkMCViZCVkMSU4ZiVkMSU4ZislZDAlYjElZDAlYmIlZDAlYjUlZDElODQlZDAlYjAlZDElODAlZDAlYmUlZDAlYmYlZDAlYmIlZDAlYjAlZDElODElZDElODIlZDAlYjglZDAlYmElZDAlYjArJWQwJTljJWQwJWJlJWQxJTgxJWQwJWJhJWQwJWIyJWQwJWIwKyVkMCViZiVkMSU4MCVkMCViZSVkMCViNCVkMCViZSVkMCViYSVkMSU4MiVkMCViZSVkMCViMiZGT1JNPUhEUlNDNw&ntb=1
+        - listitem [ref=f22e76]:
+          - button [ref=f22e77] [cursor=pointer]
+  - main "Результаты поиска" [ref=f22e82]:
+    - generic [ref=f22e84]:
+      - generic [aria-hidden] [ref=f22e85]:
+        - generic [ref=f22e86] [cursor=pointer]
+        - generic [ref=f22e89] [cursor=pointer]
+        - generic [ref=f22e92] [cursor=pointer]
+      - text: "Приблизительное число результатов: 13 300"
+    - list [ref=f22e95]:
+      - listitem [ref=f22e96]:
+        - generic [ref=f22e97]:
+          - text: Это результаты по запросу
+          - link [ref=f22e98] [cursor=pointer]:
+            - /url: /search?q=%d1%86%d0%b5%d0%bd%d0%b0+%d0%bd%d0%b8%d0%b6%d0%bd%d1%8f%d1%8f+%d0%b1%d0%bb%d0%b5%d1%84%d0%b0%d1%80%d0%be%d0%bf%d0%bb%d0%b0%d1%81%d1%82%d0%b8%d0%ba%d0%b0+%d0%b2+%d0%9c%d0%be%d1%81%d0%ba%d0%b2%d0%b5+%d0%bf%d1%80%d0%be%d0%b4%d1%83%d0%ba%d1%82%d0%be%d0%b2&FORM=AWRE
+            - text: цена нижняя блефаропластика
+            - strong [ref=f22e99]: в Москве продуктов
+          - text: .
+        - generic [ref=f22e100]:
+          - text: Вместо этого искать
+          - link "цена нижняя блефаропластика Москва продоктов" [ref=f22e101] [cursor=pointer]:
+            - /url: /search?q=%2b%d1%86%d0%b5%d0%bd%d0%b0+%d0%bd%d0%b8%d0%b6%d0%bd%d1%8f%d1%8f+%d0%b1%d0%bb%d0%b5%d1%84%d0%b0%d1%80%d0%be%d0%bf%d0%bb%d0%b0%d1%81%d1%82%d0%b8%d0%ba%d0%b0+%d0%9c%d0%be%d1%81%d0%ba%d0%b2%d0%b0+%d0%bf%d1%80%d0%be%d0%b4%d0%be%d0%ba%d1%82%d0%be%d0%b2&filters=rcrse%3a%221%22&FORM=RCRE
+          - text: "?"
+    - generic [ref=f22e102]:
+      - list [ref=f22e103]:
+        - listitem [ref=f22e104]:
+          - region "Поиск Copilot" [ref=f22e107]:
+            - generic [ref=f22e108]:
+              - heading "Цена нижняя блефаропластика Москва продуктов" [level=2] [ref=f22e114]
+              - generic [ref=f22e119]:
+                - generic [ref=f22e120]:
+                  - link "Увеличить карту" [ref=f22e126] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=092108d89abe423555f8a16fd5ef0da7b4c80231f543631b2425e7c6af80135cJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L21hcHM_Jm1lcGk9NzJ-SGVhbHRoY2FyZX5FbWJlZGRlZH5MYXJnZU1hcExpbmsmdHk9MTcmcT0lRDElODYlRDAlQjUlRDAlQkQlRDAlQjAlMjAlRDAlQkQlRDAlQjglRDAlQjYlRDAlQkQlRDElOEYlRDElOEYlMjAlRDAlQjElRDAlQkIlRDAlQjUlRDElODQlRDAlQjAlRDElODAlRDAlQkUlRDAlQkYlRDAlQkIlRDAlQjAlRDElODElRDElODIlRDAlQjglRDAlQkElRDAlQjAlMjAlRDAlOUMlRDAlQkUlRDElODElRDAlQkElRDAlQjIlRDAlQjAlMjAlRDAlQkYlRDElODAlRDAlQkUlRDAlQjQlRDAlQkUlRDAlQkElRDElODIlRDAlQkUlRDAlQjImbWI9NTUuODA1MDYxfjM3LjUzMDg3Mn41NS43NjU2NTZ-MzcuNjY5MzIzJnBwb2lzPTU1Ljc3MDMyNDcwNzAzMTI1XzM3LjYyNDU2ODkzOTIwODk4NF9fWU5GREZGRkM5NjE4Rjg3OUZFfjU1Ljc2NTY1NTUxNzU3ODEyNV8zNy42MzkxMDY3NTA0ODgyOF9fWU43M0FBRDlEMTRGQjAwRTdFfjU1Ljc3NTU1ODQ3MTY3OTY5XzM3LjY2OTMyMjk2NzUyOTNfX1lOMjMxMjUwMTFDMENGNTU3fjU1Ljc2NjU5Nzc0NzgwMjczNF8zNy41NTg4NDU1MjAwMTk1M19fWU44ODcyNEJCREJBODY4RjAwfjU1LjgwNTA2MTM0MDMzMjAzXzM3LjUzMDg3MjM0NDk3MDdfX1lONEYyMzI1Mzg3NjlCMTYzQ341NS43NzAyODI3NDUzNjEzM18zNy42MjQ1MjY5Nzc1MzkwNl9fWU4zNUM5MzFCNzE5NzY4QjA5fiZwb2ljb3VudD0xOCZ1c2ViZnByPXRydWUmdj0yJnNWPTEmRk9STT1NUFNSUEw&ntb=1
+                  - list [ref=f22e129]:
+                    - listitem [ref=f22e130]:
+                      - generic [ref=f22e131]:
+                        - generic [ref=f22e134]:
+                          - link "Веб-сайт" [ref=f22e135] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=d74191a54d2f05c2e8bc9bc640cfd4700c4410b3019e7dda4d28b8515e643166JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly93d3cuYmluZy5jb20vYWxpbmsvbGluaz91cmw9aHR0cHMlM2ElMmYlMmZwbGFzdGljYXJ0LnR1cmJvLnNpdGUlMmZwYWdlMjAyMjI5NyZzb3VyY2U9c2VycC1sb2NhbCZoPTJ2WExTM3JmNkhjMjZMWVJLOTBZYkppVmNHTG0yUWRXbzd5VWgxSWpoalElM2QmcD1sd19tYWdsdHdlYyZpZz1GODgzQ0FCRTY3NjA0MzdCOTFGMTY0MUI4RkJGMzc0RiZ5cGlkPVlORkRGRkZDOTYxOEY4NzlGRQ&ntb=1
+                            - generic [aria-hidden] [ref=f22e140]: Веб-сайт
+                          - link "Маршруты" [ref=f22e141] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=59a0648c4adbaa6a9195b2b7a11a1340fc9b8b21612e6061c25a0ec582b084a9JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L21hcHM_Jm1lcGk9NzJ-RGlyZWN0aW9uc35FbWJlZGRlZH5EaXJlY3Rpb25fQnV0dG9uJnR5PTAmcnRwPXBvcy41NS43NzAzMjQ3MDcwMzEyNV8zNy42MjQ1Njg5MzkyMDg5ODRfXyVEMCU5OCVEMCVCRCVEMSU4MSVEMSU4MiVEMCVCOCVEMSU4MiVEMSU4MyVEMSU4MiUyMCVEMCU5RiVEMCVCQiVEMCVCMCVEMSU4MSVEMSU4MiVEMCVCOCVEMSU4NyVEMCVCNSVEMSU4MSVEMCVCQSVEMCVCRSVEMCVCOSUyMCVEMCVBNSVEMCVCOCVEMSU4MCVEMSU4MyVEMSU4MCVEMCVCMyVEMCVCOCVEMCVCOCUyMCVEMCVCRCVEMCVCMCUyMCVEMCVBNiVEMCVCMiVEMCVCNSVEMSU4MiVEMCVCRCVEMCVCRSVEMCVCQyUyMCVEMCVCMSVEMSU4MyVEMCVCQiVEMSU4QyVEMCVCMiVEMCVCMCVEMSU4MCVEMCVCNV9fZV9-Jm1vZGU9bSZ2PTImc1Y9MQ&ntb=1
+                            - generic [aria-hidden] [ref=f22e145]: Маршруты
+                        - generic "Институт Пластической Хирургии на Цветном бульваре" [ref=f22e146]:
+                          - heading "Институт Пластической Хирургии на Цветном бульваре" [level=2] [ref=f22e147]
+                          - generic [ref=f22e148]:
+                            - generic [ref=f22e149]: Пластический хирург
+                            - generic [ref=f22e150]: Malyy Sukharevskiy Lane, Moscow
+                            - generic [ref=f22e151]:
+                              - generic [ref=f22e152]: Открыть · Закроется в 21:00
+                              - text: · +7 499 370-02-73
+                    - listitem [ref=f22e154]:
+                      - generic [ref=f22e155]:
+                        - generic [ref=f22e158]:
+                          - link "Веб-сайт" [ref=f22e159] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=d1403116ea4103f263c73e5f3f539b8c7024f120d36d5fc1a0c4a56e634a1be4JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly93d3cuYmluZy5jb20vYWxpbmsvbGluaz91cmw9aHR0cHMlM2ElMmYlMmZ3d3cuZG9jdG9ycGxhc3RpYy5ydSUyZiZzb3VyY2U9c2VycC1sb2NhbCZoPUxJY1YzOXFsdzcwYXolMmJNWm9WdCUyZlpRMSUyZkwzVUtnQyUyYlh0eDA2RnAwcEJRcyUzZCZwPWx3X21hZ2x0d2VjJmlnPUY4ODNDQUJFNjc2MDQzN0I5MUYxNjQxQjhGQkYzNzRGJnlwaWQ9WU43M0FBRDlEMTRGQjAwRTdF&ntb=1
+                            - generic [aria-hidden] [ref=f22e164]: Веб-сайт
+                          - link "Маршруты" [ref=f22e165] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=f63f183037f8ed7b9b62001564b5afd2af6d364ecf5a835d24d41a2cef84fc0aJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L21hcHM_Jm1lcGk9NzJ-RGlyZWN0aW9uc35FbWJlZGRlZH5EaXJlY3Rpb25fQnV0dG9uJnR5PTAmcnRwPXBvcy41NS43NjU2NTU1MTc1NzgxMjVfMzcuNjM5MTA2NzUwNDg4MjhfXyVEMCU5QSVEMCVCQiVEMCVCOCVEMCVCRCVEMCVCOCVEMCVCQSVEMCVCMCUyMCVEMCVCRiVEMCVCQiVEMCVCMCVEMSU4MSVEMSU4MiVEMCVCOCVEMSU4NyVEMCVCNSVEMSU4MSVEMCVCQSVEMCVCRSVEMCVCOSUyMCVEMSU4NSVEMCVCOCVEMSU4MCVEMSU4MyVEMSU4MCVEMCVCMyVEMCVCOCVEMCVCOCUyMCVEMCVCOCUyMCVEMCVCQSVEMCVCRSVEMSU4MSVEMCVCQyVEMCVCNSVEMSU4MiVEMCVCRSVEMCVCQiVEMCVCRSVEMCVCMyVEMCVCOCVEMCVCOCUyMERvY3RvcnBsYXN0aWNfX2VffiZtb2RlPW0mdj0yJnNWPTE&ntb=1
+                            - generic [aria-hidden] [ref=f22e169]: Маршруты
+                        - generic "Клиника пластической хирургии и косметологии Doctorplastic" [ref=f22e170]:
+                          - heading "Клиника пластической хирургии и косметологии Doctorplastic" [level=2] [ref=f22e171]
+                          - generic [ref=f22e172]:
+                            - generic [ref=f22e173]: Пластический хирург
+                            - generic [ref=f22e174]: Myasnitskaya St, 32С1, Moscow
+                            - generic [ref=f22e175]:
+                              - generic [ref=f22e176]: Открыть · Закроется в 18:00
+                              - text: · +7 495 266-97-07
+                    - listitem [ref=f22e178]:
+                      - generic [ref=f22e179]:
+                        - generic [ref=f22e182]:
+                          - link "Веб-сайт" [ref=f22e183] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=065e10a2a0a5ede18bc654c3d67bdb7b7656f223a76334ccf4fbce9c7760e97aJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly93d3cuYmluZy5jb20vYWxpbmsvbGluaz91cmw9aHR0cHMlM2ElMmYlMmZ3d3cuaXBoay5ydSUyZiZzb3VyY2U9c2VycC1sb2NhbCZoPVFsbXV3OXYzb29xOWp4M1NNeSUyZndsdXU5aWMxQVdlUCUyZlVSaUoxOURMRUM0JTNkJnA9bHdfbWFnbHR3ZWMmaWc9Rjg4M0NBQkU2NzYwNDM3QjkxRjE2NDFCOEZCRjM3NEYmeXBpZD1ZTjIzMTI1MDExQzBDRjU1Nw&ntb=1
+                            - generic [aria-hidden] [ref=f22e188]: Веб-сайт
+                          - link "Маршруты" [ref=f22e189] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=c519e73e4d367cf4479955da8082dcdcd83341d2210c5f89d1fcefbc81d56ccdJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L21hcHM_Jm1lcGk9NzJ-RGlyZWN0aW9uc35FbWJlZGRlZH5EaXJlY3Rpb25fQnV0dG9uJnR5PTAmcnRwPXBvcy41NS43NzU1NTg0NzE2Nzk2OV8zNy42NjkzMjI5Njc1MjkzX18lRDAlOTglRDAlQkQlRDElODElRDElODIlRDAlQjglRDElODIlRDElODMlRDElODIlMjAlRDAlQkYlRDAlQkIlRDAlQjAlRDElODElRDElODIlRDAlQjglRDElODclRDAlQjUlRDElODElRDAlQkElRDAlQkUlRDAlQjklMjAlRDElODUlRDAlQjglRDElODAlRDElODMlRDElODAlRDAlQjMlRDAlQjglRDAlQjglMjAlRDAlQjglMjAlRDAlQkElRDAlQkUlRDElODElRDAlQkMlRDAlQjUlRDElODIlRDAlQkUlRDAlQkIlRDAlQkUlRDAlQjMlRDAlQjglRDAlQjhfX2VffiZtb2RlPW0mdj0yJnNWPTE&ntb=1
+                            - generic [aria-hidden] [ref=f22e193]: Маршруты
+                        - generic "Институт пластической хирургии и косметологии" [ref=f22e194]:
+                          - heading "Институт пластической хирургии и косметологии" [level=2] [ref=f22e195]
+                          - generic [ref=f22e196]:
+                            - generic [ref=f22e197]: Пластический хирург
+                            - generic [ref=f22e198]: Ol'khovskaya ulitsa, 27, Moscow
+                            - generic [ref=f22e199]:
+                              - generic [ref=f22e200]: Открыть · Закроется в 21:00
+                              - text: · +7 495 775-01-02
+                    - listitem [ref=f22e202]:
+                      - generic [ref=f22e203]:
+                        - generic [ref=f22e206]:
+                          - link "Веб-сайт" [ref=f22e207] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=94b18a757c47b311816fc8e6faf0c33a449e6a08ce9c87c8574e7e5f05dc1434JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly93d3cuYmluZy5jb20vYWxpbmsvbGluaz91cmw9aHR0cCUzYSUyZiUyZm1lZDE5MDUucnUlMmYmc291cmNlPXNlcnAtbG9jYWwmaD1yS2pWMkY5Y2JLdlJCYUQ0ZGNyR0Q1Q3lXWDVDd1ZCQlp6UjMlMmZuV0tUekUlM2QmcD1sd19tYWdsdHdlYyZpZz1GODgzQ0FCRTY3NjA0MzdCOTFGMTY0MUI4RkJGMzc0RiZ5cGlkPVlOODg3MjRCQkRCQTg2OEYwMA&ntb=1
+                            - generic [aria-hidden] [ref=f22e212]: Веб-сайт
+                          - link "Маршруты" [ref=f22e213] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=562b70ad4d64a4dbcec1fe52c55738b2a8309c93428b1e3aa6ac4f275e7b6223JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L21hcHM_Jm1lcGk9NzJ-RGlyZWN0aW9uc35FbWJlZGRlZH5EaXJlY3Rpb25fQnV0dG9uJnR5PTAmcnRwPXBvcy41NS43NjY1OTc3NDc4MDI3MzRfMzcuNTU4ODQ1NTIwMDE5NTNfXyVEMCVBNyVEMCU5MCVEMCVBMSVEMCVBMiVEMCU5RCVEMCU5MCVEMCVBRiUyMCVEMCU5QSVEMCU5QiVEMCU5OCVEMCU5RCVEMCU5OCVEMCU5QSVEMCU5MCUyMCVEMCU5RCVEMCU5MCUyMCVEMCU5QyVEMCU5NSVEMCVBMiVEMCVBMCVEMCU5RSUyMDE5MDUlMjAlRDAlOTMlRDAlOUUlRDAlOTQlRDAlOTBfX2VffiZtb2RlPW0mdj0yJnNWPTE&ntb=1
+                            - generic [aria-hidden] [ref=f22e217]: Маршруты
+                        - generic "ЧАСТНАЯ КЛИНИКА НА МЕТРО 1905 ГОДА" [ref=f22e218]:
+                          - heading "ЧАСТНАЯ КЛИНИКА НА МЕТРО 1905 ГОДА" [level=2] [ref=f22e219]
+                          - generic [ref=f22e220]:
+                            - generic [ref=f22e221]: Медицинский центр
+                            - generic [ref=f22e222]: ulitsa 1905 goda, 19, Moscow
+                            - generic [ref=f22e223]:
+                              - generic [ref=f22e224]: Открыть · Закроется в 21:00
+                              - text: · +7 495 151-00-39
+                    - listitem [ref=f22e226]:
+                      - generic [ref=f22e227]:
+                        - generic [ref=f22e230]:
+                          - link "Веб-сайт" [ref=f22e231] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=8f24a6ef84d567487582af5afed11723c1fea05e11767152754ae61aae5a4f2bJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly93d3cuYmluZy5jb20vYWxpbmsvbGluaz91cmw9aHR0cCUzYSUyZiUyZnBzaG9ua2luYS5ydSUyZiZzb3VyY2U9c2VycC1sb2NhbCZoPUFoeUUlMmJsQWZFVndQMTAzb0VuRUlQN0dqJTJiRHRNd3cwJTJiNGd2am4lMmZENkFRayUzZCZwPWx3X21hZ2x0d2VjJmlnPUY4ODNDQUJFNjc2MDQzN0I5MUYxNjQxQjhGQkYzNzRGJnlwaWQ9WU40RjIzMjUzODc2OUIxNjND&ntb=1
+                            - generic [aria-hidden] [ref=f22e236]: Веб-сайт
+                          - link "Маршруты" [ref=f22e237] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=5865cfddb32ed16fe9cec7a587c15fbe235b75ecf8e20fd6ee11813e521318f4JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L21hcHM_Jm1lcGk9NzJ-RGlyZWN0aW9uc35FbWJlZGRlZH5EaXJlY3Rpb25fQnV0dG9uJnR5PTAmcnRwPXBvcy41NS44MDUwNjEzNDAzMzIwM18zNy41MzA4NzIzNDQ5NzA3X18lRDAlOUElRDAlQkIlRDAlQjglRDAlQkQlRDAlQjglRDAlQkElRDAlQjAlMjAlRDAlQkYlRDAlQkIlRDAlQjAlRDElODElRDElODIlRDAlQjglRDElODclRDAlQjUlRDElODElRDAlQkElRDAlQkUlRDAlQjklMjAlRDElODUlRDAlQjglRDElODAlRDElODMlRDElODAlRDAlQjMlRDAlQjglRDAlQjglMjAlN0MlMjAlRDAlQTklRDElODMlRDAlQkElRDAlQjglRDAlQkQlRDElODElRDAlQkElRDAlQjAlRDElOEYlMjAlN0MlMjAlRDAlOTElRDAlQkIlRDAlQjUlRDElODQlRDAlQjAlRDElODAlRDAlQkUlRDAlQkYlRDAlQkIlRDAlQjAlRDElODElRDElODIlRDAlQjglRDAlQkElRDAlQjAlMkMlMjAlRDAlQkIlRDAlQjglRDAlQkYlRDAlQkUlRDElODElRDAlQjAlRDAlQkElRDElODYlRDAlQjglRDElOEYlMkMlMjAlRDElODMlRDAlQjIlRDAlQjUlRDAlQkIlRDAlQjglRDElODclRDAlQjUlRDAlQkQlRDAlQjglRDAlQjUlMjAlRDAlQjMlRDElODAlRDElODMlRDAlQjQlRDAlQjhfX2VffiZtb2RlPW0mdj0yJnNWPTE&ntb=1
+                            - generic [aria-hidden] [ref=f22e241]: Маршруты
+                        - generic "Клиника пластической хирургии | Щукинская | Блефаропластика, липосакция, увеличение груди" [ref=f22e242]:
+                          - heading "Клиника пластической хирургии | Щукинская | Блефаропластика, липосакция, увеличение груди" [level=2] [ref=f22e243]
+                          - generic [ref=f22e244]:
+                            - generic [ref=f22e245]: Пластический хирург
+                            - generic [ref=f22e246]: ulitsa Usievicha, 8с1а, Moscow
+                            - generic [ref=f22e247]:
+                              - generic [ref=f22e248]: Открыть · Закроется в 21:00
+                              - text: · +7 985 773-04-54
+                    - listitem [ref=f22e250]:
+                      - generic [ref=f22e251]:
+                        - generic [ref=f22e254]:
+                          - link "Веб-сайт" [ref=f22e255] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=4d9628014041b246ee15c2127091d10f0050912e11acd84d83a64123cd32cf36JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly93d3cuYmluZy5jb20vYWxpbmsvbGluaz91cmw9aHR0cHMlM2ElMmYlMmZ3d3cubW9sb2RldS5ydSUyZiZzb3VyY2U9c2VycC1sb2NhbCZoPXlWTkxOeTYwVDVZaDNMN05ZRmJ0Q0x2eFVuRlo0d1Bzd0VnM2xPdGIzN0klM2QmcD1sd19tYWdsdHdlYyZpZz1GODgzQ0FCRTY3NjA0MzdCOTFGMTY0MUI4RkJGMzc0RiZ5cGlkPVlOMzVDOTMxQjcxOTc2OEIwOQ&ntb=1
+                            - generic [aria-hidden] [ref=f22e260]: Веб-сайт
+                          - link "Маршруты" [ref=f22e261] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=3594f52c5ada34c499294ab953d591f0a207009752dd35aa9b9f9397d7fefe19JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L21hcHM_Jm1lcGk9NzJ-RGlyZWN0aW9uc35FbWJlZGRlZH5EaXJlY3Rpb25fQnV0dG9uJnR5PTAmcnRwPXBvcy41NS43NzAyODI3NDUzNjEzM18zNy42MjQ1MjY5Nzc1MzkwNl9fJUQwJTk4JUQwJUJEJUQxJTgxJUQxJTgyJUQwJUI4JUQxJTgyJUQxJTgzJUQxJTgyJTIwJUQwJUJGJUQwJUJCJUQwJUIwJUQxJTgxJUQxJTgyJUQwJUI4JUQxJTg3JUQwJUI1JUQxJTgxJUQwJUJBJUQwJUJFJUQwJUI5JTIwJUQxJTg1JUQwJUI4JUQxJTgwJUQxJTgzJUQxJTgwJUQwJUIzJUQwJUI4JUQwJUI4JTIwJUQwJUI4JTIwJUQwJUJBJUQwJUJFJUQxJTgxJUQwJUJDJUQwJUI1JUQxJTgyJUQwJUJFJUQwJUJCJUQwJUJFJUQwJUIzJUQwJUI4JUQwJUI4JTIwJUQwJUJEJUQwJUIwJTIwJUQwJUEyJUQxJTgwJUQxJTgzJUQwJUIxJUQwJUJEJUQwJUJFJUQwJUI5X19lX34mbW9kZT1tJnY9MiZzVj0x&ntb=1
+                            - generic [aria-hidden] [ref=f22e265]: Маршруты
+                        - generic "Институт пластической хирургии и косметологии на Трубной" [ref=f22e266]:
+                          - heading "Институт пластической хирургии и косметологии на Трубной" [level=2] [ref=f22e267]
+                          - generic [ref=f22e268]:
+                            - generic [ref=f22e269]: Пластический хирург
+                            - generic [ref=f22e270]: Malyy Sukharevskiy Lane, 10, Moscow
+                            - generic [ref=f22e271]:
+                              - generic [ref=f22e272]: Открыть · Закроется в 21:00
+                              - text: · +7 495 120-37-21
+                - link "Больше результатов" [ref=f22e277] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=7ade17445cfc2eb8ab2fc2d76312724dcb3a8e323c49aaed76db58858eb70e65JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L21hcHM_Jm1lcGk9NzJ-SGVhbHRoY2FyZX5FbWJlZGRlZH5Mb2NhbF9NYWdhemluZV9MaXN0X0NhcmRfU2VlX01vcmUmdHk9MTcmcT0lRDElODYlRDAlQjUlRDAlQkQlRDAlQjAlMjAlRDAlQkQlRDAlQjglRDAlQjYlRDAlQkQlRDElOEYlRDElOEYlMjAlRDAlQjElRDAlQkIlRDAlQjUlRDElODQlRDAlQjAlRDElODAlRDAlQkUlRDAlQkYlRDAlQkIlRDAlQjAlRDElODElRDElODIlRDAlQjglRDAlQkElRDAlQjAlMjAlRDAlOUMlRDAlQkUlRDElODElRDAlQkElRDAlQjIlRDAlQjAlMjAlRDAlQkYlRDElODAlRDAlQkUlRDAlQjQlRDAlQkUlRDAlQkElRDElODIlRDAlQkUlRDAlQjImbWI9NTUuODA1MDYxfjM3LjUzMDg3Mn41NS43NjU2NTZ-MzcuNjY5MzIzJnBwb2lzPTU1Ljc3MDMyNDcwNzAzMTI1XzM3LjYyNDU2ODkzOTIwODk4NF8lRDAlOTglRDAlQkQlRDElODElRDElODIlRDAlQjglRDElODIlRDElODMlRDElODIlMjAlRDAlOUYlRDAlQkIlRDAlQjAlRDElODElRDElODIlRDAlQjglRDElODclRDAlQjUlRDElODElRDAlQkElRDAlQkUlRDAlQjklMjAlRDAlQTUlRDAlQjglRDElODAlRDElODMlRDElODAlRDAlQjMlRDAlQjglRDAlQjglMjAlRDAlQkQlRDAlQjAlMjAlRDAlQTYlRDAlQjIlRDAlQjUlRDElODIlRDAlQkQlRDAlQkUlRDAlQkMlMjAlRDAlQjElRDElODMlRDAlQkIlRDElOEMlRDAlQjIlRDAlQjAlRDElODAlRDAlQjVfWU5GREZGRkM5NjE4Rjg3OUZFfjU1Ljc2NTY1NTUxNzU3ODEyNV8zNy42MzkxMDY3NTA0ODgyOF8lRDAlOUElRDAlQkIlRDAlQjglRDAlQkQlRDAlQjglRDAlQkElRDAlQjAlMjAlRDAlQkYlRDAlQkIlRDAlQjAlRDElODElRDElODIlRDAlQjglRDElODclRDAlQjUlRDElODElRDAlQkElRDAlQkUlRDAlQjklMjAlRDElODUlRDAlQjglRDElODAlRDElODMlRDElODAlRDAlQjMlRDAlQjglRDAlQjglMjAlRDAlQjglMjAlRDAlQkElRDAlQkUlRDElODElRDAlQkMlRDAlQjUlRDElODIlRDAlQkUlRDAlQkIlRDAlQkUlRDAlQjMlRDAlQjglRDAlQjglMjBEb2N0b3JwbGFzdGljX1lONzNBQUQ5RDE0RkIwMEU3RX41NS43NzU1NTg0NzE2Nzk2OV8zNy42NjkzMjI5Njc1MjkzXyVEMCU5OCVEMCVCRCVEMSU4MSVEMSU4MiVEMCVCOCVEMSU4MiVEMSU4MyVEMSU4MiUyMCVEMCVCRiVEMCVCQiVEMCVCMCVEMSU4MSVEMSU4MiVEMCVCOCVEMSU4NyVEMCVCNSVEMSU4MSVEMCVCQSVEMCVCRSVEMCVCOSUyMCVEMSU4NSVEMCVCOCVEMSU4MCVEMSU4MyVEMSU4MCVEMCVCMyVEMCVCOCVEMCVCOCUyMCVEMCVCOCUyMCVEMCVCQSVEMCVCRSVEMSU4MSVEMCVCQyVEMCVCNSVEMSU4MiVEMCVCRSVEMCVCQiVEMCVCRSVEMCVCMyVEMCVCOCVEMCVCOF9ZTjIzMTI1MDExQzBDRjU1N341NS43NjY1OTc3NDc4MDI3MzRfMzcuNTU4ODQ1NTIwMDE5NTNfJUQwJUE3JUQwJTkwJUQwJUExJUQwJUEyJUQwJTlEJUQwJTkwJUQwJUFGJTIwJUQwJTlBJUQwJTlCJUQwJTk4JUQwJTlEJUQwJTk4JUQwJTlBJUQwJTkwJTIwJUQwJTlEJUQwJTkwJTIwJUQwJTlDJUQwJTk1JUQwJUEyJUQwJUEwJUQwJTlFJTIwMTkwNSUyMCVEMCU5MyVEMCU5RSVEMCU5NCVEMCU5MF9ZTjg4NzI0QkJEQkE4NjhGMDB-NTUuODA1MDYxMzQwMzMyMDNfMzcuNTMwODcyMzQ0OTcwN18lRDAlOUElRDAlQkIlRDAlQjglRDAlQkQlRDAlQjglRDAlQkElRDAlQjAlMjAlRDAlQkYlRDAlQkIlRDAlQjAlRDElODElRDElODIlRDAlQjglRDElODclRDAlQjUlRDElODElRDAlQkElRDAlQkUlRDAlQjklMjAlRDElODUlRDAlQjglRDElODAlRDElODMlRDElODAlRDAlQjMlRDAlQjglRDAlQjglMjAlN0MlMjAlRDAlQTklRDElODMlRDAlQkElRDAlQjglRDAlQkQlRDElODElRDAlQkElRDAlQjAlRDElOEYlMjAlN0MlMjAlRDAlOTElRDAlQkIlRDAlQjUlRDElODQlRDAlQjAlRDElODAlRDAlQkUlRDAlQkYlRDAlQkIlRDAlQjAlRDElODElRDElODIlRDAlQjglRDAlQkElRDAlQjAlMkMlMjAlRDAlQkIlRDAlQjglRDAlQkYlRDAlQkUlRDElODElRDAlQjAlRDAlQkElRDElODYlRDAlQjglRDElOEYlMkMlMjAlRDElODMlRDAlQjIlRDAlQjUlRDAlQkIlRDAlQjglRDElODclRDAlQjUlRDAlQkQlRDAlQjglRDAlQjUlMjAlRDAlQjMlRDElODAlRDElODMlRDAlQjQlRDAlQjhfWU40RjIzMjUzODc2OUIxNjNDfjU1Ljc3MDI4Mjc0NTM2MTMzXzM3LjYyNDUyNjk3NzUzOTA2XyVEMCU5OCVEMCVCRCVEMSU4MSVEMSU4MiVEMCVCOCVEMSU4MiVEMSU4MyVEMSU4MiUyMCVEMCVCRiVEMCVCQiVEMCVCMCVEMSU4MSVEMSU4MiVEMCVCOCVEMSU4NyVEMCVCNSVEMSU4MSVEMCVCQSVEMCVCRSVEMCVCOSUyMCVEMSU4NSVEMCVCOCVEMSU4MCVEMSU4MyVEMSU4MCVEMCVCMyVEMCVCOCVEMCVCOCUyMCVEMCVCOCUyMCVEMCVCQSVEMCVCRSVEMSU4MSVEMCVCQyVEMCVCNSVEMSU4MiVEMCVCRSVEMCVCQiVEMCVCRSVEMCVCMyVEMCVCOCVEMCVCOCUyMCVEMCVCRCVEMCVCMCUyMCVEMCVBMiVEMSU4MCVEMSU4MyVEMCVCMSVEMCVCRCVEMCVCRSVEMCVCOV9ZTjM1QzkzMUI3MTk3NjhCMDl-JnBvaWNvdW50PTE4JnVzZWJmcHI9dHJ1ZSZ2PTImc1Y9MSZGT1JNPU1QU1JQTA&ntb=1
+      - list [ref=f22e281]:
+        - listitem [ref=f22e282]:
+          - link "Prodoctorov.ru" [ref=f22e284] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=714f02f3a55fb9ff49d6a9f147188c00e62de38e9b72c86e9b17cc584ffbece1JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9wcm9kb2N0b3Jvdi5ydS9tb3NrdmEvdXNsdWdpL2JsZWZhcm9wbGFzdGlrYS1uaXpobnlheWEv&ntb=1
+            - img "Значок глобального Интернета" [ref=f22e288]
+            - generic [ref=f22e289]:
+              - generic [ref=f22e290]: Prodoctorov.ru
+              - generic [ref=f22e291]: https://prodoctorov.ru › moskva › uslugi › blefaroplastika-nizhnyaya
+          - heading [level=2] [ref=f22e294]:
+            - link "Блефаропластика (нижняя) в Москве - цены в 93 клиниках" [ref=f22e295] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=714f02f3a55fb9ff49d6a9f147188c00e62de38e9b72c86e9b17cc584ffbece1JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9wcm9kb2N0b3Jvdi5ydS9tb3NrdmEvdXNsdWdpL2JsZWZhcm9wbGFzdGlrYS1uaXpobnlheWEv&ntb=1
+          - paragraph [ref=f22e297]: Найдите Блефаропластика (нижняя) в Москве со стоимостью от 14080 до 310000 рублей и запишитесь в два клика.
+        - listitem [ref=f22e298]:
+          - link "Prodoctorov.ru" [ref=f22e300] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=df374fec1afa3344a45486565ae6d59d8fa6a1fe35f09774cf8418d29dde2862JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9wcm9kb2N0b3Jvdi5ydS9tb3NrdmEvdXNsdWdpL3BsYXN0aWNoZXNraWUtb3BlcmFjaWkvYmxlZmFyb3BsYXN0aWthLw&ntb=1
+            - generic [ref=f22e305]:
+              - generic [ref=f22e306]: Prodoctorov.ru
+              - generic [ref=f22e307]: https://prodoctorov.ru › moskva › uslugi › plasticheskie-operacii › ...
+          - heading [level=2] [ref=f22e310]:
+            - link "Блефаропластика в Москве - 109 клиник - ПроДокторов" [ref=f22e311] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=df374fec1afa3344a45486565ae6d59d8fa6a1fe35f09774cf8418d29dde2862JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9wcm9kb2N0b3Jvdi5ydS9tb3NrdmEvdXNsdWdpL3BsYXN0aWNoZXNraWUtb3BlcmFjaWkvYmxlZmFyb3BsYXN0aWthLw&ntb=1
+          - paragraph [ref=f22e313]: Операции на лице и шее Блефаропластика Пластика нижних век (блефаропластика) чрескожным подресничным доступом с …
+        - listitem [ref=f22e314]:
+          - link "Красота и Медицина" [ref=f22e316] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=4378c957dc9a2909c18b8bf4178c41fb8cadd726901c971159bb4df48a71624eJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly93d3cua3Jhc290YWltZWRpY2luYS5ydS90cmVhdG1lbnQvbG93ZXItdHJhZGl0aW9uYWwtYmxlcGhhcm9wbGFzdHkv&ntb=1
+            - img "Значок глобального Интернета" [ref=f22e320]
+            - generic [ref=f22e321]:
+              - generic [ref=f22e322]: Красота и Медицина
+              - generic [ref=f22e323]: https://www.krasotaimedicina.ru › treatment › lower-traditional-blepharoplasty
+          - heading [level=2] [ref=f22e326]:
+            - link "Нижняя блефаропластика — цены от 20000 руб. в Москве, 65 …" [ref=f22e327] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=4378c957dc9a2909c18b8bf4178c41fb8cadd726901c971159bb4df48a71624eJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly93d3cua3Jhc290YWltZWRpY2luYS5ydS90cmVhdG1lbnQvbG93ZXItdHJhZGl0aW9uYWwtYmxlcGhhcm9wbGFzdHkv&ntb=1
+          - paragraph [ref=f22e329]: Найдено 132 цены по 65 адресам. Цены на нижнюю блефаропластику в Москве от 20000 до 250000 руб. ⭐ Лучшие клиники …
+        - listitem [ref=f22e330]:
+          - link "Медицинский центр «Чудо Доктор»" [ref=f22e332] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=b56881e787327347b984234bcd21426c44c69ceeef562e99c5d99e25d68115d2JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9kb2N0LnJ1L29wZXJhdHNpaS9uaXpobnlheWEtYmxlZmFyb3BsYXN0aWthLmh0bWw&ntb=1
+            - generic [ref=f22e337]:
+              - generic [ref=f22e338]: Медицинский центр «Чудо Доктор»
+              - generic [ref=f22e339]: https://doct.ru › operatsii › nizhnyaya-blefaroplastika.html
+          - heading [level=2] [ref=f22e342]:
+            - link "Нижняя блефаропластика в Москве Цена блефаропластики …" [ref=f22e343] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=b56881e787327347b984234bcd21426c44c69ceeef562e99c5d99e25d68115d2JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9kb2N0LnJ1L29wZXJhdHNpaS9uaXpobnlheWEtYmxlZmFyb3BsYXN0aWthLmh0bWw&ntb=1
+          - paragraph [ref=f22e345]: Нижняя блефаропластика – операция по коррекции области нижнего века, в результате чего устраняется косметологический …
+        - listitem [ref=f22e346]:
+          - generic [ref=f22e347]:
+            - link "Исследуйте это изображение" [ref=f22e350] [cursor=pointer]:
+              - /url: /images/search?view=detailV2&ccid=E7PNGFfY&id=7692B10D521BC4C1712DD0BEE4B0BC305859D035&thid=OIP.E7PNGFfYpRSOYtKdiczWggAAAA&mediaurl=https://www.krasotaimedicina.ru/upload/medialibrary/415/415b321c89f0b8c0f2ab3a6a735d373c.jpg&q=%d1%86%d0%b5%d0%bd%d0%b0+%d0%bd%d0%b8%d0%b6%d0%bd%d1%8f%d1%8f+%d0%b1%d0%bb%d0%b5%d1%84%d0%b0%d1%80%d0%be%d0%bf%d0%bb%d0%b0%d1%81%d1%82%d0%b8%d0%ba%d0%b0+%d0%9c%d0%be%d1%81%d0%ba%d0%b2%d0%b0+%d0%bf%d1%80%d0%be%d0%b4%d0%be%d0%ba%d1%82%d0%be%d0%b2&ck=0C5E586FCBBCCA4416F22569715DFEDB&idpp=rc&expw=200&exph=191&form=rc2idp
+            - generic [ref=f22e352]:
+              - link "Красота и Медицина" [ref=f22e354] [cursor=pointer]:
+                - /url: https://www.bing.com/ck/a?!&&p=fe0ec6dcb7c39011623f084aee67543a55e64ee254edfd7bc6633a7ef37fc4c6JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly93d3cua3Jhc290YWltZWRpY2luYS5ydS90cmVhdG1lbnQvYmxlcGhhcm9wbGFzdHkv&ntb=1
+                - generic [ref=f22e359]:
+                  - generic [ref=f22e360]: Красота и Медицина
+                  - generic [ref=f22e361]: https://www.krasotaimedicina.ru › treatment › blepharoplasty
+              - heading [level=2] [ref=f22e364]:
+                - link "Блефаропластика - найдена 421 цена в Москве, 179 …" [ref=f22e365] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=fe0ec6dcb7c39011623f084aee67543a55e64ee254edfd7bc6633a7ef37fc4c6JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly93d3cua3Jhc290YWltZWRpY2luYS5ydS90cmVhdG1lbnQvYmxlcGhhcm9wbGFzdHkv&ntb=1
+              - paragraph [ref=f22e366]: Пластика верхних и нижних век - блефаропластика является пластической операцией, в ходе …
+        - listitem [ref=f22e368]:
+          - link "institutbeauty.ru" [ref=f22e370] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=4526916f1771d1bcdd6312ef0ee2b4bb85b279c27aecf32f87b30e46c8acf35bJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9pbnN0aXR1dGJlYXV0eS5ydS9wbGFzdGljaGVza2F5YS1raGlydXJnaXlhL2xpdHNvL2JsZWZhcm9wbGFzdGlrYS8&ntb=1
+            - generic [ref=f22e371]:
+              - generic [ref=f22e372]: institutbeauty.ru
+              - generic [ref=f22e373]: https://institutbeauty.ru › plasticheskaya-khirurgiya › litso › blefaroplastika
+          - heading [level=2] [ref=f22e376]:
+            - 'link "Блефаропластика (пластика век): цены в Москве | Услуги клиники ..." [ref=f22e377] [cursor=pointer]':
+              - /url: https://www.bing.com/ck/a?!&&p=4526916f1771d1bcdd6312ef0ee2b4bb85b279c27aecf32f87b30e46c8acf35bJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9pbnN0aXR1dGJlYXV0eS5ydS9wbGFzdGljaGVza2F5YS1raGlydXJnaXlhL2xpdHNvL2JsZWZhcm9wbGFzdGlrYS8&ntb=1
+          - paragraph [ref=f22e379]: Блефаропластика — одна из наиболее востребованных операций в современной пластической хирургии, позволяющая …
+        - listitem [ref=f22e380]:
+          - link "МосМедПортал" [ref=f22e382] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=0b578faf89282b2f5b5cb85acf947b957470e2e8602adb3cf2dc9d83f86553e9JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly93d3cubW9zbWVkcG9ydGFsLnJ1L3NlcnZpY2VzL3ByaWNlcy9uaXpobnlheWEtYmxlZmFyb3BsYXN0aWthLw&ntb=1
+            - generic [ref=f22e387]:
+              - generic [ref=f22e388]: МосМедПортал
+              - generic [ref=f22e389]: https://www.mosmedportal.ru › services › prices › nizhnyaya-blefaroplastika
+          - heading "Нижняя блефаропластика - цены в Москве - 43 клиники" [level=2] [ref=f22e392]:
+            - link "Нижняя блефаропластика - цены в Москве - 43 клиники":
+              - /url: https://www.bing.com/ck/a?!&&p=0b578faf89282b2f5b5cb85acf947b957470e2e8602adb3cf2dc9d83f86553e9JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly93d3cubW9zbWVkcG9ydGFsLnJ1L3NlcnZpY2VzL3ByaWNlcy9uaXpobnlheWEtYmxlZmFyb3BsYXN0aWthLw&ntb=1
+          - paragraph [ref=f22e394]: Нижняя блефаропластика - цены в Москве Услуга "Нижняя блефаропластика" предоставляется в 43 клиниках Москвы. Цены …
+        - listitem [ref=f22e395]:
+          - link "drsitnikova.ru" [ref=f22e397] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=7bd7fc4fc4eff54ccd126e512e9b72f5c030e79a74d807e18e3727f348a197c8JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9kcnNpdG5pa292YS5ydS9ibGVmYXJvcGxhc3Rpa2Evbml6aG5paC12ZWsv&ntb=1
+            - generic [ref=f22e398]:
+              - generic [ref=f22e399]: drsitnikova.ru
+              - generic [ref=f22e400]: https://drsitnikova.ru › blefaroplastika › nizhnih-vek
+          - heading "Нижняя блефаропластика в Москве — цена | Ситникова" [level=2] [ref=f22e403]:
+            - link "Нижняя блефаропластика в Москве — цена | Ситникова":
+              - /url: https://www.bing.com/ck/a?!&&p=7bd7fc4fc4eff54ccd126e512e9b72f5c030e79a74d807e18e3727f348a197c8JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9kcnNpdG5pa292YS5ydS9ibGVmYXJvcGxhc3Rpa2Evbml6aG5paC12ZWsv&ntb=1
+          - paragraph [ref=f22e405]: "Нижняя блефаропластика в Москве: классическая и трансконъюнктивальная техника, цены от 90 000 ₽ и консультация …"
+        - listitem [ref=f22e406]:
+          - link "oftalmologya.ru" [ref=f22e408] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e2f53c89cea9537be0958178850209ef27a21061ff99f89aa01200b56954c5b9JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9vZnRhbG1vbG9neWEucnUvY2VueS9ibGVmYXJvcGxhc3Rpa2EtY2VuYS12LW1vc2t2ZQ&ntb=1
+            - generic [ref=f22e413]:
+              - generic [ref=f22e414]: oftalmologya.ru
+              - generic [ref=f22e415]: https://oftalmologya.ru › ceny › blefaroplastika-cena-v-moskve
+          - heading "Блефаропластика в Москве — цены и стоимость операции" [level=2] [ref=f22e418]:
+            - link "Блефаропластика в Москве — цены и стоимость операции":
+              - /url: https://www.bing.com/ck/a?!&&p=e2f53c89cea9537be0958178850209ef27a21061ff99f89aa01200b56954c5b9JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9vZnRhbG1vbG9neWEucnUvY2VueS9ibGVmYXJvcGxhc3Rpa2EtY2VuYS12LW1vc2t2ZQ&ntb=1
+          - paragraph [ref=f22e420]: Сколько стоит блефаропластика в Москве? Верхняя блефаропластика стоит от 67 700 ₽, нижняя — от 75 500 ₽. Для этих …
+        - listitem [ref=f22e421]:
+          - link "yell.ru" [ref=f22e423] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=2d3718444ade57bad20ab62391f2131918494f5e00604507d7241e695a3766f4JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly93d3cueWVsbC5ydS9tb3Njb3cvdG9wL2JsZWZhcm9wbGFzdGlrYS1uaXpobnlheWEvcHJpY2Uv&ntb=1
+            - generic [ref=f22e428]:
+              - generic [ref=f22e429]: yell.ru
+              - generic [ref=f22e430]: https://www.yell.ru › moscow › top › blefaroplastika-nizhnyaya › price
+          - heading "Блефаропластика нижняя - цены на услуги в Москве, прайс-листы …" [level=2] [ref=f22e433]:
+            - link "Блефаропластика нижняя - цены на услуги в Москве, прайс-листы …":
+              - /url: https://www.bing.com/ck/a?!&&p=2d3718444ade57bad20ab62391f2131918494f5e00604507d7241e695a3766f4JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly93d3cueWVsbC5ydS9tb3Njb3cvdG9wL2JsZWZhcm9wbGFzdGlrYS1uaXpobnlheWEvcHJpY2Uv&ntb=1
+          - paragraph [ref=f22e435]: Блефаропластика нижняя в Москве - цены на услуги, 20 организаций с актуальным прайс-листом и другая полезная …
+        - listitem [ref=f22e436]:
+          - generic [ref=f22e437]:
+            - heading [level=2] [ref=f22e438]:
+              - text: Похожие запросы для
+              - strong [ref=f22e439]: цена нижняя блефаропластика москва прод
+              - text: …
+            - list [ref=f22e440]:
+              - listitem [ref=f22e441]:
+                - link [ref=f22e442] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=a596e89b55fda348040e34b2d495a13063d201ef680a00705f230f0c2f2e7acaJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMCViMSVkMCViYiVkMCViNSVkMSU4NCVkMCViMCVkMSU4MCVkMCViZSVkMCViZiVkMCViYiVkMCViMCVkMSU4MSVkMSU4MiVkMCViOCVkMCViYSVkMCViMCslZDAlYjIlZDAlYmUlZDAlYjklZDElODIlZDAlYjgmRk9STT1RU1JFMQ&ntb=1
+                  - generic [ref=f22e444]:
+                    - text: блефаропластика
+                    - strong [ref=f22e445]: войти
+              - listitem [ref=f22e446]:
+                - link [ref=f22e447] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=57b81a55bff6ea594be16c83b04a1b0b733386527e01ae36388531ad597af113JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMCViMSVkMCViYiVkMCViNSVkMSU4NCVkMCViMCVkMSU4MCVkMCViZSVkMCViZiVkMCViYiVkMCViMCVkMSU4MSVkMSU4MiVkMCViOCVkMCViYSVkMCViMCslZDElODYlZDAlYjUlZDAlYmQlZDElOGImRk9STT1RU1JFMg&ntb=1
+                  - generic [ref=f22e449]:
+                    - text: блефаропластика
+                    - strong [ref=f22e450]: цены
+              - listitem [ref=f22e451]:
+                - link [ref=f22e452] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=e097fdff375adb8576fef78bc26b1c47feedc5e52eac2c0d964f5e96a20241f0JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMSU4MSVkMCViYSVkMCViZSVkMCViYiVkMSU4YyVkMCViYSVkMCViZSslZDElODElZDElODIlZDAlYmUlZDAlYjglZDElODIrJWQwJWIxJWQwJWJiJWQwJWI1JWQxJTg0JWQwJWIwJWQxJTgwJWQwJWJlJWQwJWJmJWQwJWJiJWQwJWIwJWQxJTgxJWQxJTgyJWQwJWI4JWQwJWJhJWQwJWIwJkZPUk09UVNSRTM&ntb=1
+                  - generic [ref=f22e454]:
+                    - strong [ref=f22e455]: сколько стоит
+                    - text: блефаропластика
+              - listitem [ref=f22e456]:
+                - link [ref=f22e457] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=b85a290df0900433f75b339cb173bab4818d0fb40efe506b911c6acd78253580JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMSU4MSVkMCViYSVkMCViZSVkMCViYiVkMSU4YyVkMCViYSVkMCViZSslZDElODElZDElODIlZDAlYmUlZDAlYjglZDElODIrJWQwJWJlJWQwJWJmJWQwJWI1JWQxJTgwJWQwJWIwJWQxJTg2JWQwJWI4JWQxJThmKyVkMCViMSVkMCViYiVkMCViNSVkMSU4NCVkMCViMCVkMSU4MCVkMCViZSVkMCViZiVkMCViYiVkMCViMCVkMSU4MSVkMSU4MiVkMCViOCVkMCViYSVkMCViOCZGT1JNPVFTUkU0&ntb=1
+                  - strong [ref=f22e460]: сколько стоит операция блефаропластики
+              - listitem [ref=f22e461]:
+                - link [ref=f22e462] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=c6ee6e4eb1b836eeaaefd345c8920e903451ba502209dbcd307ccc1f504f4ebcJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMCViMSVkMCViYiVkMCViNSVkMSU4NCVkMCViMCVkMSU4MCVkMCViZSVkMCViZiVkMCViYiVkMCViMCVkMSU4MSVkMSU4MiVkMCViOCVkMCViYSVkMCViMCslZDElODElZDElODIlZDAlYmUlZDAlYjglZDAlYmMlZDAlYmUlZDElODElZDElODIlZDElOGMmRk9STT1RU1JFNQ&ntb=1
+                  - generic [ref=f22e464]:
+                    - text: блефаропластика
+                    - strong [ref=f22e465]: стоимость
+              - listitem [ref=f22e466]:
+                - link "блефаропластика москва цена" [ref=f22e467] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=9a02552b598acb2f35bf9aab1c33471be5004ee996851aff6c0b670ee6597576JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMCViMSVkMCViYiVkMCViNSVkMSU4NCVkMCViMCVkMSU4MCVkMCViZSVkMCViZiVkMCViYiVkMCViMCVkMSU4MSVkMSU4MiVkMCViOCVkMCViYSVkMCViMCslZDAlYmMlZDAlYmUlZDElODElZDAlYmElZDAlYjIlZDAlYjArJWQxJTg2JWQwJWI1JWQwJWJkJWQwJWIwJkZPUk09UVNSRTY&ntb=1
+              - listitem [ref=f22e470]:
+                - link [ref=f22e471] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=81a8ad79cef408117873f695bd06b91833405a29fc0e2af936eb1fc7f5b84483JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMCViMSVkMCViYiVkMCViNSVkMSU4NCVkMCViMCVkMSU4MCVkMCViZSVkMCViZiVkMCViYiVkMCViMCVkMSU4MSVkMSU4MiVkMCViOCVkMCViYSVkMCViMCslZDAlYjIlZDAlYjUlZDElODAlZDElODUlZDAlYmQlZDAlYjglZDElODUrJWQwJWIyJWQwJWI1JWQwJWJhKyVkMSU4NiVkMCViNSVkMCViZCVkMCViMCZGT1JNPVFTUkU3&ntb=1
+                  - generic [ref=f22e473]:
+                    - text: блефаропластика
+                    - strong [ref=f22e474]: верхних век
+                    - text: цена
+              - listitem [ref=f22e475]:
+                - link [ref=f22e476] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=5d3f14609a5b785a35d4222901a69bc58bbf44a72d4dccc2505dd0f78a6aed79JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMCViMSVkMCViYiVkMCViNSVkMSU4NCVkMCViMCVkMSU4MCVkMCViZSVkMCViZiVkMCViYiVkMCViMCVkMSU4MSVkMSU4MiVkMCViOCVkMCViYSVkMCViMCslZDAlYjIrJWQwJWJkJWQwJWJhJWQxJTg2KzImRk9STT1RU1JFOA&ntb=1
+                  - generic [ref=f22e478]:
+                    - text: блефаропластика
+                    - strong [ref=f22e479]: в нкц 2
+        - listitem [ref=f22e480]:
+          - generic [ref=f22e481]:
+            - text: Это результаты по запросу
+            - link [ref=f22e482] [cursor=pointer]:
+              - /url: /search?q=%d1%86%d0%b5%d0%bd%d0%b0+%d0%bd%d0%b8%d0%b6%d0%bd%d1%8f%d1%8f+%d0%b1%d0%bb%d0%b5%d1%84%d0%b0%d1%80%d0%be%d0%bf%d0%bb%d0%b0%d1%81%d1%82%d0%b8%d0%ba%d0%b0+%d0%b2+%d0%9c%d0%be%d1%81%d0%ba%d0%b2%d0%b5+%d0%bf%d1%80%d0%be%d0%b4%d1%83%d0%ba%d1%82%d0%be%d0%b2&FORM=AWRE1
+              - text: цена нижняя блефаропластика
+              - strong [ref=f22e483]: в Москве продуктов
+            - text: .
+          - generic [ref=f22e484]:
+            - text: Вместо этого искать
+            - link "цена нижняя блефаропластика Москва продоктов" [ref=f22e485] [cursor=pointer]:
+              - /url: /search?q=%2b%d1%86%d0%b5%d0%bd%d0%b0+%d0%bd%d0%b8%d0%b6%d0%bd%d1%8f%d1%8f+%d0%b1%d0%bb%d0%b5%d1%84%d0%b0%d1%80%d0%be%d0%bf%d0%bb%d0%b0%d1%81%d1%82%d0%b8%d0%ba%d0%b0+%d0%9c%d0%be%d1%81%d0%ba%d0%b2%d0%b0+%d0%bf%d1%80%d0%be%d0%b4%d0%be%d0%ba%d1%82%d0%be%d0%b2&filters=rcrse%3a%221%22&FORM=RCRE1
+            - text: "?"
+        - listitem [ref=f22e486]:
+          - link "Некоторые результаты удалены" [ref=f22e488] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c0d515034c24b8243c01557732cb9df108d404b789cd45242b095388b6f7cf55JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9NjE3MzUw&ntb=1
+        - listitem [ref=f22e489]:
+          - navigation "Другие результаты по запросу цена нижняя блефаропластика Москва продоктов":
+            - list:
+              - listitem [ref=f22e490]:
+                - generic "Страница 1" [ref=f22e491]: "1"
+              - listitem [ref=f22e492]:
+                - link "Страница 2" [ref=f22e493] [cursor=pointer]:
+                  - /url: /search?q=%d1%86%d0%b5%d0%bd%d0%b0+%d0%bd%d0%b8%d0%b6%d0%bd%d1%8f%d1%8f+%d0%b1%d0%bb%d0%b5%d1%84%d0%b0%d1%80%d0%be%d0%bf%d0%bb%d0%b0%d1%81%d1%82%d0%b8%d0%ba%d0%b0+%d0%9c%d0%be%d1%81%d0%ba%d0%b2%d0%b0+%d0%bf%d1%80%d0%be%d0%b4%d0%be%d0%ba%d1%82%d0%be%d0%b2&FPIG=F883CABE6760437B91F1641B8FBF374F&first=11&FORM=PERE
+                  - text: "2"
+              - listitem [ref=f22e494]:
+                - link "Страница 3" [ref=f22e495] [cursor=pointer]:
+                  - /url: /search?q=%d1%86%d0%b5%d0%bd%d0%b0+%d0%bd%d0%b8%d0%b6%d0%bd%d1%8f%d1%8f+%d0%b1%d0%bb%d0%b5%d1%84%d0%b0%d1%80%d0%be%d0%bf%d0%bb%d0%b0%d1%81%d1%82%d0%b8%d0%ba%d0%b0+%d0%9c%d0%be%d1%81%d0%ba%d0%b2%d0%b0+%d0%bf%d1%80%d0%be%d0%b4%d0%be%d0%ba%d1%82%d0%be%d0%b2&FPIG=F883CABE6760437B91F1641B8FBF374F&first=21&FORM=PERE1
+                  - text: "3"
+              - listitem [ref=f22e496]:
+                - link "Следующая страница" [ref=f22e497] [cursor=pointer]:
+                  - /url: /search?q=%d1%86%d0%b5%d0%bd%d0%b0+%d0%bd%d0%b8%d0%b6%d0%bd%d1%8f%d1%8f+%d0%b1%d0%bb%d0%b5%d1%84%d0%b0%d1%80%d0%be%d0%bf%d0%bb%d0%b0%d1%81%d1%82%d0%b8%d0%ba%d0%b0+%d0%9c%d0%be%d1%81%d0%ba%d0%b2%d0%b0+%d0%bf%d1%80%d0%be%d0%b4%d0%be%d0%ba%d1%82%d0%be%d0%b2&FPIG=F883CABE6760437B91F1641B8FBF374F&first=11&FORM=PORE
+      - complementary "Дополнительные результаты" [ref=f22e498]:
+        - list [ref=f22e499]:
+          - listitem [ref=f22e500]:
+            - generic "Похожие поисковые запросы" [ref=f22e501]:
+              - generic [ref=f22e503]:
+                - heading [level=2] [ref=f22e505]:
+                  - text: Похожие запросы для
+                  - strong [ref=f22e506]: цена нижняя блефаропластика москва прод
+                  - text: …
+                - generic [ref=f22e507]:
+                  - link [ref=f22e509] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=ef3224a064566a75a43f7db4b488a346381fb2a5a0bd0d68fb419699e994a40eJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMCViMSVkMCViYiVkMCViNSVkMSU4NCVkMCViMCVkMSU4MCVkMCViZSVkMCViZiVkMCViYiVkMCViMCVkMSU4MSVkMSU4MiVkMCViOCVkMCViYSVkMCViMCslZDAlYjIlZDAlYmUlZDAlYjklZDElODIlZDAlYjgmRk9STT1SNUZE&ntb=1
+                    - generic [ref=f22e511]:
+                      - text: блефаропластика
+                      - strong [ref=f22e512]: войти
+                  - link [ref=f22e514] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=8e8f146c8d980bd1ef738d5b5813fd04f4d0b744325126c030354cf316b7f6f0JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMCViMSVkMCViYiVkMCViNSVkMSU4NCVkMCViMCVkMSU4MCVkMCViZSVkMCViZiVkMCViYiVkMCViMCVkMSU4MSVkMSU4MiVkMCViOCVkMCViYSVkMCViMCslZDElODYlZDAlYjUlZDAlYmQlZDElOGImRk9STT1SNUZEMQ&ntb=1
+                    - generic [ref=f22e516]:
+                      - text: блефаропластика
+                      - strong [ref=f22e517]: цены
+                  - link [ref=f22e519] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=df11dc17bac602c17805c63ab4479ee6ae9d421f430c9ac68dee3e87f7ac22c4JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMSU4MSVkMCViYSVkMCViZSVkMCViYiVkMSU4YyVkMCViYSVkMCViZSslZDElODElZDElODIlZDAlYmUlZDAlYjglZDElODIrJWQwJWIxJWQwJWJiJWQwJWI1JWQxJTg0JWQwJWIwJWQxJTgwJWQwJWJlJWQwJWJmJWQwJWJiJWQwJWIwJWQxJTgxJWQxJTgyJWQwJWI4JWQwJWJhJWQwJWIwJkZPUk09UjVGRDI&ntb=1
+                    - generic [ref=f22e521]:
+                      - strong [ref=f22e522]: сколько стоит
+                      - text: блефаропластика
+                  - link [ref=f22e524] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=318bf98e4cf401a6e41ba0ce015523ee669d533cf63f7c77bb86386951214d59JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMSU4MSVkMCViYSVkMCViZSVkMCViYiVkMSU4YyVkMCViYSVkMCViZSslZDElODElZDElODIlZDAlYmUlZDAlYjglZDElODIrJWQwJWJlJWQwJWJmJWQwJWI1JWQxJTgwJWQwJWIwJWQxJTg2JWQwJWI4JWQxJThmKyVkMCViMSVkMCViYiVkMCViNSVkMSU4NCVkMCViMCVkMSU4MCVkMCViZSVkMCViZiVkMCViYiVkMCViMCVkMSU4MSVkMSU4MiVkMCViOCVkMCViYSVkMCViOCZGT1JNPVI1RkQz&ntb=1
+                    - strong [ref=f22e527]: сколько стоит операция блефаропластики
+                  - link [ref=f22e529] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=480602f3ffd6f196abc99d6192b19a802e91964e6f9defe817d5e92e72018692JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMCViMSVkMCViYiVkMCViNSVkMSU4NCVkMCViMCVkMSU4MCVkMCViZSVkMCViZiVkMCViYiVkMCViMCVkMSU4MSVkMSU4MiVkMCViOCVkMCViYSVkMCViMCslZDElODElZDElODIlZDAlYmUlZDAlYjglZDAlYmMlZDAlYmUlZDElODElZDElODIlZDElOGMmRk9STT1SNUZENA&ntb=1
+                    - generic [ref=f22e531]:
+                      - text: блефаропластика
+                      - strong [ref=f22e532]: стоимость
+                  - link "блефаропластика москва цена" [ref=f22e534] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=2942fa4de956743e193eb63f91a22cc4e0de3c7aff9f1a08b91387c2339dc843JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMCViMSVkMCViYiVkMCViNSVkMSU4NCVkMCViMCVkMSU4MCVkMCViZSVkMCViZiVkMCViYiVkMCViMCVkMSU4MSVkMSU4MiVkMCViOCVkMCViYSVkMCViMCslZDAlYmMlZDAlYmUlZDElODElZDAlYmElZDAlYjIlZDAlYjArJWQxJTg2JWQwJWI1JWQwJWJkJWQwJWIwJkZPUk09UjVGRDU&ntb=1
+                  - link [ref=f22e538] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=2f364a70b3435baba02b07065d74fb2d6b2b765cc002206d66f5b22035db7a45JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMCViMSVkMCViYiVkMCViNSVkMSU4NCVkMCViMCVkMSU4MCVkMCViZSVkMCViZiVkMCViYiVkMCViMCVkMSU4MSVkMSU4MiVkMCViOCVkMCViYSVkMCViMCslZDAlYjIlZDAlYjUlZDElODAlZDElODUlZDAlYmQlZDAlYjglZDElODUrJWQwJWIyJWQwJWI1JWQwJWJhKyVkMSU4NiVkMCViNSVkMCViZCVkMCViMCZGT1JNPVI1RkQ2&ntb=1
+                    - generic [ref=f22e540]:
+                      - text: блефаропластика
+                      - strong [ref=f22e541]: верхних век
+                      - text: цена
+                  - link [ref=f22e543] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=c85ef8a0adc96b204284f0061803e1504b073badd116c4b29a8cc64177065e21JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMCViMSVkMCViYiVkMCViNSVkMSU4NCVkMCViMCVkMSU4MCVkMCViZSVkMCViZiVkMCViYiVkMCViMCVkMSU4MSVkMSU4MiVkMCViOCVkMCViYSVkMCViMCslZDAlYjIrJWQwJWJkJWQwJWJhJWQxJTg2KzImRk9STT1SNUZENw&ntb=1
+                    - generic [ref=f22e545]:
+                      - text: блефаропластика
+                      - strong [ref=f22e546]: в нкц 2
+  - contentinfo [ref=f22e547]:
+    - generic [ref=f22e548]:
+      - list:
+        - listitem [ref=f22e549]:
+          - link "Конфиденциальность" [ref=f22e550] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c919d6612e694f27788354353dd085812c985f8ab66ac12689fdd4aa0cded4b5JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=f22e551]:
+          - link "Условия" [ref=f22e552] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c6727ce5561df3d7f064c7af9bbe73f55d889ad209cbc2ad042db4471e841646JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1
+        - listitem [ref=f22e553]:
+          - button "Обратная связь" [ref=f22e554] [cursor=pointer]

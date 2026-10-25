@@ -1,0 +1,219 @@
+- generic [active] [ref=f14e1]:
+  - banner [ref=f14e2]:
+    - button "Перейти к контенту" [ref=f14e3] [cursor=pointer]
+    - button "Отзыв о доступности" [ref=f14e6] [cursor=pointer]
+    - generic [ref=f14e9]:
+      - link [ref=f14e10] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Вернуться к Поиску Bing" [level=1] [ref=f14e11]
+      - search [ref=f14e12]:
+        - button "Поиск" [ref=f14e15] [cursor=pointer]
+        - searchbox "Введите свой поисковый запрос здесь — пока вы печатаете, будут отображаться предлагаемые варианты" [ref=f14e16]: липосакция одной зоны цена москва
+        - generic [ref=f14e17] [cursor=pointer]
+        - button "Поиск с использованием изображения" [ref=f14e22] [cursor=pointer]
+    - complementary "Награды и предпочтения учетной записи" [ref=f14e24]:
+      - link "Войти" [ref=f14e25] [cursor=pointer]:
+        - /url: javascript:void(0)
+    - navigation "Фильтр поиска" [ref=f14e27]:
+      - list [ref=f14e28]:
+        - listitem [ref=f14e29]:
+          - link "Все" [ref=f14e30] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f14e31]:
+          - link "Изображения" [ref=f14e32] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=cd07e4b3eeb460d3064892d111c98032351452c1f648ceb2b0bb402cade978c5JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L2ltYWdlcy9zZWFyY2g_cT0lZDAlYmIlZDAlYjglZDAlYmYlZDAlYmUlZDElODElZDAlYjAlZDAlYmElZDElODYlZDAlYjglZDElOGYrJWQwJWJlJWQwJWI0JWQwJWJkJWQwJWJlJWQwJWI5KyVkMCViNyVkMCViZSVkMCViZCVkMSU4YislZDElODYlZDAlYjUlZDAlYmQlZDAlYjArJWQwJWJjJWQwJWJlJWQxJTgxJWQwJWJhJWQwJWIyJWQwJWIwJkZPUk09SERSU0My&ntb=1
+        - listitem [ref=f14e33]:
+          - link "Видео" [ref=f14e34] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=8fdb4e25df5e613a4e1da64fac75b24b8108ce102f5a98c147ecec08fb50088fJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3ZpZGVvcy9zZWFyY2g_cT0lZDAlYmIlZDAlYjglZDAlYmYlZDAlYmUlZDElODElZDAlYjAlZDAlYmElZDElODYlZDAlYjglZDElOGYrJWQwJWJlJWQwJWI0JWQwJWJkJWQwJWJlJWQwJWI5KyVkMCViNyVkMCViZSVkMCViZCVkMSU4YislZDElODYlZDAlYjUlZDAlYmQlZDAlYjArJWQwJWJjJWQwJWJlJWQxJTgxJWQwJWJhJWQwJWIyJWQwJWIwJkZPUk09SERSU0Mz&ntb=1
+        - listitem [ref=f14e35]:
+          - link "Карты" [ref=f14e36] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=8494a928c920f630bb5cba84c4f94ec14a219c48aec76c22eaac0897690b0010JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L21hcHM_cT0lZDAlYmIlZDAlYjglZDAlYmYlZDAlYmUlZDElODElZDAlYjAlZDAlYmElZDElODYlZDAlYjglZDElOGYrJWQwJWJlJWQwJWI0JWQwJWJkJWQwJWJlJWQwJWI5KyVkMCViNyVkMCViZSVkMCViZCVkMSU4YislZDElODYlZDAlYjUlZDAlYmQlZDAlYjArJWQwJWJjJWQwJWJlJWQxJTgxJWQwJWJhJWQwJWIyJWQwJWIwJkZPUk09SERSU0M0&ntb=1
+        - listitem [ref=f14e37]:
+          - link "Новости" [ref=f14e38] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=4e1cebd173f7128a5ff49fc8bb9d5fd6cbdc34644a3c6390413ee0672266ef01JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L25ld3Mvc2VhcmNoP3E9JWQwJWJiJWQwJWI4JWQwJWJmJWQwJWJlJWQxJTgxJWQwJWIwJWQwJWJhJWQxJTg2JWQwJWI4JWQxJThmKyVkMCViZSVkMCViNCVkMCViZCVkMCViZSVkMCViOSslZDAlYjclZDAlYmUlZDAlYmQlZDElOGIrJWQxJTg2JWQwJWI1JWQwJWJkJWQwJWIwKyVkMCViYyVkMCViZSVkMSU4MSVkMCViYSVkMCViMiVkMCViMCZGT1JNPUhEUlNDNg&ntb=1
+        - listitem [ref=f14e39]:
+          - button [ref=f14e40] [cursor=pointer]
+  - generic [ref=f14e44]:
+    - main "Результаты поиска" [ref=f14e45]:
+      - generic [ref=f14e47]:
+        - generic [aria-hidden] [ref=f14e48]:
+          - generic [ref=f14e49] [cursor=pointer]
+          - generic [ref=f14e52] [cursor=pointer]
+          - generic [ref=f14e55] [cursor=pointer]
+        - text: "Приблизительное число результатов: 88 200"
+      - list [ref=f14e58]:
+        - listitem [ref=f14e59]:
+          - generic [ref=f14e63]:
+            - generic [ref=f14e65]:
+              - button "Нравится" [ref=f14e66]
+              - button "Не нравится" [ref=f14e69]
+            - button "Заявление об отказе от ответственности ИИ" [ref=f14e72]
+        - listitem [ref=f14e97]:
+          - link "Prodoctorov.ru" [ref=f14e99] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=623dafdffeceb2360f890277510242ff3d49bc5f519a2a7cd43d6a997f50167eJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9wcm9kb2N0b3Jvdi5ydS9tb3NrdmEvdXNsdWdpL3BsYXN0aWNoZXNraWUtb3BlcmFjaWkvbGlwb3Nha2NpeWEv&ntb=1
+            - generic [ref=f14e104]:
+              - generic [ref=f14e105]: Prodoctorov.ru
+              - generic [ref=f14e106]: https://prodoctorov.ru › moskva › uslugi › plasticheskie-operacii › liposakciya
+          - heading [level=2] [ref=f14e109]:
+            - link "Липосакция в Москве - 98 клиник , цена от 11500 руб. - ПроДокторов" [ref=f14e110] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=623dafdffeceb2360f890277510242ff3d49bc5f519a2a7cd43d6a997f50167eJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9wcm9kb2N0b3Jvdi5ydS9tb3NrdmEvdXNsdWdpL3BsYXN0aWNoZXNraWUtb3BlcmFjaWkvbGlwb3Nha2NpeWEv&ntb=1
+          - paragraph [ref=f14e112]: Липосакция - Подбородок (1 зона, 2 кат) 56 925 ₽ Липосакция бедра (передние, или задние, или наружные, или внутренние …
+        - listitem [ref=f14e113]:
+          - link "Prodoctorov.ru" [ref=f14e115] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=82157002b7004e0bc8738bb7342c60044ac09576c0ed5e5f66201d08b4481549JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9wcm9kb2N0b3Jvdi5ydS9tb3NrdmEvdXNsdWdpL2xpcG9zYWtjaXlhLw&ntb=1
+            - generic [ref=f14e120]:
+              - generic [ref=f14e121]: Prodoctorov.ru
+              - generic [ref=f14e122]: https://prodoctorov.ru › moskva › uslugi › liposakciya
+          - heading [level=2] [ref=f14e125]:
+            - link "Липосакция в Москве - цены в 97 клиниках" [ref=f14e126] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=82157002b7004e0bc8738bb7342c60044ac09576c0ed5e5f66201d08b4481549JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9wcm9kb2N0b3Jvdi5ydS9tb3NrdmEvdXNsdWdpL2xpcG9zYWtjaXlhLw&ntb=1
+          - paragraph [ref=f14e128]: "Липосакция в Москве: 97 клиник, 46237 отзывов, средняя цена 49591 руб., запись на липосакцию. Найдите Липосакция в …"
+        - listitem [ref=f14e129]:
+          - link "drgaripov.com" [ref=f14e131] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=4d2ae4a412c79f8acb36a09857fb004ec253fdce79e5af2ef69b7686722c37f2JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9kcmdhcmlwb3YuY29tL3ByYWN0aWNlL2xpcG9zYWtjaXlh&ntb=1
+            - generic [ref=f14e132]:
+              - generic [ref=f14e133]: drgaripov.com
+              - generic [ref=f14e134]: https://drgaripov.com › practice › liposakciya
+          - heading [level=2] [ref=f14e137]:
+            - link "Липосакция одной анатомической зоны в Москве — цена 30 000 ₽ …" [ref=f14e138] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=4d2ae4a412c79f8acb36a09857fb004ec253fdce79e5af2ef69b7686722c37f2JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9kcmdhcmlwb3YuY29tL3ByYWN0aWNlL2xpcG9zYWtjaXlh&ntb=1
+          - paragraph [ref=f14e140]: "Липосакция одной анатомической зоны в Москве и Уфе: показания, как проходит операция, восстановление по дням и …"
+        - listitem [ref=f14e141]:
+          - link "МаркаКачества" [ref=f14e143] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=34747f6f00db061ede435162e183299cbfa2af44bb171dd03bdd155bf93ce53aJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9tYXJrYWthY2hlc3R2YS5ydS9hbWVuaXRpZXMvNjAwNi1sdWNoc2hpZS1rbGluaWtpLXBvLWxpcG9zYWtjaWktdi1tb3NrdmUtcmVqdGluZy5odG1s&ntb=1
+            - generic [ref=f14e148]:
+              - generic [ref=f14e149]: МаркаКачества
+              - generic [ref=f14e150]: https://markakachestva.ru › amenities
+          - heading [level=2] [ref=f14e153]:
+            - link "10 лучших клиник по липосакции в Москве - рейтинг 2026" [ref=f14e154] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=34747f6f00db061ede435162e183299cbfa2af44bb171dd03bdd155bf93ce53aJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9tYXJrYWthY2hlc3R2YS5ydS9hbWVuaXRpZXMvNjAwNi1sdWNoc2hpZS1rbGluaWtpLXBvLWxpcG9zYWtjaWktdi1tb3NrdmUtcmVqdGluZy5odG1s&ntb=1
+          - paragraph [ref=f14e156]: 7 июл. 2025 г. · Липосакция — один из самых быстрых и эффективных способов избавиться от подкожных жировых …
+        - listitem [ref=f14e157]:
+          - link "nomosclinic.ru" [ref=f14e159] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=1771fd4755c43ec86e612f4e5ad497f7f1372b2755e65010aecdaf12e4f5d6acJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9ub21vc2NsaW5pYy5ydS9zZXJ2aWNlcy9wbGFzdGljaGVza2F5YS1raGlydXJnaXlhL3BsYXN0aWthLXRlbGEvbGlwb3Nha3RzaXlhLw&ntb=1
+            - generic [ref=f14e164]:
+              - generic [ref=f14e165]: nomosclinic.ru
+              - generic [ref=f14e166]: https://nomosclinic.ru › services › plasticheskaya-khirurgiya › plastika...
+          - heading [level=2] [ref=f14e169]:
+            - 'link "Липосакция в Москве: цена от 49 900 руб. | Операция по …" [ref=f14e170] [cursor=pointer]':
+              - /url: https://www.bing.com/ck/a?!&&p=1771fd4755c43ec86e612f4e5ad497f7f1372b2755e65010aecdaf12e4f5d6acJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9ub21vc2NsaW5pYy5ydS9zZXJ2aWNlcy9wbGFzdGljaGVza2F5YS1raGlydXJnaXlhL3BsYXN0aWthLXRlbGEvbGlwb3Nha3RzaXlhLw&ntb=1
+          - paragraph [ref=f14e172]: Сделать операцию по удалению жира (липосакцию) можно во многих медицинских центрах, цена на данную услугу сильно …
+        - listitem [ref=f14e173]:
+          - link "l-a.ru" [ref=f14e175] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=b87235a428afeb76b33a25bc33bb1c0a81fc1adb6e99643811720c534ec31f47JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9sLWEucnUvdXNsdWdpL3BsYXN0aWNoZXNrYXlhLXhpcnVyZ2l5YS9saXBvc2FrY3ppeWEvbGlwb3Nha2N6aXlhLXZzZWdvLXRlbGE&ntb=1
+            - generic [ref=f14e176]:
+              - generic [ref=f14e177]: l-a.ru
+              - generic [ref=f14e178]: https://l-a.ru › uslugi › plasticheskaya-xirurgiya › liposakcziya › ...
+          - heading [level=2] [ref=f14e181]:
+            - 'link "Липосакция всего тела в Москве: цена липосакции одной зоны от …" [ref=f14e182] [cursor=pointer]':
+              - /url: https://www.bing.com/ck/a?!&&p=b87235a428afeb76b33a25bc33bb1c0a81fc1adb6e99643811720c534ec31f47JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9sLWEucnUvdXNsdWdpL3BsYXN0aWNoZXNrYXlhLXhpcnVyZ2l5YS9saXBvc2FrY3ppeWEvbGlwb3Nha2N6aXlhLXZzZWdvLXRlbGE&ntb=1
+          - paragraph [ref=f14e184]: "Липосакция всего тела в Москве: цена липосакции одной зоны от 60000 руб в клинике Lege Artis. Это хирургическая …"
+        - listitem [ref=f14e185]:
+          - link "formaplastic.ru" [ref=f14e187] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=0ff7776cc1aaf23e9fd1fa180558296a17db2477c44915cc0fe5958f25c985eeJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9mb3JtYXBsYXN0aWMucnUvc2VydmljZXMvcGxhc3Rpa2EtdGVsYS9saXBvc2FrdHNpeWEv&ntb=1
+            - generic [ref=f14e188]:
+              - generic [ref=f14e189]: formaplastic.ru
+              - generic [ref=f14e190]: https://formaplastic.ru › services › plastika-tela › liposaktsiya
+          - heading [level=2] [ref=f14e193]:
+            - link "Липосакция одной зоны в клинике пластической хирургии Форма …" [ref=f14e194] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=0ff7776cc1aaf23e9fd1fa180558296a17db2477c44915cc0fe5958f25c985eeJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9mb3JtYXBsYXN0aWMucnUvc2VydmljZXMvcGxhc3Rpa2EtdGVsYS9saXBvc2FrdHNpeWEv&ntb=1
+          - paragraph [ref=f14e196]: Стоимость проведения липосакции рассчитывается врачом во время консультации, исходя из количества оперируемых зон …
+        - listitem [ref=f14e197]:
+          - link "Красота и Медицина" [ref=f14e199] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=acb326ad8fe14ccd03591e7e5d972e70530fbda5c2cebd4902f139b13f4d4856JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly93d3cua3Jhc290YWltZWRpY2luYS5ydS90cmVhdG1lbnQvbGlwb3N1Y3Rpb24v&ntb=1
+            - generic [ref=f14e204]:
+              - generic [ref=f14e205]: Красота и Медицина
+              - generic [ref=f14e206]: https://www.krasotaimedicina.ru › treatment › liposuction
+          - heading "Липосакция - найдено 490 цен в Москве, 145 адресов" [level=2] [ref=f14e209]:
+            - link "Липосакция - найдено 490 цен в Москве, 145 адресов":
+              - /url: https://www.bing.com/ck/a?!&&p=acb326ad8fe14ccd03591e7e5d972e70530fbda5c2cebd4902f139b13f4d4856JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly93d3cua3Jhc290YWltZWRpY2luYS5ydS90cmVhdG1lbnQvbGlwb3N1Y3Rpb24v&ntb=1
+          - paragraph [ref=f14e211]: Найдено 490 цен по 145 адресам. Цены на липосакцию в Москве от 10 до 600000 руб. ⭐ Лучшие клиники в рейтинге …
+        - listitem [ref=f14e212]:
+          - link "onclinic.ru" [ref=f14e214] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=cafd3966b2bf7430df60ae40a56b0e622313ac57d74360b7b9debb17bb024fecJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9wbGFzdGljYS5vbmNsaW5pYy5ydS9wbGFzdGljaGVza2F5YV9oaXJ1cmdpeWEvZGx5YV90ZWxhL2xpcG9zYWt0c2l5YS9ub2cv&ntb=1
+            - generic [ref=f14e219]:
+              - generic [ref=f14e220]: onclinic.ru
+              - generic [ref=f14e221]: https://plastica.onclinic.ru › plasticheskaya_hirurgiya › dlya_tela › ...
+          - heading "Липосакция голеней и ног в Москве - цена операции, сделать в …" [level=2] [ref=f14e224]:
+            - link "Липосакция голеней и ног в Москве - цена операции, сделать в …":
+              - /url: https://www.bing.com/ck/a?!&&p=cafd3966b2bf7430df60ae40a56b0e622313ac57d74360b7b9debb17bb024fecJmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9wbGFzdGljYS5vbmNsaW5pYy5ydS9wbGFzdGljaGVza2F5YV9oaXJ1cmdpeWEvZGx5YV90ZWxhL2xpcG9zYWt0c2l5YS9ub2cv&ntb=1
+          - paragraph [ref=f14e226]: Узнайте, сколько стоит липосакция ваших ног, записавшись на прием к выбранному специалисту по телефону в Москве +7 …
+        - listitem [ref=f14e227]:
+          - link "onclinic.ru" [ref=f14e229] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=f7fef31b0c45eebd1b09e2466d79fff330a5a15db6724ef46a640e023bb85607JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9wbGFzdGljYS5vbmNsaW5pYy5ydS9wbGFzdGljaGVza2F5YV9oaXJ1cmdpeWEvZGx5YV90ZWxhL2xpcG9zYWt0c2l5YS8&ntb=1
+            - generic [ref=f14e234]:
+              - generic [ref=f14e235]: onclinic.ru
+              - generic [ref=f14e236]: https://plastica.onclinic.ru › plasticheskaya_hirurgiya › dlya_tela › liposaktsiya
+          - heading "Липосакция в Москве - цена операции, сделать в клинике …" [level=2] [ref=f14e239]:
+            - link "Липосакция в Москве - цена операции, сделать в клинике …":
+              - /url: https://www.bing.com/ck/a?!&&p=f7fef31b0c45eebd1b09e2466d79fff330a5a15db6724ef46a640e023bb85607JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cHM6Ly9wbGFzdGljYS5vbmNsaW5pYy5ydS9wbGFzdGljaGVza2F5YV9oaXJ1cmdpeWEvZGx5YV90ZWxhL2xpcG9zYWt0c2l5YS8&ntb=1
+          - paragraph [ref=f14e241]: Липосакция в ОН КЛИНИК в городе Москва проводится с применением передового оборудования при введении …
+        - listitem [ref=f14e242]:
+          - generic [ref=f14e243]:
+            - heading [level=2] [ref=f14e244]:
+              - text: Похожие запросы для
+              - strong [ref=f14e245]: липосакция одной зоны цена москва
+            - list [ref=f14e246]:
+              - listitem [ref=f14e247]:
+                - link [ref=f14e248] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=14d0a03152cb859b97e6ae16b1603ffc76c7b8e77ea4b2de28c8481ef1ad4ab8JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMCViYiVkMCViOCVkMCViZiVkMCViZSVkMSU4MSVkMCViMCVkMCViYSVkMSU4NiVkMCViOCVkMSU4ZislZDAlYjIrJWQwJWJjJWQwJWJlJWQxJTgxJWQwJWJhJWQwJWIyJWQwJWI1JkZPUk09UVNSRTE&ntb=1
+                  - generic [ref=f14e250]:
+                    - text: липосакция
+                    - strong [ref=f14e251]: в москве
+              - listitem [ref=f14e252]:
+                - link [ref=f14e253] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=7141d8de96789bda684b5f81f67eac914f17ed8fc8d59c933798cd2c4cf038e0JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMCViYSVkMCViYiVkMCViOCVkMCViZCVkMCViOCVkMCViYSVkMCViMCslZDAlYmYlZDAlYmUrJWQwJWJiJWQwJWI4JWQwJWJmJWQwJWJlJWQxJTgxJWQwJWIwJWQwJWJhJWQxJTg2JWQwJWI4JWQwJWI4KyVkMCViYyVkMCViZSVkMSU4MSVkMCViYSVkMCViMiVkMCViMCZGT1JNPVFTUkUy&ntb=1
+                  - generic [ref=f14e255]:
+                    - strong [ref=f14e256]: клиника по липосакции
+                    - text: москва
+        - listitem [ref=f14e257]:
+          - link "Некоторые результаты удалены" [ref=f14e259] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c0d515034c24b8243c01557732cb9df108d404b789cd45242b095388b6f7cf55JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9NjE3MzUw&ntb=1
+        - listitem [ref=f14e260]:
+          - navigation "Другие результаты по запросу липосакция одной зоны цена москва":
+            - list:
+              - listitem [ref=f14e261]:
+                - generic "Страница 1" [ref=f14e262]: "1"
+              - listitem [ref=f14e263]:
+                - link "Страница 2" [ref=f14e264] [cursor=pointer]:
+                  - /url: /search?q=%d0%bb%d0%b8%d0%bf%d0%be%d1%81%d0%b0%d0%ba%d1%86%d0%b8%d1%8f+%d0%be%d0%b4%d0%bd%d0%be%d0%b9+%d0%b7%d0%be%d0%bd%d1%8b+%d1%86%d0%b5%d0%bd%d0%b0+%d0%bc%d0%be%d1%81%d0%ba%d0%b2%d0%b0&FPIG=A8890BB4C3854E0B8EA9F40FD721D6C7&first=11&FORM=PERE
+                  - text: "2"
+              - listitem [ref=f14e265]:
+                - link "Страница 3" [ref=f14e266] [cursor=pointer]:
+                  - /url: /search?q=%d0%bb%d0%b8%d0%bf%d0%be%d1%81%d0%b0%d0%ba%d1%86%d0%b8%d1%8f+%d0%be%d0%b4%d0%bd%d0%be%d0%b9+%d0%b7%d0%be%d0%bd%d1%8b+%d1%86%d0%b5%d0%bd%d0%b0+%d0%bc%d0%be%d1%81%d0%ba%d0%b2%d0%b0&FPIG=A8890BB4C3854E0B8EA9F40FD721D6C7&first=21&FORM=PERE1
+                  - text: "3"
+              - listitem [ref=f14e267]:
+                - link "Следующая страница" [ref=f14e268] [cursor=pointer]:
+                  - /url: /search?q=%d0%bb%d0%b8%d0%bf%d0%be%d1%81%d0%b0%d0%ba%d1%86%d0%b8%d1%8f+%d0%be%d0%b4%d0%bd%d0%be%d0%b9+%d0%b7%d0%be%d0%bd%d1%8b+%d1%86%d0%b5%d0%bd%d0%b0+%d0%bc%d0%be%d1%81%d0%ba%d0%b2%d0%b0&FPIG=A8890BB4C3854E0B8EA9F40FD721D6C7&first=11&FORM=PORE
+    - complementary "Дополнительные результаты" [ref=f14e269]:
+      - list [ref=f14e270]:
+        - listitem [ref=f14e271]:
+          - generic [ref=f14e274]:
+            - heading [level=2] [ref=f14e276]:
+              - text: Похожие запросы для
+              - strong [ref=f14e277]: липосакция одной зоны цена москва
+            - generic [ref=f14e278]:
+              - generic:
+                - list
+              - generic [ref=f14e279]:
+                - link [ref=f14e281] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=77c706f83261183eba3a8e4ebb702c111ca88710443c9a1fc68cf60217035655JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMCViYiVkMCViOCVkMCViZiVkMCViZSVkMSU4MSVkMCViMCVkMCViYSVkMSU4NiVkMCViOCVkMSU4ZislZDAlYjIrJWQwJWJjJWQwJWJlJWQxJTgxJWQwJWJhJWQwJWIyJWQwJWI1JkZPUk09UjVGRA&ntb=1
+                  - generic [ref=f14e283]:
+                    - text: липосакция
+                    - strong [ref=f14e284]: в москве
+                - link [ref=f14e286] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=1511f7d191c5a8944b3a82b31276a6528db59fcebbc5bf4c4690cede255b8180JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1L3NlYXJjaD9xPSVkMCViYSVkMCViYiVkMCViOCVkMCViZCVkMCViOCVkMCViYSVkMCViMCslZDAlYmYlZDAlYmUrJWQwJWJiJWQwJWI4JWQwJWJmJWQwJWJlJWQxJTgxJWQwJWIwJWQwJWJhJWQxJTg2JWQwJWI4JWQwJWI4KyVkMCViYyVkMCViZSVkMSU4MSVkMCViYSVkMCViMiVkMCViMCZGT1JNPVI1RkQx&ntb=1
+                  - generic [ref=f14e288]:
+                    - strong [ref=f14e289]: клиника по липосакции
+                    - text: москва
+  - contentinfo [ref=f14e290]:
+    - generic [ref=f14e291]:
+      - list:
+        - listitem [ref=f14e292]:
+          - link "Конфиденциальность" [ref=f14e293] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c919d6612e694f27788354353dd085812c985f8ab66ac12689fdd4aa0cded4b5JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=f14e294]:
+          - link "Условия" [ref=f14e295] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c6727ce5561df3d7f064c7af9bbe73f55d889ad209cbc2ad042db4471e841646JmltdHM9MTc5MDk4NTYwMA&ptn=3&ver=2&hsh=4&fclid=336af0af-d103-698a-16fb-e748d0a968e9&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1
+        - listitem [ref=f14e296]:
+          - button "Обратная связь" [ref=f14e297] [cursor=pointer]

@@ -1,0 +1,109 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Пластический хирург" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: П
+        - generic [ref=e6]:
+          - generic [ref=e7]: Пластический хирург
+          - generic [ref=e8]: проводник
+      - navigation [ref=e9]:
+        - link "Направления" [ref=e10] [cursor=pointer]:
+          - /url: /#napravleniya
+        - link "Послеродовое восстановление" [ref=e11] [cursor=pointer]:
+          - /url: /poslerodovoe-vosstanovlenie
+        - link "О хирурге и подходе" [ref=e12] [cursor=pointer]:
+          - /url: /#filosofiya
+        - link "Контакты" [ref=e13] [cursor=pointer]:
+          - /url: /#kontakty
+      - link "Задать вопрос" [ref=e15] [cursor=pointer]:
+        - /url: /#forma
+  - main [ref=e18]:
+    - generic [ref=e20]:
+      - generic:
+        - paragraph: пластическая хирургия лица и тела
+        - heading "Тело — это не проект. Это разговор, который длится всю жизнь." [level=1]: Тело — это не проект.Это разговор, который длится всю жизнь.
+        - paragraph: Пластическая хирургия лица и тела для женщин и мужчин. Без спешки. Без шаблонов. С вниманием к тому, кто вы есть.
+        - link "Начать разговор" [ref=e26] [cursor=pointer]:
+          - /url: "#forma"
+      - generic [ref=e29]: Исследуйте форму. Наведите курсор на скульптуры, чтобы узнать о направлениях
+      - generic: листайте — фигуры разойдутся
+      - generic:
+        - link "Женская пластика Грудь · Живот · Бёдра · Ягодицы · Руки · Лицо" [ref=e34] [cursor=pointer]:
+          - /url: /#napravleniya
+          - generic [ref=e36]: Женская пластика
+          - generic [ref=e37]: Грудь · Живот · Бёдра · Ягодицы · Руки · Лицо
+        - link "Мужская пластика Грудь · Живот · Спина · Лицо · Шея" [ref=e38] [cursor=pointer]:
+          - /url: /#napravleniya
+          - generic [ref=e40]: Мужская пластика
+          - generic [ref=e41]: Грудь · Живот · Спина · Лицо · Шея
+    - generic [ref=e44]:
+      - paragraph [ref=e45]: Направления
+      - heading "Выберите направление" [level=2] [ref=e46]
+      - paragraph [ref=e47]: Интерактивные карты тела — Женская / Мужская (модуль 3)
+    - generic [ref=e50]:
+      - paragraph [ref=e51]: О подходе
+      - heading "Проводник, а не исполнитель" [level=2] [ref=e52]
+      - paragraph [ref=e53]: Секция 2 главной (модуль 4)
+    - generic [ref=e56]:
+      - paragraph [ref=e57]: Первая встреча
+      - heading "Слушаю · Показываю · Решаете вы" [level=2] [ref=e58]
+      - paragraph [ref=e59]: Секция 6 главной (модуль 4)
+    - generic [ref=e62]:
+      - paragraph [ref=e63]: Начать разговор
+      - heading "Первая консультация — это знакомство" [level=2] [ref=e64]
+      - paragraph [ref=e65]: Форма записи на email (модуль 4)
+  - contentinfo [ref=e66]:
+    - generic [ref=e67]:
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - generic [ref=e71]: П
+            - generic [ref=e72]:
+              - paragraph [ref=e73]: Пластический хирург
+              - paragraph [ref=e74]: проводник
+          - paragraph [ref=e75]: «Проводник в разговоре с вашим телом»
+        - generic [ref=e76]:
+          - paragraph [ref=e77]: Сайт
+          - list [ref=e78]:
+            - listitem [ref=e79]:
+              - link "Направления" [ref=e80] [cursor=pointer]:
+                - /url: /#napravleniya
+            - listitem [ref=e81]:
+              - link "Послеродовое восстановление" [ref=e82] [cursor=pointer]:
+                - /url: /poslerodovoe-vosstanovlenie
+            - listitem [ref=e83]:
+              - link "Мужская пластика" [ref=e84] [cursor=pointer]:
+                - /url: /muzhskaya-plastika
+            - listitem [ref=e85]:
+              - link "О хирурге и подходе" [ref=e86] [cursor=pointer]:
+                - /url: /#filosofiya
+            - listitem [ref=e87]:
+              - link "Первая встреча" [ref=e88] [cursor=pointer]:
+                - /url: /#pervaya-vstrecha
+            - listitem [ref=e89]:
+              - link "Контакты" [ref=e90] [cursor=pointer]:
+                - /url: /#kontakty
+        - generic [ref=e91]:
+          - paragraph [ref=e92]: Контакты
+          - list [ref=e93]:
+            - listitem [ref=e94]: Москва, ул. Клиническая, 10
+            - listitem [ref=e95]:
+              - link "+7 (000) 000-00-00" [ref=e96] [cursor=pointer]:
+                - /url: tel:+70000000000
+            - listitem [ref=e97]:
+              - 'link "Telegram: @doctor_username" [ref=e98] [cursor=pointer]':
+                - /url: https://t.me/doctor_username
+            - listitem [ref=e99]:
+              - 'link "WhatsApp: +7 (000) 000-00-00" [ref=e100] [cursor=pointer]':
+                - /url: https://wa.me/70000000000
+          - paragraph [ref=e101]: Ежедневно с 09:00 до 21:00. Мы на связи.
+      - generic [ref=e102]:
+        - paragraph [ref=e103]: © 2026 Пластический хирург. Все права защищены.
+        - generic [ref=e104]:
+          - link "Политика конфиденциальности" [ref=e105] [cursor=pointer]:
+            - /url: /policy
+          - link "Согласие на обработку данных" [ref=e106] [cursor=pointer]:
+            - /url: /policy
+  - button "Open Next.js Dev Tools" [ref=e112] [cursor=pointer]
+  - alert [ref=e116]

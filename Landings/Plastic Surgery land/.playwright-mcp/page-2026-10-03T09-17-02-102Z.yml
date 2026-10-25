@@ -1,0 +1,49 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - generic [ref=f2e4] [cursor=pointer]:
+      - generic [ref=f2e5]: EN
+      - img "down" [ref=f2e8]
+    - generic [ref=f2e12]:
+      - img "SiliconFlow" [ref=f2e14]
+      - generic [ref=f2e15]:
+        - paragraph [ref=f2e16]: Accelerate AGI to Benefit Humanity
+        - generic [ref=f2e17]:
+          - paragraph [ref=f2e18]: One API. 100+ Leading Models. Built for Scale.
+          - paragraph [ref=f2e19]: Low Latency High Concurrency Exceptional Cost Efficiency
+      - generic [ref=f2e20]:
+        - paragraph [ref=f2e21]: China's Largest Independent
+        - paragraph [ref=f2e22]:
+          - text: Token Supply Platform
+          - generic [ref=f2e23]: "*"
+        - paragraph [ref=f2e24]: Trusted by 10M+ users and 13,000+ enterprise customers
+      - contentinfo [ref=f2e25]: Based on annual token throughput in 2025
+    - generic [ref=f2e27]:
+      - img "SiliconFlow" [ref=f2e28]
+      - heading "Welcome to SiliconFlow" [level=2] [ref=f2e29]
+      - generic [ref=f2e31]:
+        - generic [ref=f2e38]:
+          - generic [ref=f2e41]:
+            - combobox [ref=f2e43]
+            - generic "+86" [ref=f2e44]
+          - textbox "Phone number" [ref=f2e45]
+        - generic [ref=f2e52]:
+          - textbox "SMS verification code" [ref=f2e53]
+          - button "Get code" [ref=f2e55] [cursor=pointer]
+        - textbox "Invite code (optional)" [ref=f2e62]
+        - generic [ref=f2e70] [cursor=pointer]:
+          - checkbox "I agree with the Terms and Privacy Policy" [ref=f2e72]
+          - generic [ref=f2e75]:
+            - generic [ref=f2e76]: I agree
+            - link "with the Terms" [ref=f2e77]:
+              - /url: https://api-docs.siliconflow.cn/docs/legals/terms-of-service
+            - generic [ref=f2e78]: and
+            - link "Privacy Policy" [ref=f2e79]:
+              - /url: https://api-docs.siliconflow.cn/docs/legals/privacy-policy
+        - button "Sign Up / Log In" [ref=f2e85] [cursor=pointer]
+        - generic [ref=f2e92] [cursor=pointer]:
+          - checkbox "Stay logged in for 30 days" [checked] [ref=f2e94]
+          - generic [ref=f2e96]: Stay logged in for 30 days
+        - generic [ref=f2e98]:
+          - button [ref=f2e99] [cursor=pointer]
+          - button [ref=f2e104] [cursor=pointer]
+  - alert [ref=f2e109]

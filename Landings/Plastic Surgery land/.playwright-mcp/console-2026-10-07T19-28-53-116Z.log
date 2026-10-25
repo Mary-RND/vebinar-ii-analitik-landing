@@ -1,0 +1,3 @@
+[     499ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:4174/favicon.ico:0
+[  394816ms] [WARNING] An import map rule for specifier 'three/addons/' was removed, as it conflicted with already resolved module specifiers. @ :7
+[  394816ms] [WARNING] An import map rule for specifier 'three' was removed, as it conflicted with already resolved module specifiers. @ :7

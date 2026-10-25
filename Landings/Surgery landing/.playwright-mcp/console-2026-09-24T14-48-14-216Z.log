@@ -1,0 +1,110 @@
+[     880ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    1018ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    1550ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    1668ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    1718ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1560981ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1565690ms] [LOG] [Fast Refresh] done in 8559ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1705948ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1706291ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1707471ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1707607ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1707662ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10316614ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10759506ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10760338ms] [ERROR] React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+%s   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ ZoneRig 1. useMemo                    useMemo
+2. useRef                     useRef
+3. useMemo                    useMemo
+4. useMemo                    useMemo
+5. useContext                 useContext
+6. useRef                     useRef
+7. useMemo                    useMemo
+8. useSyncExternalStore       useSyncExternalStore
+9. useEffect                  useEffect
+10. useDebugValue             useDebugValue
+11. useDebugValue             useDebugValue
+12. useRef                    useMemo
+ @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:1052
+[10761357ms] Error: Rendered fewer hooks than expected. This may be caused by an accidental early return statement.
+    at ip (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:9671:433)
+    at ap (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:9662:24)
+    at Ea (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:10784:374)
+    at Su (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:11145:32)
+    at B (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:8449:70)
+    at rg (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:13366:50)
+    at ng (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:13283:36)
+    at Qp (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:13274:21)
+    at Zm (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:13046:75)
+    at _c (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:8863:35)
+    at Ur (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:8807:165)
+    at Cd (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:13139:51)
+    at Object.gc [as scheduleRefresh] (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:7087:71)
+    at http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:589:33
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:582:38)
+    at applyUpdate (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:137:31)
+    at http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:145:13
+[10761477ms] Error: Rendered fewer hooks than expected. This may be caused by an accidental early return statement.
+    at ip (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:9671:433)
+    at ap (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:9662:24)
+    at Ea (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:10784:374)
+    at Su (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:11145:32)
+    at B (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:8449:70)
+    at rg (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:13366:50)
+    at ng (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:13283:36)
+    at Qp (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:13274:21)
+    at Zm (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:13046:75)
+    at _c (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:8863:35)
+    at Ur (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:8807:165)
+    at Cd (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:13139:51)
+    at Object.gc [as scheduleRefresh] (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:7087:71)
+    at http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:589:33
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:582:38)
+    at applyUpdate (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:137:31)
+    at http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:145:13
+[10761743ms] [LOG] [Fast Refresh] done in 2681ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10762419ms] Error: Rendered fewer hooks than expected. This may be caused by an accidental early return statement.
+    at ip (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:9671:433)
+    at ap (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:9662:24)
+    at Ea (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:10784:374)
+    at Su (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:11145:32)
+    at B (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:8449:70)
+    at rg (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:13366:50)
+    at ng (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:13283:36)
+    at Qp (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:13274:21)
+    at Zm (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:13046:75)
+    at _c (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:8863:35)
+    at Ur (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:8807:165)
+    at Cd (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:13139:51)
+    at Object.gc [as scheduleRefresh] (http://localhost:3000/_next/static/chunks/node_modules_%40react-three_fiber_dist_0oyevo-._.js:7087:71)
+    at http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:589:33
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:582:38)
+    at applyUpdate (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:137:31)
+    at http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:145:13
+[10762615ms] [LOG] THREE.WebGLRenderer: Context Lost. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10762771ms] [LOG] THREE.WebGLRenderer: Context Lost. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10762820ms] [LOG] THREE.WebGLRenderer: Context Lost. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10771880ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10771949ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10772149ms] [LOG] [Fast Refresh] done in 76ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10774900ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10775870ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10777651ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10778003ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10778248ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10809787ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10811830ms] [LOG] [Fast Refresh] done in 2001ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10853569ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10855045ms] [LOG] [Fast Refresh] done in 1033ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10883705ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10883888ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10884779ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10884949ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[10885028ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776

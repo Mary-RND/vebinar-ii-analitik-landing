@@ -1,0 +1,153 @@
+- generic [active] [ref=f16e1]:
+  - banner [ref=f16e2]:
+    - generic [ref=f16e3]:
+      - link "Пластический хирург" [ref=f16e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f16e5]: П
+        - generic [ref=f16e6]:
+          - generic [ref=f16e7]: Пластический хирург
+          - generic [ref=f16e8]: проводник
+      - navigation [ref=f16e9]:
+        - link "Направления" [ref=f16e10] [cursor=pointer]:
+          - /url: /#napravleniya
+        - link "Послеродовое восстановление" [ref=f16e11] [cursor=pointer]:
+          - /url: /poslerodovoe-vosstanovlenie
+        - link "О хирурге и подходе" [ref=f16e12] [cursor=pointer]:
+          - /url: /#filosofiya
+        - link "Контакты" [ref=f16e13] [cursor=pointer]:
+          - /url: /#kontakty
+      - link "Задать вопрос" [ref=f16e15] [cursor=pointer]:
+        - /url: /#forma
+  - main [ref=f16e18]:
+    - generic [ref=f16e21]:
+      - generic [ref=f16e22]:
+        - paragraph [ref=f16e23]: Направление
+        - heading "Мужская пластика" [level=1] [ref=f16e24]: Мужскаяпластика
+        - paragraph [ref=f16e28]: "Мужское тело требует другого подхода: другие пропорции, другая эстетика результата, другая работа с рубцами. Здесь это учитывается с первого эскиза. Без гендерных стереотипов — с той же серьёзностью, что и женская пластика."
+        - link "Задать вопрос о мужской пластике" [ref=f16e29] [cursor=pointer]:
+          - /url: "#forma-male"
+          - text: Задать вопрос о мужской пластике
+          - generic [aria-hidden] [ref=f16e30]: →
+      - generic [ref=f16e32]:
+        - paragraph [ref=f16e33]: Зоны коррекции
+        - paragraph [ref=f16e34]: Наведите курсор — увидите возможное направление
+        - generic [ref=f16e35]: Наведите курсор на зону, чтобы узнать о возможностях
+        - generic [ref=f16e40]:
+          - generic [ref=f16e41]: Грудь
+          - generic [ref=f16e45]: Живот
+          - generic [ref=f16e49]: Спина и бока
+          - generic [ref=f16e53]: Лицо и шея
+    - generic [ref=f16e58]:
+      - generic [ref=f16e59]:
+        - heading "Направления" [level=2] [ref=f16e60]
+        - paragraph [ref=f16e61]: Каждое — с отдельной логикой разрезов, реабилитации и ожидаемого результата.
+      - generic [ref=f16e62]:
+        - generic [ref=f16e64]:
+          - generic [ref=f16e65]: "01"
+          - generic [ref=f16e66]:
+            - heading "Грудь" [level=3] [ref=f16e67]
+            - paragraph [ref=f16e68]: Гинекомастия — коррекция формы грудной клетки, липосакция и иссечение железистой ткани по показаниям.
+        - generic [ref=f16e70]:
+          - generic [ref=f16e71]: "02"
+          - generic [ref=f16e72]:
+            - heading "Живот" [level=3] [ref=f16e73]
+            - paragraph [ref=f16e74]: Абдоминопластика и липосакция с учётом мужских пропорций и распределения жировой ткани.
+        - generic [ref=f16e76]:
+          - generic [ref=f16e77]: "03"
+          - generic [ref=f16e78]:
+            - heading "Спина и бока" [level=3] [ref=f16e79]
+            - paragraph [ref=f16e80]: Контурирование, липосакция flank-зон, работа с кожным избытком.
+        - generic [ref=f16e82]:
+          - generic [ref=f16e83]: "04"
+          - generic [ref=f16e84]:
+            - heading "Лицо и шея" [level=3] [ref=f16e85]
+            - paragraph [ref=f16e86]: Блефаропластика, ринопластика, пластика шеи — сохранение маскулинных черт.
+      - generic [ref=f16e87]: На консультации — честный разбор, что достижимо в вашем случае, какие есть ограничения и как будет выглядеть восстановление. Если операция не нужна — скажу прямо.
+    - generic [ref=f16e90]:
+      - generic [ref=f16e91]:
+        - paragraph [ref=f16e92]: Начать разговор
+        - heading "Задать вопрос" [level=2] [ref=f16e93]
+        - paragraph [ref=f16e94]: Первая консультация — это знакомство. Без обязательств и давления.
+      - generic [ref=f16e96]:
+        - generic [ref=f16e97]:
+          - text: Как к вам обращаться?
+          - textbox "Как к вам обращаться?" [ref=f16e98]:
+            - /placeholder: Ваше имя
+        - generic [ref=f16e99]:
+          - text: Удобный способ связи
+          - textbox "Удобный способ связи" [ref=f16e100]:
+            - /placeholder: Телефон или Telegram
+        - generic [ref=f16e101]:
+          - text: Что вас интересует?
+          - combobox "Что вас интересует?" [ref=f16e102]:
+            - option "Выберите направление" [disabled] [selected]
+            - option "Пластика лица"
+            - option "Пластика тела"
+            - option "Послеродовое восстановление"
+            - option "Мужская пластика"
+            - option "Пока просто изучаю вопрос"
+        - generic [ref=f16e103]:
+          - generic [ref=f16e104]: Комментарий (необязательно)
+          - textbox "Комментарий (необязательно)" [ref=f16e105]:
+            - /placeholder: Коротко опишите ваш запрос или задайте вопрос, если хотите подготовиться к разговору заранее...
+        - button "Отправить запрос" [ref=f16e106]:
+          - text: Отправить запрос
+          - generic [aria-hidden] [ref=f16e107]: →
+        - paragraph [ref=f16e108]:
+          - text: Нажимая кнопку, вы соглашаетесь с
+          - link "политикой конфиденциальности" [ref=f16e109] [cursor=pointer]:
+            - /url: /policy
+          - text: . Ваши данные в безопасности и используются только для связи с вами.
+  - contentinfo [ref=f16e110]:
+    - generic [ref=f16e111]:
+      - generic [ref=f16e112]:
+        - generic [ref=f16e113]:
+          - generic [ref=f16e114]:
+            - generic [ref=f16e115]: П
+            - generic [ref=f16e116]:
+              - paragraph [ref=f16e117]: Пластический хирург
+              - paragraph [ref=f16e118]: проводник
+          - paragraph [ref=f16e119]: «Проводник в разговоре с вашим телом»
+        - generic [ref=f16e120]:
+          - paragraph [ref=f16e121]: Сайт
+          - list [ref=f16e122]:
+            - listitem [ref=f16e123]:
+              - link "Направления" [ref=f16e124] [cursor=pointer]:
+                - /url: /#napravleniya
+            - listitem [ref=f16e125]:
+              - link "Послеродовое восстановление" [ref=f16e126] [cursor=pointer]:
+                - /url: /poslerodovoe-vosstanovlenie
+            - listitem [ref=f16e127]:
+              - link "Мужская пластика" [ref=f16e128] [cursor=pointer]:
+                - /url: /muzhskaya-plastika
+            - listitem [ref=f16e129]:
+              - link "О хирурге и подходе" [ref=f16e130] [cursor=pointer]:
+                - /url: /#filosofiya
+            - listitem [ref=f16e131]:
+              - link "Первая встреча" [ref=f16e132] [cursor=pointer]:
+                - /url: /#pervaya-vstrecha
+            - listitem [ref=f16e133]:
+              - link "Контакты" [ref=f16e134] [cursor=pointer]:
+                - /url: /#kontakty
+        - generic [ref=f16e135]:
+          - paragraph [ref=f16e136]: Контакты
+          - list [ref=f16e137]:
+            - listitem [ref=f16e138]: Москва, ул. Клиническая, 10
+            - listitem [ref=f16e139]:
+              - link "+7 (000) 000-00-00" [ref=f16e140] [cursor=pointer]:
+                - /url: tel:+70000000000
+            - listitem [ref=f16e141]:
+              - 'link "Telegram: @doctor_username" [ref=f16e142] [cursor=pointer]':
+                - /url: https://t.me/doctor_username
+            - listitem [ref=f16e143]:
+              - 'link "WhatsApp: +7 (000) 000-00-00" [ref=f16e144] [cursor=pointer]':
+                - /url: https://wa.me/70000000000
+          - paragraph [ref=f16e145]: Ежедневно с 09:00 до 21:00. Мы на связи.
+      - generic [ref=f16e146]:
+        - paragraph [ref=f16e147]: © 2026 Пластический хирург. Все права защищены.
+        - generic [ref=f16e148]:
+          - link "Политика конфиденциальности" [ref=f16e149] [cursor=pointer]:
+            - /url: /policy
+          - link "Согласие на обработку данных" [ref=f16e150] [cursor=pointer]:
+            - /url: /policy
+  - button "Open Next.js Dev Tools" [ref=f16e156] [cursor=pointer]

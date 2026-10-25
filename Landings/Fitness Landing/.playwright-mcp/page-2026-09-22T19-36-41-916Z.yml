@@ -1,0 +1,570 @@
+- generic [ref=f71e1]:
+  - generic [ref=f71e3]:
+    - navigation [ref=f71e6]:
+      - link [ref=f71e8] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f71e12]:
+        - button [ref=f71e13] [cursor=pointer]
+        - button "Join" [ref=f71e17] [cursor=pointer]
+        - button [ref=f71e20] [cursor=pointer]
+    - main [ref=f71e25]:
+      - generic [ref=f71e26]:
+        - generic [ref=f71e30]:
+          - paragraph [ref=f71e32] [cursor=pointer]: Any
+          - paragraph [ref=f71e37] [cursor=pointer]: Horizontal
+          - paragraph [ref=f71e42] [cursor=pointer]: Vertical
+          - paragraph [ref=f71e47] [cursor=pointer]: Square
+        - generic [ref=f71e51]:
+          - paragraph [ref=f71e53] [cursor=pointer]: Any
+          - paragraph [ref=f71e55] [cursor=pointer]: "0"
+          - paragraph [ref=f71e60] [cursor=pointer]: "1"
+          - paragraph [ref=f71e65] [cursor=pointer]: "2"
+          - paragraph [ref=f71e70] [cursor=pointer]: 3+
+        - generic [ref=f71e74]:
+          - paragraph [ref=f71e76] [cursor=pointer]: Any
+          - paragraph [ref=f71e81] [cursor=pointer]: Baby
+          - paragraph [ref=f71e86] [cursor=pointer]: Child
+          - paragraph [ref=f71e91] [cursor=pointer]: Teenager
+          - paragraph [ref=f71e96] [cursor=pointer]: Adult
+          - paragraph [ref=f71e101] [cursor=pointer]: Senior adult
+        - generic [ref=f71e104]:
+          - generic [ref=f71e105]:
+            - generic [ref=f71e106] [cursor=pointer]
+            - slider [ref=f71e108] [cursor=pointer]
+            - slider [ref=f71e109] [cursor=pointer]
+          - generic [ref=f71e110]:
+            - generic [ref=f71e111]:
+              - paragraph [ref=f71e112]: Minimum
+              - paragraph [ref=f71e113]: 1,080px
+            - generic [ref=f71e114]:
+              - paragraph [ref=f71e115]: Maximum
+              - paragraph [ref=f71e116]: 20,000px+
+        - generic [ref=f71e119]:
+          - generic [ref=f71e120]:
+            - generic [ref=f71e121] [cursor=pointer]
+            - slider [ref=f71e123] [cursor=pointer]
+            - slider [ref=f71e124] [cursor=pointer]
+          - generic [ref=f71e125]:
+            - generic [ref=f71e126]:
+              - paragraph [ref=f71e127]: Minimum
+              - paragraph [ref=f71e128]: 1,080px
+            - generic [ref=f71e129]:
+              - paragraph [ref=f71e130]: Maximum
+              - paragraph [ref=f71e131]: 20,000px+
+        - generic [ref=f71e135]:
+          - button [ref=f71e136] [cursor=pointer]:
+            - textbox [ref=f71e142]:
+              - /placeholder: Enter hex code
+          - button [ref=f71e145] [cursor=pointer]:
+            - textbox [ref=f71e151]: "#000000"
+        - generic [ref=f71e155]:
+          - paragraph [ref=f71e157] [cursor=pointer]: Any
+          - paragraph [ref=f71e162] [cursor=pointer]: Last 24 hours
+          - paragraph [ref=f71e167] [cursor=pointer]: Last week
+          - paragraph [ref=f71e172] [cursor=pointer]: Last month
+          - paragraph [ref=f71e177] [cursor=pointer]: Last year
+        - main "main-content" [ref=f71e178]:
+          - generic [ref=f71e179]:
+            - generic [ref=f71e180]:
+              - heading "Choose your language:" [level=5] [ref=f71e181]
+              - generic [ref=f71e183]:
+                - link "English English" [ref=f71e185] [cursor=pointer]:
+                  - /url: /search/young%20fit%20woman%20smiling%20portrait/
+                  - generic [ref=f71e186]:
+                    - img "English" [ref=f71e187]
+                    - generic [ref=f71e188]: English
+                - link "Русский Русский" [ref=f71e189] [cursor=pointer]:
+                  - /url: /ru-ru/search/young%20fit%20woman%20smiling%20portrait/
+                  - generic [ref=f71e190]:
+                    - img "Русский" [ref=f71e191]
+                    - generic [ref=f71e192]: Русский
+                - button [ref=f71e193] [cursor=pointer]
+            - heading "Free Young Fit Woman Smiling Portrait Photos" [level=1] [ref=f71e200]
+            - generic [ref=f71e203]:
+              - link "Photos 10K" [ref=f71e205] [cursor=pointer]:
+                - /url: /search/young%20fit%20woman%20smiling%20portrait/
+                - text: Photos
+                - generic [ref=f71e206]: 10K
+              - link "Videos 10K" [ref=f71e207] [cursor=pointer]:
+                - /url: /search/videos/young%20fit%20woman%20smiling%20portrait/
+                - text: Videos
+                - generic [ref=f71e208]: 10K
+              - link "Users 10K" [ref=f71e209] [cursor=pointer]:
+                - /url: /search/users/young%20fit%20woman%20smiling%20portrait/
+                - text: Users
+                - generic [ref=f71e210]: 10K
+            - generic [ref=f71e212]:
+              - button "Filters" [ref=f71e214] [cursor=pointer]
+              - generic [ref=f71e224]:
+                - link [ref=f71e226] [cursor=pointer]:
+                  - /url: /search/woman%20smiling/
+                  - img "woman smiling" [ref=f71e227]
+                  - generic [ref=f71e228]:
+                    - paragraph [ref=f71e229]: woman smiling
+                    - paragraph [ref=f71e230]: 883K
+                - link [ref=f71e231] [cursor=pointer]:
+                  - /url: /search/fit%20woman/
+                  - img "fit woman" [ref=f71e232]
+                  - generic [ref=f71e233]:
+                    - paragraph [ref=f71e234]: fit woman
+                    - paragraph [ref=f71e235]: 816K
+                - link [ref=f71e236] [cursor=pointer]:
+                  - /url: /search/beautiful%20woman%20face/
+                  - img "beautiful woman face" [ref=f71e237]
+                  - generic [ref=f71e238]:
+                    - paragraph [ref=f71e239]: beautiful woman face
+                    - paragraph [ref=f71e240]: 2M
+                - link [ref=f71e241] [cursor=pointer]:
+                  - /url: /search/smiling%20girl/
+                  - img "smiling girl" [ref=f71e242]
+                  - generic [ref=f71e243]:
+                    - paragraph [ref=f71e244]: smiling girl
+                    - paragraph [ref=f71e245]: 347K
+                - link [ref=f71e246] [cursor=pointer]:
+                  - /url: /search/woman%20smile/
+                  - img "woman smile" [ref=f71e247]
+                  - generic [ref=f71e248]:
+                    - paragraph [ref=f71e249]: woman smile
+                    - paragraph [ref=f71e250]: 8K
+                - link [ref=f71e251] [cursor=pointer]:
+                  - /url: /search/fitness%20woman/
+                  - img "fitness woman" [ref=f71e252]
+                  - generic [ref=f71e253]:
+                    - paragraph [ref=f71e254]: fitness woman
+                    - paragraph [ref=f71e255]: 816K
+                - link [ref=f71e256] [cursor=pointer]:
+                  - /url: /search/woman%20portrait/
+                  - img "woman portrait" [ref=f71e257]
+                  - generic [ref=f71e258]:
+                    - paragraph [ref=f71e259]: woman portrait
+                    - paragraph [ref=f71e260]: 1M
+                - link [ref=f71e261] [cursor=pointer]:
+                  - /url: /search/woman%20working%20out/
+                  - img "woman working out" [ref=f71e262]
+                  - generic [ref=f71e263]:
+                    - paragraph [ref=f71e264]: woman working out
+                    - paragraph [ref=f71e265]: 887K
+                - link [ref=f71e266] [cursor=pointer]:
+                  - /url: /search/woman%20workout/
+                  - img "woman workout" [ref=f71e267]
+                  - generic [ref=f71e268]:
+                    - paragraph [ref=f71e269]: woman workout
+                    - paragraph [ref=f71e270]: 7K
+                - link [ref=f71e271] [cursor=pointer]:
+                  - /url: /search/women%20smiling/
+                  - img "women smiling" [ref=f71e272]
+                  - generic [ref=f71e273]:
+                    - paragraph [ref=f71e274]: women smiling
+                    - paragraph [ref=f71e275]: 345K
+                - link [ref=f71e276] [cursor=pointer]:
+                  - /url: /search/young%20woman/
+                  - img "young woman" [ref=f71e277]
+                  - generic [ref=f71e278]:
+                    - paragraph [ref=f71e279]: young woman
+                    - paragraph [ref=f71e280]: 977K
+                - link [ref=f71e281] [cursor=pointer]:
+                  - /url: /search/woman%20exercising/
+                  - img "woman exercising" [ref=f71e282]
+                  - generic [ref=f71e283]:
+                    - paragraph [ref=f71e284]: woman exercising
+                    - paragraph [ref=f71e285]: 817K
+                - link [ref=f71e286] [cursor=pointer]:
+                  - /url: /search/attractive%20woman/
+                  - img "attractive woman" [ref=f71e287]
+                  - generic [ref=f71e288]:
+                    - paragraph [ref=f71e289]: attractive woman
+                    - paragraph [ref=f71e290]: 914K
+                - link [ref=f71e291] [cursor=pointer]:
+                  - /url: /search/healthy%20woman/
+                  - img "healthy woman" [ref=f71e292]
+                  - generic [ref=f71e293]:
+                    - paragraph [ref=f71e294]: healthy woman
+                    - paragraph [ref=f71e295]: 858K
+                - link [ref=f71e296] [cursor=pointer]:
+                  - /url: /search/confident%20woman/
+                  - img "confident woman" [ref=f71e297]
+                  - generic [ref=f71e298]:
+                    - paragraph [ref=f71e299]: confident woman
+                    - paragraph [ref=f71e300]: 824K
+            - generic [ref=f71e302]:
+              - generic [ref=f71e305]:
+                - article [ref=f71e308]:
+                  - link [ref=f71e309] [cursor=pointer]:
+                    - /url: /photo/woman-in-gray-tank-top-leaning-on-blue-exercise-ball-smiling-3757654/
+                    - img "Free Smiling woman relaxing on a green exercise ball in a sunny gym setting. Stock Photo" [ref=f71e310]
+                  - generic:
+                    - button "Adjust Colors" [ref=f71e314] [cursor=pointer]
+                    - link "Download" [ref=f71e322] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/3757654/pexels-photo-3757654.jpeg?cs=srgb&dl=pexels-olly-3757654.jpg&fm=jpg
+                - article [ref=f71e328]:
+                  - link [ref=f71e329] [cursor=pointer]:
+                    - /url: /photo/smiling-woman-in-gym-environment-close-up-39219667/
+                    - img "Free Close-up of a smiling woman in a gym setting, promoting fitness and health. Stock Photo" [ref=f71e330]
+                  - generic:
+                    - button "Remove Background" [ref=f71e334] [cursor=pointer]
+                    - link "Download" [ref=f71e342] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/39219667/pexels-photo-39219667.jpeg?cs=srgb&dl=pexels-silverkblack-39219667.jpg&fm=jpg
+                - generic [ref=f71e347]:
+                  - generic [ref=f71e349]:
+                    - link [ref=f71e350] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20young%20fit%20woman%20smiling%20portrait%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                      - img "Create your own young fit woman smiling portrait content with Canva" [ref=f71e351]
+                    - link [ref=f71e352] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20young%20fit%20woman%20smiling%20portrait%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                      - img "Create your own young fit woman smiling portrait content with Canva" [ref=f71e353]
+                    - link [ref=f71e354] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20young%20fit%20woman%20smiling%20portrait%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                      - img "Create your own young fit woman smiling portrait content with Canva" [ref=f71e355]
+                    - link [ref=f71e356] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20young%20fit%20woman%20smiling%20portrait%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                      - img "Create your own young fit woman smiling portrait content with Canva" [ref=f71e357]
+                  - link [ref=f71e358] [cursor=pointer]:
+                    - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20young%20fit%20woman%20smiling%20portrait%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                    - paragraph [ref=f71e361]: Bring your ideas to life with Canva AI
+                  - link "Get started for free" [ref=f71e362] [cursor=pointer]:
+                    - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20young%20fit%20woman%20smiling%20portrait%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                - article [ref=f71e367]:
+                  - link [ref=f71e368] [cursor=pointer]:
+                    - /url: /photo/brunette-woman-in-tank-top-smiling-23285899/
+                    - img "Free A cheerful young woman in a black tank top poses in a studio setting, exuding confidence and joy. Stock Photo" [ref=f71e369]
+                  - generic:
+                    - button "Remove Background" [ref=f71e373] [cursor=pointer]
+                    - link "Download" [ref=f71e381] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/23285899/pexels-photo-23285899.jpeg?cs=srgb&dl=pexels-maxwell-araujo-771749974-23285899.jpg&fm=jpg
+                - article [ref=f71e387]:
+                  - link [ref=f71e388] [cursor=pointer]:
+                    - /url: /photo/smiling-sportswoman-standing-near-wall-and-mat-4498509/
+                    - img "Free Cheerful young female in sportswear smiling and standing near gray wall and blue mat while looking at camera Stock Photo" [ref=f71e389]
+                  - generic:
+                    - button "Crop" [ref=f71e393] [cursor=pointer]
+                    - link "Download" [ref=f71e401] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/4498509/pexels-photo-4498509.jpeg?cs=srgb&dl=pexels-karola-g-4498509.jpg&fm=jpg
+                - article [ref=f71e407]:
+                  - link [ref=f71e408] [cursor=pointer]:
+                    - /url: /photo/woman-wearing-pink-and-black-sports-bra-holding-towel-1089164/
+                    - img "Free Smiling young woman in athletic wear enjoying her outdoor workout session, embodying health and fitness. Stock Photo" [ref=f71e409]
+                  - generic:
+                    - button "Retouch" [ref=f71e413] [cursor=pointer]
+                    - link "Download" [ref=f71e421] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/1089164/pexels-photo-1089164.jpeg?cs=srgb&dl=pexels-mastercowley-1089164.jpg&fm=jpg
+                - article [ref=f71e427]:
+                  - link [ref=f71e428] [cursor=pointer]:
+                    - /url: /photo/smiling-woman-in-sportswear-looking-at-camera-6453882/
+                    - img "Free Young slim woman in black and pink top looking at camera against gray background in studio Stock Photo" [ref=f71e429]
+                  - generic:
+                    - button "Edit" [ref=f71e433] [cursor=pointer]
+                    - link "Download" [ref=f71e441] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/6453882/pexels-photo-6453882.jpeg?cs=srgb&dl=pexels-marta-wave-6453882.jpg&fm=jpg
+                - article [ref=f71e447]:
+                  - link [ref=f71e448] [cursor=pointer]:
+                    - /url: /photo/woman-with-a-healthy-drink-6740804/
+                    - img "Free Casually dressed woman smiling and holding a juice, representing a healthy lifestyle indoors. Stock Photo" [ref=f71e449]
+                  - generic:
+                    - button "Retouch" [ref=f71e453] [cursor=pointer]
+                    - link "Download" [ref=f71e461] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/6740804/pexels-photo-6740804.jpeg?cs=srgb&dl=pexels-mikhail-nilov-6740804.jpg&fm=jpg
+                - article [ref=f71e467]:
+                  - link [ref=f71e468] [cursor=pointer]:
+                    - /url: /photo/pensive-young-woman-making-ponytail-in-studio-4498231/
+                    - img "Free Confident young slim lady in lilac top collecting hair in tail against white background Stock Photo" [ref=f71e469]
+                  - generic:
+                    - button "Remove Background" [ref=f71e473] [cursor=pointer]
+                    - link "Download" [ref=f71e481] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/4498231/pexels-photo-4498231.jpeg?cs=srgb&dl=pexels-karola-g-4498231.jpg&fm=jpg
+                - article [ref=f71e487]:
+                  - link [ref=f71e488] [cursor=pointer]:
+                    - /url: /photo/smiling-woman-with-glass-of-vegetable-smoothie-with-straw-7479790/
+                    - img "Free Positive young female with dyed short hair wearing activewear standing with hand on waist with glass of green smoothie Stock Photo" [ref=f71e489]
+                  - generic:
+                    - button "Adjust Colors" [ref=f71e493] [cursor=pointer]
+                    - link "Download" [ref=f71e501] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/7479790/pexels-photo-7479790.jpeg?cs=srgb&dl=pexels-angela-roma-7479790.jpg&fm=jpg
+                - generic [ref=f71e506]:
+                  - generic [ref=f71e507]:
+                    - heading "‌S‌‌p‌‌‌o‌n‌‌s‌‌o‌‌‌r‌‌e‌‌‌d‌‌‌ ‌P‌h‌o‌t‌‌o‌‌‌s‌‌‌" [level=4] [ref=f71e508]
+                    - link [ref=f71e509] [cursor=pointer]:
+                      - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3Rvcy95b3VuZyUyMGZpdCUyMHdvbWFuJTIwc21pbGluZyUyMHBvcnRyYWl0P3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9sb2dvJnV0bV90ZXJtPXlvdW5nJTIwZml0JTIwd29tYW4lMjBzbWlsaW5nJTIwcG9ydHJhaXQiLCJkYXRhIjp7ImV4cGVyaW1lbnRzIjp7fSwicGFnZV9sb2NhbGUiOiJlbi1VUyIsImxvY2F0aW9uIjoiZ3JpZCIsImFkX3BhcnRuZXIiOiJnZXR0eSIsImFkX2Zvcm1hdCI6ImlubGluZSIsImFkX3BsYWNlbWVudCI6IjEwIiwiYWRfY3JlYXRpdmUiOiJwaG90b19zZWFyY2hfNCIsImFkX2FjdGlvbiI6ImNsaWNrIiwiYWRfaW1wcmVzc2lvbl9pZCI6IjgwNDNiOTRlLWZkYzgtNDFmYS04YzU5LWI2ZTE3MzA1ODAwYiIsIm1lZGlhX3R5cGUiOiJwaG90byIsInF1ZXJ5IjoieW91bmcgZml0IHdvbWFuIHNtaWxpbmcgcG9ydHJhaXQifX0/
+                  - generic [ref=f71e513]:
+                    - link [ref=f71e514] [cursor=pointer]:
+                      - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL2ktd2FudC10by1zaGFyZS1teS1qb3VybmV5LXdpdGgtZXZlcnlvbmUtZ20xMzExNDUyNjI4LTQwMDU0ODUxNz91dG1fc291cmNlPXBleGVscyZ1dG1fbWVkaXVtPWFmZmlsaWF0ZSZ1dG1fY2FtcGFpZ249c3BvbnNvcmVkX3Bob3RvJnV0bV9jb250ZW50PXNycF9pbmxpbmVfbWVkaWEmdXRtX3Rlcm09eW91bmclMjBmaXQlMjB3b21hbiUyMHNtaWxpbmclMjBwb3J0cmFpdCIsImRhdGEiOnsiZXhwZXJpbWVudHMiOnt9LCJwYWdlX2xvY2FsZSI6ImVuLVVTIiwibG9jYXRpb24iOiJncmlkIiwiYWRfcGFydG5lciI6ImdldHR5IiwiYWRfZm9ybWF0IjoiaW5saW5lIiwiYWRfcGxhY2VtZW50IjoiMTAiLCJhZF9jcmVhdGl2ZSI6InBob3RvX3NlYXJjaF80IiwiYWRfYWN0aW9uIjoiY2xpY2siLCJhZF9pbXByZXNzaW9uX2lkIjoiODA0M2I5NGUtZmRjOC00MWZhLThjNTktYjZlMTczMDU4MDBiIiwibWVkaWFfdHlwZSI6InBob3RvIiwicXVlcnkiOiJ5b3VuZyBmaXQgd29tYW4gc21pbGluZyBwb3J0cmFpdCJ9fQ/
+                    - link [ref=f71e515] [cursor=pointer]:
+                      - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL3NtaWxpbmctYXNpYW4td29tYW4tcG9zaW5nLXdpdGgtY3Jvc3NlZC1hcm1zLWxvb2tpbmctYXQtY2FtZXJhLW9uLWJsdWUtYmFja2dyb3VuZC1nbTIxNzcyMzE1OTItNTk2NjU5MjkwP3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9tZWRpYSZ1dG1fdGVybT15b3VuZyUyMGZpdCUyMHdvbWFuJTIwc21pbGluZyUyMHBvcnRyYWl0IiwiZGF0YSI6eyJleHBlcmltZW50cyI6e30sInBhZ2VfbG9jYWxlIjoiZW4tVVMiLCJsb2NhdGlvbiI6ImdyaWQiLCJhZF9wYXJ0bmVyIjoiZ2V0dHkiLCJhZF9mb3JtYXQiOiJpbmxpbmUiLCJhZF9wbGFjZW1lbnQiOiIxMCIsImFkX2NyZWF0aXZlIjoicGhvdG9fc2VhcmNoXzQiLCJhZF9hY3Rpb24iOiJjbGljayIsImFkX2ltcHJlc3Npb25faWQiOiI4MDQzYjk0ZS1mZGM4LTQxZmEtOGM1OS1iNmUxNzMwNTgwMGIiLCJtZWRpYV90eXBlIjoicGhvdG8iLCJxdWVyeSI6InlvdW5nIGZpdCB3b21hbiBzbWlsaW5nIHBvcnRyYWl0In19/
+                    - link [ref=f71e516] [cursor=pointer]:
+                      - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL3BvcnRyYWl0LW9mLWJlYXV0aWZ1bC1oYXBweS13b21hbi1zbWlsaW5nLWR1cmluZy1zdW5zZXQtb3V0ZG9vci1nbTE0OTY2MTU0NDUtNTE5MjMwNTEyP3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9tZWRpYSZ1dG1fdGVybT15b3VuZyUyMGZpdCUyMHdvbWFuJTIwc21pbGluZyUyMHBvcnRyYWl0IiwiZGF0YSI6eyJleHBlcmltZW50cyI6e30sInBhZ2VfbG9jYWxlIjoiZW4tVVMiLCJsb2NhdGlvbiI6ImdyaWQiLCJhZF9wYXJ0bmVyIjoiZ2V0dHkiLCJhZF9mb3JtYXQiOiJpbmxpbmUiLCJhZF9wbGFjZW1lbnQiOiIxMCIsImFkX2NyZWF0aXZlIjoicGhvdG9fc2VhcmNoXzQiLCJhZF9hY3Rpb24iOiJjbGljayIsImFkX2ltcHJlc3Npb25faWQiOiI4MDQzYjk0ZS1mZGM4LTQxZmEtOGM1OS1iNmUxNzMwNTgwMGIiLCJtZWRpYV90eXBlIjoicGhvdG8iLCJxdWVyeSI6InlvdW5nIGZpdCB3b21hbiBzbWlsaW5nIHBvcnRyYWl0In19/
+                    - link [ref=f71e517] [cursor=pointer]:
+                      - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL3BvcnRyYWl0LW9mLWEtYnVzaW5lc3N3b21hbi1zdGFuZGluZy1pbi1hLWEtbW9kZXJuLW9mZmljZS1nbTEzMTA4MTQwNDEtNDAwMDk2NDY4P3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9tZWRpYSZ1dG1fdGVybT15b3VuZyUyMGZpdCUyMHdvbWFuJTIwc21pbGluZyUyMHBvcnRyYWl0IiwiZGF0YSI6eyJleHBlcmltZW50cyI6e30sInBhZ2VfbG9jYWxlIjoiZW4tVVMiLCJsb2NhdGlvbiI6ImdyaWQiLCJhZF9wYXJ0bmVyIjoiZ2V0dHkiLCJhZF9mb3JtYXQiOiJpbmxpbmUiLCJhZF9wbGFjZW1lbnQiOiIxMCIsImFkX2NyZWF0aXZlIjoicGhvdG9fc2VhcmNoXzQiLCJhZF9hY3Rpb24iOiJjbGljayIsImFkX2ltcHJlc3Npb25faWQiOiI4MDQzYjk0ZS1mZGM4LTQxZmEtOGM1OS1iNmUxNzMwNTgwMGIiLCJtZWRpYV90eXBlIjoicGhvdG8iLCJxdWVyeSI6InlvdW5nIGZpdCB3b21hbiBzbWlsaW5nIHBvcnRyYWl0In19/
+                  - link [ref=f71e518] [cursor=pointer]:
+                    - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3Rvcy95b3VuZyUyMGZpdCUyMHdvbWFuJTIwc21pbGluZyUyMHBvcnRyYWl0P3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9jb3Vwb25jb2RlJnV0bV90ZXJtPXlvdW5nJTIwZml0JTIwd29tYW4lMjBzbWlsaW5nJTIwcG9ydHJhaXQiLCJkYXRhIjp7ImV4cGVyaW1lbnRzIjp7fSwicGFnZV9sb2NhbGUiOiJlbi1VUyIsImxvY2F0aW9uIjoiZ3JpZCIsImFkX3BhcnRuZXIiOiJnZXR0eSIsImFkX2Zvcm1hdCI6ImlubGluZSIsImFkX3BsYWNlbWVudCI6IjEwIiwiYWRfY3JlYXRpdmUiOiJwaG90b19zZWFyY2hfNCIsImFkX2FjdGlvbiI6ImNsaWNrIiwiYWRfaW1wcmVzc2lvbl9pZCI6IjgwNDNiOTRlLWZkYzgtNDFmYS04YzU5LWI2ZTE3MzA1ODAwYiIsIm1lZGlhX3R5cGUiOiJwaG90byIsInF1ZXJ5IjoieW91bmcgZml0IHdvbWFuIHNtaWxpbmcgcG9ydHJhaXQifX0/
+                    - img [ref=f71e521]:
+                      - generic [ref=f71e522]: Get 20% off with code PEXELS20 »
+                - article [ref=f71e525]:
+                  - link [ref=f71e526] [cursor=pointer]:
+                    - /url: /photo/smiling-fit-professional-gymnast-with-bun-on-head-smiling-6453606/
+                    - img "Free Confident slim content strong female in activewear smiling and looking away on purple background Stock Photo" [ref=f71e527]
+                  - generic:
+                    - button "Edit" [ref=f71e531] [cursor=pointer]
+                    - link "Download" [ref=f71e539] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/6453606/pexels-photo-6453606.jpeg?cs=srgb&dl=pexels-marta-wave-6453606.jpg&fm=jpg
+                - article [ref=f71e545]:
+                  - link [ref=f71e546] [cursor=pointer]:
+                    - /url: /photo/smiling-woman-in-black-sports-bra-and-shorts-8520342/
+                    - img "Free Fit woman in black activewear posing outdoors. Health and wellness concept. Stock Photo" [ref=f71e547]
+                  - generic:
+                    - button "Edit" [ref=f71e551] [cursor=pointer]
+                    - link "Download" [ref=f71e559] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/8520342/pexels-photo-8520342.jpeg?cs=srgb&dl=pexels-koolshooters-8520342.jpg&fm=jpg
+                - article [ref=f71e565]:
+                  - link [ref=f71e566] [cursor=pointer]:
+                    - /url: /photo/close-up-photo-of-woman-holding-a-tumbler-8456078/
+                    - img "Free Happy woman in a jacket enjoying a refreshing drink outdoors. Perfect for lifestyle and health themes. Stock Photo" [ref=f71e567]
+                  - generic:
+                    - button "Retouch" [ref=f71e571] [cursor=pointer]
+                    - link "Download" [ref=f71e579] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/8456078/pexels-photo-8456078.jpeg?cs=srgb&dl=pexels-mikhail-nilov-8456078.jpg&fm=jpg
+                - article [ref=f71e585]:
+                  - link [ref=f71e586] [cursor=pointer]:
+                    - /url: /photo/woman-in-white-long-sleeve-shirt-and-black-pants-6739128/
+                    - img "Free Woman in athletic wear posing confidently in a modern gym environment. Stock Photo" [ref=f71e587]
+                  - generic:
+                    - button "Edit" [ref=f71e591] [cursor=pointer]
+                    - link "Download" [ref=f71e599] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/6739128/pexels-photo-6739128.jpeg?cs=srgb&dl=pexels-mikhail-nilov-6739128.jpg&fm=jpg
+                - article [ref=f71e605]:
+                  - link [ref=f71e606] [cursor=pointer]:
+                    - /url: /photo/woman-in-black-sports-bra-and-black-shorts-8520354/
+                    - img "Free Young woman in black active wear smiling outdoors against concrete wall. Stock Photo" [ref=f71e607]
+                  - generic:
+                    - button "Edit" [ref=f71e611] [cursor=pointer]
+                    - link "Download" [ref=f71e619] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/8520354/pexels-photo-8520354.jpeg?cs=srgb&dl=pexels-koolshooters-8520354.jpg&fm=jpg
+                - article [ref=f71e625]:
+                  - link [ref=f71e626] [cursor=pointer]:
+                    - /url: /photo/young-woman-in-athletic-wear-relaxing-indoors-39635381/
+                    - img "Free A young woman in sporty attire relaxes in a cozy indoor setting with warm lighting. Stock Photo" [ref=f71e627]
+                  - generic:
+                    - button "Add Text" [ref=f71e631] [cursor=pointer]
+                    - link "Download" [ref=f71e639] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/39635381/pexels-photo-39635381.jpeg?cs=srgb&dl=pexels-bymuratisikofficial-39635381.jpg&fm=jpg
+                - article [ref=f71e645]:
+                  - link [ref=f71e646] [cursor=pointer]:
+                    - /url: /photo/slim-ethnic-woman-stretching-arms-7593040/
+                    - img "Free Positive ethnic female in activewear raising and stretching arms and bending aside while looking away against white background Stock Photo" [ref=f71e647]
+                  - generic:
+                    - button "Adjust Colors" [ref=f71e651] [cursor=pointer]
+                    - link "Download" [ref=f71e659] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/7593040/pexels-photo-7593040.jpeg?cs=srgb&dl=pexels-miriam-alonso-7593040.jpg&fm=jpg
+                - link [ref=f71e664] [cursor=pointer]:
+                  - /url: /collections/keep-smiling-aow2bvx/
+                  - article [ref=f71e665]:
+                    - list [ref=f71e667]:
+                      - listitem [ref=f71e668]
+                      - listitem [ref=f71e670]
+                      - listitem [ref=f71e672]
+                    - generic [ref=f71e674]:
+                      - heading "Keep Smiling" [level=4] [ref=f71e675]
+                      - paragraph [ref=f71e679]: "27"
+                - article [ref=f71e682]:
+                  - link [ref=f71e683] [cursor=pointer]:
+                    - /url: /photo/smiling-woman-in-black-tank-top-with-curly-hair-8980921/
+                    - img "Free Portrait of a smiling young woman with curly hair enjoying a sunny day outdoors. Stock Photo" [ref=f71e684]
+                  - generic:
+                    - button "Remove Background" [ref=f71e688] [cursor=pointer]
+                    - link "Download" [ref=f71e696] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/8980921/pexels-photo-8980921.jpeg?cs=srgb&dl=pexels-pnw-prod-8980921.jpg&fm=jpg
+                - article [ref=f71e702]:
+                  - link [ref=f71e703] [cursor=pointer]:
+                    - /url: /photo/smiling-woman-enjoying-a-beach-workout-29720709/
+                    - img "Free Portrait of a smiling woman on a beach wearing maroon activewear, enjoying a sunny outdoor workout. Stock Photo" [ref=f71e704]
+                  - generic:
+                    - button "Crop" [ref=f71e708] [cursor=pointer]
+                    - link "Download" [ref=f71e716] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/29720709/pexels-photo-29720709.jpeg?cs=srgb&dl=pexels-fbyf-studio-1601304170-29720709.jpg&fm=jpg
+                - article [ref=f71e722]:
+                  - link [ref=f71e723] [cursor=pointer]:
+                    - /url: /photo/a-woman-smiling-at-the-camera-4708489/
+                    - img "Free Young woman smiling in a sports bra standing outdoors with greenery background. Stock Photo" [ref=f71e724]
+                  - generic:
+                    - button "Remove Background" [ref=f71e728] [cursor=pointer]
+                    - link "Download" [ref=f71e736] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/4708489/pexels-photo-4708489.jpeg?cs=srgb&dl=pexels-shkrabaanthony-4708489.jpg&fm=jpg
+                - article [ref=f71e742]:
+                  - link [ref=f71e743] [cursor=pointer]:
+                    - /url: /photo/a-woman-wearing-an-activewear-6250870/
+                    - img "Free Portrait of a smiling young woman in black sportswear against a purple background. Stock Photo" [ref=f71e744]
+                  - generic:
+                    - button "Adjust Colors" [ref=f71e748] [cursor=pointer]
+                    - link "Download" [ref=f71e756] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/6250870/pexels-photo-6250870.jpeg?cs=srgb&dl=pexels-shvetsa-6250870.jpg&fm=jpg
+                - article [ref=f71e762]:
+                  - link [ref=f71e763] [cursor=pointer]:
+                    - /url: /photo/beautiful-woman-between-black-railings-looking-at-the-camera-8038627/
+                    - img "Free Young woman in activewear outdoors on a rainy day, smiling and at ease. Stock Photo" [ref=f71e764]
+                  - generic:
+                    - button "Remove Background" [ref=f71e768] [cursor=pointer]
+                    - link "Download" [ref=f71e776] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/8038627/pexels-photo-8038627.jpeg?cs=srgb&dl=pexels-roman-odintsov-8038627.jpg&fm=jpg
+                - article [ref=f71e782]:
+                  - link [ref=f71e783] [cursor=pointer]:
+                    - /url: /photo/smiling-woman-in-sportswear-sitting-on-floor-6453871/
+                    - img "Free Full body of slim female in black sportswear sitting on floor with bent knees and looking away on lilac background Stock Photo" [ref=f71e784]
+                  - generic:
+                    - button "Remove Background" [ref=f71e788] [cursor=pointer]
+                    - link "Download" [ref=f71e796] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/6453871/pexels-photo-6453871.jpeg?cs=srgb&dl=pexels-marta-wave-6453871.jpg&fm=jpg
+                - article [ref=f71e802]:
+                  - link [ref=f71e803] [cursor=pointer]:
+                    - /url: /photo/fit-smiling-african-american-female-sitting-and-folding-hands-7479762/
+                    - img "Free Satisfied black woman in activewear looking at camera while sitting with folded hands against white background Stock Photo" [ref=f71e804]
+                  - generic:
+                    - button "Edit" [ref=f71e808] [cursor=pointer]
+                    - link "Download" [ref=f71e816] [cursor=pointer]:
+                      - /url: https://images.pexels.com/photos/7479762/pexels-photo-7479762.jpeg?cs=srgb&dl=pexels-angela-roma-7479762.jpg&fm=jpg
+              - button "Load More" [ref=f71e821] [cursor=pointer]
+            - navigation [ref=f71e824]:
+              - generic [ref=f71e826]:
+                - link "1" [ref=f71e828]:
+                  - /url: /search/young%20fit%20woman%20smiling%20portrait/
+                - link "2" [ref=f71e831] [cursor=pointer]:
+                  - /url: /search/young%20fit%20woman%20smiling%20portrait/?page=2
+                - link "3" [ref=f71e834] [cursor=pointer]:
+                  - /url: /search/young%20fit%20woman%20smiling%20portrait/?page=3
+                - link "4" [ref=f71e837] [cursor=pointer]:
+                  - /url: /search/young%20fit%20woman%20smiling%20portrait/?page=4
+                - link "5" [ref=f71e840] [cursor=pointer]:
+                  - /url: /search/young%20fit%20woman%20smiling%20portrait/?page=5
+                - link "6" [ref=f71e843] [cursor=pointer]:
+                  - /url: /search/young%20fit%20woman%20smiling%20portrait/?page=6
+                - link "Next" [ref=f71e846] [cursor=pointer]:
+                  - /url: /search/young%20fit%20woman%20smiling%20portrait/?page=2
+    - contentinfo [ref=f71e850]:
+      - separator [ref=f71e851]
+      - generic [ref=f71e852]:
+        - generic [ref=f71e853]:
+          - heading "Where stories come together." [level=2] [ref=f71e854]
+          - generic [ref=f71e855]:
+            - link "iOS" [ref=f71e856] [cursor=pointer]:
+              - /url: https://itunes.apple.com/us/app/pexels/id1434330413/
+            - link "Android" [ref=f71e859] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.pexels.app
+          - list [ref=f71e862]:
+            - listitem [ref=f71e863]:
+              - link "Instagram" [ref=f71e864] [cursor=pointer]:
+                - /url: https://www.instagram.com/pexels/
+            - listitem [ref=f71e867]:
+              - link "Threads" [ref=f71e868] [cursor=pointer]:
+                - /url: https://www.threads.net/@pexels/
+            - listitem [ref=f71e871]:
+              - link "YouTube" [ref=f71e872] [cursor=pointer]:
+                - /url: https://www.youtube.com/pexelsphotos/
+            - listitem [ref=f71e875]:
+              - link "TikTok" [ref=f71e876] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@pexels/
+            - listitem [ref=f71e879]:
+              - link "LinkedIn" [ref=f71e880] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/pexels/
+            - listitem [ref=f71e883]:
+              - link "X" [ref=f71e884] [cursor=pointer]:
+                - /url: https://x.com/pexels/
+        - generic [ref=f71e887]:
+          - list [ref=f71e888]:
+            - heading "Pexels" [level=3] [ref=f71e889]
+            - listitem [ref=f71e890]:
+              - link "Free Stock Photos" [ref=f71e891] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f71e892]:
+              - link "Free Videos" [ref=f71e893] [cursor=pointer]:
+                - /url: /videos/
+            - listitem [ref=f71e894]:
+              - link "Popular searches" [ref=f71e895] [cursor=pointer]:
+                - /url: /popular-searches/
+            - listitem [ref=f71e896]:
+              - link "Collections" [ref=f71e897] [cursor=pointer]:
+                - /url: /discover/
+            - listitem [ref=f71e898]:
+              - link "Challenges" [ref=f71e899] [cursor=pointer]:
+                - /url: /challenges/
+            - listitem [ref=f71e900]:
+              - link "Leaderboard" [ref=f71e901] [cursor=pointer]:
+                - /url: /leaderboard/
+            - listitem [ref=f71e902]:
+              - link "Other plugins & apps" [ref=f71e903] [cursor=pointer]:
+                - /url: /pro/
+          - list [ref=f71e904]:
+            - heading "Company" [level=3] [ref=f71e905]
+            - listitem [ref=f71e906]:
+              - link "About" [ref=f71e907] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=f71e908]:
+              - link "Blog" [ref=f71e909] [cursor=pointer]:
+                - /url: /blog/
+            - listitem [ref=f71e910]:
+              - link "Help Center" [ref=f71e911] [cursor=pointer]:
+                - /url: https://help.pexels.com/hc/en-us
+            - listitem [ref=f71e912]:
+              - link "Report content" [ref=f71e913] [cursor=pointer]:
+                - /url: /report/
+            - listitem [ref=f71e914]:
+              - link "Become a Hero" [ref=f71e915] [cursor=pointer]:
+                - /url: /hero/
+            - listitem [ref=f71e916]:
+              - link "Partner with Pexels" [ref=f71e917] [cursor=pointer]:
+                - /url: /become-a-partner/
+            - listitem [ref=f71e918]:
+              - link "Image & Video API" [ref=f71e919] [cursor=pointer]:
+                - /url: /api/
+            - listitem [ref=f71e920]: Sign Up
+        - list [ref=f71e921]:
+          - listitem [ref=f71e922]:
+            - heading "Free Stock Photos" [level=3] [ref=f71e923]
+          - listitem [ref=f71e924]:
+            - generic [ref=f71e926]:
+              - link "Black and white photography" [ref=f71e928] [cursor=pointer]:
+                - /url: /search/black%20and%20white/
+              - link "Happy birthday images" [ref=f71e929] [cursor=pointer]:
+                - /url: /search/happy%20birthday/
+              - link "Free business videos" [ref=f71e930] [cursor=pointer]:
+                - /url: /search/videos/business/
+              - link "Happy new year images" [ref=f71e931] [cursor=pointer]:
+                - /url: /search/happy%20new%20year/
+              - link "Cool wallpapers" [ref=f71e932] [cursor=pointer]:
+                - /url: /search/cool%20wallpaper/
+              - link "Best HD wallpapers" [ref=f71e933] [cursor=pointer]:
+                - /url: /search/hd%20wallpaper/
+              - link "Galaxy wallpaper" [ref=f71e934] [cursor=pointer]:
+                - /url: /search/galaxy%20wallpaper/
+              - link "Lock screen wallpaper" [ref=f71e935] [cursor=pointer]:
+                - /url: /search/lock%20screen%20wallpaper/
+              - link "iPhone wallpaper" [ref=f71e936] [cursor=pointer]:
+                - /url: /search/iphone%20wallpaper/
+              - link "4K wallpaper" [ref=f71e937] [cursor=pointer]:
+                - /url: /search/4k%20wallpaper/
+              - link "Samsung wallpaper" [ref=f71e938] [cursor=pointer]:
+                - /url: /search/samsung%20wallpaper/
+              - link "Love wallpaper" [ref=f71e939] [cursor=pointer]:
+                - /url: /search/love%20wallpaper/
+              - link "Mobile wallpaper" [ref=f71e940] [cursor=pointer]:
+                - /url: /search/mobile%20wallpaper/
+      - generic [ref=f71e942]:
+        - generic [ref=f71e943]: © 2026 Pexels
+        - generic [ref=f71e945]:
+          - link "Terms of Use" [ref=f71e947] [cursor=pointer]:
+            - /url: /terms-of-service/
+          - link "Privacy Policy" [ref=f71e948] [cursor=pointer]:
+            - /url: /privacy-policy/
+          - link "License" [ref=f71e949] [cursor=pointer]:
+            - /url: /license/
+          - link "Imprint" [ref=f71e950] [cursor=pointer]:
+            - /url: /imprint/
+          - link "Cookies Policy" [ref=f71e951] [cursor=pointer]:
+            - /url: /cookies/
+        - button "English" [ref=f71e954] [cursor=pointer]
+      - separator [ref=f71e959]
+  - alert [ref=f71e960]
+  - status [ref=f71e961]: "[object Object] has been selected."
+  - region "Cookie banner" [ref=f71e962]:
+    - alertdialog "Конфиденциальность" [ref=f71e963]:
+      - generic [ref=f71e965]:
+        - paragraph [ref=f71e968]: Мы используем файлы cookie, чтобы обеспечивать правильную работу нашего веб-сайта, персонализировать рекламные объявления и другие материалы, обеспечивать работу функций социальных сетей и анализировать сетевой трафик. Мы также предоставляем информацию об использовании вами нашего веб-сайта своим партнерам по социальным сетям, рекламе и аналитическим системам.
+        - generic [ref=f71e970]:
+          - button "Настройки файлов cookie" [active] [ref=f71e971] [cursor=pointer]
+          - button "Согласиться с использованием всех файлов cookie" [ref=f71e972] [cursor=pointer]

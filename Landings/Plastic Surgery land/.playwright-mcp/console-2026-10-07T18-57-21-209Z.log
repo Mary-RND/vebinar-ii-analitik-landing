@@ -1,0 +1,4 @@
+[    3766ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://127.0.0.1:4173/_next/static/chunks/3n29bxidojxx2.js:2
+[   55373ms] [WARNING] THREE.WARNING: Multiple instances of Three.js being imported. @ https://unpkg.com/three@0.186.0/build/three.core.js:2022
+[  871654ms] [WARNING] An import map rule for specifier 'three/addons/' was removed, as it conflicted with already resolved module specifiers. @ :7
+[  871654ms] [WARNING] An import map rule for specifier 'three' was removed, as it conflicted with already resolved module specifiers. @ :7

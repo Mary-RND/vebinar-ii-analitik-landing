@@ -1,0 +1,350 @@
+- generic [active] [ref=f4e1]:
+  - banner [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - link "СЛ Спорт-ленд" [ref=f4e4] [cursor=pointer]:
+        - /url: "#hero"
+        - generic [ref=f4e5]: СЛ
+        - generic [ref=f4e6]: Спорт-ленд
+      - navigation [ref=f4e7]:
+        - link "5 привычек" [ref=f4e8] [cursor=pointer]:
+          - /url: "#habits"
+        - link "Программа" [ref=f4e9] [cursor=pointer]:
+          - /url: "#program"
+        - link "Кому подходит" [ref=f4e10] [cursor=pointer]:
+          - /url: "#filter"
+        - link "Результаты" [ref=f4e11] [cursor=pointer]:
+          - /url: "#cases"
+        - link "Команда" [ref=f4e12] [cursor=pointer]:
+          - /url: "#team"
+        - link "FAQ" [ref=f4e13] [cursor=pointer]:
+          - /url: "#faq"
+      - link "Записаться на вебинар" [ref=f4e14] [cursor=pointer]:
+        - /url: "#webinar"
+  - generic [ref=f4e16]:
+    - generic [ref=f4e17]:
+      - generic [ref=f4e18]: Бесплатный вебинар · старт 30 сентября
+      - heading "Минус 8–12 кг за 3 месяца — без голодных диет и изнуряющих тренировок" [level=1] [ref=f4e19]
+      - paragraph [ref=f4e20]: Комплексная программа снижения веса от «Спорт-ленд». Привычные продукты, 3 тренировки в неделю по 40 минут и результат на весах уже на 2-й неделе. Без срывов и возврата килограммов.
+      - generic [ref=f4e21]:
+        - link "Записаться на вебинар" [ref=f4e22] [cursor=pointer]:
+          - /url: "#webinar"
+        - generic [ref=f4e23]: Бесплатно · 60 минут · ссылка придёт на почту
+      - list [ref=f4e24]:
+        - listitem [ref=f4e25]:
+          - strong [ref=f4e26]: "3"
+          - text: тренировки в неделю
+        - listitem [ref=f4e27]:
+          - strong [ref=f4e28]: "40"
+          - text: минут на тренировку
+        - listitem [ref=f4e29]:
+          - strong [ref=f4e30]: "0"
+          - text: запретов в еде
+    - generic [ref=f4e31]:
+      - generic [ref=f4e32]:
+        - img "Тренер «Спорт-ленд» после тренировки" [ref=f4e33]
+        - generic [aria-hidden] [ref=f4e34]:
+          - generic [ref=f4e35]: FOCUS
+          - generic [ref=f4e36]: DISCIPLINE
+          - generic [ref=f4e37]: RESULTS
+      - generic [ref=f4e38]:
+        - text: Результат уже на
+        - strong [ref=f4e40]: 2-й неделе
+      - generic [ref=f4e41]:
+        - generic [ref=f4e42]:
+          - generic [ref=f4e43]: −12
+          - generic [ref=f4e44]: кг
+          - generic [ref=f4e45]: максимальный результатза 3 месяца
+        - generic [ref=f4e47]:
+          - generic [ref=f4e48]:
+            - strong [ref=f4e49]: "3"
+            - generic [ref=f4e50]: тренировкив неделю
+          - generic [ref=f4e51]:
+            - strong [ref=f4e52]: "40"
+            - generic [ref=f4e53]: минутна тренировку
+          - generic [ref=f4e54]:
+            - strong [ref=f4e55]: "6"
+            - generic [ref=f4e56]: человекв группе
+  - generic [ref=f4e58]:
+    - generic [ref=f4e59]: Без голодных диет
+    - generic [ref=f4e60]: —
+    - generic [ref=f4e61]: 3 × 40 минут в неделю
+    - generic [ref=f4e62]: —
+    - generic [ref=f4e63]: Группы до 6 человек
+    - generic [ref=f4e64]: —
+    - generic [ref=f4e65]: Куратор в чате 24/7
+    - generic [ref=f4e66]: —
+    - generic [ref=f4e67]: Правило 80/20
+    - generic [ref=f4e68]: —
+    - generic [ref=f4e69]: Без срывов
+    - generic [ref=f4e70]: —
+    - generic [ref=f4e71]: Без голодных диет
+    - generic [ref=f4e72]: —
+    - generic [ref=f4e73]: 3 × 40 минут в неделю
+    - generic [ref=f4e74]: —
+    - generic [ref=f4e75]: Группы до 6 человек
+    - generic [ref=f4e76]: —
+    - generic [ref=f4e77]: Куратор в чате 24/7
+    - generic [ref=f4e78]: —
+    - generic [ref=f4e79]: Правило 80/20
+    - generic [ref=f4e80]: —
+    - generic [ref=f4e81]: Без срывов
+    - generic [ref=f4e82]: —
+  - generic [ref=f4e84]:
+    - generic [ref=f4e85]:
+      - generic [ref=f4e86]: Честно
+      - heading "Знакомо?" [level=2] [ref=f4e87]
+      - paragraph [ref=f4e88]: Ставите будильник на 6 утра, покупаете куриную грудку и брокколи, записываетесь в зал… Хватает на две недели. Потом стресс, бокал вина, кусок торта — и чувство вины. Вы бросаете, а вес возвращается с бонусом.
+    - generic [ref=f4e89]:
+      - article [ref=f4e90]:
+        - heading "«Я уже всё перепробовала»" [level=3] [ref=f4e95]
+        - paragraph [ref=f4e96]: Сидела на гречке, считала калории в приложениях, покупала абонемент. Я устала быть в этой петле «диета-срыв-самобичевание».
+      - article [ref=f4e97]:
+        - heading "«Нет времени и сил»" [level=3] [ref=f4e102]
+        - paragraph [ref=f4e103]: Работа, дети, быт. К вечеру я как выжатый лимон. Какой спортзал? Мне бы до дивана дойти. А готовить себе отдельно — это же трата времени.
+      - article [ref=f4e104]:
+        - heading "«Стыдно и страшно»" [level=3] [ref=f4e109]
+        - paragraph [ref=f4e110]: В зале чувствую себя не в своей тарелке. Все подтянутые, а я… Начинаю каждый раз «с понедельника», а в пятницу уже ем сладкое и ненавижу себя в зеркале.
+    - paragraph [ref=f4e112]:
+      - strong [ref=f4e113]: Дело не в вас.
+      - text: Дело не в отсутствии силы воли. Дело в том, что старые методы заставляют вас работать против своей природы.
+  - generic [ref=f4e115]:
+    - generic [ref=f4e116]:
+      - generic [ref=f4e117]:
+        - img "Девушка на тренировке в тёплой студии" [ref=f4e118]
+        - generic [ref=f4e119]: SPORT-LENDMETHOD
+      - generic [ref=f4e120]:
+        - paragraph [ref=f4e121]: Идеальное тело — это не цель,это образ жизни.
+        - paragraph [ref=f4e122]: Начните сегодня — и ваш будущий «я» скажет вам спасибо.
+    - generic [ref=f4e123]:
+      - generic [ref=f4e124]: Экспертно
+      - heading [level=2] [ref=f4e125]:
+        - text: 5 привычек,
+        - generic [ref=f4e126]: которые приведутк телу мечты
+      - list [ref=f4e127]:
+        - listitem [ref=f4e128]:
+          - generic [ref=f4e132]:
+            - heading "Тренируйтесь регулярно" [level=3] [ref=f4e133]
+            - paragraph [ref=f4e134]: 3–4 тренировки в неделю — основа сжигания жира и красивого тела. По 40 минут, без фанатизма.
+        - listitem [ref=f4e135]:
+          - generic [ref=f4e139]:
+            - heading "Питайтесь осознанно" [level=3] [ref=f4e140]
+            - paragraph [ref=f4e141]: Дефицит калорий, белок, овощи и полезные жиры — без запретов на любимые продукты.
+        - listitem [ref=f4e142]:
+          - generic [ref=f4e146]:
+            - heading "Пейте достаточно воды" [level=3] [ref=f4e147]
+            - paragraph [ref=f4e148]: Вода ускоряет обмен веществ, помогает восстановлению и улучшает состояние кожи.
+        - listitem [ref=f4e149]:
+          - generic [ref=f4e153]:
+            - heading "Высыпайтесь" [level=3] [ref=f4e154]
+            - paragraph [ref=f4e155]: "7–9 часов сна: рост мышц, снижение кортизола, контроль аппетита и лёгкость утром."
+        - listitem [ref=f4e156]:
+          - generic [ref=f4e160]:
+            - heading "Будьте последовательны" [level=3] [ref=f4e161]
+            - paragraph [ref=f4e162]: Маленькие шаги каждый день дают больший результат, чем героизм раз в месяц.
+      - generic [ref=f4e163]:
+        - link "Разобрать мои привычки на вебинаре" [ref=f4e164] [cursor=pointer]:
+          - /url: "#webinar"
+        - generic [ref=f4e165]: Бесплатно · регистрация за 1 минуту
+  - generic [ref=f4e167]:
+    - generic [ref=f4e168]:
+      - generic [ref=f4e169]: Как устроена программа
+      - heading "Из чего состоит ваша трансформация" [level=2] [ref=f4e170]
+    - generic [ref=f4e171]:
+      - article [ref=f4e172]:
+        - generic [ref=f4e173]:
+          - img "Умное питание" [ref=f4e174]
+          - generic [ref=f4e175]: "01"
+        - generic [ref=f4e176]:
+          - heading "Умное питание" [level=3] [ref=f4e177]
+          - paragraph [ref=f4e178]: Не жёсткое меню «ешьте только это», а ваш персональный коридор калорий и БЖУ. Учим собирать тарелку, выбирать продукты и готовить за 15 минут.
+      - article [ref=f4e179]:
+        - generic [ref=f4e180]:
+          - img "Адаптивные тренировки" [ref=f4e181]
+          - generic [ref=f4e182]: "02"
+        - generic [ref=f4e183]:
+          - heading "Адаптивные тренировки" [level=3] [ref=f4e184]
+          - paragraph [ref=f4e185]: Программа под ваш уровень, суставы и спину. Никаких штанг больше вашего веса — нагрузка, которая сжигает жир и даёт энергию.
+      - article [ref=f4e186]:
+        - generic [ref=f4e187]:
+          - img "Поддержка куратора" [ref=f4e188]
+          - generic [ref=f4e189]: "03"
+        - generic [ref=f4e190]:
+          - heading "Поддержка 24/7" [level=3] [ref=f4e191]
+          - paragraph [ref=f4e192]: "Куратор в чате: фото тарелки в магазине, сомнения перед тренировкой, «яма» или срыв — мы рядом и превращаем их в опыт, а не в повод бросить."
+  - generic [ref=f4e194]:
+    - generic [ref=f4e195]:
+      - generic [ref=f4e196]: Честно и без обмана
+      - heading "Кому мы подходим" [level=2] [ref=f4e197]
+    - generic [ref=f4e198]:
+      - generic [ref=f4e199]:
+        - heading "Вам точно к нам, если:" [level=3] [ref=f4e200]
+        - list [ref=f4e201]:
+          - listitem [ref=f4e202]: ✓ Вы устали от диет-качелей и хотите стабильного результата.
+          - listitem [ref=f4e203]: ✓ Вы готовы уделять себе 3 раза в неделю по 40 минут.
+          - listitem [ref=f4e204]: ✓ Вам нужна не просто «методичка», а живое плечо и поддержка.
+          - listitem [ref=f4e205]: ✓ Вы хотите не просто сбросить вес, но и почувствовать прилив энергии и лёгкость.
+      - generic [ref=f4e206]:
+        - heading "Вам НЕ подойдёт, если:" [level=3] [ref=f4e207]
+        - list [ref=f4e208]:
+          - listitem [ref=f4e209]: × Вы хотите похудеть на 20 кг за один месяц — это опасно и нереально.
+          - listitem [ref=f4e210]: × Вы ищете «волшебную таблетку», чтобы ничего не делать.
+          - listitem [ref=f4e211]: × Вы не готовы менять пищевые привычки, а хотите «перетерпеть» диету.
+  - generic [ref=f4e213]:
+    - generic [ref=f4e214]:
+      - generic [ref=f4e215]: Бесплатный вебинар
+      - heading "5 привычек, которые приведут к телу мечты" [level=2] [ref=f4e216]: 5 привычек,которые приведутк телу мечты
+      - paragraph [ref=f4e217]: 60 минут с тренером и нутрициологом «Спорт-ленд». Разберём, почему вес стоит на месте, и соберём ваш персональный план на первую неделю.
+      - list [ref=f4e218]:
+        - listitem [ref=f4e219]:
+          - generic [ref=f4e220]: "01"
+          - generic [ref=f4e221]:
+            - strong [ref=f4e222]: Причины «плато»
+            - paragraph [ref=f4e223]: Разбор ваших привычек и того, почему вес не уходит.
+        - listitem [ref=f4e224]:
+          - generic [ref=f4e225]: "02"
+          - generic [ref=f4e226]:
+            - strong [ref=f4e227]: Расчёт калорий и БЖУ
+            - paragraph [ref=f4e228]: Покажем на живых примерах, как считать свой коридор.
+        - listitem [ref=f4e229]:
+          - generic [ref=f4e230]: "03"
+          - generic [ref=f4e231]:
+            - strong [ref=f4e232]: "Бонус: план на неделю"
+            - paragraph [ref=f4e233]: Готовое питание и тренировки — забираете даже если не присоединитесь к программе.
+      - generic [ref=f4e234]:
+        - generic [ref=f4e235]: ⚡
+        - paragraph [ref=f4e236]:
+          - text: В потоке осталось
+          - strong [ref=f4e237]: 7 мест из 20
+          - text: . Набор в сентябрьскую группу закрывается
+          - strong [ref=f4e238]: 30 сентября
+          - text: .
+    - generic [ref=f4e240]:
+      - generic [ref=f4e241]: Запись на вебинар
+      - heading "Оставьте заявку" [level=3] [ref=f4e242]
+      - paragraph [ref=f4e243]: Ссылку на эфир пришлём на почту сразу после регистрации.
+      - generic [ref=f4e244]:
+        - generic [ref=f4e245]: ФИО
+        - textbox "ФИО" [ref=f4e246]:
+          - /placeholder: Иванова Мария Петровна
+      - generic [ref=f4e247]:
+        - generic [ref=f4e248]: Телефон
+        - textbox "Телефон" [ref=f4e249]:
+          - /placeholder: +7 (999) 123-45-67
+      - generic [ref=f4e250]:
+        - generic [ref=f4e251]: Email
+        - textbox "Email" [ref=f4e252]:
+          - /placeholder: name@mail.ru
+      - textbox [aria-hidden] [ref=f4e253]
+      - button "Записаться на вебинар" [ref=f4e254] [cursor=pointer]
+      - paragraph [ref=f4e256]:
+        - text: Нажимая кнопку, вы соглашаетесь с
+        - link "политикой конфиденциальности" [ref=f4e257] [cursor=pointer]:
+          - /url: "#"
+        - text: .
+  - generic [ref=f4e259]:
+    - generic [ref=f4e260]:
+      - generic [ref=f4e261]: Результаты клиентов
+      - heading "Они тоже когда-то начинали «с понедельника»" [level=2] [ref=f4e262]
+    - generic [ref=f4e263]:
+      - article [ref=f4e264]:
+        - img "Анна, клиентка «Спорт-ленд»" [ref=f4e266]
+        - generic [ref=f4e267]:
+          - generic [ref=f4e268]:
+            - strong [ref=f4e269]: Анна, 34 года
+            - generic [ref=f4e270]: маркетолог, двое детей
+          - blockquote [ref=f4e271]: «Я думала, что после родов уже никогда не вернусь в форму. В «Спорт-ленд» меня научили есть то, что я люблю, и вписывать тренировки в график между работой и садиком. Ушли отёки, и я наконец-то влезла в свои любимые джинсы».
+          - generic [ref=f4e272]:
+            - generic [ref=f4e273]:
+              - strong [ref=f4e274]: −9 кг
+              - text: за 3 месяца
+            - generic [ref=f4e275]:
+              - strong [ref=f4e276]: 0 срывов
+              - text: сладкое по вечерам — в прошлом
+      - article [ref=f4e277]:
+        - img "Елена, клиентка «Спорт-ленд»" [ref=f4e279]
+        - generic [ref=f4e280]:
+          - generic [ref=f4e281]:
+            - strong [ref=f4e282]: Елена, 42 года
+            - generic [ref=f4e283]: бухгалтер
+          - blockquote [ref=f4e284]: «Мне было страшно идти в зал, болела спина. Тренер Михаил составил такую программу, что я забыла про боль в пояснице уже через месяц. Вес уходит медленно, но верно, зато у меня появилась энергия — впервые за 10 лет я не хочу спать после работы».
+          - generic [ref=f4e285]:
+            - generic [ref=f4e286]:
+              - strong [ref=f4e287]: −7 кг
+              - text: медленно, но верно
+            - generic [ref=f4e288]:
+              - strong [ref=f4e289]: 1 месяц
+              - text: и спина больше не болит
+  - generic [ref=f4e291]:
+    - generic [ref=f4e292]:
+      - generic [ref=f4e293]: Команда
+      - heading "Кто ведёт вашу программу" [level=2] [ref=f4e294]
+    - generic [ref=f4e295]:
+      - article [ref=f4e296]:
+        - img "Михаил, старший тренер" [ref=f4e298]
+        - heading "Михаил" [level=3] [ref=f4e299]
+        - generic [ref=f4e300]: Старший тренер
+        - paragraph [ref=f4e301]: Мастер спорта, 10 лет практики. Специализация — тренировки для новичков и людей с ограничениями по здоровью. Делает здоровые суставы и сильное сердце.
+      - article [ref=f4e302]:
+        - img "Ольга, нутрициолог" [ref=f4e304]
+        - heading "Ольга" [level=3] [ref=f4e305]
+        - generic [ref=f4e306]: Нутрициолог
+        - paragraph [ref=f4e307]: Дипломированный специалист по клиническому питанию. Рационы не по учебникам 90-х, а с опорой на науку и ваши гастрономические предпочтения.
+      - article [ref=f4e308]:
+        - img "Кураторы «Спорт-ленд»" [ref=f4e310]
+        - heading "Кураторы" [level=3] [ref=f4e311]
+        - generic [ref=f4e312]: Команда поддержки
+        - paragraph [ref=f4e313]: Люди, которые сами прошли этот путь. На связи в мессенджерах, поддерживают и радуются каждому вашему грамму, ушедшему со весов.
+  - generic [ref=f4e315]:
+    - generic [ref=f4e316]:
+      - generic [ref=f4e317]: FAQ
+      - heading "Частые вопросы" [level=2] [ref=f4e318]
+    - generic [ref=f4e319]:
+      - generic [ref=f4e320]:
+        - button "У меня проблемы со здоровьем / коленями. Мне можно?" [ref=f4e321] [cursor=pointer]
+        - paragraph [ref=f4e323]: Да. На диагностике мы учитываем все ваши особенности. Тренер адаптирует каждое упражнение так, чтобы нагрузка шла в мышцы, а не в суставы. (Нужна будет справка от врача о допуске к лёгким нагрузкам).
+      - generic [ref=f4e324]:
+        - button "Я совсем не умею готовить. Меня научат?" [ref=f4e325] [cursor=pointer]
+        - paragraph [ref=f4e327]: Мы не заставляем вас стоять у плиты по 3 часа. Мы даём рецепты, которые готовятся за 10–15 минут, и учим собирать готовые блюда в магазине или кафе так, чтобы они вписывались в вашу норму.
+      - generic [ref=f4e328]:
+        - button "А если я сорвусь и съем пиццу?" [ref=f4e329] [cursor=pointer]
+        - paragraph [ref=f4e331]: "В нашей системе нет понятия «сорвался». Есть правило 80/20: 80% времени вы питаетесь здорово, 20% — едите вкусняшки. Если вы съели пиццу, мы не ругаем вас, а корректируем план на следующий день. Без чувства вины."
+      - generic [ref=f4e332]:
+        - button "Вебинар правда бесплатный? В чём подвох?" [ref=f4e333] [cursor=pointer]
+        - paragraph [ref=f4e335]: Подвоха нет. Это 60-минутный онлайн-эфир. Мы разбираем привычки, считаем калории и даём план на неделю. Если вам понравится наш подход — вы присоединитесь к программе. Если нет — план останется у вас, и мы расстанемся друзьями.
+      - generic [ref=f4e336]:
+        - button "Когда я увижу результат?" [ref=f4e337] [cursor=pointer]
+        - paragraph [ref=f4e339]: "Первые изменения — на 2-й неделе: уходят отёки, появляется лёгкость. За 3 месяца программы клиенты теряют в среднем 8–12 кг без срывов и возврата веса."
+  - generic [ref=f4e341]:
+    - generic [ref=f4e342]: Последний шаг
+    - heading "Хватит откладывать жизнь на «когда похудею». Живите полноценно уже сегодня." [level=2] [ref=f4e343]: Хватит откладывать жизнь на «когда похудею».Живите полноценно уже сегодня.
+    - paragraph [ref=f4e344]: Запишитесь на бесплатный вебинар — это ни к чему не обязывает. Набор в сентябрьскую группу закрывается 30 сентября, осталось 7 мест.
+    - link "Записаться на вебинар" [ref=f4e345] [cursor=pointer]:
+      - /url: "#webinar"
+    - generic [ref=f4e346]: Занимает 1 минуту. Без обязательств.
+  - contentinfo [ref=f4e347]:
+    - generic [ref=f4e348]:
+      - generic [ref=f4e349]:
+        - link "СЛ Спорт-ленд" [ref=f4e350] [cursor=pointer]:
+          - /url: "#hero"
+          - generic [ref=f4e351]: СЛ
+          - generic [ref=f4e352]: Спорт-ленд
+        - paragraph [ref=f4e353]: ООО «Спорт-ленд»ИНН 0000000000 · ОГРН 0000000000000
+      - generic [ref=f4e354]:
+        - link "Политика конфиденциальности" [ref=f4e355] [cursor=pointer]:
+          - /url: "#"
+        - link "Договор-оферта" [ref=f4e356] [cursor=pointer]:
+          - /url: "#"
+        - link "Контакты" [ref=f4e357] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=f4e358]:
+        - link "Telegram" [ref=f4e359] [cursor=pointer]:
+          - /url: "#"
+          - text: TG
+        - link "VK" [ref=f4e360] [cursor=pointer]:
+          - /url: "#"
+        - link "WhatsApp" [ref=f4e361] [cursor=pointer]:
+          - /url: "#"
+          - text: WA
+    - generic [ref=f4e362]:
+      - generic [ref=f4e363]: © 2026 Спорт-ленд. Все права защищены.
+      - generic [ref=f4e364]: Есть противопоказания, необходима консультация специалиста.
