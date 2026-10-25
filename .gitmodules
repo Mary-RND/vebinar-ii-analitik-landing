@@ -1,0 +1,6 @@
+[submodule "Landings/Fitness Landing/v1"]
+	path = Landings/Fitness Landing/v1
+	url = https://github.com/Mary-RND/sport-land-landing.git
+[submodule "Landings/Fitness Landing/v2"]
+	path = Landings/Fitness Landing/v2
+	url = https://github.com/Mary-RND/sport-land-v2-landing.git

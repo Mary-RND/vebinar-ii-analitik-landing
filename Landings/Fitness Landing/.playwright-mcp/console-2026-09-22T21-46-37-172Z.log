@@ -1,2 +1,0 @@
-[  483026ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :10
-[  530264ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8791/images/team-olga.jpg,team-curator.jpg?cb=1790114127425:0

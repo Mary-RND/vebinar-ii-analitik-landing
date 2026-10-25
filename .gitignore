@@ -2,13 +2,12 @@
 .netlify
 
 # Test / debug artifacts
-Fitness Landing/.playwright-mcp/
-Fitness Landing/*.png
-Fitness Landing/screens/
-Fitness Landing/*.log
-
-# Playwright-логи и дампы (диагностика, не часть проектов)
 **/.playwright-mcp/
+*.log
+
+# Landings
+Landings/Fitness Landing/*.png
+Landings/Fitness Landing/screens/
 
 # Служебные файлы Word/LibreOffice (появляются, пока документ открыт)
 ~$*
